@@ -13,7 +13,7 @@ API requests require a session and reject foreign Origin headers. Mutation bodie
 - Employee targeting outside self, cross-tenant targeting, employee offboarding authority: blocked before mutation.
 - Conflicting/ambiguous/missing information: fails closed; clarification required.
 - Instruction-like requests to bypass controls, bulk change or gain privileged access: rejected by the deterministic input boundary.
-- Raw secret-like/private sentinel text: not retained in state, run ledger or event log.
+- Raw secret-like/private canary text: not retained in state, run ledger or event log.
 - Wrong tool/employee action: existing sealed-scope check blocks it; actual owned-process kill and quarantine recorded.
 - Unknown/unavailable worker: existing placement excludes it; retries preserve prior attempt.
 - Expired capability or occupied capacity: core placement selects another identity.
