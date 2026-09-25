@@ -1,6 +1,6 @@
 # Workforce Lab demonstration guide
 
-Run only on an isolated development host. No production install or service changes are needed.
+Run only on an isolated development host. No production install or service changes are needed. Start with the [current Tsunora clean-install guide](docs/TSUNORA-CLEAN-INSTALL.md), including the matching Chromium prerequisite before recording.
 
 ```sh
 npm ci
@@ -11,7 +11,7 @@ The server selects an unused loopback port. Read the private-session.json launch
 
 A: choose Employment letter, create job, observe intake/policy/prepare/execute/verify and COMPLETE. The document is a synthetic receipt, not a real employment document.
 
-B: choose Bank change, confirm the displayed synthetic replacement, create job. WAITING FOR APPROVAL is a core job state. Inspect preparation evidence. Approve as synthetic HR; observe resumed mutation and independent readback. Repeat and reject to demonstrate cancellation with no mutation.
+B: choose Bank change, confirm the displayed synthetic replacement, create job. WAITING_FOR_APPROVAL is the execute-step state; the overall Run is WAITING. Inspect preparation evidence. Approve as synthetic HR; observe resumed mutation and independent readback. Repeat and reject to demonstrate cancellation with no mutation.
 
 C: use a fresh disposable instance, choose Contain & recover. Approve the bank change. Inspect the EXECUTE step's two attempts and the Evidence & incidents tab: scope violation, real process containment, quarantine, fallback worker and final verified result. EMP-0197 must remain unchanged.
 
@@ -28,3 +28,5 @@ npm run check
 Copy rd-results.json into a running lab's state root to display measured comparisons. The R&D workspace is a result viewer; batch execution is initiated through the reproducible CLI, not a browser button. Local/API model, remote-worker and execution-mode comparisons are not yet implemented for this domain.
 
 The recording script starts a live browser recorder BEFORE each request, drives real runtime operations, verifies results and creates three WebM videos. It uses fresh synthetic instances for each hero. Create STOP in a lab state root to stop its owned server. Videos are recordings of actual runs, not event replay.
+
+The repaired launcher consumes STOP during graceful shutdown. Restart preserves retained jobs but rotates temporary sessions; reload private-session.json locally. `node --test scripts/workforce-installation.test.mjs` verifies approval persistence and expired-session rejection across that process boundary.

@@ -62,7 +62,7 @@ The full repository regression at the qualification anchor was **2,480/2,480 PAS
 
 ## Run
 
-Use the inherited [installation guide](docs/provenance/AGENT-CONTROL-README.md) and locked dependencies (`npm ci`). Start the configured runtime with `npm run web` and open `/tsunora.html` on its configured origin.
+Start with the [Tsunora clean-install guide](docs/TSUNORA-CLEAN-INSTALL.md). It selects the development branch explicitly, covers Git and source archives, and separates the core dashboard from the Workforce Lab research launcher. Historical Agent Control guides are provenance, not current Tsunora installation instructions.
 
 Exchange use requires explicit `AGENT_CONTROL_LABOUR_EXCHANGE=1` configuration and trusted host registration of organisations, backends, workers and verifiers as documented in the [operations guide](docs/DIGITAL-LABOUR-EXCHANGE-v4.15-OPERATIONS.md). Without that configuration, the workspace fails closed.
 
