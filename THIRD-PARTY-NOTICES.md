@@ -13,4 +13,4 @@
 | Model weights, recordings, screenshots, private voice | Not product source | None in publication graph |
 | Bounded generated mutation patch fixtures | Original Agent Control synthetic coding workload | 52 small gzip files retained because integrity regression requires exact bytes; 38 unique archives fully decompressed/scanned |
 
-The core project licence is unresolved. Vendor MIT notices do not license Agent Control/Tsunora as a whole. This inventory is a source review, not a legal warranty.
+Original Tsunora/Agent Control code is Apache-2.0 under the owner's licence selection; see LICENSE and docs/provenance/LICENSING.md. The MIT vendor components retain their own terms unchanged. No inherited NOTICE file is present in the distributed source and no new top-level NOTICE is required. Dependency packages installed separately must retain their supplied licences and notices. This inventory is a source review, not a legal warranty.

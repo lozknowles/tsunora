@@ -35,4 +35,12 @@ No production deployment, public repository or new release is implied. Work move
 
 ## Publication lineage
 
-This source snapshot was privacy-sanitized from the private full-history Tsunora lineage. Original commits remain provenance references, not Git parents. See [publication provenance](docs/provenance/PUBLICATION-LINEAGE.md). A top-level software licence has not yet been selected; publication remains blocked pending owner confirmation. Vendored notices retain their own terms.
+This source snapshot was privacy-sanitized from the private full-history Tsunora lineage. Original commits remain provenance references, not Git parents. See [publication provenance](docs/provenance/PUBLICATION-LINEAGE.md). Vendored notices retain their own terms.
+
+## Licence
+
+Copyright 2026 Lawrence Knowles.
+
+Tsunora's original code, including the inherited original Agent Control runtime code, is licensed under the [Apache License, Version 2.0](LICENSE). Third-party components retain their own licences and attribution requirements; see [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). This grant does not relicense vendored components.
+
+The copyright attribution follows the original runtime and Tsunora product provenance, not the author metadata of the sanitized packaging commit. See [licence provenance](docs/provenance/LICENSING.md).

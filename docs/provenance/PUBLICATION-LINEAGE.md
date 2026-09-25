@@ -1,6 +1,6 @@
 # Privacy-sanitized publication lineage
 
-The original local Tsunora lineage remains authoritative and unchanged. This publication candidate uses one new source-root commit rather than publishing 961 reachable historical commits and 34 tags. It preserves code, tests, authored documentation and the following original source checkpoints by reference, not by pretending to share byte-identical Git ancestry.
+The original local Tsunora lineage remains authoritative and unchanged. This publication candidate starts with one new source-root commit rather than publishing 961 reachable historical commits and 34 tags. It preserves code, tests, authored documentation and the following original source checkpoints by reference, not by pretending to share byte-identical Git ancestry.
 
 | Original checkpoint | Meaning | Publication transformation |
 |---|---|---|
@@ -14,4 +14,4 @@ Historical full-history statements in TSUNORA-FORK-REPORT.md and AGENT-CONTROL-L
 
 Removed: videos, screenshots, unneeded model-output archives, unneeded operational evidence, machine paths/host identifiers, account phone number, and gateway patches with unresolved redistribution provenance. Retained: 57 required lightweight source/test/evidence references, two authored PDF operator guides without embedded images/fonts, 52 small audited gzip mutation fixtures required by lossless-patch regression, original flat Tsunora SVGs, MIT vendor notices, and ordinary source fixtures. Public test IPs and synthetic credential strings remain where necessary to exercise security controls; they are not live configuration.
 
-No software licence is inferred from the project's name or from neighbouring vendor licences. Owner choice is required before publication.
+The owner subsequently selected Apache-2.0 for original code. A separate licensing commit follows the sanitized source root; it does not import original private ancestry. See LICENSING.md. No software licence is inferred from neighbouring vendor licences.

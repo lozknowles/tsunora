@@ -102,5 +102,6 @@
     "@types/blessed": "^0.1.25",
     "@types/node": "^24.0.0",
     "typescript": "^5.9.0"
-  }
+  },
+  "license": "Apache-2.0"
 }
