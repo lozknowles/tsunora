@@ -83,5 +83,4 @@ Original operational evidence stays in the authoritative private/local Agent Con
 - `docs/media/4.6/usage/08-invocations.png`
 - `docs/media/4.6/usage/09-invocation-detail.png`
 - `docs/media/4.6/usage/10-mobile.png`
-- `docs/paperclip-evidence/01-landing.png`
 - `docs/qualification/shared-speech-integration-20260924/SHARED-SPEECH-ADAPTER.md`

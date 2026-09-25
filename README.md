@@ -28,16 +28,15 @@ The product idea is simple: turn fragmented capability into governed, verifiable
 
 ## What is in the current development line?
 
-The current qualified development line, `research/workforce-ops`, combines the privacy-reviewed Tsunora baseline with the qualified Digital Labour Exchange, Paperclip-informed architectural decisions and the Workforce Operations research prototype.
+The current qualified development line, `research/workforce-ops`, combines the privacy-reviewed Tsunora baseline with the qualified Digital Labour Exchange, externally informed architectural decisions and the Workforce Operations research prototype.
 
 ### Digital Labour Exchange
 
 The exchange provides governed allocation between work and digital workers. Its current design includes stable worker identity independent of model/backend, contract-bound verification, budget and admission controls, organisation-scoped accounting, single-writer ownership, backend revision/qualification, retained bids/awards/attempts, and resource/transaction accounting.
 
-The Paperclip review was used as a source of architectural techniques, not as a dependency. Techniques judged useful were adopted or matched to existing Agent Control controls; provider-specific coupling, mandatory hierarchy metaphors, hard financial claims and unsupported distributed-control assumptions were deliberately rejected or deferred.
+The architecture was deliberately evaluated for generic techniques that strengthen ownership, identity, completion, accounting and recovery. Useful techniques were implemented without adding provider-specific coupling, mandatory hierarchy metaphors, hard financial claims or unsupported distributed-control assumptions.
 
 See:
-- [Paperclip disposition](docs/PAPERCLIP-v4.15-DISPOSITION.md)
 - [Digital Labour Exchange design](docs/DIGITAL-LABOUR-EXCHANGE-v4.15-DESIGN.md)
 - [Digital Labour Exchange qualification](docs/DIGITAL-LABOUR-EXCHANGE-v4.15-QUALIFICATION.md)
 - [Economic qualification](docs/DIGITAL-LABOUR-EXCHANGE-v4.15-ECONOMIC-QUALIFICATION.md)
