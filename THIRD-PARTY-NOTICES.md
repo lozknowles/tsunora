@@ -8,7 +8,6 @@
 | Tsunora junction/icon SVG | Original geometric vector authored for this product | Retained; no generated raster or traced concept |
 | Tsunora wordmark | SVG text references Arial/system font; no font file bundled | Retained; outline master remains design work |
 | Operator PDFs | Authored Agent Control guides; standard PDF font references, no embedded fonts/images | Retained; text inspected |
-| Paperclip review | Original comparative prose with pinned source links | Retained; third-party screenshot omitted |
 | OpenWA gateway patches/spec | Upstream pin recorded, redistribution provenance not established here | Omitted from publication; optional external integration remains separately qualified |
 | Model weights, recordings, screenshots, private voice | Not product source | None in publication graph |
 | Bounded generated mutation patch fixtures | Original Agent Control synthetic coding workload | 52 small gzip files retained because integrity regression requires exact bytes; 38 unique archives fully decompressed/scanned |

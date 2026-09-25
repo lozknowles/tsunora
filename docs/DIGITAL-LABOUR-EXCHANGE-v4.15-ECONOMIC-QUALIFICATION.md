@@ -22,7 +22,7 @@ XCU means measured child user+system CPU milliseconds, including cold model load
 
 ## Architecture and controls
 
-The Paperclip disposition table explicitly consumes all adoption/defer/reject recommendations. Ownership fencing, organisational attribution and contract-bound settlement were retained. Additions include model/backend/tool resource attribution, CPU accounting with maximum-liability reservations, worker payroll, guarded strategy comparisons and latest-qualification revocation. Matching case labels alone cannot establish comparable inputs or verifier contracts. No Paperclip integration is needed or added.
+The architecture disposition records the adopted, deferred and rejected design decisions. Ownership fencing, organisational attribution and contract-bound settlement were retained. Additions include model/backend/tool resource attribution, CPU accounting with maximum-liability reservations, worker payroll, guarded strategy comparisons and latest-qualification revocation. Matching case labels alone cannot establish comparable inputs or verifier contracts.
 
 The same worker identity changed from the general model to the coder model, retained nineteen earlier attempts, was blocked until fresh qualification and then verified work. Actual AI process interruption re-brokered to a distinct worker, with the failed liability preserved. Quarantine excluded the affected identity, permissions denied execution, and the existing containment supervisor reported STOP_CONFIRMED and persisted stopped admission. Autonomous model escalation and general agent delegation are not qualified.
 
@@ -32,4 +32,4 @@ Detailed reports, all bids/awards/attempts, raw stdout/stderr, model/runtime dig
 
 ## Release decision
 
-Do not release v4.15.0 from this evidence. Keep the candidate isolated. Broader representative work, stronger competence evidence and a defensible production accounting basis are required before production integration. No public release metadata or existing serving workload was changed. See the Paperclip disposition and AI operations guide beside this document.
+Do not release v4.15.0 from this evidence. Keep the candidate isolated. Broader representative work, stronger competence evidence and a defensible production accounting basis are required before production integration. No public release metadata or existing serving workload was changed. See the AI operations guide beside this document.

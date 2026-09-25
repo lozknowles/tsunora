@@ -1,6 +1,6 @@
 # Digital Labour Exchange v4.15 — implementation design
 
-Baseline `9ffa265a5`. Isolated additive capability. No release, push, merge, deployment or protected service mutation authorised. Paperclip review completed before exchange code; recommended generic ownership, scope and completion techniques are incorporated below.
+Baseline `9ffa265a5`. Isolated additive capability. No release, push, merge, deployment or protected service mutation authorised. Architecture review completed before exchange code; generic ownership, scope and completion techniques are incorporated below.
 
 ## Boundaries
 

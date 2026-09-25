@@ -43,4 +43,4 @@ Amounts are integer internal accounting units with an explicit currency and tari
 
 ## Handoff and authority
 
-The candidate lives in the isolated `feature/v4.15-digital-labour-exchange-20260924` worktree. Consult the qualification report, Paperclip review and evidence hashes before integrating it. Qualification of these small deterministic tasks is not approval for production agents, cloud spend, external effects, service changes, a public release or the concurrent v4.15 speech integration.
+The candidate lives in the isolated `feature/v4.15-digital-labour-exchange-20260924` worktree. Consult the qualification report, architecture documentation and evidence hashes before integrating it. Qualification of these small deterministic tasks is not approval for production agents, cloud spend, external effects, service changes, a public release or the concurrent v4.15 speech integration.

@@ -6,7 +6,7 @@ Proposed public repository: **lozknowles/tsunora**. Prepared locally only. Do no
 
 ## Source and fork
 
-Authoritative qualified release: Agent Control v4.15.0, 46442b62099b930b9d694ba4fde1109262f3047f. The specified 0071262a5 had a legitimate successor, c972256b77b94ec55d2466e961e673b09f5b9e6c, with AI allocation evidence and Paperclip disposition. Its experimental status is preserved. Both lineages are retained by a real merge in the new independent repository; no squashed or fabricated past.
+Authoritative qualified release: Agent Control v4.15.0, 46442b62099b930b9d694ba4fde1109262f3047f. The specified 0071262a5 had a legitimate successor, c972256b77b94ec55d2466e961e673b09f5b9e6c, with AI allocation evidence and architectural disposition. Its experimental status is preserved. Both lineages are retained by a real merge in the new independent repository; no squashed or fabricated past.
 
 Initial integration commit: 5ab3208358a3eba5e0f67bb51106582b9e0538eb. Final reviewed product commit is recorded separately in FORK-STATE.json to avoid a self-referential commit hash. Product branch research/tsunora-0.1. Inherited runtime dependencies/package lock, CLI/API/schema/persistence identifiers and release tags remain intact. There was no inherited GitHub Actions workflow in this baseline; no new public CI or release automation is implied.
 
@@ -19,10 +19,6 @@ The UI imports a complete WorkOrder, presents it for review and uses the existin
 Keep Agent Control separately consumable now, architecturally the underlying runtime. Do not split packages without measured need. No provider/harness dependency was introduced. DigitalWorker remains separate from Model.
 
 Visual identity uses an original SVG junction, charcoal/graphite, silver, ivory and restrained vermilion. No robot/HUD/gradient or operational log is present in the hero. Flat vector is the production candidate; textured metal treatment is deferred. Wordmark font outlines and final small-icon brand refinement remain design review items.
-
-## Paperclip
-
-Original review and full disposition retained. Ownership fencing, stable identity, contract-bound completion and maximum liability reservations inform the inherited exchange. No Paperclip dependency or cosmetic imitation. Source review is not Paperclip runtime qualification. Multi-controller ownership and externally anchored audit are deferred.
 
 ## Qualification
 

@@ -6,7 +6,7 @@ Retained source: c972256b77b94ec55d2466e961e673b09f5b9e6c, following 0071262a541
 
 Historical AI comparison: broker and cheapest each 9/12, fixed coder 7B 8/12. The original conclusion remains BROKERAGE ECONOMICALLY NEUTRAL / INCONCLUSIVE. CPU accounting is not monetary savings; small workload, single-writer recovery and non-anchored local integrity remain limitations.
 
-Paperclip review and its complete disposition table are retained without edits. Adopted lessons include durable identity, ownership fencing, contract-bound completion and maximum-liability reservations. Corporate hierarchy, Paperclip dependency and simulated earnings were rejected; distributed ownership and externally anchored audit remain deferred. This is historical source review, not a new Paperclip qualification.
+The architecture retains durable identity, ownership fencing, contract-bound completion and maximum-liability reservations. Mandatory corporate hierarchy, unnecessary runtime dependencies and simulated earnings were rejected; distributed ownership and externally anchored audit remain deferred.
 
 Tsunora qualification does not promote this component to production. Unknown resources/costs remain unknown. Existing scope, permission, containment, kill and quarantine controls remain authoritative.
 

@@ -12,7 +12,7 @@ The new repository is an independent local clone with full reachable history and
 
 The initial merge retains both source parents and original authorship. Historical releases and experiments continue to belong to Agent Control. Tsunora did not exist before this fork date. The original README is retained as AGENT-CONTROL-README.md with relative links rebased to this location; Git retains the exact original.
 
-Existing orchestration, governance, skills, tools, context/memory, accounting, containment, remote execution and qualified release lineage are inherited. Digital Labour Exchange, bounded economic evidence and Paperclip review are inherited experimental work, not part of the public v4.15.0 speech release. Tsunora-specific additions are the product identity, separate version manifest, vector assets, landing page, work-first projection and contract import UI.
+Existing orchestration, governance, skills, tools, context/memory, accounting, containment, remote execution and qualified release lineage are inherited. Digital Labour Exchange and bounded economic evidence are inherited experimental work, not part of the public v4.15.0 speech release. Tsunora-specific additions are the product identity, separate version manifest, vector assets, landing page, work-first projection and contract import UI.
 
 Other unmerged research branches remain source references only. No broad merge of economic-router, grounding, identity-colour, voice research or arbitrary local branches was performed. The complete captured branch/worktree inventory is retained in the private fork evidence; production deployments remain outside this repository.
 
