@@ -8,6 +8,8 @@ No Tsunora release tag or release asset existed at the start of this qualificati
 
 Install Bash, CA certificates, curl, xz-utils and Node.js 24 with its bundled npm using your administrator-approved source. Git is needed only for the clone/bootstrap route. Python 3 is optional for the deterministic Exchange experiment and independent evidence verifier. No GPU, API key, model, SSH agent, VPN or enterprise credential is needed for the bounded first workflow.
 
+For disposable Docker qualification, use `docker run --init` (or an equivalent PID 1 reaper). A bare `sleep` process as PID 1 can leave orphaned descendants as zombies; the runtime then correctly refuses to attest cleanup. Never weaken cleanup checks to accommodate an unsuitable container init. Keep host mounts and public port publication disabled.
+
 The clean test used Ubuntu 24.04, Node.js 24.21.0 and npm supplied by that Node distribution. To reproduce the Node prerequisite from an official archive on x86_64:
 
 ```sh
