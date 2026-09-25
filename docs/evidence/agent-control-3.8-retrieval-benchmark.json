@@ -1,0 +1,19 @@
+{
+  "schema": "agent-control.retrieval-benchmark/v1",
+  "recordedAt": "2026-09-03T11:21:37.294Z",
+  "repository": {"sha":"41ae59c6bd0e0228e419a91959efe7130fe086f2","files":581,"fullBytes":4765838},
+  "tasks": [
+    {"id":"symbol","expected":"src/control/token-aware-baton-routing.ts"},
+    {"id":"error","expected":"src/control/token-aware-baton-routing.ts"},
+    {"id":"configuration","expected":"src/control/config.ts"},
+    {"id":"architecture","expected":"src/control/harness-efficiency.ts"},
+    {"id":"cross-file","expected":"src/control/direct-repository-review-executor.ts"}
+  ],
+  "lanes": [
+    {"id":"A","description":"repeated full repository context","tasks":5,"verified":5,"successRate":1,"inputTokens":5957300,"outputTokens":null,"totalTokens":5957300,"peakContextTokens":1191460,"contextAuthority":"estimated-from-bytes","retrievalCalls":0,"toolCalls":0,"filesOpened":2905,"bytesInjected":23829190,"batonBytes":0,"handoffs":0,"wallClockMs":null,"retrievalLatencyMs":0,"modelCost":null,"retrievalCost":null,"costPerVerifiedOutcome":null,"staleEvidenceIncidents":0,"unnecessaryRetrieval":0,"failedRetrievalEscalations":0},
+    {"id":"B","description":"built-in exact/BM25 governed retrieval","tasks":5,"verified":2,"successRate":0.4,"inputTokens":8263,"outputTokens":null,"totalTokens":8263,"peakContextTokens":2048,"contextAuthority":"estimated-from-bytes","retrievalCalls":5,"toolCalls":5,"filesOpened":11,"bytesInjected":33028,"batonBytes":0,"handoffs":0,"wallClockMs":493,"retrievalLatencyMs":486,"modelCost":null,"retrievalCost":{"amount":null,"currency":null,"authority":"unavailable-local-electricity-not-measured"},"costPerVerifiedOutcome":null,"staleEvidenceIncidents":0,"unnecessaryRetrieval":3,"failedRetrievalEscalations":0},
+    {"id":"C","description":"zg 0.2.1 hybrid governed retrieval","tasks":5,"verified":5,"successRate":1,"inputTokens":5437,"outputTokens":null,"totalTokens":5437,"peakContextTokens":1346,"contextAuthority":"estimated-from-bytes","retrievalCalls":5,"toolCalls":5,"filesOpened":25,"bytesInjected":21682,"batonBytes":0,"handoffs":0,"wallClockMs":12304,"retrievalLatencyMs":12299,"modelCost":null,"retrievalCost":{"amount":null,"currency":null,"authority":"unavailable-local-electricity-not-measured"},"costPerVerifiedOutcome":null,"staleEvidenceIncidents":0,"unnecessaryRetrieval":0,"failedRetrievalEscalations":0,"indexMode":"warm-existing-index-with-refresh-wait"}
+  ],
+  "zg": {"version":"0.2.1","sourceCommit":"81a80f478f2d3ec76556cd3c993d0d064cc9580a","coldIndexMs":21410,"coldIndexPeakRssKb":954000,"filesIndexed":524,"entities":5640,"monetaryCost":null,"monetaryCostAuthority":"unavailable-local-electricity-not-measured"},
+  "method": {"verification":"expected evidence path appears in bounded packet before model execution","tokenEstimate":"ceil(UTF-8 bytes / 4)","note":"Output/model tokens, baton bytes, handoffs and model cost are not applicable to this retrieval-quality phase and are not inferred; null means unavailable or not applicable, never zero."}
+}

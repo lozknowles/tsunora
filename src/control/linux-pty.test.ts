@@ -1,0 +1,6 @@
+import assert from'node:assert/strict';import test from'node:test';import{discoverLinuxPtys,ptsFromTtyNr,toPtyDiscoveries,ttyFromStat,type ProcReader,type LinuxProcess}from'./linux-pty.js';
+const stat=(pid:number,tty:number,pgrp=1,tpgid=1)=>`${pid} (vim) S 1 ${pgrp} 1 ${tty} ${tpgid} 0 0 0 0`;
+test('decodes Linux pts tty number',()=>{assert.equal(ptsFromTtyNr((136<<8)|7),'/dev/pts/7');assert.equal(ptsFromTtyNr(0x401),null);});
+test('reads tty_nr after comm safely',()=>{assert.equal(ttyFromStat(stat(10,(136<<8)|3)),(136<<8)|3);assert.equal(ttyFromStat('broken'),null);});
+test('discovery filters other users and non PTYs',()=>{const r:ProcReader={listPids:()=>[10,11,12],readStat:p=>p===12?stat(p,0):stat(p,(136<<8)|p,p,p),readCmdline:p=>p===10?'vim file.ts':'psql',readCwd:()=>'/repo',readUid:p=>p===11?2000:1000};const got=discoverLinuxPtys(r,1000);assert.equal(got.length,1);assert.equal(got[0].pid,10);assert.equal(got[0].tty,'/dev/pts/10');});
+test('one discovery per tty prefers foreground process group over newer child',()=>{const base={tty:'/dev/pts/4',uid:1};const ps:LinuxProcess[]=[{...base,pid:20,command:'vim',cwd:'/repo',pgrp:20,tpgid:20},{...base,pid:25,command:'esbuild --service',cwd:'/repo',pgrp:25,tpgid:20}];const d=toPtyDiscoveries(ps);assert.equal(d.length,1);assert.equal(d[0].pid,20);assert.equal(d[0].command,'vim');});

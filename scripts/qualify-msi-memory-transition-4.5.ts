@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {ResourceCodexNodeExecutionPort} from '../src/control/codex-node-execution.js';
+import type {ProviderAccountProfileConfig,ProviderConfig,ResourceConfig} from '../src/control/config.js';
+
+const host=process.env.AGENT_CONTROL_WINDOWS_QUALIFICATION_HOST;
+const identityFile=process.env.AGENT_CONTROL_WINDOWS_QUALIFICATION_IDENTITY_FILE;
+if(!host||!identityFile)throw new Error('windows_qualification_resource_required');
+const output=path.resolve(process.env.AGENT_CONTROL_MSI_MEMORY_OUTPUT??'qualification/agent-control-4.5-msi-memory-20260912');
+const nodeId='windows-codex-node',provider:ProviderConfig={id:'codex-chatgpt',name:'Codex ChatGPT',kind:'cli',enabled:true,capabilities:['structured-output']};
+const resource:ResourceConfig={id:nodeId,name:'Windows Codex credential node',platform:'windows',capabilities:['harness.codex'],transport:{type:'ssh',host,port:Number(process.env.AGENT_CONTROL_WINDOWS_QUALIFICATION_PORT??22),user:process.env.AGENT_CONTROL_WINDOWS_QUALIFICATION_USER,identityFile}};
+const profiles=[profile('cottage-plus','CODEX_HOME_COTTAGE_PLUS'),profile('lawrence-pro','CODEX_HOME_LAWRENCE_PRO')],port=new ResourceCodexNodeExecutionPort([resource]);
+
+async function main(){const startedAt=new Date().toISOString(),results=[];for(const account of profiles){try{const status=await port.accountStatus({provider,account,nodeId,timeoutMs:30_000});results.push({profileId:account.id,nodeId,status:'QUALIFIED',authenticated:status.authenticated,codexVersion:status.codexVersion,executableSha256:status.executableSha256,discoveredAt:status.discoveredAt,credentialReference:account.credentialResidency!.store.env});}catch(error){results.push({profileId:account.id,nodeId,status:'BLOCKED',authenticated:false,reason:safeError(error),credentialReference:account.credentialResidency!.store.env});}}const allQualified=results.every(item=>item.status==='QUALIFIED'),report={schema:'agent-control.msi-memory-transition-qualification/v1',startedAt,completedAt:new Date().toISOString(),resource:{nodeId,platform:'windows',transport:'governed SSH ResourceCodexNodeExecutionPort'},profiles:results,transition:{status:allQualified?'NOT_TESTED':'BLOCKED',reason:allQualified?'A qualified transition must be run as a separate governed Work Parcel.':'One or more required isolated account profiles are not authenticated.'},credentialSafety:{credentialContentsObserved:false,windowsProfilePathsPersisted:false,rawTransportOutputPersisted:false},verdict:allQualified?'REVIEW_REQUIRED':'BLOCKED_AUTHENTICATION_UNAVAILABLE'};fs.mkdirSync(output,{recursive:true,mode:0o700});fs.writeFileSync(path.join(output,'msi-memory-transition.json'),`${JSON.stringify(report,null,2)}\n`,{mode:0o600});process.stdout.write(`${JSON.stringify({report:path.join(output,'msi-memory-transition.json'),verdict:report.verdict,profiles:results.map(({profileId,status,reason})=>({profileId,status,reason}))},null,2)}\n`);}
+function profile(id:string,env:string):ProviderAccountProfileConfig{return{id,label:id,providerExecutionNodeId:nodeId,credentialResidency:{nodeId,store:{type:'codex-home-env',env}},enabled:true,capabilities:['structured-output']};}
+function safeError(error:unknown){const value=error instanceof Error?error.message:'unknown';return/^(?:account_profile|codex)_[a-z0-9_]+$/.test(value)?value:'codex_account_qualification_failed';}
+main().catch(error=>{process.stderr.write(`${safeError(error)}\n`);process.exitCode=1;});

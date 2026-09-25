@@ -1,0 +1,16 @@
+{
+  "costPerformanceRouting": {
+    "presets": [
+      {
+        "schema": "agent-control.cost-performance-routing-policy/v1",
+        "id": "overnight-economy",
+        "strategy": "economy",
+        "optimization": "price",
+        "rateCeilingUsdPerMillionTokens": {"input": 0.5, "output": 1},
+        "budget": {"invocationUsd": 0.05, "jobUsd": 1},
+        "tokenCeiling": {"input": 64000, "output": 4096},
+        "fallback": {"enabled": true, "onNoEligibleRoute": "block", "crossModel": false}
+      }
+    ]
+  }
+}

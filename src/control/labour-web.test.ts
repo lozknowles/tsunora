@@ -1,0 +1,23 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import {once} from 'node:events';
+import {LabourLedger} from './labour-ledger.js';
+import {LabourExchange} from './labour-exchange.js';
+import {ContainmentSupervisor} from './containment.js';
+import {AgentControlService} from './application-service.js';
+import {PtyRegistry} from './pty.js';
+import {startWebDashboard} from './web-server.js';
+test('labour API and event stream require existing operator authority; assets extend dashboard',async t=>{
+  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'labour-web-')),ledger=new LabourLedger(path.join(dir,'ledger.jsonl')),exchange=new LabourExchange(ledger,new ContainmentSupervisor(path.join(dir,'containment.json'))),service=new AgentControlService({version:1,paused:false,lastRestorePoint:null,lanes:[]},new PtyRegistry(),undefined,'test',()=>{});
+  const server=startWebDashboard(service,{host:'127.0.0.1',port:0,operatorToken:'unit-test-token',labourExchange:exchange,labourEvidenceDirectory:dir});await once(server,'listening');t.after(()=>{server.closeAllConnections();server.close();ledger.close();});const base='http://127.0.0.1:'+(server.address() as any).port,headers={Authorization:'Bearer unit-test-token'};
+  assert.equal((await fetch(base+'/api/labour-exchange')).status,401);assert.equal((await fetch(base+'/api/labour-exchange/events')).status,401);assert.equal((await fetch(base+'/api/labour-exchange/orders',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'})).status,401);
+  assert.equal((await(await fetch(base+'/api/labour-exchange',{headers})).json()).schema,'agent-control.labour-exchange/v1');
+  const abort=new AbortController(),stream=await fetch(base+'/api/labour-exchange/events',{headers,signal:abort.signal});assert.match(stream.headers.get('content-type')??'',/text\/event-stream/);const reader=stream.body!.getReader();const first=await reader.read();assert.match(new TextDecoder().decode(first.value),/INTERNAL_TRANSACTION_CHARGES/);abort.abort();
+  assert.equal((await fetch(base+'/dashboard-labour.js')).status,200);assert.match(await(await fetch(base+'/')).text(),/dashboard-labour.js/);
+  assert.equal((await fetch(base+'/api/labour-exchange/video-evidence',{method:'POST',headers:{...headers,'Content-Type':'video/webm'},body:'not-video'})).status,400);
+  const receipt=await fetch(base+'/api/labour-exchange/video-evidence',{method:'POST',headers:{...headers,'Content-Type':'video/webm'},body:Buffer.from('1a45dfa300','hex')});assert.equal(receipt.status,201);assert.equal((await receipt.json()).bytes,5);
+  assert.equal((await fetch(base+'/api/labour-exchange/video-evidence',{method:'POST',headers:{...headers,Origin:'https://untrusted.example','Content-Type':'video/webm'},body:Buffer.from('1a45dfa300','hex')})).status,403);
+});

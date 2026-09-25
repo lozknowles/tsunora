@@ -1,0 +1,98 @@
+[
+  {
+    "capability": "Token accounting",
+    "deterministic": "PASS",
+    "physical": "PASS",
+    "verdict": "PASS"
+  },
+  {
+    "capability": "Provider semantics (resident local adapter)",
+    "deterministic": "PASS",
+    "physical": "PASS",
+    "verdict": "PASS"
+  },
+  {
+    "capability": "Exact API cost",
+    "deterministic": "PASS",
+    "physical": "BLOCKED_EXTERNAL",
+    "verdict": "BLOCKED_EXTERNAL"
+  },
+  {
+    "capability": "Cache accounting (positive billed cache)",
+    "deterministic": "PASS",
+    "physical": "BLOCKED_EXTERNAL",
+    "verdict": "BLOCKED_EXTERNAL"
+  },
+  {
+    "capability": "Retry tax",
+    "deterministic": "PASS",
+    "physical": "NOT_APPLICABLE",
+    "verdict": "NOT_APPLICABLE"
+  },
+  {
+    "capability": "Local inference usage",
+    "deterministic": "PASS",
+    "physical": "PASS",
+    "verdict": "PASS"
+  },
+  {
+    "capability": "Component energy (observed intervals)",
+    "deterministic": "PASS",
+    "physical": "PASS",
+    "verdict": "PASS"
+  },
+  {
+    "capability": "Gap-aware integration",
+    "deterministic": "PASS",
+    "physical": "PASS",
+    "verdict": "PASS"
+  },
+  {
+    "capability": "Baseline attribution",
+    "deterministic": "PASS",
+    "physical": "BLOCKED_EXTERNAL",
+    "verdict": "BLOCKED_EXTERNAL"
+  },
+  {
+    "capability": "Electricity tariff",
+    "deterministic": "PASS",
+    "physical": "BLOCKED_EXTERNAL",
+    "verdict": "BLOCKED_EXTERNAL"
+  },
+  {
+    "capability": "Whole-node energy",
+    "deterministic": "PASS",
+    "physical": "BLOCKED_EXTERNAL",
+    "verdict": "BLOCKED_EXTERNAL"
+  },
+  {
+    "capability": "Dashboard",
+    "deterministic": "PASS",
+    "physical": "PASS",
+    "verdict": "PASS"
+  },
+  {
+    "capability": "Process integration",
+    "deterministic": "PASS",
+    "physical": "PASS",
+    "verdict": "PASS"
+  },
+  {
+    "capability": "Estate integration",
+    "deterministic": "PASS",
+    "physical": "PASS",
+    "verdict": "PASS"
+  },
+  {
+    "capability": "Mallow grounding",
+    "deterministic": "PASS",
+    "physical": "PASS",
+    "verdict": "PASS"
+  },
+  {
+    "capability": "Privacy",
+    "deterministic": "PASS",
+    "physical": "PASS",
+    "verdict": "PASS"
+  }
+]

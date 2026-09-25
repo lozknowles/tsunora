@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+test('tournament recorder refuses existing outputs before creating new evidence',()=>{const source=fs.readFileSync(new URL('./record-nvidia-shortlist-tournament.mjs',import.meta.url),'utf8');assert.match(source,/tournament_evidence_already_exists/);assert.doesNotMatch(source,/fs\.rmSync\((?:file|screenshotDirectory|rawVideoDirectory)/);});

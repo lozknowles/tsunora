@@ -1,0 +1,27 @@
+{
+  "schema": "agent-control.model-improvement-example/v1",
+  "mode": "REQUIRE_PROMOTION_APPROVAL",
+  "opportunity": {
+    "model": "student-local-model@immutable-hash",
+    "weakness": "Repeated exact-format failure",
+    "evidence": ["evaluation-attempt:redacted-1", "evaluation-attempt:redacted-2"],
+    "frequency": 2
+  },
+  "baseline": {
+    "identity": "sha256:redacted",
+    "benchmark": "frozen-suite@1",
+    "evaluator": "exact-validator@1"
+  },
+  "experiment": {
+    "considered": ["DETERMINISTIC_REMOVAL", "PROMPT"],
+    "selected": "PROMPT",
+    "workBoardStages": ["freeze", "candidate", "benchmark", "security", "regression", "promotion"],
+    "scope": "candidate-only write scope",
+    "result": "INCONCLUSIVE"
+  },
+  "promotion": {
+    "required": true,
+    "approved": false
+  },
+  "note": "Sanitized structural example. It is not physical qualification evidence."
+}

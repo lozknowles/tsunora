@@ -1,0 +1,130 @@
+{
+  "schema": "agent-control.showcase-intelligence-example/v1",
+  "sourceCommit": "23142a0",
+  "capturedAt": "2026-09-13T06:52:41.505Z",
+  "scope": "Initial live metadata baseline and physical readiness proposal, not an overnight-duration benchmark",
+  "nativeParcelId": "parcel-social-160bfc5dbb511c1d37554c39c175fe0f8c8c96a276a9a03c68eb1b16405d6c6f",
+  "changesDetected": 17,
+  "relevantCandidates": 2,
+  "benchmarked": 0,
+  "status": "APPROVAL_REQUIRED",
+  "sourceFailures": [],
+  "rejections": [
+    {
+      "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    },
+    {
+      "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "reasons": [
+        "CONTEXT_NOT_ESTABLISHED",
+        "NO_ADMITTED_TARGET"
+      ]
+    }
+  ],
+  "recommendation": "No evidence-backed new leader established",
+  "routingChanged": false,
+  "downloadedModelBytes": 0,
+  "modelResults": 0,
+  "briefSha256": "5a35e988113523bbd2da0a90248b9c0a9c07d5c984776df91e4dd628efb0543f",
+  "evidenceSha256": [
+    "32513af44e22969db6702c8114091ed8bb61dc9d8ba2a1d27af1c719f837adf4",
+    "19d8ebf7f59a1cde7d26e252873f68d405d23695ba6de7d7f2ff0ea8b6b0a957",
+    "078304147487505167f4284fbfd65a68b5e5a9788b2eddcc01ebbdfd44a52210",
+    "e8027411084fffc87bde98fca351792845137a64bbf67b6468ea0aba6e320b40"
+  ]
+}

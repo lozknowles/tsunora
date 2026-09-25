@@ -1,0 +1,15 @@
+
+> agent-control@3.3.0 check:neutrality
+> node --test scripts/infrastructure-neutrality.test.mjs
+
+✔ tracked filenames contain no private topology identifiers (3.578124ms)
+✔ distributable text contains no private topology identifiers (30.947488ms)
+✔ runtime does not require a named secure-overlay product (6.266786ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 116.682579

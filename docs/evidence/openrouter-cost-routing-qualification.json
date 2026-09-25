@@ -1,0 +1,33 @@
+{
+  "schema": "agent-control.cost-routing-qualification/v1",
+  "qualifiedAt": "2026-09-20",
+  "documentation": [
+    "https://openrouter.ai/docs/guides/routing/provider-selection",
+    "https://openrouter.ai/docs/api/api-reference/generations/get-request-&-usage-metadata-for-a-generation",
+    "https://openrouter.ai/docs/guides/routing/model-fallbacks"
+  ],
+  "officialDocumentationAccessedAt": "2026-09-20",
+  "qualification": "DETERMINISTIC_CONTRACT_TESTS",
+  "repositoryCheck": {
+    "passed": 2001,
+    "failed": 0,
+    "skipped": 0,
+    "durationMs": 395369.398167,
+    "distribution": "PASS",
+    "typecheck": "PASS",
+    "bootstrapSyntax": "PASS",
+    "dashboardSyntax": "PASS",
+    "neutrality": "PASS",
+    "implementationStatus": "PASS",
+    "limitationsCarryForward": "PASS"
+  },
+  "livePaidInference": "NOT_PERFORMED",
+  "reason": "The required adapter, fail-closed, budget, reconciliation, redaction and no-inference dry-run behavior is deterministically testable without spending provider credit.",
+  "claims": {
+    "providerMaxPriceUnit": "USD_PER_MILLION_TOKENS",
+    "providerMaxPriceIsTotalBudget": false,
+    "hardCeilingsAutoDegrade": false,
+    "dryRunExternalInference": false,
+    "existingRoutingChangedByDefault": false
+  }
+}

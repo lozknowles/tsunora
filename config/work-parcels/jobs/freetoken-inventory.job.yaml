@@ -1,0 +1,13 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata: {id: freetoken-inventory, name: FreeToken safety inventory, version: 1.0.0, description: Read-only inventory before any FreeToken mutation.}
+spec:
+  enabled: true
+  priority: normal
+  concurrency: no-overlap
+  steps:
+    - id: inventory
+      action: qualification.freetoken.inventory@1.0.0
+      requires: [qualification.local]
+      outputs: [{name: inventory, type: application/vnd.agent-control.freetoken-inventory+json, schema: freetoken-inventory/v1, version: 1.0.0}]
+      verification: [freetoken-inventory-v1]

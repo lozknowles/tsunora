@@ -1,0 +1,15 @@
+{
+  "schema":"agent-control.local-model-retrieval-qualification/v1",
+  "recordedAt":"2026-09-03T11:23:37.690Z",
+  "repositorySha":"41ae59c6bd0e0228e419a91959efe7130fe086f2",
+  "provider":{"endpoint":"loopback-redacted","model":"qwen2.5-3b-instruct-q4_k_m.gguf"},
+  "authorities":{"providerTokenUsage":"authoritative","contextOccupancy":"estimated-from-UTF-8-bytes","modelCost":"unavailable","retrievalCost":"unavailable-local-electricity-not-measured"},
+  "question":"Which method preserves the original thread as recoverable after a failed governed destination handoff?",
+  "verification":{"requiredTerms":["handoff","recoverable"],"independentRule":"both terms must appear in the bounded answer"},
+  "results":[
+    {"lane":"A-full","verified":true,"inputBytes":90000,"estimatedContextTokens":22500,"providerInputTokens":20912,"providerOutputTokens":63,"providerTotalTokens":20975,"retrievalMs":0,"modelMs":1786,"answerSha256":"816a85e4c76a6d64d814bc6c5aa09db1da007c8e679340056de26c4fa4da449d"},
+    {"lane":"B-exact-lexical","verified":true,"inputBytes":12146,"estimatedContextTokens":3037,"providerInputTokens":2480,"providerOutputTokens":100,"providerTotalTokens":2580,"retrievalMs":272,"modelMs":4223,"answerSha256":"a37cf007f75a09a7f331ecf5e3cdb23c3f9a9e085a45860fb3ca7f097d6db44f"},
+    {"lane":"C-zg-hybrid","verified":true,"inputBytes":6619,"estimatedContextTokens":1655,"providerInputTokens":1556,"providerOutputTokens":79,"providerTotalTokens":1635,"retrievalMs":1999,"modelMs":1619,"answerSha256":"dccd9a533d6d717a7c4f7ed72b777817702a6c2e52cc4a7db27002af346862cd"}
+  ],
+  "limitations":["One bounded real local-model question is not a production routing qualification.","Prompt-cache counts were provider-reported and retained separately; monetary/electricity cost was unavailable.","No handoff was needed in this retrieval-only comparison."]
+}

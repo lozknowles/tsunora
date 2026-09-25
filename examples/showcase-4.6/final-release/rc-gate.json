@@ -1,0 +1,44 @@
+{
+  "schema": "agent-control.release-rc/v1",
+  "version": "4.6.0",
+  "sourceDigest": "dc31f2f599163f66b601b265a9d8012330eedef28cdf7c43c21fa3193d51b143",
+  "coreRelease": "PASS",
+  "showcase": "PASS_WITH_LIMITATIONS",
+  "releaseBlockers": [],
+  "knownLimitations": {
+    "KNOWN_LIMITATION": 1,
+    "BLOCKED_EXTERNAL": 6,
+    "PARTIAL_SUPPORT": 3,
+    "PLATFORM_LIMITATION": 2,
+    "FUTURE_WORK": 3
+  },
+  "nonBlocking": [
+    "AC46-ANDROID-01",
+    "AC46-ANDROID-02",
+    "AC46-ANDROID-03",
+    "AC46-ANDROID-04",
+    "AC46-ANDROID-05",
+    "AC46-BILLING-01",
+    "AC46-BILLING-02",
+    "AC46-ENERGY-01",
+    "AC46-ENERGY-02",
+    "AC46-ENERGY-03",
+    "AC46-MODEL-01",
+    "AC46-WATCH-01",
+    "AC46-WATCH-02",
+    "AC46-RUNTIME-01",
+    "AC46-RULES-01"
+  ],
+  "publication": "REQUIRES_OPERATOR_REVIEW",
+  "subsystems": {
+    "androidStandalone": "PASS_WITH_LIMITATIONS",
+    "usageEnergy": "PASS_WITH_LIMITATIONS",
+    "modelIntelligence": "PASS_WITH_LIMITATIONS",
+    "localLlmBenchmark": "CONTROL_QUALIFIED_TARGET_EXECUTION_APPROVAL_REQUIRED",
+    "estateProcess": "PASS",
+    "governanceSecurity": "PASS",
+    "morningBrief": "PASS_WITH_LIMITATIONS",
+    "coreInstallation": "PASS",
+    "dependencyReproducibility": "PASS"
+  }
+}

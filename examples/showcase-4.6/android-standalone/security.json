@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "path": "/api/status",
+      "status": 200,
+      "secretAbsent": true
+    },
+    {
+      "path": "/api/deployment",
+      "status": 200,
+      "secretAbsent": true
+    },
+    {
+      "path": "/api/runs",
+      "status": 200,
+      "secretAbsent": true
+    },
+    {
+      "path": "/api/environment-discovery",
+      "status": 200,
+      "secretAbsent": true
+    },
+    {
+      "path": "/api/estate-map",
+      "status": 200,
+      "secretAbsent": true
+    },
+    {
+      "path": "/api/configuration",
+      "status": 200,
+      "secretAbsent": true
+    }
+  ],
+  "unauthenticatedDeployment": 401,
+  "foreignOriginMutation": 403,
+  "remoteResources": 0,
+  "providers": 0,
+  "models": 0,
+  "tokenPermissions": "600"
+}

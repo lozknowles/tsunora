@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "sourceFiles": 34,
+  "sourceContentUnchanged": true,
+  "archive": "original-failures-sealed.tar.gz",
+  "archiveSha256": "adc1f7613d28e619c0a7e2a3715e6a0d4550dc45a5662b5f1d52db7fc2aae667",
+  "archiveMode": "0400",
+  "archiveEntriesIndependentlyHashVerified": true,
+  "scope": "Three original reconciliation failures; sealed copy does not supersede source evidence"
+}

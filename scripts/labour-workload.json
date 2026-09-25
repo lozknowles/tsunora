@@ -1,0 +1,23 @@
+{
+  "schema": "agent-control.labour-workload/v1",
+  "scope": "Bounded decimal arithmetic, numeric classification and exact record extraction; not general coding/reasoning qualification",
+  "calibration": [
+    {"id":"sum-small","jobType":"sum","input":{"values":["2","3","-8"]},"expected":{"sum":"-3"}},
+    {"id":"class-small","jobType":"classification","input":{"values":["-2","0","3"]},"expected":{"labels":["negative","zero","positive"]}},
+    {"id":"extract-small","jobType":"extraction","input":{"kind":"invoice","records":[{"id":"a","kind":"invoice","value":"12"},{"id":"b","kind":"memo","value":"7"}]} ,"expected":{"values":[{"id":"a","value":"12"}]}},
+    {"id":"sum-large","jobType":"sum","input":{"values":["9007199254740993","7"]},"expected":{"sum":"9007199254741000"}},
+    {"id":"class-zero","jobType":"classification","input":{"values":["-0","0000","9999999999999999999"]},"expected":{"labels":["zero","zero","positive"]}},
+    {"id":"extract-empty","jobType":"extraction","input":{"kind":"invoice","records":[]},"expected":{"values":[]}}
+  ],
+  "heldOut": [
+    {"id":"sum-cancel","jobType":"sum","input":{"values":["-999999999999999999999999999999","999999999999999999999999999998","5"]},"expected":{"sum":"4"}},
+    {"id":"sum-carry","jobType":"sum","input":{"values":["9999999999999999999999","1"]},"expected":{"sum":"10000000000000000000000"}},
+    {"id":"sum-borrow","jobType":"sum","input":{"values":["-10000000000000000000000","1"]},"expected":{"sum":"-9999999999999999999999"}},
+    {"id":"class-large","jobType":"classification","input":{"values":["-9999999999999999999999","-0000","00001","0"]},"expected":{"labels":["negative","zero","positive","zero"]}},
+    {"id":"class-negative","jobType":"classification","input":{"values":["-1","-2","-3"]},"expected":{"labels":["negative","negative","negative"]}},
+    {"id":"extract-mixed","jobType":"extraction","input":{"kind":"invoice","records":[{"id":"x","kind":"memo","value":"999"},{"id":"y","kind":"invoice","value":"-12"},{"id":"z","kind":"invoice","value":"Unicode α"}]},"expected":{"values":[{"id":"y","value":"-12"},{"id":"z","value":"Unicode α"}]}},
+    {"id":"extract-no-match","jobType":"extraction","input":{"kind":"receipt","records":[{"id":"x","kind":"memo","value":"0"}]},"expected":{"values":[]}},
+    {"id":"sum-zero","jobType":"sum","input":{"values":["00012","-12","-0"]},"expected":{"sum":"0"}},
+    {"id":"class-boundary","jobType":"classification","input":{"values":["9007199254740993","-9007199254740993"]},"expected":{"labels":["positive","negative"]}}
+  ]
+}

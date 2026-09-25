@@ -1,0 +1,70 @@
+{
+  "version": "4.6.0-rc.1",
+  "sourceDigest": "d0eb2eafd065d59aa3705bc8f9ec49be3345eba0287e283e713a98392052459e",
+  "checks": {
+    "regression": {
+      "status": "PASS",
+      "evidence": [
+        "examples/showcase-4.6/release-integration/validation.json"
+      ]
+    },
+    "typecheck": {
+      "status": "PASS",
+      "evidence": [
+        "examples/showcase-4.6/release-integration/validation.json"
+      ]
+    },
+    "installation": {
+      "status": "PASS",
+      "evidence": [
+        "examples/showcase-4.6/release-integration/validation.json"
+      ]
+    },
+    "distribution": {
+      "status": "PASS",
+      "evidence": [
+        "examples/showcase-4.6/release-integration/validation.json"
+      ]
+    },
+    "documentation": {
+      "status": "PASS",
+      "evidence": [
+        "examples/showcase-4.6/release-integration/validation.json"
+      ]
+    },
+    "versioning": {
+      "status": "PASS",
+      "evidence": [
+        "examples/showcase-4.6/release-integration/validation.json"
+      ]
+    },
+    "upgrade": {
+      "status": "PASS",
+      "evidence": [
+        "examples/showcase-4.6/release-integration/upgrade-retained-runs.json",
+        "examples/showcase-4.6/release-integration/validation.json"
+      ]
+    },
+    "governanceSecurity": {
+      "status": "PASS",
+      "evidence": [
+        "examples/showcase-4.6/release-integration/physical-api.json",
+        "examples/showcase-4.6/release-integration/validation.json"
+      ]
+    },
+    "estateProcess": {
+      "status": "PASS",
+      "evidence": [
+        "examples/showcase-4.6/release-integration/clean-local-job.json",
+        "examples/showcase-4.6/release-integration/browser-validation.json"
+      ]
+    },
+    "screenshots": {
+      "status": "PASS",
+      "evidence": [
+        "examples/showcase-4.6/release-integration/screenshots.json",
+        "examples/showcase-4.6/android-standalone/screenshots.json"
+      ]
+    }
+  }
+}

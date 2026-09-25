@@ -1,0 +1,1136 @@
+{
+  "schema": "agent-control.physical-usage-closure/v1",
+  "verdict": "PASS_WITH_LIMITATIONS",
+  "scope": "Local token usage, sampled GPU board energy, physical gap exclusion, native dashboard and Mallow evidence chain. Metered billing, workload attribution and whole-node electricity are excluded from PASS.",
+  "sourceCommit": "0f2359360c7fe9d89e8ae83fa1c870ba4a6d5bc2",
+  "sourceDirty": false,
+  "selectedInvocations": 3,
+  "inputTokens": 186,
+  "outputTokens": 876,
+  "totalTokens": 1062,
+  "successfulJobs": 3,
+  "browserErrors": [],
+  "physicalRows": [
+    {
+      "invocationId": "usage-closure-run-f84d96b7-4c0e-4ac7-8717-051fde1b9073",
+      "runId": "run-f84d96b7-4c0e-4ac7-8717-051fde1b9073",
+      "parcelId": "parcel-social-5778da5b558b1736a3a0482a2701faf0811d2b2d34d0a30fb2016d16de9c0bc6",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "modelRevision": "3da3afe6cf5c674ac195803ea0dd6fee7e1c228c2105c1ce8c66890d1d4ab460",
+      "runtime": "llama.cpp",
+      "runtimeVersion": "3f1000482d759661cadb1dc9b59f6292f52408ee0d2906298fa001837517fb4e",
+      "machine": "machine:controller",
+      "hardware": "NVIDIA Quadro P5000",
+      "startedAt": "2026-09-13T09:05:01.574Z",
+      "completedAt": "2026-09-13T09:05:07.138Z",
+      "inputTokens": 62,
+      "outputTokens": 292,
+      "totalTokens": 354,
+      "durationMs": 5564,
+      "outputTokensPerSecond": 54.33350650587918,
+      "verified": true,
+      "workload": "ordered-integer-list-1-to-100",
+      "sampleIntervalMs": 200,
+      "maxAcceptedGapMs": 700,
+      "expectedSamples": 29,
+      "observedSamples": 29,
+      "controlledSkippedSamples": 0,
+      "controlledGapExperiment": false,
+      "sampleIntervalMsDefinition": "Target schedule; actual timestamp intervals used for integration",
+      "coverage": 1,
+      "excludedIntervals": [],
+      "grossComponentWh": 0.1414646013888889,
+      "observedMs": 5540.0,
+      "averageWatts": 91.92645577617328,
+      "peakWatts": 99.21,
+      "attribution": "NOT_ATTRIBUTABLE",
+      "attributedWh": null,
+      "incrementalAttributedWh": null,
+      "baselineStatus": "UNAVAILABLE",
+      "baselineSamplesRetained": 12,
+      "electricityCost": null,
+      "apiCost": "0 (local no-API-charge declaration)",
+      "independentGapRecalculation": "PASS",
+      "powerSamples": [
+        {
+          "at": "2026-09-13T09:05:01.598Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 6.09,
+          "gpuUtilizationPercent": 0,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:01.822Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 72.83,
+          "gpuUtilizationPercent": 98,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:02.021Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 86.35,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:02.226Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 96.18,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:02.425Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 94.01,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:02.625Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 97.57,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:02.844Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 91.46,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:03.023Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.84,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:03.222Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.98,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:03.422Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 99.21,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:03.624Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.52,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:03.825Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 91.78,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:04.022Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 96.49,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:04.223Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.4,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:04.424Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 93.15,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:04.624Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 94.81,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:04.825Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.41,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:05.025Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 97.04,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:05.228Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 97.23,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:05.426Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 93.96,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:05.628Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 92.12,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:05.829Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.94,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:06.023Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 97.39,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:06.223Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 97.68,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:06.422Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 96.41,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:06.622Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 94.58,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:06.823Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 97.19,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:07.024Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 93.83,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:07.138Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 43.48,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        }
+      ],
+      "providerNativeUsage": {
+        "completion_tokens": 292,
+        "prompt_tokens": 62,
+        "total_tokens": 354,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "responseSha256": "138c6ff653b86d6234de64a836aec619eac56d17be7a88b9ee184ad29559ff6e",
+      "sourceReceiptSha256": "e21b27b185718a54e9bacc09d6be8b294c7c872a7ef3292cf784fd45e4d2f768"
+    },
+    {
+      "invocationId": "usage-closure-run-11d5fd63-1949-490d-96fb-266acadfcc2f",
+      "runId": "run-11d5fd63-1949-490d-96fb-266acadfcc2f",
+      "parcelId": "parcel-social-5778da5b558b1736a3a0482a2701faf0811d2b2d34d0a30fb2016d16de9c0bc6",
+      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "modelRevision": "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d",
+      "runtime": "llama.cpp",
+      "runtimeVersion": "3f1000482d759661cadb1dc9b59f6292f52408ee0d2906298fa001837517fb4e",
+      "machine": "machine:controller",
+      "hardware": "NVIDIA Quadro P5000",
+      "startedAt": "2026-09-13T09:05:15.488Z",
+      "completedAt": "2026-09-13T09:05:21.044Z",
+      "inputTokens": 62,
+      "outputTokens": 292,
+      "totalTokens": 354,
+      "durationMs": 5556,
+      "outputTokensPerSecond": 54.28023846126678,
+      "verified": true,
+      "workload": "ordered-integer-list-1-to-100",
+      "sampleIntervalMs": 200,
+      "maxAcceptedGapMs": 700,
+      "expectedSamples": 29,
+      "observedSamples": 29,
+      "controlledSkippedSamples": 0,
+      "controlledGapExperiment": false,
+      "sampleIntervalMsDefinition": "Target schedule; actual timestamp intervals used for integration",
+      "coverage": 1,
+      "excludedIntervals": [],
+      "grossComponentWh": 0.1420679277777778,
+      "observedMs": 5532.0,
+      "averageWatts": 92.4520137382502,
+      "peakWatts": 99.05,
+      "attribution": "NOT_ATTRIBUTABLE",
+      "attributedWh": null,
+      "incrementalAttributedWh": null,
+      "baselineStatus": "UNAVAILABLE",
+      "baselineSamplesRetained": 12,
+      "electricityCost": null,
+      "apiCost": "0 (local no-API-charge declaration)",
+      "independentGapRecalculation": "PASS",
+      "powerSamples": [
+        {
+          "at": "2026-09-13T09:05:15.512Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 28.44,
+          "gpuUtilizationPercent": 0,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:15.738Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 73.99,
+          "gpuUtilizationPercent": 98,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:15.937Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 86.85,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:16.137Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 99.05,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:16.336Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 94.31,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:16.537Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 96.45,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:16.739Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 97.72,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:16.937Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 92.93,
+          "gpuUtilizationPercent": 94,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:17.142Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.79,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:17.342Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 97,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:17.542Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.4,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:17.736Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.71,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:17.936Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 91.62,
+          "gpuUtilizationPercent": 97,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:18.137Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 96.29,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:18.336Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.13,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:18.537Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.37,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:18.738Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 93.51,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:18.936Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.99,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:19.136Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 91.13,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:19.336Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 93.46,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:19.539Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 94.24,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:19.739Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.69,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:19.938Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 98.7,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:20.140Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 96.45,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:20.340Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.49,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:20.542Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 96.14,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:20.745Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 96.18,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:20.935Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 96.8,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:21.044Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 45.54,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        }
+      ],
+      "providerNativeUsage": {
+        "completion_tokens": 292,
+        "prompt_tokens": 62,
+        "total_tokens": 354,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "responseSha256": "9b691aa8e6042e54f6032f9349bf3bf9a9a0a920303783a4a4f77d4a0b2a34d0",
+      "sourceReceiptSha256": "e48574d3b3fb3143eea16c41f08bd52289d6c0a3f688a03c98c8712fecd2402a"
+    },
+    {
+      "invocationId": "usage-closure-run-0e6eba44-44b7-4230-ad04-fbacdc630812",
+      "runId": "run-0e6eba44-44b7-4230-ad04-fbacdc630812",
+      "parcelId": "parcel-social-5778da5b558b1736a3a0482a2701faf0811d2b2d34d0a30fb2016d16de9c0bc6",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "modelRevision": "3da3afe6cf5c674ac195803ea0dd6fee7e1c228c2105c1ce8c66890d1d4ab460",
+      "runtime": "llama.cpp",
+      "runtimeVersion": "3f1000482d759661cadb1dc9b59f6292f52408ee0d2906298fa001837517fb4e",
+      "machine": "machine:controller",
+      "hardware": "NVIDIA Quadro P5000",
+      "startedAt": "2026-09-13T09:05:30.039Z",
+      "completedAt": "2026-09-13T09:05:35.536Z",
+      "inputTokens": 62,
+      "outputTokens": 292,
+      "totalTokens": 354,
+      "durationMs": 5497,
+      "outputTokensPerSecond": 54.56285622351039,
+      "verified": true,
+      "workload": "ordered-integer-list-1-to-100",
+      "sampleIntervalMs": 200,
+      "maxAcceptedGapMs": 700,
+      "expectedSamples": 29,
+      "observedSamples": 21,
+      "controlledSkippedSamples": 8,
+      "controlledGapExperiment": true,
+      "sampleIntervalMsDefinition": "Target schedule; actual timestamp intervals used for integration",
+      "coverage": 0.6695906432748538,
+      "excludedIntervals": [
+        {
+          "start": "2026-09-13T09:05:31.487Z",
+          "end": "2026-09-13T09:05:33.295Z",
+          "ms": 1808.0
+        }
+      ],
+      "grossComponentWh": 0.09429330972222223,
+      "observedMs": 3664.0,
+      "averageWatts": 92.64626501091703,
+      "peakWatts": 99.93,
+      "attribution": "NOT_ATTRIBUTABLE",
+      "attributedWh": null,
+      "incrementalAttributedWh": null,
+      "baselineStatus": "UNAVAILABLE",
+      "baselineSamplesRetained": 12,
+      "electricityCost": null,
+      "apiCost": "0 (local no-API-charge declaration)",
+      "independentGapRecalculation": "PASS",
+      "powerSamples": [
+        {
+          "at": "2026-09-13T09:05:30.064Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 34.9,
+          "gpuUtilizationPercent": 0,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:30.289Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 94.83,
+          "gpuUtilizationPercent": 97,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:30.487Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 93.48,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:30.687Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.9,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:30.888Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 91.94,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:31.088Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 93.81,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:31.287Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 97.31,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:31.487Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.86,
+          "gpuUtilizationPercent": 97,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:33.295Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 92.08,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:33.495Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 94,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:33.698Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 94.93,
+          "gpuUtilizationPercent": 94,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:33.898Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 99.93,
+          "gpuUtilizationPercent": 94,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:34.099Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 93.96,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:34.291Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 94.63,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:34.494Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 96.88,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:34.704Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 92.01,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:34.893Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 96.41,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:35.091Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 93.96,
+          "gpuUtilizationPercent": 95,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:35.292Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 92.73,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:35.492Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 95.82,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        },
+        {
+          "at": "2026-09-13T09:05:35.536Z",
+          "nodeId": "machine:controller",
+          "scope": "GPU_ONLY",
+          "watts": 44.72,
+          "gpuUtilizationPercent": 96,
+          "authority": "MEASURED",
+          "source": "nvidia-smi:gpu0",
+          "limitations": [
+            "GPU board telemetry; other resident services exist; exclusive workload attribution unproven"
+          ]
+        }
+      ],
+      "providerNativeUsage": {
+        "completion_tokens": 292,
+        "prompt_tokens": 62,
+        "total_tokens": 354,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "responseSha256": "07a67b171b3a5bfd608501d82e162325e68747e05cceadf4510375efa647cfb8",
+      "sourceReceiptSha256": "1b9d1db785a9acd4d9d183c22590a68ed9bd9843ae855aae6e9b0fec78590d75"
+    }
+  ],
+  "meteredBilling": "BLOCKED_EXTERNAL",
+  "positiveCacheBilling": "BLOCKED_EXTERNAL",
+  "workloadAttribution": "BLOCKED_EXTERNAL",
+  "wholeNodeEnergy": "BLOCKED_EXTERNAL",
+  "electricityTariff": "BLOCKED_EXTERNAL",
+  "cloudEnergy": "UNKNOWN",
+  "comparison": "Same bounded ordered-list workload on two resident models; no energy or monetary winner established. Controlled-gap run is a separate observer experiment.",
+  "previousReconciliationFailures": "PRESERVED; ordered-list passes do not remediate or reclassify reconciliation failures."
+}

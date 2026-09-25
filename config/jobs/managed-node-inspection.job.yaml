@@ -1,0 +1,34 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata:
+  id: managed-node-inspection
+  name: Managed node inspection
+  version: 1.0.0
+  description: Run one typed read-only operation through the governed managed-node boundary.
+spec:
+  enabled: true
+  priority: normal
+  concurrency: queue
+  parameters:
+    operation:
+      type: string
+      default: system.identity
+      enum: [system.identity, process.list, logs.read, package.query, service.status, housekeeping.preview]
+    target:
+      type: string
+    value:
+      type: integer
+      minimum: 1
+      maximum: 500
+  steps:
+    - id: inspect
+      name: Typed remote inspection
+      action: managed-node.inspect@1.0.0
+      requires: [managed-node.inspect]
+      outputs:
+        - name: result
+          type: application/json
+          schema: agent-control.managed-node-result/v1
+          version: 1.0.0
+          retention: run-history
+      verification: [managed-node-result-v1]

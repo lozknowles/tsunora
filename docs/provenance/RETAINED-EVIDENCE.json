@@ -1,0 +1,344 @@
+[
+  {
+    "path": "docs/evidence/AGENT_CONTROL_4.11_MODEL_IMPROVEMENT_CANDIDATE.md",
+    "originalSha256": "902c1434d2291f9b0ee8000580864077287169d355c952bd532ec439a0f16c33",
+    "publicSha256": "902c1434d2291f9b0ee8000580864077287169d355c952bd532ec439a0f16c33",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/AGENT_CONTROL_4.11_PROMOTION_ROLLBACK_QUALIFICATION.md",
+    "originalSha256": "1c2dc15aa2b2ea40a30a4a194d40d93e2d2edda5268006a7a1380e9dc23a308b",
+    "publicSha256": "1c2dc15aa2b2ea40a30a4a194d40d93e2d2edda5268006a7a1380e9dc23a308b",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/DYNAMIC_WORK_BOARD_QUALIFICATION.md",
+    "originalSha256": "e91fd2b585c495bdc71eab511911755a741a674478346ea0ea2d73c035c50824",
+    "publicSha256": "b34a78676ce75030556860a0d6cf9db26b69a0a298c40ef0cd50513dd07f7eee",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/QUARANTINE_SCHEDULING_QUALIFICATION.md",
+    "originalSha256": "08b0304308bb2140cf44317001f0b46f3f576fe3905f4bfb979cfd853d1b4e83",
+    "publicSha256": "409e7ff7c75aca61e7ba034334ed69f4ff5a4f5413692736fc77ef1ec44afdf1",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.4.0-release-qualification.md",
+    "originalSha256": "c0563b76529b66735a4f4f4c0ace8f4e918e56ab2b10276eee58578aebd82158",
+    "publicSha256": "165310e86af159dc7d715d0826987af05e49202306f5bdda9d60a982a066a758",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.5-qualification.md",
+    "originalSha256": "f927605294250a7af109555066aa62729a5564ab7e8747c3a201d45890422cae",
+    "publicSha256": "f927605294250a7af109555066aa62729a5564ab7e8747c3a201d45890422cae",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.6-development-qualification.md",
+    "originalSha256": "55ccba1cf961ffc0a17fba68ed0869d11fa937657789ce309795279838d130cb",
+    "publicSha256": "55ccba1cf961ffc0a17fba68ed0869d11fa937657789ce309795279838d130cb",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.7-development-qualification.md",
+    "originalSha256": "892853015b7941eb71d4cad809b33d2adf5202ea53015701910d0c0b0e3e5dcd",
+    "publicSha256": "892853015b7941eb71d4cad809b33d2adf5202ea53015701910d0c0b0e3e5dcd",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.7-physical-lifecycle-20260903.json",
+    "originalSha256": "3b026a4e21a6929bf24a9491baeede56ae91cb404b94ca2d1c1afd07c7f90293",
+    "publicSha256": "3b026a4e21a6929bf24a9491baeede56ae91cb404b94ca2d1c1afd07c7f90293",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.7-physical-qualification-20260902.md",
+    "originalSha256": "d11f2f79c732fde3d91a929a1ad24a270667568fc6de50c7e524b585ad707784",
+    "publicSha256": "d11f2f79c732fde3d91a929a1ad24a270667568fc6de50c7e524b585ad707784",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.8-local-model-retrieval.json",
+    "originalSha256": "e2d920255917ec3c5e2f4b4823636a9240830e3155325260c1a21742881c0ef9",
+    "publicSha256": "e2d920255917ec3c5e2f4b4823636a9240830e3155325260c1a21742881c0ef9",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.8-phase2-qualification.json",
+    "originalSha256": "98a0b96393c70c019581afa6327d240b04b7e5ea5e9a2a6de724f80d00464d70",
+    "publicSha256": "98a0b96393c70c019581afa6327d240b04b7e5ea5e9a2a6de724f80d00464d70",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.8-phase2-qualification.md",
+    "originalSha256": "7ef68481ae4fe59ad89672d4b177e149a25fb59f1db7f500da8600697d6d6527",
+    "publicSha256": "7ef68481ae4fe59ad89672d4b177e149a25fb59f1db7f500da8600697d6d6527",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.8-retrieval-benchmark.json",
+    "originalSha256": "7a85e65a218e5923ee48363fa068d4a03885f65f84bf1a5b72c4e102df63bea0",
+    "publicSha256": "7a85e65a218e5923ee48363fa068d4a03885f65f84bf1a5b72c4e102df63bea0",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.8.0-release-qualification.md",
+    "originalSha256": "16b3924d1dda62de94064a2dda86123f16d487a0722b915847db32525c063b2a",
+    "publicSha256": "16b3924d1dda62de94064a2dda86123f16d487a0722b915847db32525c063b2a",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.8.1-final-glm-review.md",
+    "originalSha256": "3273aeb05e255de73eeddc267dffd21a6ad4b6d6c8983250884befb32aad8ef9",
+    "publicSha256": "a622b2655dd51b9f414a97a3b252aa0f4fc990ffb463164532396adbdabeca12",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.8.1-high-remediation-physical.json",
+    "originalSha256": "d3858e4f3c07f9e17ebcb9899466023ff19fbbc674d3b03f9af71e8f5d9afaff",
+    "publicSha256": "d3858e4f3c07f9e17ebcb9899466023ff19fbbc674d3b03f9af71e8f5d9afaff",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.8.1-qualification.md",
+    "originalSha256": "919f4ffbafdcd17372fbe976ae9f2cbdc2545be15bfc1a419edd3cc3a08a37ef",
+    "publicSha256": "fc5ae8bdcb634372d6993e3516d017e16169c21911d83d3ca988c80f825bb12b",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.8.1-resumed-physical-evidence.json",
+    "originalSha256": "60bb12a8f6bbd6ebd90ad0aca75ae37a0ff12dc634fd090af241233870feb0b4",
+    "publicSha256": "2192677e585b0f73450e60b46d1de9517a7ec02429e7e57c02d3bdf1c00d612e",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.8.2-human-readable-history-qualification.md",
+    "originalSha256": "09365200e2a5a8e59401140e39298e35412ea4469bfa69d2dfac90fa21e6409c",
+    "publicSha256": "4e529db7f459c402f6ef83f223f3103c852ef0a638d482061f39f886c865b674",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.9-evidence-gap-matrix.md",
+    "originalSha256": "ff7a1c4a4b92a339a2c5a2ac0a7fda691090f65ee03b3cbb11b2cedd1d775ea1",
+    "publicSha256": "ff7a1c4a4b92a339a2c5a2ac0a7fda691090f65ee03b3cbb11b2cedd1d775ea1",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.9-nvidia-focused-diagnostics-20260906.md",
+    "originalSha256": "5c724d01eecca30093e88033bed1928defecf094403758306a4e43102ed7b07b",
+    "publicSha256": "5c724d01eecca30093e88033bed1928defecf094403758306a4e43102ed7b07b",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.9-nvidia-hosted-qualification-20260906.md",
+    "originalSha256": "854fe1d9d5c6aae72c38d9bfb25911b2637b894fa6bc7ec1d460d4108fce1d65",
+    "publicSha256": "854fe1d9d5c6aae72c38d9bfb25911b2637b894fa6bc7ec1d460d4108fce1d65",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.9-provider-neutral-dashboard-video.json",
+    "originalSha256": "91a1084d9477d0a3a963a2dbddd4bc851666950849447c325f234f575310b86f",
+    "publicSha256": "91a1084d9477d0a3a963a2dbddd4bc851666950849447c325f234f575310b86f",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.9-provider-neutral-qualification.json",
+    "originalSha256": "2bfc26e6ddd8d619ceada263860769f330ca5625ee40eb2d6f61f9fd33b4a678",
+    "publicSha256": "2bfc26e6ddd8d619ceada263860769f330ca5625ee40eb2d6f61f9fd33b4a678",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.9-provider-neutral-qualification.md",
+    "originalSha256": "11aada9cfd32a6d563026867b53283106a7e00bedbfb0f797c0ed0c7332a4282",
+    "publicSha256": "11aada9cfd32a6d563026867b53283106a7e00bedbfb0f797c0ed0c7332a4282",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-3.9-qualification.md",
+    "originalSha256": "2c9721f17a0550b25c315048a9c4deaecc5cfe7c94dd48983701b920eb58e86a",
+    "publicSha256": "3b7a02b82cab36c7d4efdbaa85e291c28b8ff938e4140edef161006d25264d61",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-4.0-pixel-social-continuation.md",
+    "originalSha256": "b708ab3586d8ee979da687d7e2476070124e2a9f6bcdcb93d6c59af488c4744d",
+    "publicSha256": "b708ab3586d8ee979da687d7e2476070124e2a9f6bcdcb93d6c59af488c4744d",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-4.3-integrated-qualification-20260909.json",
+    "originalSha256": "eff527f21b6a3a84ba18d44f6be74e24ae96841c3ee6891a63ec9cd923291d5d",
+    "publicSha256": "6ae843db9c4b877f3145224a42ba6243dd189d37f16fe37390e8aa6c318dcaa9",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-4.3-integrated-qualification-20260909.md",
+    "originalSha256": "94adc82e33439e80b360acee3be0be841c36f5e6e11b623d4e34298f0e79d6e4",
+    "publicSha256": "0357ee2c909fe6320b0038a2eceb70d76b7bf92999b983730c3b8c14a0a130d6",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-4.3-integrated-transcript-20260909.md",
+    "originalSha256": "5fe743c6d219d6dc543e87fa7123cce1104537d1a4e3e4f6116bf92988cf0897",
+    "publicSha256": "e6e2cafb75a5aef293de4ce451ae1b258f5611d45d301456d91322eceb580c57",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-4.4-ux-session-replay-20260911.md",
+    "originalSha256": "59e49d9713aaf20719b8fd37a61fa6e6fc59f9bcbc3814703bc790c09e9de23e",
+    "publicSha256": "59e49d9713aaf20719b8fd37a61fa6e6fc59f9bcbc3814703bc790c09e9de23e",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-4.5-deterministic-skill-promotion-20260911.md",
+    "originalSha256": "cf834e398b36e75551a4d78427c1a300f3f8b6a2fbe54e1090c25bae4041a288",
+    "publicSha256": "002b9ce0ed101f3e668ffa3a3c41abeb3eee1c8f78a2fe14615cca79a2d016e7",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-4.5-environment-discovery-qualification-20260912.md",
+    "originalSha256": "7a26f3141dec2ff02309f5cb7b166e42f0fcf8ebf2500d2d8b29361a512f28a3",
+    "publicSha256": "d29e9500ec55aca39fdbb705b1ed6a2334944a98e2a04729841ac7fb1aa8a93a",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-4.5-governed-skill-learning-20260911.md",
+    "originalSha256": "4f26978d8c20c7189fd4f2363f969aa449411bc7b973af4d5ba6720f23b16799",
+    "publicSha256": "4f26978d8c20c7189fd4f2363f969aa449411bc7b973af4d5ba6720f23b16799",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-4.5-runtime-map-visual-acceptance-20260912.md",
+    "originalSha256": "cfe0b54fffd1c0fddf6c9a7383129a58c77cb34444e661c2cd097c154ad6430c",
+    "publicSha256": "cfe0b54fffd1c0fddf6c9a7383129a58c77cb34444e661c2cd097c154ad6430c",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-4.5-session-vault-physical-qualification-20260912.md",
+    "originalSha256": "94396d79465e436621a9f0b06f0f1be083702310a2a3abffc7508f013fdb07d1",
+    "publicSha256": "df0d3ff910ee60d07f5629ba0b8d6de8e4998b237ff7f8cbb27feeab55851382",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-poe-development-qualification-20260908.md",
+    "originalSha256": "ff168c8dbde63581b507084e24d410fba1b53c66022141261d8a5d7bc99a5ab9",
+    "publicSha256": "ff168c8dbde63581b507084e24d410fba1b53c66022141261d8a5d7bc99a5ab9",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-post-3.8.2-context-efficiency.md",
+    "originalSha256": "80cd198baa478dc2b178070cef55d1fb54af338049a7feb540bd4be36c755727",
+    "publicSha256": "7fcd44a3c1acf1c37cab8b7e72f63bfda1e42df870dfe0e572eca8c2330f8a1a",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-protected-resource-dashboard-video.json",
+    "originalSha256": "fccefa6d999aa691d22cb7101949b4a440f8502d694114958b93c5c051258bd9",
+    "publicSha256": "fccefa6d999aa691d22cb7101949b4a440f8502d694114958b93c5c051258bd9",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-protected-resource-qualification.json",
+    "originalSha256": "e4697d7f55bfdb25e146e4452354e3610d22368c3fa62d70fc79e3527bc99da1",
+    "publicSha256": "e4697d7f55bfdb25e146e4452354e3610d22368c3fa62d70fc79e3527bc99da1",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-protected-resource-qualification.md",
+    "originalSha256": "3bc91472c7c236e631fb6c79e76c618e2a7cf3f6746f45884f690ef94317b3fb",
+    "publicSha256": "3bc91472c7c236e631fb6c79e76c618e2a7cf3f6746f45884f690ef94317b3fb",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/agent-control-protected-resource-transcript.md",
+    "originalSha256": "0b76b2abde5897f17184e4c0c0a5c0d72b2753bea12cc5e01fa456f2f7813f00",
+    "publicSha256": "0b76b2abde5897f17184e4c0c0a5c0d72b2753bea12cc5e01fa456f2f7813f00",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/capability-routing-benchmark-v1.json",
+    "originalSha256": "6b564dc12c295f21cb0063657b46b54df9232b48aafedb1ddc9651b66f5dc212",
+    "publicSha256": "6b564dc12c295f21cb0063657b46b54df9232b48aafedb1ddc9651b66f5dc212",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/model-improvement-promotion-rollback-4.11.json",
+    "originalSha256": "3120ba0e1ad0c2fb5d69eded0c8e9af59be80c5e1b5bd7917c2fe2ff5fc78bd8",
+    "publicSha256": "cc3523842ae264024b62eea43d9534a9590d0bdd5ffa4667acfc58846df2d792",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/openrouter-cost-routing-qualification.json",
+    "originalSha256": "c188a43b20a075655c9121d42646309f4530c7e047bc7ba54a4b4f9e15da1b60",
+    "publicSha256": "c188a43b20a075655c9121d42646309f4530c7e047bc7ba54a4b4f9e15da1b60",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/persistent-teammates-3.2.0-verification.md",
+    "originalSha256": "1298283756a7c091bf233194037914a6b8cf1948516216ac50c8263e2cf12485",
+    "publicSha256": "1298283756a7c091bf233194037914a6b8cf1948516216ac50c8263e2cf12485",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/physical-multi-provider-chain-20260901.json",
+    "originalSha256": "291df5673dd8046e96ee18db7f46daab41a95a9b7b689107564e89f6882f562f",
+    "publicSha256": "291df5673dd8046e96ee18db7f46daab41a95a9b7b689107564e89f6882f562f",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/token-aware-output-benchmark-20260827.json",
+    "originalSha256": "9909dbf3594e0f81b46717ad927061bdc54ada73cb02bec392d86191efce9b34",
+    "publicSha256": "9909dbf3594e0f81b46717ad927061bdc54ada73cb02bec392d86191efce9b34",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/truthful-bootstrap-status-20260825.md",
+    "originalSha256": "a1257a2a659ef8de7b13d240f82cf75e0b6e6c155df2dbf7f6b6dcfd1bc904b6",
+    "publicSha256": "a1257a2a659ef8de7b13d240f82cf75e0b6e6c155df2dbf7f6b6dcfd1bc904b6",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/windows-openai-chatgpt-plan-live-20260824.json",
+    "originalSha256": "980a03b0bde3a9cafbe3a5030c96f8bf8cb160d608342aafc6dab516b12143bc",
+    "publicSha256": "980a03b0bde3a9cafbe3a5030c96f8bf8cb160d608342aafc6dab516b12143bc",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/windows-openai-harness-qualification-20260824.md",
+    "originalSha256": "cd378fd0e8c787c7d038534775798aa279304692209d0f9003d19555e44e6181",
+    "publicSha256": "cd378fd0e8c787c7d038534775798aa279304692209d0f9003d19555e44e6181",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/windows-openai-responses-live-20260824.json",
+    "originalSha256": "0000aa6784127f6f2bdc8cd2d446b312ee3c5c6de8e30d617ac9d8577ad3f941",
+    "publicSha256": "0000aa6784127f6f2bdc8cd2d446b312ee3c5c6de8e30d617ac9d8577ad3f941",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/evidence/worker-linux-managed-node-qualification-20260826.md",
+    "originalSha256": "1a63e6cb8afbf7c7bf2b6aa7d3455f588fe6047419e03caabb704367fcfcc536",
+    "publicSha256": "70a359ec64b85e4739a8e2ec1a15832cd015b161e1c0856bb5a89ecf0e194e40",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/qualification/4.12-lean-runtime/AGENT-CONTROL-4.12-LEAN-RUNTIME-QUALIFICATION.md",
+    "originalSha256": "2e24bf02b29d4a33483ff464092b89a040e1fd4927e68845498ee7167dba87ef",
+    "publicSha256": "2e24bf02b29d4a33483ff464092b89a040e1fd4927e68845498ee7167dba87ef",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/qualification/4.12-native-timeout/STANDARD-DEEP-RUNTIME-BUDGET-ANALYSIS.md",
+    "originalSha256": "6b1e8d5d77a2fb1820740dd21b2792bc644a463e910c66d795e954f33d4ceb44",
+    "publicSha256": "6b1e8d5d77a2fb1820740dd21b2792bc644a463e910c66d795e954f33d4ceb44",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  },
+  {
+    "path": "docs/qualification/4.12-qwen-output-budget/QWEN38-27B-OUTPUT-BUDGET-QUALIFICATION.md",
+    "originalSha256": "af869e4db703b03373fc61249580a1e3b90e466c206974a9412f9351d410bc8f",
+    "publicSha256": "af869e4db703b03373fc61249580a1e3b90e466c206974a9412f9351d410bc8f",
+    "status": "privacy-transformed-historical-report-not-new-qualification"
+  }
+]

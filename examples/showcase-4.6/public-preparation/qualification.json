@@ -1,0 +1,81 @@
+{
+  "sourceCommit": "4139185948179751485c05bad6629187b94914f2",
+  "installAndUpgradeCommit": "a15dada53f0c3e0d2f4f3fd00da7cad936dc494e",
+  "finalDelta": "Only map breadcrumb presentation changed; browser regression passed. Installation, server and dependency source unchanged.",
+  "environment": {
+    "node": "v24.21.0",
+    "npm": "11.19.0",
+    "git": "git version 2.39.5"
+  },
+  "containerImage": "node:24-bookworm",
+  "imageDigest": "sha256:6dac556d980b7f0e5498d08f08cee0ca67798b4ad6c23964a9214920e67758d0",
+  "freshClone": "PASS",
+  "bootstrap": "PASS",
+  "dashboard": "PASS",
+  "discovery": {
+    "id": "discovery-6570bb5c-b2cc-4116-b7b4-09a039155bad",
+    "status": "COMPLETED",
+    "summary": {
+      "machines": 1,
+      "gpus": 0,
+      "localModels": 0,
+      "providers": 0,
+      "agents": 2,
+      "tools": 27,
+      "memorySources": 0,
+      "healthy": 50,
+      "needsQualification": 0,
+      "unavailable": 0,
+      "new": 50
+    },
+    "progressCaptured": true,
+    "cpuLimit": 0.05
+  },
+  "progressPollingAfterCompletion": 0,
+  "firstGovernedJob": {
+    "id": "operator-system-observation@1.1.0",
+    "status": "SUCCEEDED",
+    "stages": [
+      "observe",
+      "verify"
+    ],
+    "approval": "Explicit browser approval of sealed proposal",
+    "paidProviderCalls": 0
+  },
+  "upgrade": {
+    "priorVersion": "4.5.1",
+    "fixture": "src/control/fixtures/v4.1-existing-configuration.json",
+    "configurationScope": "Published sanitized existing configuration, no credentials copied or invoked",
+    "filesByteIdenticalAfterBootstrap": 21,
+    "configPreserved": true,
+    "oldRunCount": 1,
+    "candidateRunCount": 2,
+    "oldRunAndStepEvidencePreserved": true,
+    "states": [
+      "SUCCEEDED",
+      "SUCCEEDED"
+    ]
+  },
+  "browserErrors": [],
+  "mobileOverflow": false,
+  "physicalReplay": {
+    "calls": 3,
+    "tokens": {
+      "value": 1062,
+      "knownTotal": 1062,
+      "reported": 3,
+      "total": 3
+    },
+    "browserErrors": [],
+    "newInference": false,
+    "originalPhysicalStatePreserved": true
+  },
+  "fullTests": {
+    "passed": 1438,
+    "failed": 0
+  },
+  "typecheck": "PASS",
+  "distribution": "PASS",
+  "screenshotCount": 13,
+  "releaseRecommendation": "NOT READY FOR 4.6 RELEASE"
+}

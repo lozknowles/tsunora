@@ -1,0 +1,3 @@
+
+> agent-control@3.3.0 check:bootstrap
+> node --check scripts/agent-control.mjs scripts/status-client.mjs scripts/control-plane.mjs scripts/config.mjs scripts/qualify-all.mjs && bash -n android/resource-agent.sh android/start-node.sh android/install-boot.sh android/termux-boot-agent-control.sh scripts/qualify-remote.sh scripts/managed-node-probe.sh scripts/managed-node-action.sh

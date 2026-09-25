@@ -1,0 +1,21 @@
+{
+  "version": "4.6.0-rc.1",
+  "showcase": "PASS_WITH_LIMITATIONS",
+  "subsystems": {
+    "androidStandalone": "PASS_WITH_LIMITATIONS",
+    "usageEnergy": "PASS_WITH_LIMITATIONS",
+    "modelIntelligence": "PASS_WITH_LIMITATIONS",
+    "localLlmBenchmark": "CONTROL_QUALIFIED_TARGET_EXECUTION_APPROVAL_REQUIRED",
+    "estateProcess": "PASS",
+    "governanceSecurity": "PASS",
+    "morningBrief": "PASS_WITH_LIMITATIONS",
+    "coreInstallation": "PASS",
+    "dependencyReproducibility": "PASS"
+  },
+  "showcaseReason": "Implemented local controller, governance, Android, usage and real Model Intelligence observations are demonstrated. The complete approved target-model/league chain remains pending; the strict full-showcase checker still reports INCOMPLETE.",
+  "integratedCommits": [
+    "720577b8aa82c78a8f0ae6156b8d826e868e3502",
+    "2d30ceb2ab24126e7c2c95c30c89e13fdff942c3",
+    "5bbdf0b09410a608e7b185a0d58d05d9d8fd023e"
+  ]
+}

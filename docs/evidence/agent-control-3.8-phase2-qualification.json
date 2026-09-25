@@ -1,0 +1,57 @@
+{
+  "schema": "agent-control.3.8-phase2-release-readiness/v1",
+  "generatedAt": "2026-09-03T18:20:00.000Z",
+  "startingCommit": "2cf5480184f61b558687cefff1a417bd34abe6d7",
+  "branch": "feature/3.8-governed-retrieval-context-intelligence",
+  "baseline": {"tag": "v3.7.0", "commit": "41ae59c6bd0e0228e419a91959efe7130fe086f2"},
+  "benchmark": {
+    "definition": "benchmarks/harness-mutation-jobs.json",
+    "definitionSha256": "d0d2ecffdfbd306401a2fd6d1ef312995ded7fb651fdf0cb5d1cdc11fa96a050",
+    "fixtureSha256": "d1b5e8ebec19378b5d2112e8be5e73671a51c40bc328af8ded815be44edb6b27",
+    "tasks": 12,
+    "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+    "temperature": 0,
+    "attemptsPerLane": 12,
+    "lanes": [
+      {"id":"A","mode":"CONVENTIONAL","reportSha256":"6aa95f90890c6e94c25398d06aae8945d9a0cfb79ed4211a8f804900065585b1","verified":2,"verifiedTasks":["MUT-001","MUT-011"],"successRate":0.1666666667,"freshInputTokens":32119,"cachedInputTokens":153210,"outputTokens":4873,"processedTokens":190202,"processedTokensPerVerifiedOutcome":95101,"freshTokensPerVerifiedOutcome":16059.5,"medianLatencyMs":9057.4064515},
+      {"id":"B","mode":"BUILTIN","reportSha256":"5afc1762ab49af4fee5313952bddd8a0f447ef5119bd08b191122c698549332b","verified":2,"verifiedTasks":["MUT-001","MUT-002"],"successRate":0.1666666667,"freshInputTokens":15209,"cachedInputTokens":131042,"outputTokens":6127,"processedTokens":152378,"processedTokensPerVerifiedOutcome":76189,"freshTokensPerVerifiedOutcome":7604.5,"processedTokenReductionVsA":0.1988538501,"retrievalSucceeded":5,"governedFallback":7,"evidenceTokens":7904,"retrievalLatencyMs":8,"medianLatencyMs":7997.203488},
+      {"id":"C","mode":"ZG","zgVersion":"0.2.1","reportSha256":"80e4524d3bbb626c65e36eaba08fda497a11f323076a340f2f3cb6c9d0674dd5","verified":2,"verifiedTasks":["MUT-001","MUT-011"],"successRate":0.1666666667,"freshInputTokens":17100,"cachedInputTokens":153654,"outputTokens":5325,"processedTokens":176079,"processedTokensPerVerifiedOutcome":88039.5,"freshTokensPerVerifiedOutcome":8550,"processedTokenReductionVsA":0.0742526367,"retrievalSucceeded":4,"governedFallback":8,"evidenceTokens":9208,"retrievalLatencyMs":16828,"medianLatencyMs":8019.816217}
+    ],
+    "cost": {"amount":null,"authority":"unavailable","reason":"No authoritative provider price or measured local electricity cost."},
+    "capabilityConclusion": "No expanded small-model task class demonstrated; all lanes verified 2/12."
+  },
+  "physicalLifecycle": {
+    "runId":"phase2-live-run",
+    "workParcelId":"parcel-db97b193-80a7-4998-bb09-47da246480e9",
+    "source":{"provider":"phase2-qwen-instruct","model":"qwen2.5-3b-instruct-q4_k_m.gguf","inputTokens":189,"outputTokens":116,"totalTokens":305},
+    "destination":{"provider":"phase2-qwen-coder","model":"Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf","inputTokens":878,"outputTokens":118,"totalTokens":996},
+    "parcel":{"inputTokens":1067,"outputTokens":234,"totalTokens":1301,"calculatedCostUsd":0.0005324,"costAuthority":"estimated-configured-pricing"},
+    "baton":{"id":"token-baton:c0a4f490-3b87-47e5-96f4-49acb62f38af","sha256":"b6f965507bf0aca8a7b824c0e95f0f6818395c7feb1d1a1310c75432c7c6a7ef","storageBytes":2297,"evidenceReferenceBytes":291,"rehydratedEvidenceBytes":690,"conventionalContextBytes":1327,"referenceTransferReductionRatio":0.7807083647},
+    "governor":"qualification-only 10/20/30/40 percent thresholds through unchanged production code",
+    "verified":true,
+    "sourceRecoverable":true,
+    "restartRehydration":true,
+    "staleInvalidation":true,
+    "crossProviderImplementation":false,
+    "crossProviderNote":"Distinct provider/model configurations used the same OpenAI-compatible adapter."
+  },
+  "failureQualification": {
+    "reportSha256":"27ea089dd4d74276c2c31be0d1cde4e99b5ce591ca15388bf090401d32cb972a",
+    "cases":["zg-unavailable","index-absent","process-failure","malformed-no-result","stale-index"],
+    "allFellBack":true,
+    "searchOnlyDidNotCreateIndex":true
+  },
+  "resources": {
+    "phase1ColdIndex":{"files":524,"entities":5640,"durationMs":21410,"peakRssKiB":954000},
+    "phase2TinyColdIndex":{"durationMs":2790,"peakRssKiB":511120,"indexBytes":4718989},
+    "warmBuiltinRetrievalMs":8,
+    "warmZgRetrievalMs":16828,
+    "policyDecisionsExercised":["USE_BUILTIN"],
+    "otherPolicyDecisionsDeterministicallyTested":["USE_PROVIDER","BUILD_INDEX","DEFER_INDEX"]
+  },
+  "telemetry":{"transport":"existing SSE /api/events","eventCount":20,"reconciled":true,"observed":["retrieval.started","retrieval.provider_selected","retrieval.evidence","retrieval.rehydrated","token.telemetry","token.governor_transition","token.baton_created","token.handoff_result"]},
+  "security":{"promptLikeRepositoryTextRemainsUntrustedEvidence":true,"pathEscapeAndSymlinkRejected":true,"staleIndexedTextRejected":true,"absoluteTemporaryRootPersisted":false,"rawProviderOutputPersisted":false},
+  "regression":{"npmRunCheck":{"passed":true,"tests":688,"failed":0,"skipped":0},"packageInstall":{"passed":true,"installedCliHelp":true},"dependencyAudit":{"status":"PASS","resolvedArtifactInstall":true,"vulnerabilities":{"info":0,"low":0,"moderate":0,"high":0,"critical":0,"total":0},"note":"The source repository has no lockfile, so the exact packed RC was installed into a clean temporary prefix and that resolved installation was audited."}},
+  "decision":"PASS",
+  "releaseAction":"Prepare and push 3.8.0-rc.1 only; do not merge, tag, release or deploy."
+}

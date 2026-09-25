@@ -1,0 +1,31 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata:
+  id: browser-headless-session
+  name: Governed headless browser session
+  version: 1.0.0
+  description: Run a bounded structured browser session on a capability-qualified worker.
+spec:
+  enabled: true
+  priority: normal
+  concurrency: queue
+  parameters:
+    sessionJson:
+      type: string
+      required: true
+  retry:
+    attempts: 1
+    backoffSeconds: 5
+  steps:
+    - id: browser
+      action: browser.session@1.0.0
+      requires: [browser.headless, browser.javascript, browser.screenshot, browser.download]
+      resources: [browser/session]
+      timeoutSeconds: 120
+      outputs:
+        - name: browser-result
+          type: application/vnd.agent-control.browser-result+json
+          schema: agent-control.browser-result/v1
+          version: 1.0.0
+          retention: run-history
+      verification: [browser-session-completed]

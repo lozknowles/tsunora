@@ -1,0 +1,59 @@
+{
+  "sourceCommit": "5ed7495bc46108ad2968bdfe8ef5cf47731c4ad1",
+  "installationCommit": "e8862223efaa4f3694145089fb1c142e8a75850f",
+  "dependencyLockSha256": "0d76e78ddfa7594578fc54f8d06f19efce908d5c8733aa7c429116ba8885b567",
+  "regression": {
+    "command": "npm run check",
+    "tests": 1464,
+    "passed": 1464,
+    "failed": 0,
+    "skipped": 0,
+    "durationMs": 152313.229708,
+    "logSha256": "81fe0937868dd0e6a946d40386559830d63982795a46dfabd5ee529aacedfaa0"
+  },
+  "typecheck": "PASS",
+  "cleanPublicInstall": {
+    "state": "PASS",
+    "dependencies": "installed-locked",
+    "node": "24.21.0",
+    "npm": "11.19.0",
+    "logSha256": "422e8b5e485c8f788d9815c7b5a7596c9c271d71e976cdfe865843b730bd486d"
+  },
+  "stableUpgrade": {
+    "state": "PASS",
+    "priorVersion": "4.5.1",
+    "stateFilesByteIdenticalAfterBootstrap": 21,
+    "originalRunRetained": true,
+    "newLocalRun": "SUCCEEDED",
+    "logSha256": "7d4dd0f265f050a2a002cd9bf457f0fbe4c9c8afaadd73e5b4c4367f20e9165c"
+  },
+  "windowsBootstrap": {
+    "state": "PASS",
+    "node": "24.19.0",
+    "npm": "11.17.0",
+    "freshConfiguration": "CREATED",
+    "repeatConfiguration": "PRESERVED",
+    "typescriptSqliteProbe": "PASS",
+    "logSha256": "7fc72b50d4fb340543dce9d6834ac4f1642986f5958ce6dafce231f41850f40a",
+    "repeatLogSha256": "7c92bf84f1d584b48f2f62c7616b2b46960a346afee1cd40a5b0ceeb1ca86ea1",
+    "dashboardQualification": "Linux browser checks separately recorded; no new Windows browser capture claimed"
+  },
+  "androidLockedBootstrap": {
+    "state": "PASS",
+    "sourceCommit": "e8862223efaa4f3694145089fb1c142e8a75850f",
+    "node": "26.4.0",
+    "npm": "11.19.0",
+    "typescriptSqliteProbe": "PASS",
+    "newIsolatedConfig": true,
+    "existingPhoneController": "Unchanged",
+    "logSha256": "4d088856887a23db923fde7d491461e52ae76ac2bd8631ac9e19560a6964d565",
+    "scope": "New locked dependency/bootstrap proof; prior full physical standalone result preserved separately"
+  },
+  "deltaAfterInstall": "Only dashboard assets, one frontend regression test and active guide text changed; bootstrap, dependency lock, package and server code remain byte-identical.",
+  "failuresAndRecovery": [
+    "Initial Docker browser probe could not reach a container-loopback listener. Inspection forwarding was corrected to container interface plus host loopback-only publication; clean UI path passed.",
+    "Desktop map toolbar clipping and delayed/stale Estate authentication were fixed and rechecked on the final source.",
+    "A Windows diagnostic using a raw absolute ESM import path failed; documented package-name import from the installation directory passed."
+  ],
+  "limitations": "No target inference, benchmark league or overnight duration is claimed by this receipt."
+}

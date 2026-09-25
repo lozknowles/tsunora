@@ -1,0 +1,9 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata: {id: freetoken-provider-qualification, name: FreeToken provider qualification, version: 1.0.0}
+spec:
+  enabled: true
+  priority: normal
+  concurrency: no-overlap
+  steps: [{id: provider, action: qualification.freetoken.provider@1.0.0, requires: [qualification.local], verification: [provider-qualified-no-production-route-change]}]
+

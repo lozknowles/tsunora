@@ -1,0 +1,101 @@
+{
+  "schema": "agent-control.lab-example-result/v1",
+  "kind": "REAL_REDACTED_NATIVE_BENCHMARK",
+  "nativeExecution": "PASS",
+  "modelQualification": "FAILED",
+  "model": "microsoft/Phi-4-mini-instruct",
+  "quantisation": "Q4_K_M",
+  "modelSha256": "01999f17c39cc3074afae5e9c539bc82d45f2dd7faa3917c66cbef76fce8c0c2",
+  "runtime": "llama.cpp",
+  "runtimeSha256": "202b42092b6bdce81e2cdc0fa430ce5706a25821a4003a9007aceedcdfbd8e56",
+  "targetClass": "Android 17 aarch64 / Termux",
+  "workerPlacement": "controller-hosted",
+  "transport": "SSH",
+  "suite": "local-model-common@2.0.0",
+  "suiteSha256": "2f5f23f324ced75708ad8a0f6180234cbd27962ae0514f09ec4e66c5e7039a58",
+  "executionSource": "86781560cd1d6899c5a81d949fadd3f649e2e942",
+  "provenance": "AGENT_CONTROL_RUNTIME_EVIDENCE",
+  "calls": 27,
+  "successfulExecutions": 27,
+  "quality": {
+    "passed": 15,
+    "failed": 12,
+    "unknown": 0
+  },
+  "tokens": {
+    "input": 3696,
+    "cached": 0,
+    "output": 318
+  },
+  "nativeReceipts": 27,
+  "restorationConfirmed": 27,
+  "startedAt": "2026-09-16T04:07:51.493Z",
+  "endedAt": "2026-09-16T04:39:51.387Z",
+  "qualityByCase": {
+    "instruction": {
+      "passed": 3,
+      "failed": 0
+    },
+    "factual-qa": {
+      "passed": 3,
+      "failed": 0
+    },
+    "reasoning": {
+      "passed": 0,
+      "failed": 3
+    },
+    "tool-selection": {
+      "passed": 0,
+      "failed": 3
+    },
+    "summarisation": {
+      "passed": 0,
+      "failed": 3
+    },
+    "structured-json": {
+      "passed": 0,
+      "failed": 3
+    },
+    "coding-mean": {
+      "passed": 3,
+      "failed": 0
+    },
+    "long-context-retrieval": {
+      "passed": 3,
+      "failed": 0
+    },
+    "unknown-evidence": {
+      "passed": 3,
+      "failed": 0
+    }
+  },
+  "historicalComparison": {
+    "provenance": "EXTERNAL_HARNESS_EVIDENCE",
+    "outputMatches": 27,
+    "calls": 27,
+    "meanMetrics": {
+      "elapsedSeconds": {
+        "historical": 6.677114690483669,
+        "native": 6.276914033881406
+      },
+      "timeToFirstTokenSeconds": {
+        "historical": 5.407302782183116,
+        "native": 5.21987604684869
+      },
+      "promptTokPerSecond": {
+        "historical": 29.474783051517733,
+        "native": 22.396746212658087
+      },
+      "generationTokPerSecond": {
+        "historical": 9.39340178078996,
+        "native": 9.454289825890013
+      },
+      "peakRamBytes": {
+        "historical": 5283331185.777778,
+        "native": 3299630042.0740743
+      }
+    },
+    "interpretation": "Descriptive observations only; thermal state and lifecycle/transport conditions differ. No speed improvement attributed to provenance correction."
+  },
+  "redaction": "Private target identifiers, paths, transport endpoints and credential references omitted. Original artifact references remain in the authorised private record."
+}

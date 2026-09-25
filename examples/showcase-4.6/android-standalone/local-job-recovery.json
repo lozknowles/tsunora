@@ -1,0 +1,11 @@
+{
+  "sameRunAfterRestart": [
+    {
+      "id": "run-b50db641-05ad-4239-87e1-1564638d5b1a",
+      "status": "SUCCEEDED",
+      "jobId": "operator-system-observation"
+    }
+  ],
+  "evidenceClass": "PHYSICAL_ANDROID_LOCAL",
+  "initialSourceCommit": "f9f95eda37760ba4b83d0558ed9634cf5f4400cc"
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "agent-control.lab-example-result/v1",
+  "classification": "CAPABILITY_SMOKE",
+  "provenance": "AGENT_CONTROL_RUNTIME_EVIDENCE",
+  "physicalSource": "a503973f80e223bbfd782279d29340a4b837394a",
+  "targetClass": "Android/Termux mobile device",
+  "model": "Qwen/Qwen3-0.6B",
+  "modelSha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+  "runtimeSha256": "202b42092b6bdce81e2cdc0fa430ce5706a25821a4003a9007aceedcdfbd8e56",
+  "quantisation": "Q8_0",
+  "modelCalls": 1,
+  "fixture": "Reply with exactly READY and nothing else.",
+  "expected": "READY",
+  "output": "READY",
+  "tokens": {
+    "input": 20,
+    "cached": 0,
+    "output": 2
+  },
+  "metrics": {
+    "modelLoadSeconds": 2.9548694269615225,
+    "elapsedSeconds": 0.4756460370263085,
+    "timeToFirstTokenSeconds": 0.445068319037091,
+    "promptTokPerSecond": 58.65601473439091,
+    "generationTokPerSecond": 34.95403544339194,
+    "peakRamBytes": 1563914240,
+    "availableRamBeforeBytes": 5152776192,
+    "availableRamAfterBytes": 5138448384,
+    "processCpuPercent": 93.75692131708713,
+    "gpuUtilisationPercent": null,
+    "powerWatts": null,
+    "thermalThrottling": null
+  },
+  "admitted": "ADMIT",
+  "batteryBefore": 97,
+  "temperatureBeforeC": 27.3,
+  "batteryAfter": 98,
+  "temperatureAfterC": 27.2,
+  "serviceRestored": true,
+  "comparisonBoundary": "Not comparable to multi-case/common benchmarks; no performance ranking inferred",
+  "boundary": "Historical one-call native smoke only; not the new 27-call frozen benchmark and not a model ranking."
+}

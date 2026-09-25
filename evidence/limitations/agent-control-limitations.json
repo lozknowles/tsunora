@@ -1,0 +1,2962 @@
+{
+  "schema": "agent-control.limitations-ledger/v1",
+  "generatedAt": "2026-09-19T12:00:00Z",
+  "authoritativeComparisonRelease": "v4.10.0",
+  "authoritativeComparisonCommit": "6102d4889a836c6477cd70d574df9fadee9cea4a",
+  "auditMethod": {
+    "releasedTagsInspected": 28,
+    "keywordCandidateArtifact": "private-retained-evidence:limitations-audit/raw-release-limitation-candidates.json",
+    "keywordCandidateArtifactSha256": "c7e84f21cd08839f0161719504b4a076b3e37ca1d15a0e788a28671f548e7167",
+    "keywordCandidateCount": 7388,
+    "metricDefinitions": {
+      "newLimitations": "first observed in that release",
+      "carriedForward": "still unresolved immediately before that release",
+      "resolvedOrSuperseded": "resolution or supersession release is that release",
+      "currentlyPartiallyResolvedAmongKnown": "current audit classification among records known by then; not a reconstructed historical transition",
+      "currentlyFlaggedSilentDropAmongKnown": "current audit flag among records known by then",
+      "explicitReappearances": "an explicit later appearance recorded after at least one intervening public release",
+      "totalKnownOpenAfterRelease": "introduced minus resolved or superseded through that release"
+    },
+    "rules": [
+      "Historical sources remain immutable",
+      "Resolution requires evidence appropriate to the original qualification type",
+      "Missing later wording does not close a limitation",
+      "v4.11 candidate work is relationship-only"
+    ]
+  },
+  "releaseInventory": [
+    {
+      "release": "v3.0.0",
+      "commit": "617200889977fbef7e0358557feab6932583b0df",
+      "date": "2026-08-23T21:19:24+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "TODO.md",
+        "docs/context-evidence-architecture.md",
+        "docs/evidence/context-consensus-demo-20260823.json",
+        "docs/evidence/context-shared-thread-implementation-20260823.md",
+        "docs/evidence/openai-chatkit-live-run-20260823.json",
+        "docs/evidence/openai-provider-qualification-20260823.md",
+        "docs/evidence/pixel-self-recovery-qualified-20260819.md",
+        "docs/evidence/provider-live-qualification-20260823.json",
+        "docs/remote-qualification.md",
+        "docs/ui-target.md"
+      ]
+    },
+    {
+      "release": "v3.0.1",
+      "commit": "9d751ee076c634e4b4311c451af3e6d3e1891b9c",
+      "date": "2026-08-24T06:45:31+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/Agent-Control-3.0.1-Operator-Guide.md",
+        "docs/architecture-v2-agnostic.md",
+        "docs/evidence/context-consensus-demo-20260823.json",
+        "docs/evidence/infrastructure-agnostic-audit-3.0.1.md",
+        "docs/evidence/provider-live-qualification-20260823.json",
+        "docs/ui-target.md"
+      ]
+    },
+    {
+      "release": "v3.1.0",
+      "commit": "eaa1d4904b6d91b0149ee36f693499c2c663276f",
+      "date": "2026-08-28T09:08:03+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/Agent-Control-3.1.0-Operator-Guide.md",
+        "docs/architecture-v2-agnostic.md",
+        "docs/concepts.md",
+        "docs/conceptual-integrity.md",
+        "docs/dashboard-3.1-boundary-review.md",
+        "docs/evidence/adaptive-harness-dispatch-qualification-20260824.md",
+        "docs/evidence/adaptive-harness-recovery-20260824.md",
+        "docs/evidence/agent-control-3.1.0-release-qualification-20260828.md",
+        "docs/evidence/job-scheduler-qualification-20260824.md",
+        "docs/evidence/worker-linux-managed-node-qualification-20260826.md",
+        "docs/evidence/real-harness-execution-qualification-20260824.md",
+        "docs/evidence/release-documentation-3.1.0-20260824.md",
+        "docs/evidence/truthful-bootstrap-status-20260825.md",
+        "docs/evidence/windows-openai-harness-qualification-20260824.md",
+        "docs/harness-efficiency-architecture.md",
+        "docs/harness-efficiency-live-report.md",
+        "docs/harness-efficiency.md",
+        "docs/harness-mutation-report.md",
+        "docs/implementation-status.md",
+        "docs/jobs-and-scheduler.md",
+        "docs/managed-nodes.md",
+        "docs/release-notes-3.1.0.md",
+        "docs/status-command.md",
+        "docs/token-aware-command-output.md"
+      ]
+    },
+    {
+      "release": "v3.2.0",
+      "commit": "beed6ee95453ef8505b4c14d224c53262e33a7b4",
+      "date": "2026-08-29T21:22:41+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/implementation-status.md"
+      ]
+    },
+    {
+      "release": "v3.2.1",
+      "commit": "99db684e1dfadb7b7137e3a88777b4e17c54cd24",
+      "date": "2026-08-30T09:29:58+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/implementation-status.md",
+        "docs/reports/AGENT-CONTROL-3.2.1-AUDIT-REMEDIATION.md"
+      ]
+    },
+    {
+      "release": "v3.3.0",
+      "commit": "528956c7d2cd4f0b518e0d87b15a30634f5f6e15",
+      "date": "2026-08-30T18:45:56+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "docs/browser-capabilities.md",
+        "docs/implementation-status.md"
+      ]
+    },
+    {
+      "release": "v3.3.1",
+      "commit": "0dee5d3f66bb079563d7a3853c92a82b31609861",
+      "date": "2026-08-31T09:20:10+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/local-context-compiler.md",
+        "docs/release-notes-3.3.1.md"
+      ]
+    },
+    {
+      "release": "v3.4.0",
+      "commit": "4b04f3942201d65748c6c68bf9669cdea1841d19",
+      "date": "2026-09-01T11:27:49+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/implementation-status.md",
+        "docs/jobs/REPOSITORY-REVIEW.md",
+        "docs/jobs/RUNS.md",
+        "docs/models/CODEX-INTEGRATION.md",
+        "docs/models/README.md"
+      ]
+    },
+    {
+      "release": "v3.5.0",
+      "commit": "a12957e69d4db82fda751ffcf830333137f2cf87",
+      "date": "2026-09-01T21:24:10+01:00",
+      "qualificationStatus": "PASS_WITH_LIMITATIONS",
+      "limitationSources": [
+        "README.md",
+        "docs/acp-compatibility.md",
+        "docs/evidence/agent-control-3.5-qualification.md",
+        "docs/evidence/agent-control-3.5.0-release-qualification.md",
+        "docs/fast-execution.md",
+        "docs/identity-sessions-delegation.md",
+        "docs/implementation-status.md",
+        "docs/models/CODEX-INTEGRATION.md",
+        "docs/qualification.md",
+        "docs/release-notes-3.5.0.md",
+        "docs/security-3.5.md",
+        "docs/web-dashboard.md"
+      ]
+    },
+    {
+      "release": "v3.7.0",
+      "commit": "41ae59c6bd0e0228e419a91959efe7130fe086f2",
+      "date": "2026-09-03T11:36:45+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/acp-compatibility.md",
+        "docs/contract-pty-runtime.md",
+        "docs/evidence/agent-control-3.6-development-qualification.md",
+        "docs/evidence/agent-control-3.7-codex-0.153-review.md",
+        "docs/evidence/agent-control-3.7-development-qualification.md",
+        "docs/evidence/agent-control-3.7-physical-lifecycle-20260903.json",
+        "docs/evidence/agent-control-3.7-physical-qualification-20260902.md",
+        "docs/evidence/agent-control-3.7.0-release-qualification.md",
+        "docs/evidence/capability-routing-benchmark-v1.json",
+        "docs/fast-execution.md",
+        "docs/governed-handoffs.md",
+        "docs/implementation-status.md",
+        "docs/migration-3.6.md",
+        "docs/migration-3.7.md",
+        "docs/models/CODEX-INTEGRATION.md",
+        "docs/models/README.md",
+        "docs/qualification.md",
+        "docs/release-notes-3.7.0.md",
+        "docs/security-3.5.md",
+        "docs/token-aware-baton-routing.md",
+        "docs/web-dashboard.md"
+      ]
+    },
+    {
+      "release": "v3.8.0",
+      "commit": "09ac94a3a818b08ecd49beb87ea6acb383e425b4",
+      "date": "2026-09-03T20:07:21+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/evidence/agent-control-3.8-local-model-retrieval.json",
+        "docs/evidence/agent-control-3.8-phase2-qualification.json",
+        "docs/evidence/agent-control-3.8-phase2-qualification.md",
+        "docs/evidence/agent-control-3.8-retrieval-benchmark.json",
+        "docs/evidence/agent-control-3.8.0-release-qualification.md",
+        "docs/implementation-status.md",
+        "docs/release-notes-3.8.0.md",
+        "docs/token-aware-baton-routing.md",
+        "docs/web-dashboard.md"
+      ]
+    },
+    {
+      "release": "v3.8.1",
+      "commit": "4da1d360211bb27d8fde981d688a54850685501e",
+      "date": "2026-09-04T11:37:57+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/credential-residency.md",
+        "docs/evidence/agent-control-3.8.1-final-glm-review.md",
+        "docs/evidence/agent-control-3.8.1-high-remediation-physical.json",
+        "docs/evidence/agent-control-3.8.1-qualification.md",
+        "docs/evidence/agent-control-3.8.1-release-qualification.md",
+        "docs/evidence/agent-control-3.8.1-resumed-physical-evidence.json",
+        "docs/fast-execution.md",
+        "docs/implementation-status.md",
+        "docs/models/CODEX-INTEGRATION.md",
+        "docs/models/README.md",
+        "docs/release-notes-3.8.1.md",
+        "docs/token-aware-baton-routing.md",
+        "docs/web-dashboard.md"
+      ]
+    },
+    {
+      "release": "v3.8.2",
+      "commit": "b51623dae1b764a31198424e8fc6ea9076d04089",
+      "date": "2026-09-04T22:45:07+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/evidence/agent-control-3.8.2-human-readable-history-qualification.md",
+        "docs/execution-history.md",
+        "docs/governed-handoffs.md",
+        "docs/implementation-status.md",
+        "docs/models/CODEX-INTEGRATION.md",
+        "docs/release-notes-3.8.2.md",
+        "docs/token-aware-baton-routing.md",
+        "docs/web-dashboard.md"
+      ]
+    },
+    {
+      "release": "v3.9.0",
+      "commit": "4966c97505d05e5be3a2f8cae092113ad44d636e",
+      "date": "2026-09-05T15:03:32+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/context-evidence-architecture.md",
+        "docs/evidence/agent-control-3.9-evidence-gap-matrix.md",
+        "docs/evidence/agent-control-3.9-provider-neutral-qualification-before-repeat-fix.json",
+        "docs/evidence/agent-control-3.9-provider-neutral-qualification.json",
+        "docs/evidence/agent-control-3.9-provider-neutral-qualification.md",
+        "docs/evidence/agent-control-3.9-qualification.md",
+        "docs/evidence/agent-control-post-3.8.2-context-efficiency.md",
+        "docs/execution-history.md",
+        "docs/governed-handoffs.md",
+        "docs/implementation-status.md",
+        "docs/jobs-and-scheduler.md",
+        "docs/jobs/README.md",
+        "docs/jobs/RUNS.md",
+        "docs/managed-nodes.md",
+        "docs/migration-3.9.md",
+        "docs/models/ADDING-A-PROVIDER.md",
+        "docs/models/CODEX-INTEGRATION.md",
+        "docs/models/README.md",
+        "docs/provider-model-lifecycle.md",
+        "docs/qualification.md",
+        "docs/release-notes-3.9.0.md",
+        "docs/token-aware-baton-routing.md",
+        "docs/web-dashboard.md"
+      ]
+    },
+    {
+      "release": "v4.0.0",
+      "commit": "ff7ed114c08b71583e2a2d67b40d081f0b0a4c33",
+      "date": "2026-09-08T06:52:29+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/adaptive-multi-model-orchestration.md",
+        "docs/contract-pty-runtime.md",
+        "docs/credential-residency.md",
+        "docs/dashboard-characters.md",
+        "docs/evidence/agent-control-3.9-crew-wopr-escalation-transcript.md",
+        "docs/evidence/agent-control-3.9-crew-wopr-escalation-video.json",
+        "docs/evidence/agent-control-3.9-crew-wopr-escalation.json",
+        "docs/evidence/agent-control-3.9-crew-wopr-escalation.md",
+        "docs/evidence/agent-control-3.9-nvidia-focused-diagnostics-20260906.md",
+        "docs/evidence/agent-control-3.9-nvidia-hosted-qualification-20260906.md",
+        "docs/evidence/agent-control-3.9-nvidia-routing-admission-release-qualification.md",
+        "docs/evidence/agent-control-4.0-integration-inventory.md",
+        "docs/evidence/agent-control-4.0-pixel-social-continuation-transcript.md",
+        "docs/evidence/agent-control-4.0-pixel-social-continuation-video.json",
+        "docs/evidence/agent-control-4.0-pixel-social-continuation.json",
+        "docs/evidence/agent-control-4.0-pixel-social-continuation.md",
+        "docs/evidence/agent-control-4.0-protected-resource-qualification.json",
+        "docs/evidence/agent-control-4.0-protected-resource-transcript.md",
+        "docs/evidence/agent-control-4.0-qualification.md",
+        "docs/evidence/agent-control-crew-workflow-qualification.json",
+        "docs/evidence/agent-control-crew-workflow-qualification.md",
+        "docs/evidence/agent-control-crew-workflow-video.json",
+        "docs/evidence/agent-control-dashboard-characters-qualification.json",
+        "docs/evidence/agent-control-dashboard-characters-qualification.md",
+        "docs/evidence/agent-control-dashboard-characters-video.json",
+        "docs/evidence/agent-control-protected-resource-qualification.json",
+        "docs/evidence/agent-control-protected-resource-qualification.md",
+        "docs/evidence/agent-control-protected-resource-transcript.md",
+        "docs/execution-history.md",
+        "docs/implementation-status.md",
+        "docs/jobs/RUNS.md",
+        "docs/live-shell.md",
+        "docs/migration-3.7.md",
+        "docs/models/ADDING-A-PROVIDER.md",
+        "docs/models/NVIDIA-HOSTED.md",
+        "docs/models/README.md",
+        "docs/openwa/README.md",
+        "docs/openwa/gateway-pilot.patch",
+        "docs/openwa/live-qualification.md",
+        "docs/openwa/qualification.md",
+        "docs/protected-resource-governance.md",
+        "docs/provider-model-lifecycle.md",
+        "docs/qualification.md",
+        "docs/release-notes-3.9.0.md",
+        "docs/release-notes-4.0.0-rc.1.md",
+        "docs/release-notes-4.0.0.md",
+        "docs/security-3.6.md",
+        "docs/social-voice/README.md",
+        "docs/social-voice/evidence/live-chain.json",
+        "docs/social-voice/evidence/transcript.md",
+        "docs/social-voice/evidence/video-provenance.json",
+        "docs/social-voice/openwa-governed-forwarding.spec.txt",
+        "docs/social-voice/qualification.md",
+        "docs/social-voice/security.md",
+        "docs/token-aware-baton-routing.md",
+        "docs/web-dashboard.md"
+      ]
+    },
+    {
+      "release": "v4.1.0",
+      "commit": "3c906bd3ec55b97815dd79cc79661bed4a255b33",
+      "date": "2026-09-09T06:24:15+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/evidence/agent-control-4.1-qualification.md",
+        "docs/evidence/agent-control-poe-development-qualification-20260908.md",
+        "docs/evidence/agent-control-poe-physical-qualification-20260908.json",
+        "docs/evidence/agent-control-poe-physical-qualification-20260908.md",
+        "docs/implementation-status.md",
+        "docs/installation-deployment-4.1.md",
+        "docs/poe-dashboard-operator.md",
+        "docs/poe-facebook-workflow.md",
+        "docs/poe.md",
+        "docs/release-notes-4.1.0.md",
+        "docs/social-voice/README.md",
+        "docs/web-dashboard.md"
+      ]
+    },
+    {
+      "release": "v4.3.0",
+      "commit": "c389a7a2fc79caeea021226532ec7fff05de7420",
+      "date": "2026-09-09T21:26:42+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/DEPLOYMENT.md",
+        "docs/cache-aware-expert-delegation.md",
+        "docs/evidence/agent-control-4.3-cache-aware-expert-qualification-20260909.md",
+        "docs/evidence/agent-control-4.3-integrated-qualification-20260909.json",
+        "docs/evidence/agent-control-4.3-integrated-qualification-20260909.md",
+        "docs/evidence/agent-control-4.3-integrated-release-candidate.md",
+        "docs/evidence/agent-control-4.3-integrated-transcript-20260909.md",
+        "docs/evidence/agent-control-4.3-release-manifest.json",
+        "docs/evidence/non-openai-cache-qualification-20260909.md",
+        "docs/implementation-status.md",
+        "docs/jobs-and-scheduler.md",
+        "docs/migration-3.7.md",
+        "docs/non-openai-cache-qualification.md",
+        "docs/poe-dashboard-operator.md",
+        "docs/release-notes-4.3.0.md",
+        "docs/runtime-safety-and-containment.md",
+        "docs/security-3.6.md",
+        "docs/transport-integrity.md",
+        "docs/web-dashboard.md"
+      ]
+    },
+    {
+      "release": "v4.4.0",
+      "commit": "0a3d136c38ec2c75afb4fb946fba1fb12a9dd5f8",
+      "date": "2026-09-11T15:42:25+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/DEPLOYMENT.md",
+        "docs/evidence/agent-control-4.4-marm-memory-manifest-20260911.json",
+        "docs/evidence/agent-control-4.4-marm-memory-qualification-20260911.json",
+        "docs/evidence/agent-control-4.4-marm-memory-qualification-20260911.md",
+        "docs/evidence/agent-control-4.4-release-manifest.json",
+        "docs/evidence/agent-control-4.4-ux-session-replay-20260911.md",
+        "docs/implementation-status.md",
+        "docs/memory-architecture-review.md",
+        "docs/release-notes-4.4.0.md",
+        "docs/ux-session-replay.md"
+      ]
+    },
+    {
+      "release": "v4.5.0",
+      "commit": "0c88d05ef10206f8b0007dcd7e4ac391645db6e0",
+      "date": "2026-09-13T05:39:17+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "TODO.md",
+        "docs/DEPLOYMENT.md",
+        "docs/agent-control-4.5-skill-learning-architecture-review.md",
+        "docs/cache-aware-expert-delegation.md",
+        "docs/deterministic-skill-promotion.md",
+        "docs/energy-aware-intelligence.md",
+        "docs/environment-discovery.md",
+        "docs/evidence-archive.md",
+        "docs/evidence/agent-control-3.9-crew-wopr-escalation.md",
+        "docs/evidence/agent-control-3.9-provider-neutral-qualification.md",
+        "docs/evidence/agent-control-4.0-pixel-social-continuation.md",
+        "docs/evidence/agent-control-4.3-integrated-release-candidate.md",
+        "docs/evidence/agent-control-4.5-cross-model-memory-complete-transcript-20260911.md",
+        "docs/evidence/agent-control-4.5-cross-model-memory-qualification-20260911.json",
+        "docs/evidence/agent-control-4.5-cross-model-memory-qualification-20260911.md",
+        "docs/evidence/agent-control-4.5-cross-model-memory-ux-session-20260911.json",
+        "docs/evidence/agent-control-4.5-deterministic-skill-promotion-20260911.md",
+        "docs/evidence/agent-control-4.5-energy-qualification-20260911.md",
+        "docs/evidence/agent-control-4.5-environment-discovery-qualification-20260912.md",
+        "docs/evidence/agent-control-4.5-final-release-closure-audit-20260913.md",
+        "docs/evidence/agent-control-4.5-governed-skill-learning-20260911.md",
+        "docs/evidence/agent-control-4.5-memory-conditions-consolidation-20260911.json",
+        "docs/evidence/agent-control-4.5-poe-cross-model-success-20260911.json",
+        "docs/evidence/agent-control-4.5-poe-qwen-glm-failure-20260911.json",
+        "docs/evidence/agent-control-4.5-power-aware-poe-qualification-20260911.json",
+        "docs/evidence/agent-control-4.5-project-memory-portability-20260911.md",
+        "docs/evidence/agent-control-4.5-release-closure-20260912.md",
+        "docs/evidence/agent-control-4.5-release-gate-20260912.md",
+        "docs/evidence/agent-control-4.5-release-gate-completion-20260912.md",
+        "docs/evidence/agent-control-4.5-release-manifest.json",
+        "docs/evidence/agent-control-4.5-runtime-map-physical-qualification-20260912.md",
+        "docs/evidence/agent-control-4.5-runtime-map-visual-acceptance-20260912.md",
+        "docs/evidence/agent-control-4.5-session-vault-physical-qualification-20260912.md",
+        "docs/evidence/agent-control-4.5-source-distribution-remediation-20260912.md",
+        "docs/evidence/agent-control-4.5-specialist-energy-qualification-20260911.md",
+        "docs/evidence/agent-control-4.5-virgin-bootstrap-runtime-qualification-20260913.md",
+        "docs/evidence/agent-control-crew-workflow-qualification.md",
+        "docs/evidence/agent-control-dashboard-characters-qualification.md",
+        "docs/evidence/agent-control-protected-resource-qualification.md",
+        "docs/evidence/minicpm5-2b-qualification-closure-20260912.md",
+        "docs/evidence/morrow-4.5-integration/completion-evidence-check.txt",
+        "docs/evidence/morrow-4.5-integration/full-check.txt",
+        "docs/evidence/morrow-4.5-integration/secret-scan.json",
+        "docs/evidence/morrow-4.5-integration/validation.json",
+        "docs/evidence/morrow-4.5-integration/validation.md",
+        "docs/evidence/morrow-host-identity/focused-checks.txt",
+        "docs/evidence/morrow-host-identity/full-check.txt",
+        "docs/evidence/morrow-host-identity/preview.html",
+        "docs/implementation-status.md",
+        "docs/poe-dashboard-operator.md",
+        "docs/poe.md",
+        "docs/project-memory-portability.md",
+        "docs/release-notes-4.3.0.md",
+        "docs/release-notes-4.5.0.md",
+        "docs/runtime-map.md",
+        "docs/session-vault-provider-adapters.md",
+        "docs/session-vault-replication.md",
+        "docs/session-vault-threat-model.md",
+        "docs/session-vault.md"
+      ]
+    },
+    {
+      "release": "v4.5.1",
+      "commit": "a2cd9c9d8a12dbf8ff16fae61940d8e353bcf0c9",
+      "date": "2026-09-13T07:42:54+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "docs/DEPLOYMENT.md",
+        "docs/environment-discovery.md",
+        "docs/evidence/agent-control-4.5.1-controller-local-upgrade-qualification-20260913.md",
+        "docs/implementation-status.md",
+        "docs/qualification.md",
+        "docs/release-notes-4.5.1.md",
+        "docs/runtime-safety-and-containment.md"
+      ]
+    },
+    {
+      "release": "v4.6.0",
+      "commit": "a4ab4da943be05d9a5270f8142f17bc4c98524e7",
+      "date": "2026-09-13T14:57:42+01:00",
+      "qualificationStatus": "PASS_WITH_LIMITATIONS",
+      "limitationSources": [
+        "README.md",
+        "docs/CAPABILITY-BINDING-RESULTS.md",
+        "docs/CAPABILITY-BINDING-ROOT-CAUSE.md",
+        "docs/CAPABILITY-BINDING.md",
+        "docs/DEPLOYMENT.md",
+        "docs/ESTATE-READINESS-VISUALISATION.md",
+        "docs/EXTERNAL-JOB-CATALOGUE-ACCESS.md",
+        "docs/PHYSICAL-READINESS-ALL-JOBS.md",
+        "docs/PHYSICAL-READINESS-VALIDATION.md",
+        "docs/README-4.5-history.md",
+        "docs/android-standalone-qualification.md",
+        "docs/android-standalone.md",
+        "docs/evidence/estate-readiness-visualisation-20260913.json",
+        "docs/evidence/physical-readiness-20260913.json",
+        "docs/installation-first-run.md",
+        "docs/known-limitations-4.6.md",
+        "docs/local-llm-benchmark.md",
+        "docs/media/4.6/public/overview.html",
+        "docs/model-intelligence-showcase.md",
+        "docs/post-4.6-work-queue.md",
+        "docs/public-installation-journey.md",
+        "docs/public-release-readiness-4.6.md",
+        "docs/release-candidate-4.6.md",
+        "docs/release-integration-4.6.md",
+        "docs/release-notes-4.6.0-rc.1.md",
+        "docs/release-notes-4.6.0.md",
+        "docs/release-verification-4.6.0.md",
+        "docs/showcase-4.6-status.md",
+        "docs/usage-energy-4.6.md",
+        "docs/usage-energy-architecture-audit-4.6.md",
+        "docs/usage-energy-physical-closure-4.6.md"
+      ]
+    },
+    {
+      "release": "v4.6.1",
+      "commit": "4bf186c97655ce52f2f1581c6e829720f31aff29",
+      "date": "2026-09-13T21:56:44+01:00",
+      "qualificationStatus": "PUBLIC_RELEASE_TAG; inspect cited release evidence",
+      "limitationSources": [
+        "README.md",
+        "TODO.md",
+        "docs/DEPLOYMENT.md",
+        "docs/evidence/agent-control-4.6-security-stabilisation-disposition.json",
+        "docs/installation-first-run.md",
+        "docs/known-limitations-4.6.md",
+        "docs/release-notes-4.6.1.md",
+        "docs/security-containment-4.6.md",
+        "docs/security-stabilisation-4.6.md",
+        "docs/showcase-4.6-status.md"
+      ]
+    },
+    {
+      "release": "v4.7.0",
+      "commit": "27124db3d5924b1244be590ef3ea48d4c3b183bc",
+      "date": "2026-09-14T07:27:06+01:00",
+      "qualificationStatus": "PASS_WITH_LIMITATIONS",
+      "limitationSources": [
+        "README.md",
+        "TODO.md",
+        "docs/installation-first-run.md",
+        "docs/known-limitations-4.7.md",
+        "docs/mallow-voice.md",
+        "docs/release-4.7-candidate.md",
+        "docs/release-notes-4.7.0.md",
+        "docs/release-verification-4.7.0.md",
+        "docs/upgrade-4.7.md"
+      ]
+    },
+    {
+      "release": "v4.7.1",
+      "commit": "2fd8336ab5a856836b7116340312ebbc337884d6",
+      "date": "2026-09-14T11:31:16+01:00",
+      "qualificationStatus": "PASS_WITH_LIMITATIONS",
+      "limitationSources": [
+        "README.md",
+        "docs/installation-first-run.md",
+        "docs/known-limitations-4.7.md",
+        "docs/observability-4.7.md",
+        "docs/observability-qualification-4.7.md",
+        "docs/release-notes-4.7.1.md",
+        "docs/release-verification-4.7.1.md",
+        "docs/system-theme-4.7.md",
+        "docs/upgrade-4.7.md"
+      ]
+    },
+    {
+      "release": "v4.8.0",
+      "commit": "57c593b4f88965acc54239f6c1a5321329ce6cef",
+      "date": "2026-09-15T11:32:27+01:00",
+      "qualificationStatus": "PASS_WITH_LIMITATIONS",
+      "limitationSources": [
+        "README.md",
+        "TODO.md",
+        "docs/installation-first-run.md",
+        "docs/managed-nodes.md",
+        "docs/navigable-workspaces.md",
+        "docs/nested-execution-environments.md",
+        "docs/release-notes-4.8.0.md"
+      ]
+    },
+    {
+      "release": "v4.8.1",
+      "commit": "b440d2c01c9cee17057a779298a421676c637be5",
+      "date": "2026-09-17T13:11:55+01:00",
+      "qualificationStatus": "PASS_WITH_LIMITATIONS",
+      "limitationSources": [
+        "README.md",
+        "docs/ANDROID-TERMUX-ENVIRONMENT-PREDICATE.md",
+        "docs/ANDROID-TERMUX-RESET-RECOVERY-DESIGN.md",
+        "docs/ATTEMPT-BOUND-CLEANUP-VERIFICATION-DESIGN.md",
+        "docs/BENCHMARK-PREFLIGHT-CLEANUP-RELIABILITY.md",
+        "docs/NATIVE-SAME-RUN-RESUME-DESIGN.md",
+        "docs/PRE-RESET-RECOVERY-CONTINUATION-DESIGN.md",
+        "docs/atlas-benchmark-runtime.md",
+        "docs/installation-first-run.md",
+        "docs/mobile-benchmark-admission.md",
+        "docs/native-benchmark-architectural-closeout.md",
+        "docs/native-benchmark-responsibility-matrix.md",
+        "docs/release-notes-4.8.1.md",
+        "docs/release-verification-4.8.1.md",
+        "docs/running-your-first-benchmark.md",
+        "docs/speculative-decoding-qualification.md"
+      ]
+    },
+    {
+      "release": "v4.9.0",
+      "commit": "fe9a879e4360d3249c44ee21f0279761a182bd0d",
+      "date": "2026-09-18T05:48:42+01:00",
+      "qualificationStatus": "PASS_WITH_LIMITATIONS",
+      "limitationSources": [
+        "README.md",
+        "TODO.md",
+        "docs/activity-log.md",
+        "docs/evidence/security-audit-v4.9-completion/HISTORICAL-EVIDENCE.md",
+        "docs/evidence/security-audit-v4.9-completion/dashboard-manifest.json",
+        "docs/evidence/security-audit-v4.9-completion/findings.json",
+        "docs/evidence/security-audit-v4.9/LIMITATIONS.md",
+        "docs/evidence/security-audit-v4.9/SANDBOX-ASSURANCE.md",
+        "docs/evidence/security-audit-v4.9/activity-log-qualification.json",
+        "docs/evidence/security-audit-v4.9/architecture.md",
+        "docs/evidence/security-audit-v4.9/dashboard-qualification.json",
+        "docs/evidence/security-audit-v4.9/findings.json",
+        "docs/evidence/security-audit-v4.9/qualification-receipt.json",
+        "docs/evidence/security-audit-v4.9/run-manifest.json",
+        "docs/examples/activity.jsonl",
+        "docs/implementation-status.md",
+        "docs/installation-first-run.md",
+        "docs/release-notes-4.9.0.md",
+        "docs/third-party/cloudflare-security-audit-skill.md"
+      ]
+    },
+    {
+      "release": "v4.10.0",
+      "commit": "6102d4889a836c6477cd70d574df9fadee9cea4a",
+      "date": "2026-09-19T12:02:30+01:00",
+      "qualificationStatus": "PASS_WITH_LIMITATIONS",
+      "limitationSources": [
+        "README.md",
+        "docs/activity-log.md",
+        "docs/dynamic-work-board.md",
+        "docs/evidence/DYNAMIC_WORK_BOARD_QUALIFICATION.md",
+        "docs/evidence/PHONE_HOSTED_MODEL_COMPUTER_USE_QUALIFICATION.md",
+        "docs/evidence/QUARANTINE_SCHEDULING_QUALIFICATION.md",
+        "docs/harness-efficiency.md",
+        "docs/implementation-status.md",
+        "docs/installation-first-run.md",
+        "docs/phone-hosted-local-model-computer-use.md",
+        "docs/rebroad-reliability-review-4.9.md",
+        "docs/release-notes-4.10.0.md",
+        "docs/release-notes-4.9.0.md",
+        "docs/release-verification-4.10.0.md"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "AC-LIM-0001",
+      "title": "OpenAI ChatKit thread access remained live-unqualified",
+      "originalWording": "OpenAI ChatKit support remains live-unqualified until an accessible cthr thread exists.",
+      "firstReleaseObserved": "v3.0.0",
+      "firstEvidenceReference": "v3.0.0:docs/context-evidence-architecture.md:49",
+      "affectedSubsystem": "Providers",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [
+        "OpenAI ChatKit"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "EXTERNAL_BLOCKER",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.0.0:docs/context-evidence-architecture.md:49",
+        "v3.0.0:docs/evidence/openai-provider-qualification-20260823.md:15"
+      ],
+      "flags": [
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "EXTERNAL",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0002",
+      "title": "Android recovery depends on an existing authorised transport",
+      "originalWording": "Recovery is not claimed when Tailscale/SSH themselves are unavailable.",
+      "firstReleaseObserved": "v3.0.0",
+      "firstEvidenceReference": "v3.0.0:docs/evidence/pixel-self-recovery-qualified-20260819.md:53",
+      "affectedSubsystem": "Remote/mobile",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [
+        "v4.6.0",
+        "v4.8.1"
+      ],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "PARTIALLY_RESOLVED",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.0.0:docs/evidence/pixel-self-recovery-qualified-20260819.md:53",
+        "v4.8.1:docs/release-notes-4.8.1.md"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": "Several Pixel recovery/reset paths were later physically exercised; arbitrary Android/transport-loss recovery remains unqualified."
+    },
+    {
+      "id": "AC-LIM-0003",
+      "title": "Opaque external CLI tools are not universally policy-mediated",
+      "originalWording": "Orca/SSH CLI-internal tools are opaque and not qualified as universally moderated tool calls.",
+      "firstReleaseObserved": "v3.1.0",
+      "firstEvidenceReference": "v3.1.0:docs/Agent-Control-3.1.0-Operator-Guide.md:196",
+      "affectedSubsystem": "Security",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [
+        "v3.2.1",
+        "v3.4.0"
+      ],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "OPEN",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PARTIAL",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.1.0:docs/Agent-Control-3.1.0-Operator-Guide.md:196",
+        "v4.10.0:docs/implementation-status.md"
+      ],
+      "flags": [],
+      "closureClass": "ENGINEERING",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0004",
+      "title": "Universal verification-to-acceptance coverage is incomplete",
+      "originalWording": "Every adapter and task type is not yet universally covered by task-specific verification.",
+      "firstReleaseObserved": "v3.1.0",
+      "firstEvidenceReference": "v3.1.0:docs/implementation-status.md:22",
+      "affectedSubsystem": "Core orchestration",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [
+        "v3.2.1",
+        "v3.4.0"
+      ],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "OPEN",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PARTIAL",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.1.0:docs/implementation-status.md:22",
+        "v4.10.0:docs/implementation-status.md"
+      ],
+      "flags": [
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "ENGINEERING",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0005",
+      "title": "Dynamic skill proposal, review, sandbox and promotion were absent",
+      "originalWording": "Dynamic skill proposal, security review, sandbox qualification, approval and promotion remained follow-on work.",
+      "firstReleaseObserved": "v3.1.0",
+      "firstEvidenceReference": "v3.1.0:docs/evidence/adaptive-harness-recovery-20260824.md:171",
+      "affectedSubsystem": "Models",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "RESOLVED",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": "v4.5.0",
+      "resolutionEvidence": [
+        "v4.5.0:docs/evidence/agent-control-4.5-governed-skill-learning-20260911.md",
+        "v4.5.0:docs/evidence/agent-control-4.5-deterministic-skill-promotion-20260911.md"
+      ],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "QUALIFIED",
+        "production": "QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.1.0:docs/evidence/adaptive-harness-recovery-20260824.md:171"
+      ],
+      "flags": [],
+      "closureClass": "NONE",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0006",
+      "title": "Safe selective retry was not implemented",
+      "originalWording": "Only whole eligible historical Run retry existed; selective step retry was not implemented.",
+      "firstReleaseObserved": "v3.1.0",
+      "firstEvidenceReference": "v3.1.0:docs/dashboard-3.1-boundary-review.md:91",
+      "affectedSubsystem": "Core orchestration",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "RESOLVED",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": "v4.8.1",
+      "resolutionEvidence": [
+        "v4.8.1:docs/release-notes-4.8.1.md",
+        "v4.8.1:docs/NATIVE-SAME-RUN-RESUME-DESIGN.md"
+      ],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "QUALIFIED",
+        "production": "QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.1.0:docs/dashboard-3.1-boundary-review.md:91"
+      ],
+      "flags": [],
+      "closureClass": "NONE",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0007",
+      "title": "Remote artifact transport lacked qualification",
+      "originalWording": "Remote artifact transport was not implemented; only the local authoritative artifact contract was proven.",
+      "firstReleaseObserved": "v3.1.0",
+      "firstEvidenceReference": "v3.1.0:docs/dashboard-3.1-boundary-review.md:92",
+      "affectedSubsystem": "Evidence/observability",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "PARTIALLY_RESOLVED",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.1.0:docs/dashboard-3.1-boundary-review.md:92",
+        "v4.8.1:docs/native-benchmark-architectural-closeout.md"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": "Remote/native benchmark artifacts are physically evidenced for the Atlas route, not every transport."
+    },
+    {
+      "id": "AC-LIM-0008",
+      "title": "Authenticated Facebook discovery and LocalWalks publishing were fixture-only",
+      "originalWording": "Authenticated Facebook discovery and LocalWalks production publishing remained fixture-driven and non-production.",
+      "firstReleaseObserved": "v3.1.0",
+      "firstEvidenceReference": "v3.1.0:docs/dashboard-3.1-boundary-review.md:90",
+      "affectedSubsystem": "Providers",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [
+        "Facebook",
+        "LocalWalks"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "ACCEPTED_LIMITATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.1.0:docs/dashboard-3.1-boundary-review.md:90"
+      ],
+      "flags": [
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "ACCEPTED",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0009",
+      "title": "Providers without streaming usage cannot expose live token/cost counters",
+      "originalWording": "Provider APIs that do not stream usage cannot supply incremental tokens or cost.",
+      "firstReleaseObserved": "v3.2.1",
+      "firstEvidenceReference": "v3.2.1:docs/reports/AGENT-CONTROL-3.2.1-AUDIT-REMEDIATION.md:22",
+      "affectedSubsystem": "Usage/cost",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "ACCEPTED_LIMITATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.2.1:docs/reports/AGENT-CONTROL-3.2.1-AUDIT-REMEDIATION.md:22"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11"
+      ],
+      "closureClass": "ACCEPTED",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0010",
+      "title": "Durable ledgers rewrite complete snapshots",
+      "originalWording": "Full ledger snapshots are still rewritten for real transitions.",
+      "firstReleaseObserved": "v3.2.1",
+      "firstEvidenceReference": "v3.2.1:docs/reports/AGENT-CONTROL-3.2.1-AUDIT-REMEDIATION.md:24",
+      "affectedSubsystem": "Evidence/observability",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "OPEN",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "NOT_APPLICABLE",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.2.1:docs/reports/AGENT-CONTROL-3.2.1-AUDIT-REMEDIATION.md:24"
+      ],
+      "flags": [
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "ENGINEERING",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0011",
+      "title": "No approved desktop ChatGPT session bridge",
+      "originalWording": "No approved desktop Edge session bridge was present; chatgpt.web remained blocked.",
+      "firstReleaseObserved": "v3.3.0",
+      "firstEvidenceReference": "v3.3.0:docs/browser-capabilities.md:24",
+      "affectedSubsystem": "Providers",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [
+        "Windows desktop browser",
+        "ChatGPT"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.3.0:docs/browser-capabilities.md:24",
+        "v4.10.0:docs/browser-capabilities.md:22"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0012",
+      "title": "Physical ChatGPT Android UI route unqualified",
+      "originalWording": "Android reachability alone does not qualify authenticated ChatGPT Android UI automation.",
+      "firstReleaseObserved": "v3.3.0",
+      "firstEvidenceReference": "v3.3.0:docs/browser-capabilities.md:24",
+      "affectedSubsystem": "Remote/mobile",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [
+        "Android",
+        "ChatGPT"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "OPEN",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.3.0:docs/browser-capabilities.md:24",
+        "v4.10.0:docs/browser-capabilities.md:22"
+      ],
+      "flags": [],
+      "closureClass": "ENGINEERING",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0013",
+      "title": "Local Context Compiler had no qualified runtime or live benchmark",
+      "originalWording": "No local runtime had been qualified and no live five-way benchmark existed.",
+      "firstReleaseObserved": "v3.3.1",
+      "firstEvidenceReference": "v3.3.1:docs/local-context-compiler.md:88",
+      "affectedSubsystem": "Models",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "SUPERSEDED",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": "v4.8.1",
+      "resolutionEvidence": [
+        "v4.8.1:docs/native-benchmark-architectural-closeout.md",
+        "v4.8.1:docs/release-notes-4.8.1.md"
+      ],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "QUALIFIED",
+        "production": "PARTIAL"
+      },
+      "evidenceReferences": [
+        "v3.3.1:docs/local-context-compiler.md:88"
+      ],
+      "flags": [],
+      "closureClass": "NONE",
+      "notes": "Native benchmark architecture superseded the narrow compiler claim; the compiler itself was not promoted."
+    },
+    {
+      "id": "AC-LIM-0014",
+      "title": "Authoritative provider monetary cost is often unavailable",
+      "originalWording": "Provider monetary cost was unavailable and remains unknown.",
+      "firstReleaseObserved": "v3.5.0",
+      "firstEvidenceReference": "v3.5.0:docs/release-notes-3.5.0.md:17",
+      "affectedSubsystem": "Usage/cost",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [
+        "v3.8.0",
+        "v3.9.0",
+        "v4.5.0",
+        "v4.6.0",
+        "v4.7.1"
+      ],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "EXTERNAL_BLOCKER",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.5.0:docs/release-notes-3.5.0.md:17",
+        "v4.6.1:docs/known-limitations-4.6.md"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11",
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "EXTERNAL",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0015",
+      "title": "ACP packaging/conformance and shared-token principal isolation were incomplete",
+      "originalWording": "ACP covered governed session/control mapping; external conformance was deferred. Shared-token transport is one-principal only.",
+      "firstReleaseObserved": "v3.5.0",
+      "firstEvidenceReference": "v3.5.0:docs/release-notes-3.5.0.md:18",
+      "affectedSubsystem": "Security",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [
+        "v3.6.0",
+        "v4.6.1"
+      ],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "PARTIALLY_RESOLVED",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "PARTIAL"
+      },
+      "evidenceReferences": [
+        "v3.5.0:docs/release-notes-3.5.0.md:18",
+        "v4.6.1:docs/release-notes-4.6.1.md"
+      ],
+      "flags": [],
+      "closureClass": "ENGINEERING",
+      "notes": "ACP protocol support exists; independent principal isolation behind one shared credential remains an accepted boundary."
+    },
+    {
+      "id": "AC-LIM-0016",
+      "title": "Physical multi-provider chain had not run",
+      "originalWording": "The physical Luna to local LLM to GLM chain did not run and was not claimed.",
+      "firstReleaseObserved": "v3.5.0",
+      "firstEvidenceReference": "v3.5.0:docs/release-notes-3.5.0.md:19",
+      "affectedSubsystem": "Providers",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "RESOLVED",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": "v3.7.0",
+      "resolutionEvidence": [
+        "v3.7.0:docs/evidence/agent-control-3.7-physical-qualification-20260902.md",
+        "v3.7.0:docs/evidence/agent-control-3.7-physical-lifecycle-20260903.json"
+      ],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "QUALIFIED",
+        "production": "QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.5.0:docs/release-notes-3.5.0.md:19"
+      ],
+      "flags": [],
+      "closureClass": "NONE",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0017",
+      "title": "Automatic Spark/Job adoption remained disabled",
+      "originalWording": "Automatic production Job adoption and automatic Spark routing remained unqualified and disabled.",
+      "firstReleaseObserved": "v3.5.0",
+      "firstEvidenceReference": "v3.5.0:docs/release-notes-3.5.0.md:20",
+      "affectedSubsystem": "Core orchestration",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "SUPERSEDED",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": "v4.5.0",
+      "resolutionEvidence": [
+        "v4.5.0:docs/evidence/agent-control-4.5-deterministic-skill-promotion-20260911.md"
+      ],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "QUALIFIED",
+        "production": "PARTIAL"
+      },
+      "evidenceReferences": [
+        "v3.5.0:docs/release-notes-3.5.0.md:20"
+      ],
+      "flags": [],
+      "closureClass": "NONE",
+      "notes": "Promoted deterministic skills supersede automatic Spark routing; Spark itself remains evidence-gated."
+    },
+    {
+      "id": "AC-LIM-0018",
+      "title": "Small local model quality remained weak",
+      "originalWording": "The 3B model remained weak on the recorded frozen task.",
+      "firstReleaseObserved": "v3.8.0",
+      "firstEvidenceReference": "v3.8.0:docs/evidence/agent-control-3.8-phase2-qualification.md:92",
+      "affectedSubsystem": "Models",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [
+        "v4.5.0",
+        "v4.8.1"
+      ],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "ACCEPTED_LIMITATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.8.0:docs/evidence/agent-control-3.8-phase2-qualification.md:92",
+        "v4.8.1:docs/native-benchmark-architectural-closeout.md"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11"
+      ],
+      "closureClass": "ACCEPTED",
+      "notes": "A negative model result is retained; it is not a framework defect."
+    },
+    {
+      "id": "AC-LIM-0019",
+      "title": "Cross-adapter physical portability remained unexercised",
+      "originalWording": "Cross-adapter portability was unexercised.",
+      "firstReleaseObserved": "v3.8.0",
+      "firstEvidenceReference": "v3.8.0:docs/evidence/agent-control-3.8-phase2-qualification.md:92",
+      "affectedSubsystem": "Providers",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.8.0:docs/evidence/agent-control-3.8-phase2-qualification.md:92",
+        "v3.9.0:docs/evidence/agent-control-3.9-provider-neutral-qualification.md:164"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11",
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0020",
+      "title": "Retrieval remained opt-in and route-specific",
+      "originalWording": "Retrieval remained opt-in.",
+      "firstReleaseObserved": "v3.8.0",
+      "firstEvidenceReference": "v3.8.0:docs/evidence/agent-control-3.8-phase2-qualification.md:92",
+      "affectedSubsystem": "Models",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "ACCEPTED_LIMITATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.8.0:docs/evidence/agent-control-3.8-phase2-qualification.md:92"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11"
+      ],
+      "closureClass": "ACCEPTED",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0021",
+      "title": "Authoritative current-context occupancy unavailable on local endpoints",
+      "originalWording": "Local endpoints do not provide authoritative current-context occupancy.",
+      "firstReleaseObserved": "v3.9.0",
+      "firstEvidenceReference": "v3.9.0:docs/evidence/agent-control-3.9-provider-neutral-qualification.md:161",
+      "affectedSubsystem": "Usage/cost",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "EXTERNAL_BLOCKER",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.9.0:docs/evidence/agent-control-3.9-provider-neutral-qualification.md:161",
+        "v4.7.1:docs/known-limitations-4.7.md"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11",
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "EXTERNAL",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0022",
+      "title": "Preferred routing requires multi-day evidence and approval",
+      "originalWording": "Multi-day sample history and approval are required before preferred routing or leader claims.",
+      "firstReleaseObserved": "v3.9.0",
+      "firstEvidenceReference": "v3.9.0:docs/evidence/agent-control-3.9-provider-neutral-qualification.md:163",
+      "affectedSubsystem": "Models",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "ACCEPTED_LIMITATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "PARTIAL"
+      },
+      "evidenceReferences": [
+        "v3.9.0:docs/evidence/agent-control-3.9-provider-neutral-qualification.md:163"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11"
+      ],
+      "closureClass": "ACCEPTED",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0023",
+      "title": "Browser/computer tasks lacked fully governed evaluator evidence",
+      "originalWording": "Browser/computer tasks need a governed evaluator adapter and real interaction evidence.",
+      "firstReleaseObserved": "v3.9.0",
+      "firstEvidenceReference": "v3.9.0:docs/evidence/agent-control-3.9-provider-neutral-qualification.md:160",
+      "affectedSubsystem": "Benchmarks",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "PARTIALLY_RESOLVED",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v3.9.0:docs/evidence/agent-control-3.9-provider-neutral-qualification.md:160",
+        "v4.10.0:docs/evidence/PHONE_HOSTED_MODEL_COMPUTER_USE_QUALIFICATION.md"
+      ],
+      "flags": [],
+      "closureClass": "ENGINEERING",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0024",
+      "title": "Physical Mallow/voice model conversation unqualified",
+      "originalWording": "No complete physical model-backed Mallow/voice conversation was qualified.",
+      "firstReleaseObserved": "v4.7.0",
+      "firstEvidenceReference": "v4.7.0:docs/known-limitations-4.7.md",
+      "affectedSubsystem": "Voice",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [
+        "v4.7.1"
+      ],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "OPEN",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.7.0:docs/known-limitations-4.7.md"
+      ],
+      "flags": [
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0025",
+      "title": "Some speech/model providers expose only complete results, not streaming",
+      "originalWording": "Provider streaming cannot be claimed where adapters expose only complete results.",
+      "firstReleaseObserved": "v4.7.0",
+      "firstEvidenceReference": "v4.7.0:docs/known-limitations-4.7.md",
+      "affectedSubsystem": "Voice",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [
+        "v4.7.1"
+      ],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "ACCEPTED_LIMITATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.7.0:docs/known-limitations-4.7.md"
+      ],
+      "flags": [
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "ACCEPTED",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0026",
+      "title": "Android local inference and benchmark league were absent",
+      "originalWording": "No Android model recommendation or local inference league result was advertised.",
+      "firstReleaseObserved": "v4.6.0",
+      "firstEvidenceReference": "v4.6.0:docs/known-limitations-4.6.md",
+      "affectedSubsystem": "Remote/mobile",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [
+        "Android",
+        "Pixel"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "RESOLVED",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": "v4.8.1",
+      "resolutionEvidence": [
+        "v4.8.1:docs/native-benchmark-architectural-closeout.md",
+        "v4.8.1:docs/release-notes-4.8.1.md"
+      ],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "QUALIFIED",
+        "production": "QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.6.0:docs/known-limitations-4.6.md"
+      ],
+      "flags": [],
+      "closureClass": "NONE",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0027",
+      "title": "Phone battery, charging, thermal and metering telemetry were unavailable",
+      "originalWording": "Base Termux could not obtain battery, charging, thermal or metering observations.",
+      "firstReleaseObserved": "v4.6.0",
+      "firstEvidenceReference": "v4.6.0:docs/known-limitations-4.6.md",
+      "affectedSubsystem": "Remote/mobile",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [
+        "Android",
+        "Pixel"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "PARTIALLY_RESOLVED",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [
+        "v4.8.1:docs/native-benchmark-architectural-closeout.md"
+      ],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "QUALIFIED",
+        "production": "PARTIAL"
+      },
+      "evidenceReferences": [
+        "v4.6.0:docs/known-limitations-4.6.md",
+        "v4.8.1:docs/native-benchmark-architectural-closeout.md"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": "Battery, charging, RAM and thermal admission were physically recorded; whole-device metering/GPU/NPU telemetry remains unavailable."
+    },
+    {
+      "id": "AC-LIM-0028",
+      "title": "Handset resource feasibility varies under live load",
+      "originalWording": "Available RAM fluctuated below the reserve despite larger installed RAM.",
+      "firstReleaseObserved": "v4.6.0",
+      "firstEvidenceReference": "v4.6.0:docs/known-limitations-4.6.md",
+      "affectedSubsystem": "Remote/mobile",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [
+        "Android"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "ACCEPTED_LIMITATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "QUALIFIED",
+        "production": "QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.6.0:docs/known-limitations-4.6.md",
+        "v4.8.1:docs/mobile-benchmark-admission.md"
+      ],
+      "flags": [],
+      "closureClass": "ACCEPTED",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0029",
+      "title": "Android background reliability and interruption breadth incomplete",
+      "originalWording": "Reboot, battery shutdown and forced OS reclamation were not fully exercised.",
+      "firstReleaseObserved": "v4.6.0",
+      "firstEvidenceReference": "v4.6.0:docs/known-limitations-4.6.md",
+      "affectedSubsystem": "Remote/mobile",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [
+        "Android"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "PARTIALLY_RESOLVED",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "PARTIAL"
+      },
+      "evidenceReferences": [
+        "v4.6.0:docs/known-limitations-4.6.md",
+        "v4.8.1:docs/release-notes-4.8.1.md"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0030",
+      "title": "Additional phones and PWA launcher combinations unqualified",
+      "originalWording": "Other handset and launcher combinations are unqualified.",
+      "firstReleaseObserved": "v4.6.0",
+      "firstEvidenceReference": "v4.6.0:docs/known-limitations-4.6.md",
+      "affectedSubsystem": "Remote/mobile",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [
+        "Android",
+        "PWA"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.6.0:docs/known-limitations-4.6.md"
+      ],
+      "flags": [
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0031",
+      "title": "Positive billed-cache behavior and delayed corrections unqualified",
+      "originalWording": "Provider billing evidence was unavailable for positive cache charges and delayed adjustments.",
+      "firstReleaseObserved": "v4.6.0",
+      "firstEvidenceReference": "v4.6.0:docs/known-limitations-4.6.md",
+      "affectedSubsystem": "Usage/cost",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "EXTERNAL_BLOCKER",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.6.0:docs/known-limitations-4.6.md"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11",
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "EXTERNAL",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0032",
+      "title": "Attributable per-job and baseline electricity unavailable",
+      "originalWording": "Shared load prevented defensible exclusive energy allocation.",
+      "firstReleaseObserved": "v4.6.0",
+      "firstEvidenceReference": "v4.6.0:docs/known-limitations-4.6.md",
+      "affectedSubsystem": "Energy",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "EXTERNAL_BLOCKER",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.6.0:docs/known-limitations-4.6.md"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11",
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "EXTERNAL",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0033",
+      "title": "Electricity tariff evidence unavailable",
+      "originalWording": "No operator tariff evidence was configured.",
+      "firstReleaseObserved": "v4.6.0",
+      "firstEvidenceReference": "v4.6.0:docs/known-limitations-4.6.md",
+      "affectedSubsystem": "Energy",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "EXTERNAL_BLOCKER",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.6.0:docs/known-limitations-4.6.md"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11",
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "EXTERNAL",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0034",
+      "title": "Whole-node energy lacks defensible sensor binding",
+      "originalWording": "No actual W/Wh/kWh sensor with a defensible machine binding was discovered.",
+      "firstReleaseObserved": "v4.6.0",
+      "firstEvidenceReference": "v4.6.0:docs/known-limitations-4.6.md",
+      "affectedSubsystem": "Energy",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [
+        "v4.6.1",
+        "v4.7.1"
+      ],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "EXTERNAL_BLOCKER",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.6.0:docs/known-limitations-4.6.md",
+        "v4.6.1:docs/release-notes-4.6.1.md"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11",
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "EXTERNAL",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0035",
+      "title": "Overnight unattended qualification was not physically demonstrated",
+      "originalWording": "A real overnight-duration run had not been qualified.",
+      "firstReleaseObserved": "v4.6.0",
+      "firstEvidenceReference": "v4.6.0:docs/known-limitations-4.6.md",
+      "affectedSubsystem": "Models",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.6.0:docs/known-limitations-4.6.md"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11",
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0036",
+      "title": "External notifications and source integrations require configured destinations",
+      "originalWording": "No external destination was configured; feeds require approved adapters.",
+      "firstReleaseObserved": "v4.6.0",
+      "firstEvidenceReference": "v4.6.0:docs/known-limitations-4.6.md",
+      "affectedSubsystem": "Providers",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "EXTERNAL_BLOCKER",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.6.0:docs/known-limitations-4.6.md"
+      ],
+      "flags": [
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "EXTERNAL",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0037",
+      "title": "Additional runtime/API and subjective judge adapters incomplete",
+      "originalWording": "Generic provisioners and judge adapters were incomplete.",
+      "firstReleaseObserved": "v4.6.0",
+      "firstEvidenceReference": "v4.6.0:docs/known-limitations-4.6.md",
+      "affectedSubsystem": "Benchmarks",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "OPEN",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PARTIAL",
+        "physical": "PARTIAL",
+        "production": "PARTIAL"
+      },
+      "evidenceReferences": [
+        "v4.6.0:docs/known-limitations-4.6.md",
+        "v4.8.1:docs/release-notes-4.8.1.md"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11"
+      ],
+      "closureClass": "ENGINEERING",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0038",
+      "title": "Rules-builder UI and physical household automation absent",
+      "originalWording": "Typed rules existed, but no full rules-builder UI or household demonstration.",
+      "firstReleaseObserved": "v4.6.0",
+      "firstEvidenceReference": "v4.6.0:docs/known-limitations-4.6.md",
+      "affectedSubsystem": "Dashboard",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "OPEN",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.6.0:docs/known-limitations-4.6.md"
+      ],
+      "flags": [
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "ENGINEERING",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0039",
+      "title": "Local speech synthesis was too slow for natural real-time voice",
+      "originalWording": "The CPU route took 52.33 seconds to generate 2.62 seconds of audio.",
+      "firstReleaseObserved": "v4.7.0",
+      "firstEvidenceReference": "v4.7.0:docs/known-limitations-4.7.md",
+      "affectedSubsystem": "Voice",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "ACCEPTED_LIMITATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "QUALIFIED_NEGATIVE",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.7.0:docs/known-limitations-4.7.md"
+      ],
+      "flags": [
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "ACCEPTED",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0040",
+      "title": "Voice/model shared-session cost allocation is incomplete",
+      "originalWording": "Shared-session allocation and combined totals remain unknown where not defensible.",
+      "firstReleaseObserved": "v4.7.0",
+      "firstEvidenceReference": "v4.7.0:docs/known-limitations-4.7.md",
+      "affectedSubsystem": "Usage/cost",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "PARTIALLY_RESOLVED",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.7.0:docs/known-limitations-4.7.md"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11",
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "EXTERNAL",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0041",
+      "title": "Arbitrary spoken job parameters are not supported",
+      "originalWording": "No arbitrary spoken parameter planner is advertised.",
+      "firstReleaseObserved": "v4.7.0",
+      "firstEvidenceReference": "v4.7.0:docs/known-limitations-4.7.md",
+      "affectedSubsystem": "Voice",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "ACCEPTED_LIMITATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.7.0:docs/known-limitations-4.7.md"
+      ],
+      "flags": [
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "ACCEPTED",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0042",
+      "title": "Safari and iOS presentation remain unqualified",
+      "originalWording": "Browser evidence covered Chromium desktop and touch emulation, not Safari/iOS.",
+      "firstReleaseObserved": "v4.7.0",
+      "firstEvidenceReference": "v4.7.0:docs/known-limitations-4.7.md",
+      "affectedSubsystem": "Platform support",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [
+        "Safari",
+        "iOS"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PARTIAL",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.7.0:docs/known-limitations-4.7.md",
+        "v4.7.1:docs/release-notes-4.7.1.md"
+      ],
+      "flags": [
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0043",
+      "title": "Mobile viewport evidence is not physical handset qualification",
+      "originalWording": "Touch viewport videos do not replace physical handset qualification.",
+      "firstReleaseObserved": "v4.7.0",
+      "firstEvidenceReference": "v4.7.0:docs/known-limitations-4.7.md",
+      "affectedSubsystem": "Dashboard",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.7.0:docs/known-limitations-4.7.md",
+        "v4.8.0:docs/release-notes-4.8.0.md"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0044",
+      "title": "Whole-node resource samples do not establish per-job CPU/GPU attribution",
+      "originalWording": "Whole-node samples do not establish per-job CPU/GPU attribution.",
+      "firstReleaseObserved": "v4.7.0",
+      "firstEvidenceReference": "v4.7.0:docs/known-limitations-4.7.md",
+      "affectedSubsystem": "Evidence/observability",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "PARTIALLY_RESOLVED",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "PARTIAL"
+      },
+      "evidenceReferences": [
+        "v4.7.0:docs/known-limitations-4.7.md",
+        "v4.8.1:docs/native-benchmark-architectural-closeout.md"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11"
+      ],
+      "closureClass": "ENGINEERING",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0045",
+      "title": "AVF/pKVM nested execution unqualified",
+      "originalWording": "AVF/pKVM was not yet qualified.",
+      "firstReleaseObserved": "v4.8.0",
+      "firstEvidenceReference": "v4.8.0:docs/nested-execution-environments.md",
+      "affectedSubsystem": "Remote/mobile",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [
+        "Android",
+        "AVF",
+        "pKVM"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PARTIAL",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.8.0:docs/nested-execution-environments.md",
+        "v4.8.0:docs/release-notes-4.8.0.md"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0046",
+      "title": "Resident worker daemon inside nested guest unqualified",
+      "originalWording": "A resident Agent Control worker daemon inside the guest was not qualified.",
+      "firstReleaseObserved": "v4.8.0",
+      "firstEvidenceReference": "v4.8.0:docs/nested-execution-environments.md",
+      "affectedSubsystem": "Remote/mobile",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "OPEN",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "NOT_IMPLEMENTED",
+        "automated": "NOT_QUALIFIED",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.8.0:docs/nested-execution-environments.md"
+      ],
+      "flags": [],
+      "closureClass": "ENGINEERING",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0047",
+      "title": "Physical network-loss recovery for nested routes unqualified",
+      "originalWording": "Physical network-disconnection recovery for nested routes was not qualified.",
+      "firstReleaseObserved": "v4.8.0",
+      "firstEvidenceReference": "v4.8.0:docs/nested-execution-environments.md",
+      "affectedSubsystem": "Remote/mobile",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.8.0:docs/nested-execution-environments.md",
+        "v4.8.1:docs/release-notes-4.8.1.md"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0048",
+      "title": "Docker and LXC discovery does not qualify physical execution",
+      "originalWording": "Docker and LXC discovery support does not claim physical execution qualification.",
+      "firstReleaseObserved": "v4.8.0",
+      "firstEvidenceReference": "v4.8.0:docs/nested-execution-environments.md",
+      "affectedSubsystem": "Remote/mobile",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [
+        "Docker",
+        "LXC"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.8.0:docs/nested-execution-environments.md",
+        "v4.8.0:docs/release-notes-4.8.0.md"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0049",
+      "title": "Workspace favourites, search, project semantics, pagination and controlled activation deferred",
+      "originalWording": "Durable favourites, global search, project semantics, large-estate pagination and controlled terminal/file activation remain deferred.",
+      "firstReleaseObserved": "v4.8.0",
+      "firstEvidenceReference": "v4.8.0:docs/release-notes-4.8.0.md",
+      "affectedSubsystem": "Dashboard",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "OPEN",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "NOT_IMPLEMENTED",
+        "automated": "NOT_QUALIFIED",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.8.0:docs/release-notes-4.8.0.md"
+      ],
+      "flags": [
+        "SILENTLY_DROPPED"
+      ],
+      "closureClass": "ENGINEERING",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0050",
+      "title": "Security-audit coverage is bounded and not universal assurance",
+      "originalWording": "Coverage had 12 partial and zero full units; the older audit corpus could not be authenticated.",
+      "firstReleaseObserved": "v4.9.0",
+      "firstEvidenceReference": "v4.9.0:docs/release-notes-4.9.0.md",
+      "affectedSubsystem": "Security",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "ACCEPTED_LIMITATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "QUALIFIED",
+        "production": "PARTIAL"
+      },
+      "evidenceReferences": [
+        "v4.9.0:docs/release-notes-4.9.0.md",
+        "v4.9.0:docs/release-verification-4.9.0.md"
+      ],
+      "flags": [],
+      "closureClass": "ACCEPTED",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0051",
+      "title": "Security sandbox physical qualification is Linux-specific",
+      "originalWording": "Other platforms must earn equivalent sandbox adapter evidence.",
+      "firstReleaseObserved": "v4.9.0",
+      "firstEvidenceReference": "v4.9.0:docs/release-notes-4.9.0.md",
+      "affectedSubsystem": "Sandboxing",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [
+        "Windows",
+        "Android",
+        "macOS"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.9.0:docs/release-notes-4.9.0.md"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0052",
+      "title": "Native benchmark model acquisition and runtime portability are limited",
+      "originalWording": "The published adapter does not download models or qualify arbitrary runtimes.",
+      "firstReleaseObserved": "v4.8.1",
+      "firstEvidenceReference": "v4.8.1:docs/release-notes-4.8.1.md",
+      "affectedSubsystem": "Benchmarks",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "ACCEPTED_LIMITATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "PARTIAL"
+      },
+      "evidenceReferences": [
+        "v4.8.1:docs/release-notes-4.8.1.md",
+        "v4.8.1:docs/native-benchmark-architectural-closeout.md"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11"
+      ],
+      "closureClass": "ACCEPTED",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0053",
+      "title": "Speculative decoding benefit is exact-combination specific",
+      "originalWording": "Benefit must be re-established for a different model/runtime/hardware combination.",
+      "firstReleaseObserved": "v4.8.1",
+      "firstEvidenceReference": "v4.8.1:docs/release-notes-4.8.1.md",
+      "affectedSubsystem": "Models",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "ACCEPTED_LIMITATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "QUALIFIED",
+        "production": "PARTIAL"
+      },
+      "evidenceReferences": [
+        "v4.8.1:docs/release-notes-4.8.1.md"
+      ],
+      "flags": [
+        "RELATED_TO_V4_11"
+      ],
+      "closureClass": "ACCEPTED",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0054",
+      "title": "No distinct runtime containment kill scope",
+      "originalWording": "A distinct runtime kill scope is not implemented.",
+      "firstReleaseObserved": "v4.10.0",
+      "firstEvidenceReference": "v4.10.0:docs/release-notes-4.10.0.md",
+      "affectedSubsystem": "Containment",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "OPEN",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "NOT_IMPLEMENTED",
+        "automated": "NOT_QUALIFIED",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.10.0:docs/release-notes-4.10.0.md",
+        "v4.10.0:docs/evidence/QUARANTINE_SCHEDULING_QUALIFICATION.md"
+      ],
+      "flags": [],
+      "closureClass": "ENGINEERING",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0055",
+      "title": "Dashboard lacks complete containment and recovery timeline",
+      "originalWording": "The dashboard does not provide a complete containment/recovery timeline.",
+      "firstReleaseObserved": "v4.10.0",
+      "firstEvidenceReference": "v4.10.0:docs/release-notes-4.10.0.md",
+      "affectedSubsystem": "Dashboard",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "OPEN",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PARTIAL",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.10.0:docs/release-notes-4.10.0.md",
+        "v4.10.0:docs/release-verification-4.10.0.md"
+      ],
+      "flags": [],
+      "closureClass": "ENGINEERING",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0056",
+      "title": "Some containment restart scenarios lack separate physical qualification",
+      "originalWording": "Some restart cases remain automated-test rather than separate physical qualification.",
+      "firstReleaseObserved": "v4.10.0",
+      "firstEvidenceReference": "v4.10.0:docs/release-notes-4.10.0.md",
+      "affectedSubsystem": "Containment",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.10.0:docs/release-notes-4.10.0.md"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0057",
+      "title": "Pixel and remote containment remain physically unqualified",
+      "originalWording": "Pixel/remote containment remains unqualified.",
+      "firstReleaseObserved": "v4.10.0",
+      "firstEvidenceReference": "v4.10.0:docs/release-notes-4.10.0.md",
+      "affectedSubsystem": "Containment",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [
+        "Android",
+        "remote workers"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.10.0:docs/release-notes-4.10.0.md",
+        "v4.10.0:docs/release-verification-4.10.0.md"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0058",
+      "title": "Generic outbound-worker transport remains experimental",
+      "originalWording": "The typed outbound-worker transport remains experimental and is not a deployed listener.",
+      "firstReleaseObserved": "v4.10.0",
+      "firstEvidenceReference": "v4.10.0:docs/release-notes-4.10.0.md",
+      "affectedSubsystem": "Remote/mobile",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.10.0:docs/release-notes-4.10.0.md",
+        "v4.10.0:docs/evidence/DYNAMIC_WORK_BOARD_QUALIFICATION.md"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0059",
+      "title": "Phone-hosted model and computer-use route remains unqualified",
+      "originalWording": "Physical phone-hosted model/computer-use routing remains experimental or unqualified.",
+      "firstReleaseObserved": "v4.10.0",
+      "firstEvidenceReference": "v4.10.0:docs/release-verification-4.10.0.md",
+      "affectedSubsystem": "Remote/mobile",
+      "severity": null,
+      "qualificationType": "MIXED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "OPEN",
+      "latestRelevantRelease": "v4.10.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PASS",
+        "physical": "NOT_QUALIFIED",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.10.0:docs/release-verification-4.10.0.md",
+        "v4.10.0:docs/evidence/PHONE_HOSTED_MODEL_COMPUTER_USE_QUALIFICATION.md"
+      ],
+      "flags": [],
+      "closureClass": "ENGINEERING",
+      "notes": ""
+    },
+    {
+      "id": "AC-LIM-0060",
+      "title": "Only PROMPT intervention application is physically qualified",
+      "originalWording": "Intervention types other than PROMPT have a generic contract but no physically qualified application adapter.",
+      "firstReleaseObserved": "v4.11.0",
+      "firstEvidenceReference": "v4.11.0:docs/evidence/AGENT_CONTROL_4.11_PROMOTION_ROLLBACK_QUALIFICATION.md",
+      "affectedSubsystem": "Model improvement",
+      "severity": null,
+      "qualificationType": "PHYSICAL",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.11.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PARTIAL",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.11.0:docs/evidence/AGENT_CONTROL_4.11_PROMOTION_ROLLBACK_QUALIFICATION.md"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": "PROMPT was physically qualified on a disposable Qwen route. Other declared kinds are vocabulary for future adapters, not claims of support."
+    },
+    {
+      "id": "AC-LIM-0061",
+      "title": "Generic canary allocation is not implemented",
+      "originalWording": "The Model Improvement Loop has no honest generic percentage or canary allocation mechanism.",
+      "firstReleaseObserved": "v4.11.0",
+      "firstEvidenceReference": "v4.11.0:docs/model-improvement.md",
+      "affectedSubsystem": "Model improvement",
+      "severity": null,
+      "qualificationType": "AUTOMATED",
+      "affectedPlatformDeviceProvider": [],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "ACCEPTED_LIMITATION",
+      "latestRelevantRelease": "v4.11.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "NOT_IMPLEMENTED",
+        "automated": "NOT_QUALIFIED",
+        "physical": "NOT_APPLICABLE",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.11.0:docs/model-improvement.md"
+      ],
+      "flags": [],
+      "closureClass": "ACCEPTED",
+      "notes": "No simulated percentage routing is exposed. Future work requires a real qualified allocation mechanism."
+    },
+    {
+      "id": "AC-LIM-0062",
+      "title": "Promotion scope is qualified only on a disposable prompt route",
+      "originalWording": "Applied promotion and rollback are physically qualified only for a disposable Qwen prompt-route configuration, not arbitrary production routes.",
+      "firstReleaseObserved": "v4.11.0",
+      "firstEvidenceReference": "v4.11.0:docs/evidence/AGENT_CONTROL_4.11_PROMOTION_ROLLBACK_QUALIFICATION.md",
+      "affectedSubsystem": "Model improvement",
+      "severity": null,
+      "qualificationType": "PHYSICAL",
+      "affectedPlatformDeviceProvider": [
+        "Linux qualification node",
+        "Qwen2.5 3B",
+        "llama.cpp"
+      ],
+      "subsequentAppearances": [],
+      "relatedCommitsOrPRs": [],
+      "currentStatus": "NEEDS_REQUALIFICATION",
+      "latestRelevantRelease": "v4.11.0",
+      "resolutionRelease": null,
+      "resolutionEvidence": [],
+      "qualification": {
+        "implementation": "PRESENT",
+        "automated": "PASS",
+        "physical": "PARTIAL",
+        "production": "NOT_QUALIFIED"
+      },
+      "evidenceReferences": [
+        "v4.11.0:docs/evidence/AGENT_CONTROL_4.11_PROMOTION_ROLLBACK_QUALIFICATION.md"
+      ],
+      "flags": [],
+      "closureClass": "QUALIFICATION_ONLY",
+      "notes": "The adapter is allow-listed and fail-closed. Production route qualification remains target-specific."
+    }
+  ],
+  "historicalMetrics": [
+    {
+      "release": "v3.0.0",
+      "newLimitations": 2,
+      "carriedForward": 0,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 1,
+      "currentlyFlaggedSilentDropAmongKnown": 1,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 2
+    },
+    {
+      "release": "v3.0.1",
+      "newLimitations": 0,
+      "carriedForward": 2,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 1,
+      "currentlyFlaggedSilentDropAmongKnown": 1,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 2
+    },
+    {
+      "release": "v3.1.0",
+      "newLimitations": 6,
+      "carriedForward": 2,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 2,
+      "currentlyFlaggedSilentDropAmongKnown": 3,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 8
+    },
+    {
+      "release": "v3.2.0",
+      "newLimitations": 0,
+      "carriedForward": 8,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 2,
+      "currentlyFlaggedSilentDropAmongKnown": 3,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 8
+    },
+    {
+      "release": "v3.2.1",
+      "newLimitations": 2,
+      "carriedForward": 8,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 2,
+      "currentlyFlaggedSilentDropAmongKnown": 4,
+      "explicitReappearances": 2,
+      "totalKnownOpenAfterRelease": 10
+    },
+    {
+      "release": "v3.3.0",
+      "newLimitations": 2,
+      "carriedForward": 10,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 2,
+      "currentlyFlaggedSilentDropAmongKnown": 4,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 12
+    },
+    {
+      "release": "v3.3.1",
+      "newLimitations": 1,
+      "carriedForward": 12,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 2,
+      "currentlyFlaggedSilentDropAmongKnown": 4,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 13
+    },
+    {
+      "release": "v3.4.0",
+      "newLimitations": 0,
+      "carriedForward": 13,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 2,
+      "currentlyFlaggedSilentDropAmongKnown": 4,
+      "explicitReappearances": 2,
+      "totalKnownOpenAfterRelease": 13
+    },
+    {
+      "release": "v3.5.0",
+      "newLimitations": 4,
+      "carriedForward": 13,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 3,
+      "currentlyFlaggedSilentDropAmongKnown": 5,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 17
+    },
+    {
+      "release": "v3.7.0",
+      "newLimitations": 0,
+      "carriedForward": 17,
+      "resolvedOrSuperseded": 1,
+      "currentlyPartiallyResolvedAmongKnown": 3,
+      "currentlyFlaggedSilentDropAmongKnown": 5,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 16
+    },
+    {
+      "release": "v3.8.0",
+      "newLimitations": 3,
+      "carriedForward": 16,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 3,
+      "currentlyFlaggedSilentDropAmongKnown": 6,
+      "explicitReappearances": 1,
+      "totalKnownOpenAfterRelease": 19
+    },
+    {
+      "release": "v3.8.1",
+      "newLimitations": 0,
+      "carriedForward": 19,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 3,
+      "currentlyFlaggedSilentDropAmongKnown": 6,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 19
+    },
+    {
+      "release": "v3.8.2",
+      "newLimitations": 0,
+      "carriedForward": 19,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 3,
+      "currentlyFlaggedSilentDropAmongKnown": 6,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 19
+    },
+    {
+      "release": "v3.9.0",
+      "newLimitations": 3,
+      "carriedForward": 19,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 4,
+      "currentlyFlaggedSilentDropAmongKnown": 7,
+      "explicitReappearances": 1,
+      "totalKnownOpenAfterRelease": 22
+    },
+    {
+      "release": "v4.0.0",
+      "newLimitations": 0,
+      "carriedForward": 22,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 4,
+      "currentlyFlaggedSilentDropAmongKnown": 7,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 22
+    },
+    {
+      "release": "v4.1.0",
+      "newLimitations": 0,
+      "carriedForward": 22,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 4,
+      "currentlyFlaggedSilentDropAmongKnown": 7,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 22
+    },
+    {
+      "release": "v4.3.0",
+      "newLimitations": 0,
+      "carriedForward": 22,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 4,
+      "currentlyFlaggedSilentDropAmongKnown": 7,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 22
+    },
+    {
+      "release": "v4.4.0",
+      "newLimitations": 0,
+      "carriedForward": 22,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 4,
+      "currentlyFlaggedSilentDropAmongKnown": 7,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 22
+    },
+    {
+      "release": "v4.5.0",
+      "newLimitations": 0,
+      "carriedForward": 22,
+      "resolvedOrSuperseded": 2,
+      "currentlyPartiallyResolvedAmongKnown": 4,
+      "currentlyFlaggedSilentDropAmongKnown": 7,
+      "explicitReappearances": 2,
+      "totalKnownOpenAfterRelease": 20
+    },
+    {
+      "release": "v4.5.1",
+      "newLimitations": 0,
+      "carriedForward": 20,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 4,
+      "currentlyFlaggedSilentDropAmongKnown": 7,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 20
+    },
+    {
+      "release": "v4.6.0",
+      "newLimitations": 13,
+      "carriedForward": 20,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 6,
+      "currentlyFlaggedSilentDropAmongKnown": 15,
+      "explicitReappearances": 2,
+      "totalKnownOpenAfterRelease": 33
+    },
+    {
+      "release": "v4.6.1",
+      "newLimitations": 0,
+      "carriedForward": 33,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 6,
+      "currentlyFlaggedSilentDropAmongKnown": 15,
+      "explicitReappearances": 1,
+      "totalKnownOpenAfterRelease": 33
+    },
+    {
+      "release": "v4.7.0",
+      "newLimitations": 8,
+      "carriedForward": 33,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 8,
+      "currentlyFlaggedSilentDropAmongKnown": 21,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 41
+    },
+    {
+      "release": "v4.7.1",
+      "newLimitations": 0,
+      "carriedForward": 41,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 8,
+      "currentlyFlaggedSilentDropAmongKnown": 21,
+      "explicitReappearances": 2,
+      "totalKnownOpenAfterRelease": 41
+    },
+    {
+      "release": "v4.8.0",
+      "newLimitations": 5,
+      "carriedForward": 41,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 8,
+      "currentlyFlaggedSilentDropAmongKnown": 22,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 46
+    },
+    {
+      "release": "v4.8.1",
+      "newLimitations": 2,
+      "carriedForward": 46,
+      "resolvedOrSuperseded": 3,
+      "currentlyPartiallyResolvedAmongKnown": 8,
+      "currentlyFlaggedSilentDropAmongKnown": 22,
+      "explicitReappearances": 2,
+      "totalKnownOpenAfterRelease": 45
+    },
+    {
+      "release": "v4.9.0",
+      "newLimitations": 2,
+      "carriedForward": 45,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 8,
+      "currentlyFlaggedSilentDropAmongKnown": 22,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 47
+    },
+    {
+      "release": "v4.10.0",
+      "newLimitations": 6,
+      "carriedForward": 47,
+      "resolvedOrSuperseded": 0,
+      "currentlyPartiallyResolvedAmongKnown": 8,
+      "currentlyFlaggedSilentDropAmongKnown": 22,
+      "explicitReappearances": 0,
+      "totalKnownOpenAfterRelease": 53
+    }
+  ],
+  "candidateRelease": "v4.11.0"
+}

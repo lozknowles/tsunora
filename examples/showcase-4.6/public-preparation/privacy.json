@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "method": "Visual inspection of real screenshots plus exact private-token, key and private-path OCR checks. Native public projection for Discovery and Estate.",
+  "images": [
+    {
+      "file": "docs/media/4.6/public/01-first-dashboard.png",
+      "ocrFlags": {
+        "exactPrivateToken": false,
+        "privatePath": false,
+        "privateKey": false
+      }
+    },
+    {
+      "file": "docs/media/4.6/public/02-setup.png",
+      "ocrFlags": {
+        "exactPrivateToken": false,
+        "privatePath": false,
+        "privateKey": false
+      }
+    },
+    {
+      "file": "docs/media/4.6/public/03-discovery-running.png",
+      "ocrFlags": {
+        "exactPrivateToken": false,
+        "privatePath": false,
+        "privateKey": false
+      }
+    },
+    {
+      "file": "docs/media/4.6/public/04-discovery-results.png",
+      "ocrFlags": {
+        "exactPrivateToken": false,
+        "privatePath": false,
+        "privateKey": false
+      }
+    },
+    {
+      "file": "docs/media/4.6/public/05-estate.png",
+      "ocrFlags": {
+        "exactPrivateToken": false,
+        "privatePath": false,
+        "privateKey": false
+      }
+    },
+    {
+      "file": "docs/media/4.6/public/06-inspector.png",
+      "ocrFlags": {
+        "exactPrivateToken": false,
+        "privatePath": false,
+        "privateKey": false
+      }
+    },
+    {
+      "file": "docs/media/4.6/public/10-crew.png",
+      "ocrFlags": {
+        "exactPrivateToken": false,
+        "privatePath": false,
+        "privateKey": false
+      }
+    },
+    {
+      "file": "docs/media/4.6/public/11-mallow.png",
+      "ocrFlags": {
+        "exactPrivateToken": false,
+        "privatePath": false,
+        "privateKey": false
+      }
+    },
+    {
+      "file": "docs/media/4.6/public/12-mallow-proposal.png",
+      "ocrFlags": {
+        "exactPrivateToken": false,
+        "privatePath": false,
+        "privateKey": false
+      }
+    },
+    {
+      "file": "docs/media/4.6/public/13-mobile.png",
+      "ocrFlags": {
+        "exactPrivateToken": false,
+        "privatePath": false,
+        "privateKey": false
+      }
+    },
+    {
+      "file": "docs/media/4.6/public/07-process.png",
+      "ocrFlags": {
+        "exactPrivateToken": false,
+        "privatePath": false,
+        "privateKey": false
+      }
+    },
+    {
+      "file": "docs/media/4.6/public/08-usage.png",
+      "ocrFlags": {
+        "exactPrivateToken": false,
+        "privatePath": false,
+        "privateKey": false
+      }
+    },
+    {
+      "file": "docs/media/4.6/public/09-energy.png",
+      "ocrFlags": {
+        "exactPrivateToken": false,
+        "privatePath": false,
+        "privateKey": false
+      }
+    }
+  ],
+  "credentialsPublished": false
+}

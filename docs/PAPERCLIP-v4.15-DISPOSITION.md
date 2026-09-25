@@ -1,0 +1,48 @@
+# Paperclip findings consumed into the AI labour candidate
+
+24 September 2026. Original review read in full. Public repository HEAD rechecked: `e006c18f2036d95d47ca8f7eb068670f3c54942d`, unchanged. Important budget, identity, completion and ownership conclusions were checked against this snapshot. Source analysis is not Paperclip runtime qualification.
+
+| Paperclip technique | Review classification | Agent Control equivalent | Gap identified | Decision | Implemented? | Implementation location | Tests | Evidence | Reason if rejected/deferred |
+|---|---|---|---|---|---|---|---|---|---|
+| Conditional checkout / ownership fencing | ADOPT NOW | Job leases plus exchange single writer and contract identity | Duplicate outcome charges and restart ambiguity | ALREADY SATISFIED | Yes, bounded single writer | labour-ledger.ts; labour-exchange.ts admit/submit/recovery | duplicate, concurrent submission, restart reservation | Candidate 0071262a5 and original physical ledger | Distributed ownership is outside this experiment |
+| Company-scoped cost and assessment ownership | ADOPT NOW | Organisation on worker, order, attempt and budget | Cross-organisation award/accounting | ALREADY SATISFIED | Yes | labour-types.ts; labour-exchange.ts rejections/admit | organisation mismatch and budget exhaustion | Original qualification; new payroll keeps organisation totals separate | Not a full tenant-security certification |
+| Persistent identity independent of adapter/session | ADOPT NOW | Worker ID plus versioned backend and historical attempts | Historical economics could otherwise follow only model names | IMPLEMENTED | Stable identity existed; actual model/backend resource attribution added | labour-ai-backend.ts; labour-types.ts resources; changeBackend | backend swap, stale qualification, retained history | New physical identity test required; original deterministic test retained | No opaque session migration |
+| Contract-bound completion assessment | ADOPT NOW | WorkOrder hash, verifier revision, result hash, verified settlement | Process exit alone is insufficient | ALREADY SATISFIED | Yes | labour-exchange.ts execute/settle | wrong output, verifier exception, changed contract | Original qualification; same frozen verifier for all new strategies | Generated code treated as data, not arbitrary execution |
+| Budget stop/admission | ADOPT NOW design strengthening | Whole-outcome reservation and bounded attempts | Observed spend alone does not cover in-flight liabilities | IMPLEMENTED | Existing reservation retained; measured-resource quote separated from reservation ceiling | labour-exchange.ts bid/tender/execute; cpu-ms metering | reservation, bounded retry and measured charge tests | CPU resource ledger, unknown measurement charged conservatively and flagged | No assertion Paperclip itself reserves all liabilities |
+| Organisation hierarchy / goal ancestry | INVESTIGATE LATER | Principal, crew, job and organisation scopes | No demonstrated need for reporting tree in benchmark | Deferred | No new hierarchy | Existing identity-control-plane.ts and job contracts | Existing full suite | Original P1/P2 source comparison | Reporting lines would not improve this bounded allocation test |
+| Delegation and supervision | INVESTIGATE LATER | Existing handoffs, scopes, owned processes, containment | Worker identity must survive implementation changes | Retain existing controls; prove sequential backend swap | Existing controls retained | containment.ts; owned-process.ts; changeBackend | kill/quarantine/scope regression and physical controls | New AI controls separate from economic comparison | Autonomous escalation and delegation chains require their own authority contracts |
+| Adapter-specific context/session migration | INVESTIGATE LATER | Existing context/session vault and backend revision | Incompatible sessions cannot transfer safely | Deferred | No migration added | Existing session/context mechanisms | Existing regression | Current adapter uses independent bounded calls | No evidence justifies migrating model context |
+| External workforce / execution adapter | INVESTIGATE LATER | LabourBackend boundary | Remote cancellation, cost and evidence authority unresolved | FUTURE RESEARCH ONLY | No integration | No dependency introduced | Dependency/source distribution checks | Source interface comparison | No demonstrated benefit for locally available workforce |
+| Multi-controller transactional persistence | INVESTIGATE LATER | Single-writer journal and fail-closed lock | Multiple writers and production reconciliation not implemented | Deferred | No | labour-ledger.ts | duplicate writer, restart and tamper tests | Local ledger evidence | Need production workload and storage authority before distributed design |
+| Independently anchored audit roots | INVESTIGATE LATER | Hash-linked journal | Privileged administrator can replace local journal/root | Deferred | No external anchor | labour-ledger.ts | integrity test | SHA manifests provide local integrity only | No independent anchor service authorised or needed for experiment |
+| Runtime budget races, recovery, completion arbitration and multi-company boundaries | INVESTIGATE LATER | Existing Agent Control controls | Paperclip runtime not executed | Deferred / NOT TESTED | No Paperclip runtime | P3/P4/P7/P10 source only | No runtime tests claimed | Pinned source links in original review | Separate Paperclip executable qualification would be needed before relying on it |
+| Paperclip runtime/database dependency | DO NOT ADOPT | Independent Agent Control runtime | No capability gap requiring dependency | Rejected | No | No Paperclip imports or package addition | Source/dependency checks | Candidate diff | Unwanted coupling |
+| Mandatory corporate hierarchy / CEO metaphor | DO NOT ADOPT | Operational worker identity | Would add presentation without execution evidence | Rejected | No | Dashboard shows actual organisation, status, ownership and budget | Dashboard checks | Live exchange projection | No demonstrated operational benefit |
+| Provider-specific core qualification constants | DO NOT ADOPT | Backend revision and generic capabilities | Core must stay model/provider independent | Rejected | No | Generic LabourBackend/Verifier contracts | backend revision and qualification tests | Native adapter is optional | Specific model paths confined to explicit qualification manifest |
+| Hard financial ceiling inferred from observed spend | DO NOT ADOPT | Maximum reservation plus explicit units | Resource values cannot establish monetary savings | Rejected | No such claim | resource accounting and economics projection | unknown accounting and budget tests | Null monetary conversion | No defensible local monetary/energy conversion available |
+| Simulated employee earnings / paid-money claims | DO NOT ADOPT | Internal charges and measured resource payroll | Accounting is not settlement | Rejected | No payments | labour-economics.ts / dashboard | projection checks | Runtime data only | No financial settlement occurred |
+| Claims that Paperclip lacks verification, qualification or recovery | DO NOT ADOPT | Source-grounded comparison | Original framing must acknowledge overlap | Rejected | Corrected interpretation retained | Original review P7/P9/P10 | Source inspection | Pinned public source | These mechanisms are visibly present |
+
+Every ADOPT NOW recommendation is explicitly dispositioned above. The additions address measured-resource accounting and current qualification validity; they do not import Paperclip or change the benchmark to favour brokerage.
+
+## Boundary and final interoperability decision
+
+Paperclip's schemas and services support organisation/control of agents, assignment, costs, completion review and recovery. The searched current snapshot still does not establish competitive tenders, retained offers and performance-adjusted allocation. This is a bounded source finding, not a claim about every plugin or future version. See [the pinned architecture](https://github.com/paperclipai/paperclip/blob/e006c18f2036d95d47ca8f7eb068670f3c54942d/docs/start/architecture.md) and source links in the original review.
+
+**NO INTEGRATION REQUIRED** now. External-workforce, execution-backend and control-plane interoperability remain **FUTURE RESEARCH ONLY**, conditional on scoped ownership, idempotency, complete resource export and cancellation proof. Agent Control remains independently functional.
+
+```text
+ORGANISATION owns BUDGET and policy
+  CONTROL PLANE governs identity, permissions, qualification, lifecycle,
+    supervision, approvals, containment and durable ownership
+      WORK ORDER declares outcome + verifier contract + scope + maximum budget
+        BROKER filters authority then compares BIDs from DIGITAL WORKER identities
+          AWARD binds work owner, bid, contract and backend revision
+            EXECUTION BACKEND implements worker using MODEL + allowed TOOLS
+              VERIFIER accepts or rejects exact outcome
+                TRANSACTION records worker/backend/model/tools/resources and charges
+                  LEDGER retains bids, awards, all attempts and settlement
+                    BUDGET releases reservation against complete-outcome accounting
+```
+
+DigitalWorker != Model; DigitalWorker != Agent Process. Stable worker identity owns its historical transactions; backend/model changes require fresh qualification. The broker adds allocation policy to the control plane and remains subordinate to governance. Payroll and strategy comparison are projections of the ledger, not an alternative source of truth.

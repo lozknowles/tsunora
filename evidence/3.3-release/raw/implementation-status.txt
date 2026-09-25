@@ -1,0 +1,5 @@
+
+> agent-control@3.3.0 check:status
+> node scripts/implementation-status.mjs --check
+
+PASS 18 implementation-status entries

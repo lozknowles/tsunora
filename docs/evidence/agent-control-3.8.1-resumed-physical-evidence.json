@@ -1,0 +1,144 @@
+{
+  "schema": "agent-control.3.8.1-resumed-physical-evidence/v1",
+  "checkpoint": "e50697874c0838d7b2acdf918a4f0cad7b8e4356",
+  "observedAt": "2026-09-04T05:13:25.000Z",
+  "profiles": {
+    "controller-account-a": {
+      "nodeId": "controller",
+      "state": "QUALIFIED",
+      "isolated": true
+    },
+    "cottage-plus": {
+      "nodeId": "controller",
+      "state": "QUALIFIED",
+      "isolated": true,
+      "authentication": "independent-device-flow"
+    },
+    "distinctCredentialReferences": true,
+    "globalHomeUnchanged": true
+  },
+  "msi": {
+    "gitVersion": "2.55.0.windows.3",
+    "gitExecutableSha256": "7b7971dd13f0c3a284e538601f2f9770b3a87dfaccb5fb52d68141c67ed22364",
+    "reviewedSha": "c37b54b00fa7318ac3261109641c8c5e68795eec",
+    "archiveSha256": "f5b9bd9f89a7e67f3da3e8e7ebdd9a7a73f272d0e9c5a8bab7b018842d1e9276",
+    "snapshotKind": "remote-immutable-archive",
+    "clean": true,
+    "sourceWorktreesMutated": false,
+    "pathSafetyPassed": true,
+    "sensitiveTrackedPathGatePassed": true
+  },
+  "accountHandoff": {
+    "jobId": "repository-code-review@1",
+    "runId": "5dd1a95d-719c-4503-af43-f464bb102c37",
+    "workParcelId": "parcel-5de60fb2-69ed-4b94-b10e-221e297590fd",
+    "source": {
+      "providerId": "codex-chatgpt",
+      "accountProfileId": "controller-account-a",
+      "modelId": "account-a-review",
+      "workloadNodeId": "msi",
+      "providerExecutionNodeId": "controller",
+      "credentialNodeId": "controller",
+      "inputTokens": 12859,
+      "outputTokens": 170,
+      "totalTokens": 13029,
+      "currentContextTokens": 13029,
+      "contextLimitTokens": 32768,
+      "contextAuthority": "estimated",
+      "calculatedCostUsd": 0.13199
+    },
+    "destination": {
+      "providerId": "codex-chatgpt",
+      "accountProfileId": "cottage-plus",
+      "modelId": "account-b-review",
+      "workloadNodeId": "msi",
+      "providerExecutionNodeId": "controller",
+      "credentialNodeId": "controller",
+      "inputTokens": 12830,
+      "outputTokens": 348,
+      "totalTokens": 13178,
+      "currentContextTokens": 13178,
+      "contextLimitTokens": 32768,
+      "contextAuthority": "estimated",
+      "calculatedCostUsd": 0.013526
+    },
+    "batonId": "token-baton:ff96cc1a-63ae-41cb-b991-2e7df7b09c5d",
+    "batonSha256": "9b969d6b1c0a2724c5def43d1e0a3282cbba44162a23826cb22f4fa09b004c2d",
+    "handoffId": "handoff:0a0f0343-29f1-40bd-87ff-a2348ddcec23",
+    "handoffStatus": "COMPLETED",
+    "destinationContractId": "contract:33d44107-d5fd-4ffa-bcbf-ed89b62b25b8",
+    "destinationContractState": "VERIFIED",
+    "sourceRecoverable": true,
+    "verification": "PASS",
+    "aggregate": {
+      "inputTokens": 25689,
+      "outputTokens": 518,
+      "totalTokens": 26207,
+      "calculatedCostUsd": 0.145516,
+      "providerReportedCost": null
+    }
+  },
+  "fallback": {
+    "runId": "fbf1fcc9-0fb9-42d6-96c6-4d6ef9889b05",
+    "workParcelId": "parcel-9009aa24-364e-4936-b741-31e674c97960",
+    "primaryAccountProfileId": "controller-account-a",
+    "primaryEligible": false,
+    "primaryRejection": "account-profile-disabled",
+    "selectedAccountProfileId": "cottage-plus",
+    "fallbackReason": "account-a-review:account-profile-disabled",
+    "totalTokens": 12570,
+    "verification": "PASS",
+    "temporaryPolicyRestored": true
+  },
+  "glm": {
+    "providerId": "openrouter",
+    "modelId": "z-ai/glm-5.3-flash",
+    "state": "QUALIFIED",
+    "credentialReference": "OPENROUTER_API_KEY_FILE",
+    "qualificationEvidenceRoot": "/opt/qualification/agent-control-3.8.1-glm-KvSmy8",
+    "capabilities": ["responses", "model-identity", "usage-accounting", "basic-response", "coding", "structured-output", "reasoning", "tool-use"],
+    "directProviderSubstitutionUsed": false,
+    "fullReview": {
+      "runId": "run-e1a6c1ed-df0b-4f6f-b409-d9ee9650ea86",
+      "reviewedCommit": "d9f768123378e6d2858e9578cf8748e485186153",
+      "contextSha256": "4d58bc29810c9718e093cec1b2d75f2b476b7878cc0d977bd7099882cc1b9191",
+      "status": "SUCCEEDED",
+      "verification": ["provider-completed", "review-content-complete"],
+      "verdict": "PASS_WITH_FINDINGS",
+      "inputTokens": 827644,
+      "outputTokens": 53898,
+      "reasoningTokens": 44808,
+      "totalTokens": 881542,
+      "providerReportedCostUsd": 0.1510956,
+      "precedingIncompleteAttempt": {
+        "inputTokens": 985134,
+        "outputTokens": 32768,
+        "totalTokens": 1017902,
+        "providerReportedCostUsd": 0.1641541,
+        "verification": "FAIL"
+      },
+      "artifactRemediation": {
+        "state": "PASS",
+        "rawProviderResponsePersisted": false,
+        "resolvedCredentialPathPersisted": false,
+        "credentialValueObserved": false
+      },
+      "evidenceRoot": "/opt/qualification/agent-control-3.8.1-glm-full-review"
+    }
+  },
+  "dashboardVideo": {
+    "state": "UNAVAILABLE",
+    "reason": "no callable interactive browser/computer surface; durable lifecycle and completion telemetry retained"
+  },
+  "regression": {
+    "command": "npm run check",
+    "typecheck": "PASS",
+    "bootstrap": "PASS",
+    "dashboard": "PASS",
+    "neutralityTests": 3,
+    "implementationStatusClaims": 32,
+    "testsPassed": 703,
+    "testsFailed": 0
+  },
+  "verdict": "REVIEW_REQUIRED — GLM QUALIFIED AND FULL REVIEW VERIFIED; RELEASE BLOCKED BY REVIEW FINDINGS"
+}

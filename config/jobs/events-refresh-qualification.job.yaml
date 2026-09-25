@@ -1,0 +1,90 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata:
+  id: events-refresh-qualification
+  name: Events Refresh Qualification
+  version: 1.0.0
+  description: Safe non-production proof of capability placement, typed handoff and verified completion.
+spec:
+  enabled: true
+  priority: normal
+  concurrency: no-overlap
+  parameters:
+    publish:
+      type: boolean
+      default: false
+    existingRecords:
+      type: integer
+      default: 3
+      minimum: 0
+  retry:
+    attempts: 1
+    backoffSeconds: 5
+  steps:
+    - id: discover
+      name: Event discovery
+      action: qualification.events.discover@1.0.0
+      requires: [browser.mobile, facebook.authenticated]
+      resources: [facebook-session, browser-session]
+      outputs:
+        - name: candidates
+          type: application/vnd.agent-control.events+json
+          schema: events/v3
+          version: 1.0.0
+      verification: [events-schema-v3]
+    - id: reconcile
+      name: Reconciliation
+      action: qualification.events.reconcile@1.0.0
+      requires: [localwalks.publisher]
+      resources: [repository/localwalks]
+      dependsOn: [discover]
+      inputs:
+        candidates: discover.candidates
+      outputs:
+        - name: reconciled
+          type: application/vnd.agent-control.events-reconciled+json
+          schema: events-reconciled/v1
+          version: 1.0.0
+      verification: [reconciliation-preserves-existing]
+    - id: build
+      name: Build
+      action: qualification.events.build@1.0.0
+      requires: [node, git]
+      resources: [repository/localwalks]
+      dependsOn: [reconcile]
+      inputs:
+        events: reconcile.reconciled
+      outputs:
+        - name: build-report
+          type: application/vnd.agent-control.test-report+json
+          schema: build-report/v1
+          version: 1.0.0
+      verification: [build-passed]
+    - id: publish
+      name: Safe publication gate
+      action: qualification.events.publish@1.0.0
+      requires: [localwalks.publisher, production-access]
+      resources: [localwalks-production-publisher]
+      dependsOn: [build]
+      inputs:
+        build: build.build-report
+      approval: production-publish
+      outputs:
+        - name: release
+          type: application/vnd.agent-control.release+json
+          schema: release/v1
+          version: 1.0.0
+      verification: [publication-policy-respected]
+    - id: verify
+      name: Target verification
+      action: qualification.events.verify@1.0.0
+      requires: [network.read]
+      dependsOn: [publish]
+      inputs:
+        release: publish.release
+      outputs:
+        - name: verification-report
+          type: application/vnd.agent-control.verification+json
+          schema: verification/v1
+          version: 1.0.0
+      verification: [target-verified]

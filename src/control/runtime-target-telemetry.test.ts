@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {assessTargetAdmission,validateTargetPolicy,type TargetObservation,type TargetResourcePolicy} from './runtime-target-telemetry.js';
+export const policy:TargetResourcePolicy={batteryRequired:true,chargingRequired:true,minimumBatteryPercent:30,maximumThermalCelsius:40,maximumThermalStatus:2,minimumAvailableBytes:1000,minimumFreeStorageBytes:5000,maximumObservationAgeMs:30000};
+export const observation=():TargetObservation=>({observedAt:new Date().toISOString(),connected:true,batteryPercent:80,charging:true,thermalCelsius:30,thermalStatus:0,availableRamBytes:2000,freeStorageBytes:10000,serviceHealthy:true,serviceIdle:true,evidence:{}});
+test('runtime admission permits evidenced target without granting new authority',()=>{assert.equal(assessTargetAdmission(observation(),policy).decision,'ADMIT');});
+test('thermal boundary refuses exactly 40 C without heating hardware',()=>{for(const temp of [40,40.1,50])assert.equal(assessTargetAdmission({...observation(),thermalCelsius:temp},policy).decision,'REFUSE');});
+test('unknown telemetry is not zero',()=>{for(const field of ['batteryPercent','thermalCelsius','thermalStatus','availableRamBytes','freeStorageBytes','charging'])assert.equal(assessTargetAdmission({...observation(),[field]:null},policy).allowed,false);});
+test('stale and unreachable observations refuse',()=>{assert.equal(assessTargetAdmission({...observation(),connected:false},policy).allowed,false);assert.equal(assessTargetAdmission({...observation(),observedAt:'2000-01-01'},policy).allowed,false);});
+test('service busy and insufficient memory refuse',()=>{assert.equal(assessTargetAdmission({...observation(),serviceIdle:false},policy).allowed,false);assert.equal(assessTargetAdmission({...observation(),availableRamBytes:999},policy).allowed,false);});
+test('Linux semantics do not invent battery values',()=>{assert.equal(assessTargetAdmission({...observation(),batteryPercent:null,charging:null,thermalCelsius:null,thermalStatus:null},{...policy,batteryRequired:false,chargingRequired:false}).allowed,true);});
+test('resource policy cannot weaken the 40 C maximum',()=>{assert.throws(()=>validateTargetPolicy({...policy,maximumThermalCelsius:41}));assert.throws(()=>validateTargetPolicy({...policy,maximumObservationAgeMs:Infinity}));});

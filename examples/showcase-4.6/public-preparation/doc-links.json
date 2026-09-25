@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "documents": 11,
+  "localLinksAndAnchorsChecked": 106,
+  "failures": [],
+  "externalLinks": [
+    "https://github.com/lozknowles/agent-control-jobs",
+    "https://github.com/lozknowles/agent-control/blob/feature/4.6-model-intelligence-showcase/README.md",
+    "https://github.com/lozknowles/agent-control/blob/feature/4.6-model-intelligence-showcase/docs/installation-first-run.md",
+    "https://github.com/lozknowles/agent-control/blob/v4.5.1/docs/DEPLOYMENT.md",
+    "https://github.com/lozknowles/agent-control/releases/tag/v4.5.1",
+    "https://github.com/lozknowles/agent-control/tree/feature/4.6-model-intelligence-showcase"
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "schema": "agent-control.benchmark-workloads/v1",
+  "id": "local-model-common",
+  "version": "2.0.0",
+  "boundary": "Deterministic bounded workloads. Structured summarisation measures extraction of requested facts, not unrestricted summary quality. Long-context retrieval here is about 100 records, not maximum model context. Sustained endurance is a separate qualification.",
+  "cases": [
+    {
+      "id": "instruction",
+      "prompt": "Reply with exactly READY and nothing else.",
+      "validator": "exact-text",
+      "input": null,
+      "expected": "READY"
+    },
+    {
+      "id": "factual-qa",
+      "prompt": "What is the capital city of France? Reply with only the city name.",
+      "validator": "exact-text",
+      "input": null,
+      "expected": "Paris"
+    },
+    {
+      "id": "reasoning",
+      "prompt": "A box has 3 red balls and 5 blue balls. Two blue balls are removed and 4 red balls are added. How many balls remain? Reply with only the integer.",
+      "validator": "exact-text",
+      "input": null,
+      "expected": "10"
+    },
+    {
+      "id": "tool-selection",
+      "prompt": "Choose the tool for inspecting the current status of a job without changing it. Tools: job.inspect (read-only), job.cancel (changes state), estate.delete (changes state). Return only JSON with one field tool containing the tool name.",
+      "validator": "json-schema",
+      "input": null,
+      "expected": {
+        "type": "object",
+        "required": [
+          "tool"
+        ],
+        "properties": {
+          "tool": {
+            "const": "job.inspect"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "summarisation",
+      "prompt": "Summarise this note as JSON with fields owner, deadline and action only. Note: Mira will send the inventory report on Friday. Arun is away Monday. The report is needed before the weekend. Return JSON only.",
+      "validator": "json-schema",
+      "input": null,
+      "expected": {
+        "type": "object",
+        "required": [
+          "owner",
+          "deadline",
+          "action"
+        ],
+        "properties": {
+          "owner": {
+            "const": "Mira"
+          },
+          "deadline": {
+            "const": "Friday"
+          },
+          "action": {
+            "enum": [
+              "send the inventory report",
+              "send inventory report"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "structured-json",
+      "prompt": "Return only a JSON object with name set to Iris, count set to the integer 3, and active set to true. No other fields.",
+      "validator": "json-schema",
+      "input": null,
+      "expected": {
+        "type": "object",
+        "required": [
+          "name",
+          "count",
+          "active"
+        ],
+        "properties": {
+          "name": {
+            "const": "Iris"
+          },
+          "count": {
+            "const": 3
+          },
+          "active": {
+            "const": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "coding-mean",
+      "prompt": "Repair this Python function. Return only the complete function named solve. It should return the arithmetic mean, or 0 for an empty list. Broken code: def solve(values): return sum(values) / len(values). Visible tests: solve([2,4]) == 3; solve([]) == 0.",
+      "validator": "python-function-tests",
+      "input": [
+        [],
+        [
+          2,
+          4
+        ],
+        [
+          0
+        ],
+        [
+          -3,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          10,
+          -2
+        ]
+      ],
+      "expected": [
+        0,
+        3,
+        0,
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "id": "long-context-retrieval",
+      "prompt": "Read the following records and answer the question after them.\nRecord 001: inventory marker is ordinary.\nRecord 002: inventory marker is ordinary.\nRecord 003: inventory marker is ordinary.\nRecord 004: inventory marker is ordinary.\nRecord 005: inventory marker is ordinary.\nRecord 006: inventory marker is ordinary.\nRecord 007: inventory marker is ordinary.\nRecord 008: inventory marker is ordinary.\nRecord 009: inventory marker is ordinary.\nRecord 010: inventory marker is ordinary.\nRecord 011: inventory marker is ordinary.\nRecord 012: inventory marker is ordinary.\nRecord 013: inventory marker is ordinary.\nRecord 014: inventory marker is ordinary.\nRecord 015: inventory marker is ordinary.\nRecord 016: inventory marker is ordinary.\nRecord 017: inventory marker is ordinary.\nRecord 018: inventory marker is ordinary.\nRecord 019: inventory marker is ordinary.\nRecord 020: inventory marker is ordinary.\nRecord 021: inventory marker is ordinary.\nRecord 022: inventory marker is ordinary.\nRecord 023: inventory marker is ordinary.\nRecord 024: inventory marker is ordinary.\nRecord 025: inventory marker is ordinary.\nRecord 026: inventory marker is ordinary.\nRecord 027: inventory marker is ordinary.\nRecord 028: inventory marker is ordinary.\nRecord 029: inventory marker is ordinary.\nRecord 030: inventory marker is ordinary.\nRecord 031: inventory marker is ordinary.\nRecord 032: inventory marker is ordinary.\nRecord 033: inventory marker is ordinary.\nRecord 034: inventory marker is ordinary.\nRecord 035: inventory marker is ordinary.\nRecord 036: inventory marker is ordinary.\nRecord 037: inventory marker is ordinary.\nRecord 038: inventory marker is ordinary.\nRecord 039: inventory marker is ordinary.\nRecord 040: inventory marker is ordinary.\nRecord 041: inventory marker is ordinary.\nRecord 042: inventory marker is ordinary.\nRecord 043: inventory marker is ordinary.\nRecord 044: inventory marker is ordinary.\nRecord 045: inventory marker is ordinary.\nRecord 046: inventory marker is ordinary.\nRecord 047: inventory marker is LIME-72.\nRecord 048: inventory marker is ordinary.\nRecord 049: inventory marker is ordinary.\nRecord 050: inventory marker is ordinary.\nRecord 051: inventory marker is ordinary.\nRecord 052: inventory marker is ordinary.\nRecord 053: inventory marker is ordinary.\nRecord 054: inventory marker is ordinary.\nRecord 055: inventory marker is ordinary.\nRecord 056: inventory marker is ordinary.\nRecord 057: inventory marker is ordinary.\nRecord 058: inventory marker is ordinary.\nRecord 059: inventory marker is ordinary.\nRecord 060: inventory marker is ordinary.\nRecord 061: inventory marker is ordinary.\nRecord 062: inventory marker is ordinary.\nRecord 063: inventory marker is ordinary.\nRecord 064: inventory marker is ordinary.\nRecord 065: inventory marker is ordinary.\nRecord 066: inventory marker is ordinary.\nRecord 067: inventory marker is ordinary.\nRecord 068: inventory marker is ordinary.\nRecord 069: inventory marker is ordinary.\nRecord 070: inventory marker is ordinary.\nRecord 071: inventory marker is ordinary.\nRecord 072: inventory marker is ordinary.\nRecord 073: inventory marker is ordinary.\nRecord 074: inventory marker is ordinary.\nRecord 075: inventory marker is ordinary.\nRecord 076: inventory marker is ordinary.\nRecord 077: inventory marker is ordinary.\nRecord 078: inventory marker is ordinary.\nRecord 079: inventory marker is ordinary.\nRecord 080: inventory marker is ordinary.\nRecord 081: inventory marker is ordinary.\nRecord 082: inventory marker is ordinary.\nRecord 083: inventory marker is ordinary.\nRecord 084: inventory marker is ordinary.\nRecord 085: inventory marker is ordinary.\nRecord 086: inventory marker is ordinary.\nRecord 087: inventory marker is ordinary.\nRecord 088: inventory marker is ordinary.\nRecord 089: inventory marker is ordinary.\nRecord 090: inventory marker is ordinary.\nRecord 091: inventory marker is ordinary.\nRecord 092: inventory marker is ordinary.\nRecord 093: inventory marker is ordinary.\nRecord 094: inventory marker is ordinary.\nRecord 095: inventory marker is ordinary.\nRecord 096: inventory marker is ordinary.\nRecord 097: inventory marker is ordinary.\nRecord 098: inventory marker is ordinary.\nRecord 099: inventory marker is ordinary.\nRecord 100: inventory marker is ordinary.\nWhat is the exact inventory marker in record 047? Reply with only that marker.",
+      "validator": "exact-text",
+      "input": null,
+      "expected": "LIME-72"
+    },
+    {
+      "id": "unknown-evidence",
+      "prompt": "The records supplied do not contain the serial number of machine Cedar. What is its serial number? Reply exactly UNKNOWN when the evidence does not contain the answer.",
+      "validator": "exact-text",
+      "input": null,
+      "expected": "UNKNOWN"
+    }
+  ]
+}

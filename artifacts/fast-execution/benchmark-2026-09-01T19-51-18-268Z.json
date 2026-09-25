@@ -1,0 +1,136 @@
+{
+  "schema": "agent-control.fast-execution-benchmark/v1",
+  "createdAt": "2026-09-01T19:51:18.268Z",
+  "availability": {
+    "available": true,
+    "model": "gpt-5.3-codex-spark",
+    "codexVersion": "codex-cli 0.144.4",
+    "authMode": "chatgpt",
+    "checkedAt": "2026-09-01T19:51:18.243Z",
+    "reason": "authenticated-bounded-codex-exec-succeeded",
+    "evidence": [
+      "codex-version:codex-cli 0.144.4",
+      "model:gpt-5.3-codex-spark",
+      "response:SPARK_AVAILABLE"
+    ],
+    "latencyMs": 5369
+  },
+  "classifier": {
+    "total": 10,
+    "falsePositive": 0,
+    "falseNegative": 0,
+    "correct": 10,
+    "cases": [
+      {
+        "id": "docs",
+        "expectedSpark": true,
+        "selected": true,
+        "reasons": [],
+        "contextTokens": 29
+      },
+      {
+        "id": "config",
+        "expectedSpark": true,
+        "selected": true,
+        "reasons": [],
+        "contextTokens": 29
+      },
+      {
+        "id": "rename",
+        "expectedSpark": true,
+        "selected": true,
+        "reasons": [],
+        "contextTokens": 29
+      },
+      {
+        "id": "bug",
+        "expectedSpark": true,
+        "selected": true,
+        "reasons": [],
+        "contextTokens": 24
+      },
+      {
+        "id": "lint",
+        "expectedSpark": true,
+        "selected": true,
+        "reasons": [],
+        "contextTokens": 32
+      },
+      {
+        "id": "test",
+        "expectedSpark": true,
+        "selected": true,
+        "reasons": [],
+        "contextTokens": 29
+      },
+      {
+        "id": "search",
+        "expectedSpark": true,
+        "selected": true,
+        "reasons": [],
+        "contextTokens": 35
+      },
+      {
+        "id": "ambiguous",
+        "expectedSpark": false,
+        "selected": false,
+        "reasons": [
+          "task-not-trivial",
+          "risk-not-low",
+          "non-deterministic-verification"
+        ],
+        "contextTokens": null
+      },
+      {
+        "id": "multi-file",
+        "expectedSpark": false,
+        "selected": false,
+        "reasons": [
+          "multi-file-task"
+        ],
+        "contextTokens": null
+      },
+      {
+        "id": "protected",
+        "expectedSpark": false,
+        "selected": false,
+        "reasons": [
+          "risk-not-low",
+          "protected-path",
+          "sensitive-task"
+        ],
+        "contextTokens": null
+      }
+    ]
+  },
+  "live": false,
+  "models": {
+    "spark": "gpt-5.3-codex-spark",
+    "standard": "gpt-5.6-luna"
+  },
+  "results": [],
+  "summary": {
+    "spark": {
+      "attempts": 0,
+      "verified": 0,
+      "verifiedSuccessRate": null,
+      "medianLatencyMs": null,
+      "inputTokens": null,
+      "outputTokens": null,
+      "cost": null,
+      "currency": null,
+      "costTimePerVerifiedOutcome": null
+    },
+    "standard": {
+      "attempts": 0,
+      "verified": 0,
+      "verifiedSuccessRate": null,
+      "medianLatencyMs": null,
+      "inputTokens": null,
+      "outputTokens": null,
+      "cost": null,
+      "currency": null,
+      "costTimePerVerifiedOutcome": null
+    }
+  }
+}

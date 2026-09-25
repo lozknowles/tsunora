@@ -1,0 +1,253 @@
+{
+  "schema": "agent-control.rebroad-local-direct-inference/v1",
+  "startedAt": "2026-09-19T08:04:24.539Z",
+  "completedAt": "2026-09-19T08:04:26.708Z",
+  "receipt": {
+    "schema": "agent-control.direct-inference/v1",
+    "routeKind": "RAW_INFERENCE",
+    "invocationId": "inv-raw-57fcf22c-aad6-4d91-90ca-96d75f0aa03c",
+    "requestedModel": null,
+    "requestedRole": "lab.raw.local",
+    "resolved": {
+      "model": "ministral-local-raw",
+      "provider": "qualified-loopback-local",
+      "providerModel": "Ministral-3-8B-Instruct-2512-Q4_K_M.gguf",
+      "responseModel": "Ministral-3-8B-Instruct-2512-Q4_K_M.gguf",
+      "node": "controller",
+      "qualificationVersion": "rebroad-local-physical-20260919-accounting-v2",
+      "fallback": false
+    },
+    "output": "AC_RAW_LOCAL_OK",
+    "latencyMs": 2157,
+    "usage": {
+      "inputTokens": 546,
+      "outputTokens": 6,
+      "cachedInputTokens": 536,
+      "cacheWriteTokens": null,
+      "totalTokens": 552,
+      "providerReportedCost": null,
+      "calculatedCost": null,
+      "currency": null,
+      "cacheEvidence": {
+        "reusedTokens": 536,
+        "processedPromptTokens": 10,
+        "cacheWriteTokens": null,
+        "promptProcessingMs": 1176.244,
+        "generationMs": 944.58,
+        "authority": "authoritative",
+        "source": "llama.cpp.response.timings"
+      },
+      "reasoningTokens": null
+    },
+    "accounting": {
+      "execution": "LOCAL",
+      "billing": "FREE",
+      "source": "PROVIDER_REPORTED"
+    },
+    "finishReason": "stop",
+    "evidence": [
+      "request_sha256:45d240a12fb7ac2ee0a35fe396850a7cdd147717b3f0ee97085bcdc7eb1e48a3",
+      "response_sha256:b8b83ab9f3ea2af51862f2e0eeab68d3ca425526e032920f1d345f9c5368f1dd",
+      "qualification:rebroad-local-physical-20260919-accounting-v2",
+      "direct-inference:f3268a6928d73cbae684fba99edfbbfa31e7c5493808c4b27706dcdad693e88a"
+    ]
+  },
+  "observation": {
+    "schema": "agent-control.model-invocation/v1",
+    "accounting": {
+      "schema": "agent-control.usage-accounting/v1",
+      "revision": 0,
+      "parentInvocationId": null,
+      "retryOfInvocationId": null,
+      "parcelId": null,
+      "batonId": null,
+      "providerRequestId": null,
+      "modelRevision": "rebroad-local-physical-20260919-accounting-v2",
+      "runtime": "local",
+      "runtimeVersion": null,
+      "machine": "controller",
+      "hardware": null,
+      "jobType": "direct-inference",
+      "executionKind": "LOCAL",
+      "provenance": {
+        "kind": "NATIVE",
+        "source": "direct-inference",
+        "sourceVersion": "1",
+        "migrationVersion": null,
+        "at": "2026-09-19T08:04:24.540Z"
+      },
+      "semantics": {
+        "id": "provider-normalized-direct-inference/v1",
+        "input": "UNKNOWN",
+        "reasoning": "UNKNOWN",
+        "total": "PROVIDER_ONLY",
+        "billing": "UNKNOWN"
+      },
+      "evidence": {
+        "input": 546,
+        "cached": 536,
+        "cacheWrite": null,
+        "output": 6,
+        "reasoning": null,
+        "total": 552
+      },
+      "pricing": null,
+      "reportedCost": null,
+      "localApiChargeKnownZero": true
+    },
+    "id": "inv-raw-57fcf22c-aad6-4d91-90ca-96d75f0aa03c",
+    "jobId": "rebroad-direct-inference-requalification",
+    "runId": null,
+    "stepId": null,
+    "taskId": "rebroad-direct-inference-requalification:raw",
+    "laneId": "job:rebroad-direct-inference-requalification",
+    "model": "ministral-local-raw",
+    "provider": "qualified-loopback-local",
+    "harnessProfile": "THIN",
+    "harnessId": "adaptive-harness",
+    "executionStrategy": "RAW_INFERENCE",
+    "turnNumber": 1,
+    "startedAt": "2026-09-19T08:04:24.540Z",
+    "completedAt": "2026-09-19T08:04:26.699Z",
+    "elapsedMs": 2159,
+    "state": "COMPLETE",
+    "phase": "complete",
+    "phaseUpdatedAt": "2026-09-19T08:04:26.699Z",
+    "startup": {
+      "components": [
+        {
+          "name": "system_instructions",
+          "estimatedTokens": 0,
+          "bytes": 0,
+          "persistent": false,
+          "measurement": "estimated",
+          "provenanceIds": [],
+          "percentage": 0
+        },
+        {
+          "name": "agent_control_instructions",
+          "estimatedTokens": 0,
+          "bytes": 0,
+          "persistent": false,
+          "measurement": "estimated",
+          "provenanceIds": [],
+          "percentage": 0
+        },
+        {
+          "name": "tool_schemas",
+          "estimatedTokens": 0,
+          "bytes": 0,
+          "persistent": false,
+          "measurement": "estimated",
+          "provenanceIds": [],
+          "percentage": 0
+        },
+        {
+          "name": "skills",
+          "estimatedTokens": 0,
+          "bytes": 0,
+          "persistent": false,
+          "measurement": "estimated",
+          "provenanceIds": [],
+          "percentage": 0
+        },
+        {
+          "name": "workspace_bootstrap",
+          "estimatedTokens": 0,
+          "bytes": 0,
+          "persistent": false,
+          "measurement": "estimated",
+          "provenanceIds": [],
+          "percentage": 0
+        },
+        {
+          "name": "memory_shared_context",
+          "estimatedTokens": 0,
+          "bytes": 0,
+          "persistent": false,
+          "measurement": "estimated",
+          "provenanceIds": [],
+          "percentage": 0
+        },
+        {
+          "name": "repository_instructions",
+          "estimatedTokens": 0,
+          "bytes": 0,
+          "persistent": false,
+          "measurement": "estimated",
+          "provenanceIds": [],
+          "percentage": 0
+        },
+        {
+          "name": "task_context",
+          "estimatedTokens": 0,
+          "bytes": 0,
+          "persistent": false,
+          "measurement": "estimated",
+          "provenanceIds": [],
+          "percentage": 0
+        },
+        {
+          "name": "conversation_history",
+          "estimatedTokens": 0,
+          "bytes": 0,
+          "persistent": false,
+          "measurement": "estimated",
+          "provenanceIds": [],
+          "percentage": 0
+        },
+        {
+          "name": "other",
+          "estimatedTokens": 0,
+          "bytes": 0,
+          "persistent": false,
+          "measurement": "estimated",
+          "provenanceIds": [],
+          "percentage": 0
+        }
+      ],
+      "startupContextTokens": 0,
+      "taskContextTokens": 0,
+      "conversationHistoryTokens": 0,
+      "totalEstimatedContextTokens": 0,
+      "repeatedContextCostEstimate": 0,
+      "turns": 1
+    },
+    "usage": {
+      "inputTokens": 546,
+      "freshInputTokens": null,
+      "cachedInputTokens": 536,
+      "cacheWriteTokens": null,
+      "outputTokens": 6,
+      "reasoningTokens": null,
+      "totalProcessedTokens": 552
+    },
+    "providerReportedCost": null,
+    "calculatedCost": null,
+    "currency": null,
+    "usageSource": "provider-reported",
+    "costSource": "unknown",
+    "finishReason": "stop",
+    "toolCalls": 0,
+    "toolIds": [],
+    "agentId": null,
+    "filesContextSupplied": null,
+    "contextSourceIds": [],
+    "retrievedContextTokens": null,
+    "repositoryContextTokens": null,
+    "conversationHistoryTokens": 0,
+    "verifierResult": "UNKNOWN",
+    "finalJobResult": "UNKNOWN",
+    "outcome": "COMPLETE",
+    "error": null,
+    "provenance": {
+      "recipeFingerprint": "7a4fa8e1083cda9024130fd8d2a14371fc1415c6e5aa6c7a359a6957cd45c9a3",
+      "evidenceIds": [
+        "request_sha256:45d240a12fb7ac2ee0a35fe396850a7cdd147717b3f0ee97085bcdc7eb1e48a3",
+        "response_sha256:b8b83ab9f3ea2af51862f2e0eeab68d3ca425526e032920f1d345f9c5368f1dd",
+        "qualification:rebroad-local-physical-20260919-accounting-v2",
+        "direct-inference:f3268a6928d73cbae684fba99edfbbfa31e7c5493808c4b27706dcdad693e88a"
+      ]
+    }
+  }
+}

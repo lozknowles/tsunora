@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+if [ "${1-}" != install-adb ] || [ "$#" -ne 1 ]; then
+  echo 'agent-control-privileged: only install-adb is allowed' >&2
+  exit 64
+fi
+exec /usr/bin/apt-get install -y --no-install-recommends adb

@@ -1,0 +1,291 @@
+{
+  "schema": "agent-control.tool-call-reliability-corpus/v1",
+  "frozenFrom": "aws-strands-physical-ab-20260922",
+  "historical": [
+    {
+      "id": "MUT-001-AGC",
+      "failure": "TOOL_SCHEMA",
+      "lastTool": "mutation.repository.replace",
+      "rawResponseAvailable": false,
+      "rawArgumentsAvailable": false
+    },
+    {
+      "id": "MUT-002-AGC",
+      "failure": "TOOL_SCHEMA",
+      "lastTool": "mutation.repository.replace",
+      "rawResponseAvailable": false,
+      "rawArgumentsAvailable": false
+    },
+    {
+      "id": "MUT-003-AGC",
+      "failure": "TOOL_SCHEMA",
+      "lastTool": "mutation.repository.replace",
+      "rawResponseAvailable": false,
+      "rawArgumentsAvailable": false
+    },
+    {
+      "id": "MUT-004-AGC",
+      "failure": "TOOL_CALL",
+      "lastTool": "mutation.repository.write",
+      "rawResponseAvailable": false,
+      "rawArgumentsAvailable": false
+    },
+    {
+      "id": "MUT-006-AGC",
+      "failure": "TOOL_SCHEMA",
+      "lastTool": "mutation.repository.read",
+      "rawResponseAvailable": false,
+      "rawArgumentsAvailable": false
+    },
+    {
+      "id": "MUT-007-AGC",
+      "failure": "TOOL_SCHEMA",
+      "lastTool": "mutation.repository.replace",
+      "rawResponseAvailable": false,
+      "rawArgumentsAvailable": false
+    },
+    {
+      "id": "MUT-008-AGC",
+      "failure": "TOOL_CALL",
+      "lastTool": "mutation.repository.write",
+      "rawResponseAvailable": false,
+      "rawArgumentsAvailable": false
+    },
+    {
+      "id": "MUT-010-AGC",
+      "failure": "TOOL_SCHEMA",
+      "lastTool": "mutation.repository.read",
+      "rawResponseAvailable": false,
+      "rawArgumentsAvailable": false
+    }
+  ],
+  "synthetic": [
+    {
+      "id": "valid-read",
+      "raw": "{\"tool\":\"mutation.repository.read\",\"input\":{\"path\":\"src/a.js\"}}",
+      "expected": "VALID",
+      "tool": "mutation.repository.read"
+    },
+    {
+      "id": "valid-replace",
+      "raw": "{\"tool\":\"mutation.repository.replace\",\"input\":{\"path\":\"src/a.js\",\"oldText\":\"a\",\"newText\":\"b\"}}",
+      "expected": "VALID",
+      "tool": "mutation.repository.replace"
+    },
+    {
+      "id": "valid-write",
+      "raw": "{\"tool\":\"mutation.repository.write\",\"input\":{\"path\":\"src/a.js\",\"content\":\"export const a = 1;\"}}",
+      "expected": "VALID",
+      "tool": "mutation.repository.write"
+    },
+    {
+      "id": "valid-test",
+      "raw": "{\"tool\":\"mutation.repository.test\",\"input\":{}}",
+      "expected": "VALID",
+      "tool": "mutation.repository.test"
+    },
+    {
+      "id": "valid-finish",
+      "raw": "{\"tool\":\"mutation.finish\",\"input\":{}}",
+      "expected": "VALID",
+      "tool": "mutation.finish"
+    },
+    {
+      "id": "repair-native-read",
+      "raw": "{\"name\":\"mutation.repository.read\",\"arguments\":{\"path\":\"src/a.js\"}}",
+      "expected": "REPAIRED",
+      "tool": "mutation.repository.read",
+      "equivalentInput": {
+        "path": "src/a.js"
+      }
+    },
+    {
+      "id": "repair-native-string-args",
+      "raw": "{\"name\":\"mutation.repository.replace\",\"arguments\":\"{\\\"path\\\":\\\"src/a.js\\\",\\\"oldText\\\":\\\"a\\\",\\\"newText\\\":\\\"b\\\"}\"}",
+      "expected": "REPAIRED",
+      "tool": "mutation.repository.replace",
+      "equivalentInput": {
+        "path": "src/a.js",
+        "oldText": "a",
+        "newText": "b"
+      }
+    },
+    {
+      "id": "repair-trailing-object-comma",
+      "raw": "{\"tool\":\"mutation.repository.read\",\"input\":{\"path\":\"src/a.js\",},}",
+      "expected": "REPAIRED",
+      "tool": "mutation.repository.read",
+      "equivalentInput": {
+        "path": "src/a.js"
+      }
+    },
+    {
+      "id": "repair-trailing-array-comma",
+      "raw": "{\"tool\":\"mutation.repository.search\",\"input\":{\"query\":\"hello\",\"paths\":[\"src/a.js\",]}}",
+      "expected": "REPAIRED",
+      "tool": "mutation.repository.search",
+      "equivalentInput": {
+        "query": "hello",
+        "paths": [
+          "src/a.js"
+        ]
+      }
+    },
+    {
+      "id": "repair-empty-input-default",
+      "raw": "{\"tool\":\"mutation.repository.test\"}",
+      "expected": "REPAIRED",
+      "tool": "mutation.repository.test",
+      "equivalentInput": {}
+    },
+    {
+      "id": "reject-prose",
+      "raw": "I will read src/a.js: {\"tool\":\"mutation.repository.read\",\"input\":{\"path\":\"src/a.js\"}}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-two-actions",
+      "raw": "[{\"tool\":\"mutation.repository.read\",\"input\":{\"path\":\"src/a.js\"}},{\"tool\":\"mutation.finish\",\"input\":{}}]",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-conflicting-wrapper",
+      "raw": "{\"tool\":\"mutation.repository.read\",\"name\":\"mutation.repository.write\",\"input\":{\"path\":\"src/a.js\"}}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-unknown-tool",
+      "raw": "{\"tool\":\"shell.exec\",\"input\":{\"command\":\"rm -rf /\"}}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-extra-command",
+      "raw": "{\"tool\":\"mutation.repository.read\",\"input\":{\"path\":\"src/a.js\",\"command\":\"delete\"}}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-missing-write-content",
+      "raw": "{\"tool\":\"mutation.repository.write\",\"input\":{\"path\":\"src/a.js\"}}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-string-path-type",
+      "raw": "{\"tool\":\"mutation.repository.read\",\"input\":{\"path\":123}}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-native-unknown-field",
+      "raw": "{\"name\":\"mutation.repository.read\",\"arguments\":{\"path\":\"src/a.js\"},\"approve\":true}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-native-nonobject",
+      "raw": "{\"name\":\"mutation.repository.write\",\"arguments\":\"src/a.js\"}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-json-with-two-objects",
+      "raw": "{\"tool\":\"mutation.repository.test\",\"input\":{}} {\"tool\":\"mutation.finish\",\"input\":{}}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-repair-plus-wrapper",
+      "raw": "{\"name\":\"mutation.repository.read\",\"arguments\":{\"path\":\"src/a.js\"},}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-missing-tool",
+      "raw": "{\"input\":{\"path\":\"src/a.js\"}}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-explicit-null-input",
+      "raw": "{\"tool\":\"mutation.repository.test\",\"input\":null}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "repair-trailing-comma-search",
+      "raw": "{\"tool\":\"mutation.repository.search\",\"input\":{\"query\":\"needle\",}}",
+      "expected": "REPAIRED",
+      "tool": "mutation.repository.search",
+      "equivalentInput": {
+        "query": "needle"
+      }
+    },
+    {
+      "id": "repair-native-write",
+      "raw": "{\"name\":\"mutation.repository.write\",\"arguments\":{\"path\":\"src/a.js\",\"content\":\"export const a = 2;\"}}",
+      "expected": "REPAIRED",
+      "tool": "mutation.repository.write",
+      "equivalentInput": {
+        "path": "src/a.js",
+        "content": "export const a = 2;"
+      }
+    },
+    {
+      "id": "reject-duplicate-tool",
+      "raw": "{\"tool\":\"mutation.repository.read\",\"tool\":\"mutation.repository.write\",\"input\":{\"path\":\"src/a.js\",\"content\":\"x\"}}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-duplicate-input-path",
+      "raw": "{\"tool\":\"mutation.repository.write\",\"input\":{\"path\":\"src/a.js\",\"path\":\"src/b.js\",\"content\":\"x\"}}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-ungranted-native-write",
+      "raw": "{\"name\":\"mutation.repository.write\",\"arguments\":{\"path\":\"src/a.js\",\"content\":\"x\"}}",
+      "expected": "REJECT",
+      "granted": [
+        "mutation.repository.read"
+      ]
+    },
+    {
+      "id": "reject-permission-expansion",
+      "raw": "{\"tool\":\"mutation.repository.write\",\"input\":{\"path\":\"src/a.js\",\"content\":\"x\",\"permission\":\"all\"}}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-two-native-requests",
+      "raw": "[{\"name\":\"mutation.repository.read\",\"arguments\":{\"path\":\"src/a.js\"}},{\"name\":\"mutation.finish\",\"arguments\":{}}]",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-ambiguous-empty-write",
+      "raw": "{\"tool\":\"mutation.repository.write\",\"input\":{\"path\":\"src/a.js\",\"content\":null}}",
+      "expected": "REJECT"
+    },
+    {
+      "id": "reject-numbered-read-copy",
+      "raw": "{\"tool\":\"mutation.repository.write\",\"input\":{\"path\":\"src/a.js\",\"content\":\"   1 | export const x = 1;\\n   2 | export const y = 2;\"}}",
+      "expected": "REJECT",
+      "reason": "NUMBERED_READ_DISPLAY"
+    },
+    {
+      "id": "reject-numbered-read-copy-offset",
+      "raw": "{\"tool\":\"mutation.repository.write\",\"input\":{\"path\":\"src/a.js\",\"content\":\"  41 | export function run() {\\n  42 |   return true;\\n  43 | }\"}}",
+      "expected": "REJECT",
+      "reason": "NUMBERED_READ_DISPLAY"
+    }
+  ],
+  "reconstructed": [
+    {
+      "id": "MUT-004-AGC-numbered-write",
+      "origin": "RECONSTRUCTED",
+      "sourceHistoricalId": "MUT-004-AGC",
+      "rawIsOriginal": false,
+      "raw": "{\"tool\":\"mutation.repository.write\",\"input\":{\"path\":\"src/a.js\",\"content\":\"   1 | export const telemetry = true;\\n   2 | export default telemetry;\"}}",
+      "expected": "REJECT",
+      "reason": "NUMBERED_READ_DISPLAY"
+    },
+    {
+      "id": "MUT-008-AGC-numbered-write",
+      "origin": "RECONSTRUCTED",
+      "sourceHistoricalId": "MUT-008-AGC",
+      "rawIsOriginal": false,
+      "raw": "{\"tool\":\"mutation.repository.write\",\"input\":{\"path\":\"src/a.js\",\"content\":\"   7 | export function dispatch() {\\n   8 |   return false;\\n   9 | }\"}}",
+      "expected": "REJECT",
+      "reason": "NUMBERED_READ_DISPLAY"
+    }
+  ]
+}

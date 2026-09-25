@@ -1,0 +1,105 @@
+{
+  "schema": "agent-control.usage-closure-validation/v1",
+  "sourceCommit": "0f2359360c7fe9d89e8ae83fa1c870ba4a6d5bc2",
+  "focused": {
+    "passed": 29,
+    "failed": 0
+  },
+  "fullRegression": {
+    "passed": 1428,
+    "failed": 0,
+    "skipped": 0,
+    "typecheck": "PASS"
+  },
+  "qualificationScriptTypecheck": "PASS",
+  "browser": {
+    "views": 8,
+    "javascriptErrors": [],
+    "nativeProcessExecutionTrace": "PASS",
+    "discoveredEstateMachineTrace": "PASS",
+    "estateToUsageRoundTrip": "PASS",
+    "mobileViewport": "390x844"
+  },
+  "physicalRerun": "PASS_FOR_LOCAL_USAGE_AND_COMPONENT_INTERVALS",
+  "billingAndAttribution": "BLOCKED_EXTERNAL",
+  "independentPhysicalIntegrationRecalculation": "PASS",
+  "screenshots": [
+    {
+      "file": "docs/media/4.6/usage-closure/01-overview.png",
+      "sha256": "e85c2f7dcf0c0bdec4619f6db1e62353f35cb3c631924176f0bc8b52239f552e",
+      "sourceCommit": "0f2359360c7fe9d89e8ae83fa1c870ba4a6d5bc2",
+      "sourceDirty": false,
+      "synthetic": false,
+      "privacyReviewed": true
+    },
+    {
+      "file": "docs/media/4.6/usage-closure/03-breakdown.png",
+      "sha256": "1ea9148769f0ed339684165f4a1bf7459a47d230bd080a1a83b4de811b46a0fd",
+      "sourceCommit": "0f2359360c7fe9d89e8ae83fa1c870ba4a6d5bc2",
+      "sourceDirty": false,
+      "synthetic": false,
+      "privacyReviewed": true
+    },
+    {
+      "file": "docs/media/4.6/usage-closure/05-energy.png",
+      "sha256": "df2adca4e4c9fea1fd54934aa467425ccf24e404a7d255e82d5b48056aa49378",
+      "sourceCommit": "0f2359360c7fe9d89e8ae83fa1c870ba4a6d5bc2",
+      "sourceDirty": false,
+      "synthetic": false,
+      "privacyReviewed": true
+    },
+    {
+      "file": "docs/media/4.6/usage-closure/06-local-vs-api.png",
+      "sha256": "220c45769a97d37e3f58c7468ac2d37471c3dc11ebbef5797dee1d89a5036853",
+      "sourceCommit": "0f2359360c7fe9d89e8ae83fa1c870ba4a6d5bc2",
+      "sourceDirty": false,
+      "synthetic": false,
+      "privacyReviewed": true
+    },
+    {
+      "file": "docs/media/4.6/usage-closure/09-invocation-detail.png",
+      "sha256": "9affedd822c59a01a38331b02903e7d8f9b244d6f9f17dbd11c66c0a32a4a0dd",
+      "sourceCommit": "0f2359360c7fe9d89e8ae83fa1c870ba4a6d5bc2",
+      "sourceDirty": false,
+      "synthetic": false,
+      "privacyReviewed": true
+    },
+    {
+      "file": "docs/media/4.6/usage-closure/10-mobile.png",
+      "sha256": "377d729309df2a8c33b3eb7ef8df3960ee6e15872828a5715a3f56c4e6e4bef0",
+      "sourceCommit": "0f2359360c7fe9d89e8ae83fa1c870ba4a6d5bc2",
+      "sourceDirty": false,
+      "synthetic": false,
+      "privacyReviewed": true
+    }
+  ],
+  "logs": {
+    "focused.log": {
+      "sha256": "2d752978be3ed468901177b4b234596f69c134131732d067f952121baad18a98"
+    },
+    "full-check.log": {
+      "sha256": "2014c9f8c37274fe803d8e7cdd7997b7b8e52f7df2489651e608a4a8d9620b42"
+    },
+    "script-typecheck.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "browser-before-rerun.log": {
+      "sha256": "fd8d2535fa09c6d885d6e2b63314dfb7d57b706d754ad124420ccd6e8537ecf6"
+    },
+    "privacy-before-rerun.log": {
+      "sha256": "37d10407cbff3771fdcb6a7ceefcb3c9f6f4790085e4aa0093bcbbd185b5b9a8"
+    },
+    "local-b.log": {
+      "sha256": "846983fe6e6cbe50abe5bbfc7698d22a64b9b20d6115248eab9ac415fe624f88"
+    },
+    "public-privacy.log": {
+      "sha256": "13df500f773553cf3d622042052f1866d1f3c6371793e651c63a9420a20b7d6d"
+    }
+  },
+  "privacy": "Allowlisted reporting data; prompts, generated model output and private configuration excluded. Six published images visually reviewed.",
+  "publicationChecks": {
+    "sourceDistribution": "PASS",
+    "documentationLinks": "PASS",
+    "whitespace": "PASS"
+  }
+}

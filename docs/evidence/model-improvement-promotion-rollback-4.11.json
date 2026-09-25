@@ -1,0 +1,159 @@
+{
+  "schema": "agent-control.model-improvement-promotion-qualification-summary/v1",
+  "qualifiedSourceCommit": "796bc70a06e5088837116c00ab2e11ef21149150",
+  "result": "PASS",
+  "experimentId": "experiment-4f5648c9-7bf6-42f6-a148-5ac9933714dd",
+  "priorCandidate": {
+    "baselineExactMatches": "0/2",
+    "candidateExactMatches": "2/2",
+    "priorQualificationSha256": "ded0ad02f57f7b53ccd4fa3422ddc01fd251684d1fab10b094db7bb6a21c4c20"
+  },
+  "proposal": {
+    "sha256": "637e5d42058354634c0ca60accee58e91f1785039706731404daa5959d30ebf7",
+    "interventionKind": "PROMPT",
+    "target": "disposable qualification route",
+    "previousStateSha256": "af18e3fdabc6bbb64917e08586decd02828b6477b7fc3c24ab485d9dbb54f5b4",
+    "proposedStateSha256": "ccbba96f1cacf7524b5764e6ef718e47c00b9cfd49009e8da0de46024684b5e3"
+  },
+  "approval": {
+    "result": "APPROVED",
+    "sha256": "2c1973cd14cedf205026bd85aedb2856d4eae56acc0d148f874f0d34257c8736",
+    "proposalSha256": "637e5d42058354634c0ca60accee58e91f1785039706731404daa5959d30ebf7"
+  },
+  "appliedEffect": {
+    "result": "VERIFIED",
+    "receiptSha256": "efa9b978e6afa3a4e1eb4debd8f4c3d79579f7958a400182bafbfaa0e141fb5e",
+    "adapter": {
+      "id": "agent-control.prompt-file",
+      "version": "1"
+    },
+    "protectedStateUnchanged": true
+  },
+  "postPromotion": {
+    "exactMatches": "2/2",
+    "outputs": [
+      "ALPHA|7",
+      "ALPHA|7"
+    ],
+    "invocationIds": [
+      "inv-raw-3b2357d7-7f7d-4739-bb6d-09d1f69af167",
+      "inv-raw-74b881a7-634e-43f4-afcf-e675b04b7119"
+    ]
+  },
+  "restartPersistence": "PASS",
+  "rollback": {
+    "result": "VERIFIED",
+    "receiptSha256": "324b7601ac668ecb52fe0355c9808af7508b5155e78acdef6f05144c14e7fd53",
+    "restoredStateSha256": "af18e3fdabc6bbb64917e08586decd02828b6477b7fc3c24ab485d9dbb54f5b4"
+  },
+  "postRollback": {
+    "exactMatches": "0/2",
+    "outputs": [
+      "ALPHA7",
+      "ALPHA7"
+    ],
+    "invocationIds": [
+      "inv-raw-fa755d6e-9b1b-488e-b5d5-16cd4af37508",
+      "inv-raw-c6fcb6cd-cddc-4cd8-acf7-06414b882cbd"
+    ]
+  },
+  "protectedServices": {
+    "unchanged": true,
+    "before": [
+      {
+        "pid": 4125702,
+        "port": 19223,
+        "state": "RUNNING",
+        "commandSha256": "969a83ef90c7d41759e20b466ec573511f3cad7334887f32bc816672694206b6",
+        "models": [
+          "Ministral-3-8B-Instruct-2512-Q4_K_M.gguf"
+        ]
+      },
+      {
+        "pid": 4125729,
+        "port": 8080,
+        "state": "RUNNING",
+        "commandSha256": "f9b5d7bd2d882581a140699d0d113691a584acff770eb8f21a7391bbffeae0fc",
+        "models": [
+          "qwen2.5-3b-instruct-q4_k_m.gguf"
+        ]
+      },
+      {
+        "pid": 4125746,
+        "port": 8081,
+        "state": "RUNNING",
+        "commandSha256": "ed1b2fc452639504d5f42a1d59e955cf50f7f0ba57f38e7983564fef1566f294",
+        "models": [
+          "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf"
+        ]
+      }
+    ],
+    "after": [
+      {
+        "pid": 4125702,
+        "port": 19223,
+        "state": "RUNNING",
+        "commandSha256": "969a83ef90c7d41759e20b466ec573511f3cad7334887f32bc816672694206b6",
+        "models": [
+          "Ministral-3-8B-Instruct-2512-Q4_K_M.gguf"
+        ]
+      },
+      {
+        "pid": 4125729,
+        "port": 8080,
+        "state": "RUNNING",
+        "commandSha256": "f9b5d7bd2d882581a140699d0d113691a584acff770eb8f21a7391bbffeae0fc",
+        "models": [
+          "qwen2.5-3b-instruct-q4_k_m.gguf"
+        ]
+      },
+      {
+        "pid": 4125746,
+        "port": 8081,
+        "state": "RUNNING",
+        "commandSha256": "ed1b2fc452639504d5f42a1d59e955cf50f7f0ba57f38e7983564fef1566f294",
+        "models": [
+          "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf"
+        ]
+      }
+    ],
+    "gpuAllocationBefore": [
+      "4125729, 3400",
+      "4125702, 1938",
+      "4125746, 3400",
+      "4125658, 144",
+      "2965796, 3948"
+    ],
+    "gpuAllocationAfter": [
+      "4125729, 3400",
+      "4125702, 1938",
+      "4125746, 3400",
+      "4125658, 144",
+      "2965796, 3948"
+    ]
+  },
+  "rawQualificationSha256": "b730b3f4b83919b61b7ff67775b6eac167c7290ccfe1c46c5832ec3713466355",
+  "installation": {
+    "schema": "agent-control.4.11-install-upgrade-qualification/v1",
+    "sourceCommit": "796bc70a06e5088837116c00ab2e11ef21149150",
+    "artifact": "ccda6d44fa05f1feae17abd28a3a47939ddad7233517198997b09846421927ea  /opt/qualification/agent-control-4.11-promotion-rollback-release-gates-20260919/artifacts/agent-control-4.11.0-candidate.1.tgz",
+    "virgin": {
+      "result": "PASS",
+      "version": "agent-control 4.11.0-candidate.1",
+      "runtime": "VIRGIN_INSTALL_PASS"
+    },
+    "upgrade": {
+      "from": "v4.10.0",
+      "result": "PASS",
+      "version": "agent-control 4.11.0-candidate.1",
+      "stateHashesUnchanged": true,
+      "workBoard": "preserved",
+      "configuration": "preserved",
+      "history": "preserved",
+      "containment": "preserved",
+      "usage": "preserved",
+      "modelAndProviderRegistry": "configuration-preserved",
+      "modelImprovement": "additive-empty-for-v4.10; inherited-v4.11-awaiting-candidate-covered-by-focused-test-and-physical-qualification"
+    }
+  }
+}

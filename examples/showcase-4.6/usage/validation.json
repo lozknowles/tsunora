@@ -1,0 +1,218 @@
+{
+  "schema": "agent-control.usage-checkpoint-validation/v1",
+  "recordedAt": "2026-09-13T08:49:02.938769+00:00",
+  "status": "IMPLEMENTED_CHECKPOINT_PHYSICAL_ACCEPTANCE_PARTIAL",
+  "testedSourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+  "regression": {
+    "command": "npm run check",
+    "tests": 1426,
+    "passed": 1426,
+    "failed": 0,
+    "skipped": 0,
+    "typecheck": "PASS"
+  },
+  "qualificationScriptTypecheck": "PASS",
+  "browser": {
+    "captureSourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+    "captureSourceDirty": false,
+    "views": 8,
+    "screenshots": 10,
+    "invocationDetail": "PASS",
+    "processMapParcelLink": "PASS",
+    "estateNavigation": "PASS",
+    "mobileViewport": {
+      "width": 390,
+      "height": 844
+    },
+    "javascriptErrors": [],
+    "visualLimitations": [
+      "Floating draggable guide can overlap table content.",
+      "Wide evidence tables require horizontal scrolling for full identities and remaining columns."
+    ]
+  },
+  "privacy": {
+    "reportingProjection": "EXPLICIT_ALLOWLIST",
+    "publishedJsonSensitiveMaterialAndPrivatePathScan": "PASS",
+    "screenshots": "VISUALLY_REVIEWED",
+    "rawResponseException": "One separate synthetic reconciliation qualification response is published as failure evidence; responses are not included in the usage projection."
+  },
+  "poe": {
+    "actualConversation": "PASS",
+    "mode": "DETERMINISTIC_GROUNDED",
+    "proof": "examples/showcase-4.6/usage/poe-proof.json"
+  },
+  "physical": {
+    "status": "PARTIAL",
+    "selectedInvocations": 5,
+    "sourceRuns": 4,
+    "totalTokens": 802,
+    "successfulArithmeticJobs": 2,
+    "failedReconciliationJobs": 3,
+    "wholeNodeEnergy": "BLOCKED_EXTERNAL",
+    "workloadEnergyAttribution": "NOT_ATTRIBUTABLE",
+    "paidProviderBilling": "NOT_PHYSICALLY_QUALIFIED",
+    "electricityCost": "UNAVAILABLE",
+    "localModelDownloads": 0
+  },
+  "history": {
+    "selectedProjection": "MIGRATED",
+    "repeatImportAddedRows": 0,
+    "sourceRecords": "PRESERVED",
+    "realHistoryReset": false
+  },
+  "showcaseReleaseGate": "INCOMPLETE",
+  "logs": {
+    "fullRegression": {
+      "fileName": "usage-final-committed-check.log",
+      "sha256": "1c95a6987d71f14f005152fc05332ef795cf68adabea959c207ab4ca85512a85"
+    },
+    "qualificationScriptTypecheck": {
+      "fileName": "usage-final-scripts-typecheck.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "browser": {
+      "fileName": "usage-final-gallery.log",
+      "sha256": "a1aabd91d806e836649560aefecfec9b962c57427af5df6c4d12feccdf23d1a4"
+    },
+    "publicPrivacy": {
+      "fileName": "usage-final-public-privacy-check.log",
+      "sha256": "a5e411c3122b101027e9eef26a6cd27fd3cb78a7069f511e56202ebbb3b5eb93"
+    },
+    "documentationLinks": {
+      "fileName": "usage-public-links-check.log",
+      "sha256": "e2bdaca0d77646c036197d79fef2e0d306588ad4fc6d916c13e9e2a888da5236"
+    },
+    "showcaseStructure": {
+      "fileName": "usage-public-structure-check.log",
+      "sha256": "8a9d4940888084ef0c30897650e15fb2f0feddd6881ededc37ebc5febde8cd41"
+    }
+  },
+  "screenshots": [
+    {
+      "kind": "usage-overview",
+      "file": "docs/media/4.6/usage/01-overview.png",
+      "sha256": "0833162fb47a1b2bd19da9c25d517dc242f471bb41fa8556de2eb621e790c970",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-trend",
+      "file": "docs/media/4.6/usage/02-trend.png",
+      "sha256": "7474c57240534787ad4e0398693507ef4df5d08782307e6ee6a5886ffc2d9bc2",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-breakdown",
+      "file": "docs/media/4.6/usage/03-breakdown.png",
+      "sha256": "6685a7418b6ae324372d7515fe1faba31bb1a5470b6443752b6ecefec9037dcd",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-cache-retries",
+      "file": "docs/media/4.6/usage/04-cache-retries.png",
+      "sha256": "fde5d90bacc3ee4e4cb2d802f5f74de70ea7563c368d05c3201d3a3355a212a7",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-energy",
+      "file": "docs/media/4.6/usage/05-energy.png",
+      "sha256": "e76ab0053eb854add50f095deb79692b4d8f54758991554a0163306125c3216f",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-local-vs-api",
+      "file": "docs/media/4.6/usage/06-local-vs-api.png",
+      "sha256": "5aa5748ff1a32be934d19963ccd76f108d1de765d16362dbf77cbba2caeb008d",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-model-history",
+      "file": "docs/media/4.6/usage/07-model-history.png",
+      "sha256": "3e41f6c4b0ccd293787ade9bac19e71e0e2aadf6dd3ad0565680bf638aa30178",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-invocations",
+      "file": "docs/media/4.6/usage/08-invocations.png",
+      "sha256": "abaead1d4897bbdd73d2c90eeb25a7f08c122188c51fef51c020a70d64cd55af",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-invocation-detail",
+      "file": "docs/media/4.6/usage/09-invocation-detail.png",
+      "sha256": "ffe466ce3ccfb09c68375d9ecdc4a64273592a9bd71d9ab969b90139fcb454ba",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-mobile",
+      "file": "docs/media/4.6/usage/10-mobile.png",
+      "sha256": "fe4dc5940e2f777c14fba6f9d92a0e6608cac28e8b43983a941a216a984332fa",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    }
+  ],
+  "changedFiles": [
+    "README.md",
+    "assets/dashboard/dashboard-enhancements.js",
+    "assets/dashboard/dashboard-first-run.js",
+    "assets/dashboard/dashboard-runtime-map.js",
+    "assets/dashboard/dashboard-usage.css",
+    "assets/dashboard/dashboard-usage.js",
+    "assets/dashboard/index.html",
+    "docs/README-4.5-history.md",
+    "docs/installation-first-run.md",
+    "docs/showcase-4.6-status.md",
+    "docs/usage-energy-4.6.md",
+    "docs/usage-energy-architecture-audit-4.6.md",
+    "examples/showcase-4.6/showcase-manifest.json",
+    "examples/showcase-4.6/usage/history-index.json",
+    "examples/showcase-4.6/usage/projection.json",
+    "examples/showcase-4.6/usage/summary.json",
+    "package.json",
+    "scripts/bootstrap-agent-control.test.mjs",
+    "scripts/check-showcase.ts",
+    "scripts/qualify-usage-history.ts",
+    "scripts/qualify-usage-intelligence.ts",
+    "src/control/application-service.ts",
+    "src/control/energy-telemetry.ts",
+    "src/control/harness-efficiency.ts",
+    "src/control/poe-knowledge.ts",
+    "src/control/usage-accounting.ts",
+    "src/control/usage-energy.ts",
+    "src/control/usage-intelligence.test.ts",
+    "src/control/usage-migration.ts",
+    "src/control/usage-projection.ts",
+    "src/control/web-server.test.ts",
+    "src/control/web-server.ts",
+    "src/web.ts"
+  ],
+  "publicationBoundary": "Feature branch checkpoint only; no merge, tag, release or deployment."
+}

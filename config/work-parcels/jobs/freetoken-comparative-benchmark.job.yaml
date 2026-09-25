@@ -1,0 +1,9 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata: {id: freetoken-comparative-benchmark, name: FreeToken comparative benchmark, version: 1.0.0}
+spec:
+  enabled: true
+  priority: normal
+  concurrency: no-overlap
+  steps: [{id: benchmark, action: qualification.freetoken.benchmark@1.0.0, requires: [qualification.local], resources: [gpu/qualification], verification: [same-model-comparison]}]
+

@@ -1,0 +1,59 @@
+{
+  "screenshots": [
+    {
+      "kind": "model-intelligence",
+      "file": "docs/media/4.6/integration/intelligence-baseline.png",
+      "sourceCommit": "e8862223efaa4f3694145089fb1c142e8a75850f",
+      "sha256": "ec09ab59c48f5ee20cf5260b28e7100eb84ed7950063e3eb6aef994182764c13",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Real baseline: existing artifact observations, two reviewed candidates, approval required; zero benchmarked."
+    },
+    {
+      "kind": "morning-brief",
+      "file": "docs/media/4.6/integration/morning-followup.png",
+      "sourceCommit": "e8862223efaa4f3694145089fb1c142e8a75850f",
+      "sha256": "fc42183935a1e344cd04322691302c8a75fa1b6b4afeb430331b611d8d22ccb0",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Real follow-up: zero observed changes, incomplete runtime source coverage disclosed."
+    },
+    {
+      "kind": "model-intelligence-mobile",
+      "file": "docs/media/4.6/integration/intelligence-mobile.png",
+      "sourceCommit": "e8862223efaa4f3694145089fb1c142e8a75850f",
+      "sha256": "f4282e6d2d058d02585049fa9cafb0accce9d0e2997fa82f9d855ecc5f6923b3",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Actual dashboard in desktop mobile viewport emulation; not physical handset qualification."
+    },
+    {
+      "kind": "estate-current",
+      "file": "docs/media/4.6/integration/estate.png",
+      "sourceCommit": "5ed7495bc46108ad2968bdfe8ef5cf47731c4ad1",
+      "sha256": "2b65c5a2181667fb78cdbde0a8457093808a7d0f1a5f0302ef6bad67cf8b302f",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Fresh native Discovery and current Estate header; wrapped filters."
+    },
+    {
+      "kind": "process-completed-current",
+      "file": "docs/media/4.6/integration/process.png",
+      "sourceCommit": "5ed7495bc46108ad2968bdfe8ef5cf47731c4ad1",
+      "sha256": "57816e0d4718fb244ccceae432129101d56ef879cf006f3512d73df7a00ce35d",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Actual successful governed local job, retained history; not an active model benchmark."
+    },
+    {
+      "kind": "process-mobile-current",
+      "file": "docs/media/4.6/integration/process-mobile.png",
+      "sourceCommit": "5ed7495bc46108ad2968bdfe8ef5cf47731c4ad1",
+      "sha256": "9b117032735434d202a51c1aabb74cf1b8a81152c52e8f64d5c4b36c9c56a473",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Actual dashboard in desktop mobile viewport emulation; not physical handset qualification."
+    }
+  ],
+  "review": "Original browser captures visually reviewed. No image generation or pixel alteration. Private credentials/estate data excluded."
+}

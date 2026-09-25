@@ -1,0 +1,46 @@
+{
+  "schema": "agent-control.release-qualification/v1",
+  "release": "3.1.0",
+  "qualifiedAt": "2026-08-28",
+  "verdict": "PARTIAL",
+  "releaseSafeInfrastructure": true,
+  "automaticProductionRoutingQualified": false,
+  "appliedProductionMode": "OBSERVATIONAL_STANDARD_FALLBACK",
+  "source": {
+    "baselineCommit": "be72754f3320c516c4bfc257deeeeebf93112399",
+    "implementationCommit": "a62006fd75c54766356522f55c86234d1593201e",
+    "preMergeMainCommit": "31d9c2378a23d37df8c8a29bd752c30752383c74",
+    "integrationBranch": "integration/3.1-real-mutation-release-20260828"
+  },
+  "benchmark": {
+    "id": "805da318b2fb205c663ff11d93f8932ad76219f66bd5e58d240355b22caff2fc",
+    "fixtureSha256": "d1b5e8ebec19378b5d2112e8be5e73671a51c40bc328af8ded815be44edb6b27",
+    "reportSha256": "93136bb763816f925a7c301c4d810ba51c8bb22d73f970afc31e42f28d3f433a",
+    "taskSample": 12,
+    "minimumProductionTaskSample": 20,
+    "standardVerified": 2,
+    "adaptiveVerified": 2,
+    "standardFreshTokensPerVerifiedOutcome": 11964.5,
+    "adaptiveFreshTokensPerVerifiedOutcome": 38639.5,
+    "monetaryCostPerVerifiedOutcome": null
+  },
+  "qualification": {
+    "tests": {"passed": 385, "failed": 0},
+    "typecheck": "PASS",
+    "bootstrapSyntax": "PASS",
+    "dashboardSyntax": "PASS",
+    "neutrality": {"passed": 3, "failed": 0},
+    "implementationStatus": {"passed": 17, "failed": 0},
+    "gitDiffCheck": "PASS",
+    "credentialScan": "PASS",
+    "jobQualification": "PASS_SAFE_NON_PRODUCTION",
+    "governedHarnessQualification": "REAL_HARNESS_EXECUTION_QUALIFIED",
+    "configuredInfrastructure": "SKIP_NO_OPERATOR_CONFIGURATION",
+    "toolPolicy": "PASS",
+    "staleLease": "PASS",
+    "staleOwnership": "PASS",
+    "humanTakeover": "PASS",
+    "standardFallback": "PASS",
+    "protectedServicesUnchanged": true
+  }
+}

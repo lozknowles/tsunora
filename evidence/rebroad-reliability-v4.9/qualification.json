@@ -1,0 +1,59 @@
+{
+  "schema": "agent-control.rebroad-reliability-qualification/v1",
+  "generatedAt": "2026-09-19T08:07:45Z",
+  "base": "fe9a879e4360d3249c44ee21f0279761a182bd0d",
+  "implementationCommit": "7608ac62889dc3ffc46ce658d3d574155ac6fa37",
+  "platform": {
+    "os": "Linux 6.8.0-139-generic x86_64 GNU/Linux",
+    "node": "v24.21.0",
+    "npm": "11.19.0"
+  },
+  "tests": {
+    "passed": 1837,
+    "failed": 0,
+    "skipped": 0,
+    "durationMs": 227614.11486,
+    "typecheck": "PASS",
+    "distribution": "PASS",
+    "bootstrap": "PASS",
+    "dashboard": "PASS",
+    "neutrality": "PASS",
+    "implementationStatus": "PASS"
+  },
+  "freshInstall": {
+    "result": "PASS",
+    "configurationCreated": true,
+    "dashboardPresent": true
+  },
+  "upgrade": {
+    "from": "v4.9.0",
+    "result": "PASS",
+    "configurationPreserved": true,
+    "historyPreserved": true
+  },
+  "physicalLocalInference": {
+    "result": "PASS",
+    "routeKind": "RAW_INFERENCE",
+    "model": "Ministral-3-8B-Instruct-2512-Q4_K_M.gguf",
+    "output": "AC_RAW_LOCAL_OK",
+    "latencyMs": 2157,
+    "inputTokens": 546,
+    "cachedInputTokens": 536,
+    "outputTokens": 6,
+    "totalTokens": 552,
+    "reasoningTokens": null,
+    "executionKind": "LOCAL",
+    "billing": "FREE",
+    "localApiChargeKnownZero": true
+  },
+  "apiInference": {
+    "result": "BLOCKED_EXTERNAL",
+    "reason": "No API provider/model route was configured in the isolated candidate or current controller configuration; no credentials were imported and no metered call was made."
+  },
+  "evidenceSha256": {
+    "local-direct-inference.json": "9a7c3f2f08ad05cd574840c9e689beb7cfbf95185151f32077c6361c59a08baf",
+    "local-direct-inference-pre-accounting-fix.json": "e31fe1a0502b96a0a73858cf03b274c140558b320aed2aaddd2afcadd1b26ffc",
+    "direct-inference-evidence/f3268a6928d73cbae684fba99edfbbfa31e7c5493808c4b27706dcdad693e88a.json": "f3268a6928d73cbae684fba99edfbbfa31e7c5493808c4b27706dcdad693e88a"
+  },
+  "verdict": "PASS_WITH_LIMITATIONS"
+}

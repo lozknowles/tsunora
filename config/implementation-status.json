@@ -1,0 +1,1512 @@
+{
+  "schema": "agent-control.implementation-status/v1",
+  "release": "4.12.0",
+  "updated": "2026-09-20",
+  "capabilities": [
+    {
+      "id": "lab.raw-direct-inference",
+      "title": "Governed raw direct inference",
+      "status": "IMPLEMENTED",
+      "summary": "An authenticated tool-free Lab route resolves an exactly qualified model or role through existing provider/runtime adapters, records RAW_INFERENCE separately from AGENT_WORKFLOW, preserves provider-reported token/cache/reasoning data and retains redacted content-addressed request/response evidence.",
+      "sources": [
+        "src/control/direct-inference.ts",
+        "src/control/openai-compatible-provider.ts",
+        "src/control/web-server.ts",
+        "src/web.ts"
+      ],
+      "tests": [
+        "src/control/direct-inference.test.ts",
+        "src/control/openai-compatible-provider.test.ts"
+      ],
+      "evidence": [
+        "docs/rebroad-reliability-review-4.9.md",
+        "evidence/rebroad-reliability-v4.9/local-direct-inference.json"
+      ],
+      "limitation": "One physical local llama.cpp route is qualified. No API route was configured in the isolated candidate; raw inference does not prove agent or tool competence, and no universal monetary budget service is claimed."
+    },
+    {
+      "id": "logging.live-writer-safe-repair",
+      "title": "Live-writer-safe activity-log repair",
+      "status": "IMPLEMENTED",
+      "summary": "The operational activity projection can remove malformed, duplicate and non-monotonic rows while retaining an immutable backup, crash journal, canonical inode and verified post-repair digest.",
+      "sources": [
+        "src/control/activity-log.ts"
+      ],
+      "tests": [
+        "src/control/activity-log.test.ts"
+      ],
+      "evidence": [
+        "docs/activity-log.md",
+        "docs/rebroad-reliability-review-4.9.md"
+      ],
+      "limitation": "This repair applies to the conventional activity projection. Authoritative Job and evidence ledgers retain their own integrity mechanisms and are not rewritten by it."
+    },
+    {
+      "id": "sandbox.protected-workspace-metadata",
+      "title": "Protected writable-workspace governance metadata",
+      "status": "IMPLEMENTED",
+      "summary": "A platform-neutral policy separates ordinary writable content from unavailable governance directories and read-only instruction, policy, parcel, baton and evidence-integrity records; the mutation adapter enforces it before task scope and excludes protected metadata from search and evidence capture.",
+      "sources": [
+        "src/control/protected-workspace-metadata.ts",
+        "src/control/harness-mutation-workspace.ts"
+      ],
+      "tests": [
+        "src/control/protected-workspace-metadata.test.ts",
+        "src/control/harness-mutation-workspace.test.ts"
+      ],
+      "evidence": [
+        "docs/rebroad-reliability-review-4.9.md"
+      ],
+      "limitation": "Linux disposable mutation workspaces are tested. Windows and Android writable-workspace adapters must independently prove enforcement or report degraded/blocked support."
+    },
+    {
+      "id": "security.governed-audit",
+      "title": "Governed coverage-led security audits",
+      "status": "IMPLEMENTED",
+      "summary": "A native six-phase Job owns reconnaissance, coverage-led hunting, candidate validation, structured findings, separate record verification, and deterministic reporting. Strict verdict schemas, append-only event hashes, authenticated interfaces, change-aware revalidation, and fail-closed sandbox admission preserve evidence integrity.",
+      "sources": [
+        "src/control/security-audit.ts",
+        "src/control/security-audit-job.ts",
+        "src/control/web-server.ts",
+        "scripts/agent-control.mjs",
+        "assets/dashboard/dashboard-security-audits.js"
+      ],
+      "tests": [
+        "src/control/security-audit.test.ts",
+        "src/control/security-audit-web.test.ts",
+        "scripts/security-audit-client.test.mjs"
+      ],
+      "evidence": [
+        "SECURITY_AUDIT_INTEGRATION_DECISION.md",
+        "docs/security-audits.md",
+        "docs/third-party/cloudflare-security-audit-skill.md"
+      ],
+      "limitation": "Target-controlled execution remains blocked unless every sandbox guarantee is evidenced. Current deterministic verification uses separate invocation contexts on the same controller worker; model-diverse verification is not claimed."
+    },
+    {
+      "id": "operator.poe-conversational-interface",
+      "title": "Morrow grounded conversational operator and benchmark designer",
+      "status": "IMPLEMENTED",
+      "summary": "An original state-driven Morrow dashboard and channel-scoped runtime explain focused Agent Control evidence, explicitly preserve unknowns, route optional model phrasing through qualified Model Registry roles, design/fairness-check/version/freeze benchmark proposals, and submit only exact operator-approved plans through the normal registered Job and Work Parcel lifecycle. Authenticated WhatsApp questions reuse the same persona without widening command authority; optional designed OmniVoice records latency and isolates barge-in from executing work.",
+      "sources": [
+        "src/control/poe.ts",
+        "src/control/poe-model.ts",
+        "src/control/application-service.ts",
+        "src/control/web-server.ts",
+        "src/control/social-voice.ts",
+        "assets/dashboard/dashboard-poe.js",
+        "assets/dashboard/dashboard-poe.css"
+      ],
+      "tests": [
+        "src/control/poe.test.ts",
+        "src/control/poe-model.test.ts",
+        "src/control/poe-integration.test.ts",
+        "src/control/social-voice.test.ts"
+      ],
+      "evidence": [
+        "docs/poe.md",
+        "docs/evidence/agent-control-poe-development-qualification-20260908.md"
+      ],
+      "limitation": "Deterministic implementation qualification is complete on the isolated branch. The specified real dashboard conversation, real governed benchmark/league update, and genuine OmniVoice exchange remain physical release gates; the supplied section 26 ends mid-sentence and no missing criteria are inferred."
+    },
+    {
+      "id": "social-voice.providers",
+      "title": "Replaceable governed Social and Voice capabilities",
+      "status": "PARTIAL",
+      "summary": "Actual enrolled WhatsApp voice intake, untrusted STT, fresh text confirmation, governed AC-3 Work Parcel execution and delivered short voice summary passed. Confirmed requests now retain exact transcription and redacted channel/authentication provenance through the canonical Work Parcel and complete transcript. Human confirmed corrected summary clear. Physical OmniVoice inference passed on P5000 and integrated Intel Arc; provider-neutral boundaries and durable history remain authoritative.",
+      "limitation": "Private pilot only. The 4.0 Pixel continuation physically qualifies authenticated text ingress, adaptive repository-review routing, a Qwen-to-Codex sealed-baton handoff, independent verification and reconciled model-chain accounting. General speech quality, long-duration soak and production deployment remain unqualified. Final 0.9 playback rate has codec/STT evidence but no second handset rating.",
+      "sources": [
+        "src/control/social-voice.ts",
+        "src/control/social-voice-providers.ts",
+        "src/control/request-origin.ts",
+        "src/control/openwa-social-provider.ts",
+        "src/control/speech-http-provider.ts",
+        "scripts/speech-worker.py"
+      ],
+      "tests": [
+        "src/control/social-voice.test.ts",
+        "src/control/speech-http-provider.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/social-voice/README.md",
+        "docs/social-voice/security.md",
+        "docs/social-voice/qualification.md",
+        "docs/evidence/agent-control-4.0-pixel-social-continuation.md"
+      ]
+    },
+    {
+      "id": "messaging.openwa-pilot",
+      "title": "Optional governed OpenWA messaging pilot",
+      "status": "PARTIAL",
+      "summary": "Signed direct commands, authenticated two-step enrolment, immutable template grants, durable runtime request keys, outbound recovery and private dashboard setup are implemented and automatically tested.",
+      "limitation": "Live enrolment, help, typecheck, status, cancellation with cleanup, delivered reports, reconnect and controlled duplicate replay passed. The 4.0 Pixel continuation additionally qualifies one authenticated physical handset request through adaptive Qwen-to-Codex review, verification and terminal delivery. The feature remains a private pilot; production deployment and broad provider admission remain unqualified.",
+      "sources": [
+        "src/control/openwa.ts",
+        "src/control/request-origin.ts",
+        "src/control/messaging-commands.ts",
+        "src/control/repository-test-actions.ts"
+      ],
+      "tests": [
+        "src/control/openwa.test.ts"
+      ],
+      "evidence": [
+        "docs/openwa/README.md",
+        "docs/openwa/live-qualification.md",
+        "docs/evidence/agent-control-4.0-pixel-social-continuation.md"
+      ]
+    },
+    {
+      "id": "runtime.governed-live-shell",
+      "title": "Governed Live Shell and execution-session attachment",
+      "status": "IMPLEMENTED",
+      "summary": "Real owned local, SSH and bounded Codex processes can expose durable redacted WATCH, INTERVENE or TAKE_CONTROL sessions according to adapter capability, operator authority and writer-fencing policy. Protected-resource Actions are WATCH_ONLY, and adapter input/signal/takeover capability cannot widen that scope.",
+      "sources": [
+        "src/control/execution-session.ts",
+        "src/control/owned-process.ts",
+        "src/control/job-runtime.ts",
+        "src/control/managed-node-ssh.ts",
+        "src/control/codex-node-execution.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-live-shell.js",
+        "scripts/execution-session-runner.mjs"
+      ],
+      "tests": [
+        "src/control/execution-session.test.ts",
+        "src/control/owned-process.test.ts",
+        "src/control/job-runtime.test.ts",
+        "src/control/codex-node-execution.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/live-shell.md"
+      ]
+    },
+    {
+      "id": "providers.secure-credential-references",
+      "title": "Generic late-bound provider credential references",
+      "status": "QUALIFIED",
+      "summary": "The existing environment, referenced-file and provider-secure-store credential kinds share one invocation-time resolver. The secure-store backend uses hashed names, owner-only permissions and atomic rotation; metadata-only status, account-specific no-fallback selection and exact-secret response redaction keep credential values out of configuration, Work Parcels, Jobs, evidence, telemetry, API, SSE and dashboard state.",
+      "sources": [
+        "src/control/provider-credential-store.ts",
+        "src/control/security-redaction.ts",
+        "src/provider-credential.ts",
+        "src/control/openai-compatible-provider.ts",
+        "src/control/model-registry.ts"
+      ],
+      "tests": [
+        "src/control/provider-credential-store.test.ts",
+        "src/control/security-redaction.test.ts",
+        "src/provider-credential.test.ts",
+        "src/control/openai-compatible-provider.test.ts",
+        "src/control/model-registry.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/credential-residency.md",
+        "docs/evidence/agent-control-3.9-nvidia-hosted-qualification-20260906.md"
+      ],
+      "limitation": "The controller-local owner-only backend is physically qualified through a real late-bound NVIDIA credential and sanitized authenticated calls. Remote API-account credential resolution still requires a governed node-specific adapter; the credential value and transient ceremony fingerprint are intentionally absent from durable evidence."
+    },
+    {
+      "id": "providers.dynamic-model-catalogue",
+      "title": "Dynamic provider model discovery and governed review lifecycle",
+      "status": "PARTIAL",
+      "summary": "Provider adapters can perform bounded authenticated model discovery, preserve field-level metadata authority and observed limits, register routing-disabled dynamic models, separately establish inference callability through a bounded streaming probe, run a versioned content-hashed capability-smoke suite, queue the existing frozen benchmark and admit routing only after current qualified intelligence plus explicit operator enablement. NVIDIA hosted NIM is a thin endpoint/key-format and invocation-profile adapter over this generic path.",
+      "sources": [
+        "src/control/provider-catalog.ts",
+        "src/control/openai-compatible-provider.ts",
+        "src/control/model-registry.ts",
+        "src/control/application-service.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-models.js"
+      ],
+      "tests": [
+        "src/control/provider-catalog.test.ts",
+        "src/control/openai-compatible-provider.test.ts",
+        "src/control/model-registry.test.ts",
+        "src/control/model-evaluation-runtime.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/models/NVIDIA-HOSTED.md",
+        "docs/provider-model-lifecycle.md",
+        "docs/evidence/agent-control-3.9-nvidia-hosted-qualification-20260906.md",
+        "docs/evidence/agent-control-3.9-nvidia-focused-diagnostics-20260906.md"
+      ],
+      "limitation": "Physical qualification discovered 81 NVIDIA IDs and ran one frozen Nemotron batch. Focused follow-up confirmed inference and corrected 5/5 smoke for Nemotron and Muse, classified MiniMax as indeterminate after two before-first-token timeouts, and retained Kimi K2.6 as endpoint-unavailable. The Nemotron benchmark remained PARTIAL because 42/51 capability-gated attempts were unavailable. No NVIDIA model is qualified or routing eligible; price, quota, rate limits, context occupancy and most catalogue metadata remain unavailable, and catalogue-wide callability/smoke/benchmarking is not authorized."
+    },
+    {
+      "id": "context.persistent-parcel-ledger",
+      "title": "Persistent Work Parcel context ledger and bounded baton views",
+      "status": "QUALIFIED",
+      "summary": "Each Work Parcel retains immutable goal and steering provenance, concise active state, a SHA-linked durable event ledger, governed historical retrieval and content-hashed bounded baton projections. Compaction or handoff can remove history from the current view without deleting it, and exact retrieval can recover excluded failures for later execution.",
+      "sources": [
+        "src/control/parcel-context.ts",
+        "src/control/work-parcels.ts"
+      ],
+      "tests": [
+        "src/control/parcel-context.test.ts",
+        "src/control/work-parcels.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.9-provider-neutral-qualification.md",
+        "docs/evidence/agent-control-3.9-provider-neutral-qualification.json"
+      ]
+    },
+    {
+      "id": "work-parcels.async-dag-criteria",
+      "title": "Asynchronous Work Parcel DAGs and evidence-gated completion",
+      "status": "QUALIFIED",
+      "summary": "Validated Work Parcel dependency graphs dispatch policy-allowed independent stages concurrently, pause only branches named by stable asynchronous questions, resume them after a durable answer and require structured success criteria with provenance and evidence before parcel success. Steering remains append-only and never rewrites the original goal.",
+      "sources": [
+        "src/control/work-parcels.ts",
+        "src/control/parcel-context.ts",
+        "src/control/job-runtime.ts"
+      ],
+      "tests": [
+        "src/control/work-parcels.test.ts",
+        "src/control/parcel-context.test.ts",
+        "src/control/job-runtime.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.9-provider-neutral-qualification.md",
+        "docs/evidence/agent-control-3.9-provider-neutral-qualification.json"
+      ]
+    },
+    {
+      "id": "models.capability-intelligence",
+      "title": "Provider-neutral capability intelligence and capabilities-first routing",
+      "status": "QUALIFIED",
+      "summary": "Normalized observations distinguish supported from unsupported, native from Agent Control-emulated and verified from advertised capability across provider, account, model, runtime, version and node identities. Routing filters on required verified capabilities before optimizing quality, reliability, latency, cost and token/cache efficiency; external discoveries enter an auditable candidate lifecycle rather than changing architecture automatically.",
+      "sources": [
+        "src/control/capability-intelligence.ts",
+        "src/control/model-registry.ts"
+      ],
+      "tests": [
+        "src/control/capability-intelligence.test.ts",
+        "src/control/model-registry.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.9-provider-neutral-qualification.md",
+        "docs/evidence/agent-control-3.9-provider-neutral-qualification.json"
+      ]
+    },
+    {
+      "id": "models.historical-evaluation-intelligence",
+      "title": "Frozen model qualification and historical outcome intelligence",
+      "status": "PARTIAL",
+      "summary": "A content-hashed frozen suite records every repetition in an append-only ledger with exact candidate identity, scoring, failure class, elapsed time, provider usage, fresh/cache token split and cost authority. Rolling 7/30/90-day and all-time projections expose task economics, regressions, conservative lifecycle state and evidence-gated leaders without overwriting prior results.",
+      "sources": [
+        "src/control/model-intelligence.ts",
+        "src/control/model-evaluation-runtime.ts",
+        "config/qualification-suite-v1.json"
+      ],
+      "tests": [
+        "src/control/model-intelligence.test.ts",
+        "src/control/model-evaluation-runtime.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.9-provider-neutral-qualification.md",
+        "docs/evidence/agent-control-3.9-provider-neutral-qualification.json"
+      ],
+      "limitation": "Two real llama.cpp candidates completed two frozen batches and all 204 attempts persisted. Browser/computer/workflow evaluators, authoritative local current-context occupancy and monetary/energy cost were unavailable, while same-day history is intentionally insufficient for automatic preferred-model promotion."
+    },
+    {
+      "id": "runtime.independent-safety-supervisor",
+      "title": "Independent runtime safety supervision",
+      "status": "PARTIAL",
+      "summary": "A provider-independent supervisor requires explicit read-only, declared consequential or typed resolver-derived Action effects before Job execution. Unknown or inconsistent effects deny; approved local scopes use execution-filesystem identity; remote node, credential, communication, destructive and deployment consequences remain durable and provider-independent.",
+      "sources": [
+        "src/control/runtime-safety-supervisor.ts",
+        "src/control/job-runtime.ts"
+      ],
+      "tests": [
+        "src/control/runtime-safety-supervisor.test.ts",
+        "src/control/job-runtime.test.ts"
+      ],
+      "evidence": [
+        "docs/runtime-safety-and-containment.md",
+        "docs/evidence/agent-control-3.9-provider-neutral-qualification.md",
+        "docs/evidence/agent-control-4.3-integrated-qualification-20260909.md"
+      ],
+      "limitation": "Agent Control 4.3 deterministic containment tests and the physical A-F local model-mutation route pass. Remote filesystem containment still requires node-local typed enforcement; a controller cannot prove an unresolved remote path and therefore fails closed."
+    },
+    {
+      "id": "runtime.protected-resource-mutation-governance",
+      "title": "Semantic protected-resource mutation governance",
+      "status": "QUALIFIED",
+      "summary": "Natural Work Parcel constraints compile to durable resource capabilities. Model/action proposals are sealed, normalized into semantic effects and independently checked before dispatch; protected Git-ref updates, force updates, deletion, rewrite and equivalent remote-alias mutations fail closed while allowed neighbour operations retain truthful external-commit state and independent verification.",
+      "sources": [
+        "src/control/action-governance.ts",
+        "src/control/governed-git-actions.ts",
+        "src/control/protected-resource-model-actions.ts",
+        "src/control/job-runtime.ts",
+        "src/control/runtime-safety-supervisor.ts"
+      ],
+      "tests": [
+        "src/control/governed-git-actions.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-protected-resource-qualification.md",
+        "docs/evidence/agent-control-protected-resource-qualification.json",
+        "docs/evidence/agent-control-protected-resource-transcript.md",
+        "docs/evidence/agent-control-protected-resource-dashboard-video.json"
+      ],
+      "limitation": "The real Codex-backed worker naturally chose the authorised feature branch and did not attempt the prohibited mutation. Enforcement is separately proven through the production boundary against a disposable remote. Physical Git operations completed too quickly for an honest cancellation; deterministic owned-execution coverage proves CANCELLED_BEFORE_COMMIT and unresolved interruption remains COMMIT_STATE_UNCERTAIN."
+    },
+    {
+      "id": "dashboard.capability-context-intelligence",
+      "title": "Live context, capability and model-intelligence dashboard",
+      "status": "QUALIFIED",
+      "summary": "The authenticated dashboard projects Work Parcel context metrics, criteria, asynchronous questions, bounded retrieval, model leaders, capability watch, frozen batches, rolling history, cache/fresh-token economics, lifecycle controls, regressions and independent safety decisions from durable stores. Core SSE remains live when an optional dashboard projection is unavailable.",
+      "sources": [
+        "src/control/application-service.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-models.js",
+        "assets/dashboard/dashboard-enhancements.js",
+        "assets/dashboard/dashboard-parameterized-jobs.js"
+      ],
+      "tests": [
+        "src/control/web-server.test.ts",
+        "scripts/browser-dashboard.test.mjs"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.9-provider-neutral-qualification.md",
+        "docs/evidence/agent-control-3.9-provider-neutral-dashboard-video.json",
+        "docs/evidence-archive.md"
+      ]
+    },
+    {
+      "id": "execution.resilient-recovery",
+      "title": "Durable execution identity and bounded recovery",
+      "status": "QUALIFIED",
+      "summary": "Normal and parameterised Jobs persist exact execution identity, classify transport/enrolment/authentication/configuration failures, reconcile rather than replay unresolved work after restart, and expose bounded route-preserving retry state with real deadlines and remaining budget.",
+      "sources": [
+        "src/control/execution-recovery.ts",
+        "src/control/job-runtime.ts",
+        "src/control/parameterized-job-engine.ts",
+        "src/control/parameterized-job-types.ts"
+      ],
+      "tests": [
+        "src/control/execution-recovery.test.ts",
+        "src/control/job-runtime.test.ts",
+        "src/control/parameterized-jobs.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.9-evidence-gap-matrix.md",
+        "docs/evidence/agent-control-3.9-qualification.md"
+      ],
+      "limitation": "Representative physical qualification proved separate-authority reconciliation after an actual controller SIGKILL, same-route authentication recovery, bounded retry exhaustion and cancellation during backoff without replay or duplicate accounting. Provider/runtime combinations that do not expose authoritative reattachment still fail closed and require their own qualification."
+    },
+    {
+      "id": "execution.verified-process-cleanup",
+      "title": "Owned process trees and verified cancellation cleanup",
+      "status": "QUALIFIED",
+      "summary": "Actions receive an owned-execution port. Linux captures process start identity and terminates/verifies the process group; Windows uses fixed CIM inventory plus bounded tree termination; cancellation, timeout and handoff retain explicit confirmed, uncertain, identity-mismatch or failed cleanup evidence.",
+      "sources": [
+        "src/control/owned-process.ts",
+        "src/control/job-runtime.ts",
+        "src/control/contract-runtime.ts",
+        "src/control/codex-exec-provider.ts"
+      ],
+      "tests": [
+        "src/control/owned-process.test.ts",
+        "src/control/job-runtime.test.ts",
+        "src/control/contract-runtime.test.ts",
+        "src/control/codex-exec-provider.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.9-qualification.md"
+      ],
+      "limitation": "Linux process-group and Windows process-tree cancellation are physically qualified, including descendants, timeout, identity mismatch and retained protection under cleanup uncertainty. Other substrates deliberately report uncertainty when descendant absence cannot be proven."
+    },
+    {
+      "id": "dashboard.resilient-live-lifecycle",
+      "title": "Truthful resilient lifecycle and telemetry dashboard",
+      "status": "QUALIFIED",
+      "summary": "The Jobs dashboard renders durable authentication, reconnect, cancellation, cleanup uncertainty, reason, retry deadline/budget, telemetry source/freshness, token/cache composition and process-cleanup evidence; reload and SSE reconnect reconcile a full authoritative snapshot without browser-owned state.",
+      "sources": [
+        "assets/dashboard/dashboard-running-state.js",
+        "assets/dashboard/dashboard-parameterized-jobs.js",
+        "assets/dashboard/dashboard-enhancements.js",
+        "assets/dashboard/dashboard.js",
+        "src/control/application-service.ts"
+      ],
+      "tests": [
+        "scripts/dashboard-running-state.test.mjs",
+        "scripts/browser-dashboard.test.mjs",
+        "src/control/execution-history.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.9-qualification.md"
+      ]
+    },
+    {
+      "id": "nodes.provenance-aware-telemetry",
+      "title": "Provenance-aware resource telemetry and procfs fallbacks",
+      "status": "PARTIAL",
+      "summary": "Managed-node measurements preserve value, source, authority, freshness, limitations and admission qualification. Linux prefers procfs; bounded Node os fallbacks and two-sample Android sysfs cpuidle busy derivation keep unavailable/stale/reset data distinct from zero.",
+      "sources": [
+        "src/control/resource-telemetry.ts",
+        "src/control/managed-node.ts",
+        "scripts/managed-node-probe.sh"
+      ],
+      "tests": [
+        "src/control/resource-telemetry.test.ts",
+        "src/control/managed-node.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.9-qualification.md"
+      ],
+      "limitation": "A physical Pixel produced a current derived cpuidle busy sample, explicitly not qualified for admission. Its temperature and storage were unavailable in that observation; the fallback is not a universal Android resource-telemetry qualification."
+    },
+    {
+      "id": "android.local-adb-reliability",
+      "title": "Governed local Android wireless-ADB reliability",
+      "status": "QUALIFIED",
+      "summary": "A bounded helper serializes pairing/reconnect ownership, recovers stale attempts, accepts pairing PIN only through local stdin, discovers pairing/connect DNS-SD services, preserves stable device identity, distinguishes paired from usable, verifies connection independently and publishes ADB transport capability only while qualified.",
+      "sources": [
+        "android/adb-local.mjs",
+        "android/node-server.mjs",
+        "android/resource-agent.sh"
+      ],
+      "tests": [
+        "android/adb-local.test.mjs"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.9-qualification.md"
+      ],
+      "limitation": "Physically qualified on the recorded Android 17 / Termux / ADB 35.0.2 environment for hidden-stdin pairing, intended-device verification, capability withdrawal, same- and changed-endpoint reconnect, governed typed execution and fresh-process session resume. Other Android/ADB builds remain capability-assessed, and first pairing remains an explicit local ceremony."
+    },
+    {
+      "id": "providers.portable-prompt-cache-boundary",
+      "title": "Portable prompt-cache boundary and truthful accounting",
+      "status": "PARTIAL",
+      "summary": "Provider-neutral stable/volatile prompt blocks preserve deterministic rendering. Responses adapters add hashed cache keys or explicit breakpoints only when provider and model both advertise the qualified capability; cache reads, writes, fresh/total input and configured costs remain separate through execution and dashboard accounting.",
+      "sources": [
+        "src/control/provider-prompt.ts",
+        "src/control/openai-compatible-provider.ts",
+        "src/control/codex-repository-review-client.ts",
+        "src/control/work-parcels.ts",
+        "scripts/qualify-provider-cache-boundary.ts"
+      ],
+      "tests": [
+        "src/control/provider-prompt.test.ts",
+        "src/control/openai-compatible-provider.test.ts",
+        "src/control/direct-repository-review-executor.test.ts",
+        "src/control/harness-efficiency.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.9-qualification.md",
+        "docs/evidence/agent-control-post-3.8.2-context-efficiency.md"
+      ],
+      "limitation": "A matched known-answer comparison produced equal independent quality scores, but the candidate used more tokens and elapsed time. The Codex CLI route exposes automatic cache-read observations but not explicit Responses controls, cache-write counts, authoritative current context or billed cost; no token, latency or economic saving is claimed."
+    },
+    {
+      "id": "dashboard.human-readable-execution-history",
+      "title": "Human-readable execution history and schema diagnostics",
+      "status": "QUALIFIED",
+      "summary": "Saved Job Runs and Lanes expose a bounded redacted chronological projection derived from their existing durable Run, Work Parcel, token-governor and baton records. Actor, association, telemetry authority, governor, baton, provider-result, verification and accounting semantics remain explicit without adding a transcript store or mutation path. Repository-review provider and application schemas now express the same semantic constraints and retain safe failing paths while validation remains fail closed.",
+      "sources": [
+        "src/control/execution-history.ts",
+        "src/control/application-service.ts",
+        "src/control/direct-repository-review-executor.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-parameterized-jobs.js",
+        "assets/dashboard/dashboard.js",
+        "assets/dashboard/dashboard-jobs.css"
+      ],
+      "tests": [
+        "src/control/execution-history.test.ts",
+        "src/control/direct-repository-review-executor.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/execution-history.md",
+        "docs/evidence/agent-control-3.8.2-human-readable-history-qualification.md"
+      ],
+      "limitation": "The v3.8.1 rejected provider bodies were intentionally ephemeral, so their exact failing field/value cannot be reconstructed; new failures record only safe field paths and constraints. The browser recording is content-addressed external qualification media rather than a product dependency, and no actual 3.8.2 baton transfer is claimed."
+    },
+    {
+      "id": "providers.credential-residency",
+      "title": "Credential residency and provider execution locality",
+      "status": "QUALIFIED",
+      "summary": "Provider-neutral account profiles distinguish workload/repository, provider-execution and credential-residency nodes. Remote repositories cross the existing managed-node boundary only as hash-verified immutable archives; credentials remain opaque node-local references. Routes, batons, contracts, telemetry, recovery and dashboard/ledger views preserve all three localities, while legacy 3.8 profile configuration is normalized compatibly.",
+      "sources": [
+        "src/control/provider-account-profile.ts",
+        "src/control/model-registry.ts",
+        "src/control/account-profile-qualification.ts",
+        "src/control/codex-node-execution.ts",
+        "src/control/resource-repository-resolver.ts",
+        "src/control/parameterized-job-engine.ts",
+        "scripts/codex-node-windows.ps1",
+        "scripts/repository-snapshot-windows.ps1",
+        "assets/dashboard/dashboard-models.js",
+        "assets/dashboard/dashboard-parameterized-jobs.js",
+        "assets/dashboard/dashboard-enhancements.js"
+      ],
+      "tests": [
+        "src/control/credential-residency.test.ts",
+        "src/control/model-registry.test.ts",
+        "src/control/codex-node-execution.test.ts",
+        "src/control/config.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/credential-residency.md",
+        "docs/evidence/agent-control-3.8.1-qualification.md",
+        "docs/evidence/agent-control-3.8.1-resumed-physical-evidence.json",
+        "docs/evidence/agent-control-3.8.1-high-remediation-physical.json",
+        "docs/evidence/agent-control-3.8.1-final-glm-review.md"
+      ],
+      "limitation": "Remote Windows-node-to-controller immutable repository transfer, two-account baton continuation/fallback, remote account-status, and a GLM whole-repository review remain historical route-specific evidence. Spark remains disabled by default. Agent Control 4.3 compares valuable ignored state around fast execution while treating only explicitly named roots as disposable."
+    },
+    {
+      "id": "context.governed-retrieval",
+      "title": "Governed retrieval and context intelligence",
+      "status": "QUALIFIED",
+      "summary": "An opt-in provider-neutral retrieval governor supplies bounded content-addressed Evidence Packets through local exact/BM25 and optional zg semantic/hybrid adapters, assesses sufficiency from observable exact/coverage/freshness signals, binds evidence to repository content, revalidates portable references after restart and handoff, selects index use through a generic resource policy, and streams redacted lifecycle telemetry over existing SSE.",
+      "sources": [
+        "src/control/governed-retrieval.ts",
+        "src/control/retrieval-resource-policy.ts",
+        "src/control/direct-repository-review-executor.ts",
+        "src/control/harness-efficiency.ts",
+        "src/control/application-service.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-enhancements.js"
+      ],
+      "tests": [
+        "src/control/governed-retrieval.test.ts",
+        "src/control/retrieval-resource-policy.test.ts",
+        "src/control/direct-repository-review-executor.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.8-retrieval-benchmark.json",
+        "docs/evidence/agent-control-3.8-local-model-retrieval.json",
+        "docs/evidence/agent-control-3.8-phase2-qualification.json",
+        "docs/evidence/agent-control-3.8-phase2-qualification.md",
+        "docs/evidence/agent-control-3.8.0-release-qualification.md"
+      ],
+      "limitation": "The 12-task physical mutation comparison qualified context reduction and fail-safe lifecycle behaviour, not broader Qwen2.5 3B capability: all lanes verified only 2/12. Retrieval remains opt-in, weak evidence falls back, index mutation requires separate authority, and the cross-provider-implementation baton variant remains unexercised."
+    },
+    {
+      "id": "identity.sessions-delegation",
+      "title": "Persistent identity, sessions and delegation",
+      "status": "PARTIAL",
+      "summary": "Actors, Agents, immutable session creators, attributed participants, context-transfer hashes, authority-subset delegation, opaque secret-use receipts and execution lineage are persistent; execution admission enforces participant/session/delegation authority plus model, node, filesystem and network envelopes, while the Sessions dashboard projects parcels, batons, delegations, runtimes and chain accounting.",
+      "sources": [
+        "src/control/identity-control-plane.ts",
+        "src/control/context-deterioration.ts",
+        "src/control/work-parcels.ts",
+        "src/control/application-service.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-sessions.js"
+      ],
+      "tests": [
+        "src/control/identity-control-plane.test.ts",
+        "src/control/context-deterioration.test.ts",
+        "src/control/work-parcels.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.5-qualification.md"
+      ],
+      "limitation": "The physical Luna to local Qwen to GLM-5.3-Flash to Luna chain is qualified for one bounded contract, including detach/restart, yield/substitution and independent verification. The 50-attempt production-routing gate remains unqualified."
+    },
+    {
+      "id": "execution.contract-pty-runtime",
+      "title": "Contract-owned process and PTY runtime",
+      "status": "PARTIAL",
+      "summary": "A durable versioned contract owns objective, criteria, authority, budget, route, sealed baton, process/PTY identity, attachments, permissions, pending actions, verification and evidence. Consultation/reconnect are read-only, write ownership is singular and explicitly transferred, human takeover fences agents, and cancellation, timeout, orphaning and output ordering reconstruct after restart.",
+      "sources": [
+        "src/control/contract-runtime.ts"
+      ],
+      "tests": [
+        "src/control/contract-runtime.test.ts"
+      ],
+      "evidence": [
+        "docs/contract-pty-runtime.md"
+      ],
+      "limitation": "The durable authority model, governed handoffs and redacted dashboard projection are implemented; operating-system-specific PTY creation and signal delivery remain adapters beneath this record."
+    },
+    {
+      "id": "execution.governed-handoffs",
+      "title": "Governed worker handoff outcomes",
+      "status": "IMPLEMENTED",
+      "summary": "SACRIFICE, SUBSTITUTE, DELEGATE, YIELD and COMPLETE have exact durable transitions over contract-owned state. AUTO remains inside authority and budget; risky, privileged, production, destructive, expanded-envelope and explicit MANUAL requests require operator approval without manufacturing withheld authority.",
+      "sources": [
+        "src/control/handoff-runtime.ts",
+        "src/control/contract-runtime.ts"
+      ],
+      "tests": [
+        "src/control/handoff-runtime.test.ts",
+        "src/control/contract-runtime.test.ts"
+      ],
+      "evidence": [
+        "docs/governed-handoffs.md",
+        "docs/contract-pty-runtime.md"
+      ]
+    },
+    {
+      "id": "interop.acp-v1-adapter",
+      "title": "ACP v1 governed session adapter",
+      "status": "PARTIAL",
+      "summary": "The official ACP SDK validates and frames a transport-neutral stable-v1 core; agent-control acp serves NDJSON stdio and the explicit remote adapter serves authenticated Streamable HTTP/WebSocket with TLS-gated non-loopback binding. Durable session lifecycle, prompts, ordered plan/tool updates, idempotent namespaced delivery and cancellation map into Actors, governed Sessions, context transfers and Work Parcels without adding a control path.",
+      "sources": [
+        "src/acp.ts",
+        "src/acp-remote.ts",
+        "src/control/acp-bootstrap.ts",
+        "src/control/acp-runtime.ts",
+        "src/control/acp-remote.ts",
+        "src/control/acp-adapter.ts",
+        "src/control/identity-control-plane.ts",
+        "scripts/agent-control.mjs"
+      ],
+      "tests": [
+        "src/control/acp-runtime.test.ts",
+        "src/control/acp-remote.test.ts",
+        "src/control/acp-adapter.test.ts",
+        "src/control/identity-control-plane.test.ts"
+      ],
+      "evidence": [
+        "docs/acp-compatibility.md"
+      ],
+      "limitation": "Official SDK clients qualify stdio, Streamable HTTP and WebSocket on ephemeral loopback, and an independent raw-wire harness covers malformed/invalid traffic. Production TLS exposure and cancellation while provider, permission or client-owned tool work is pending remain unqualified. ACP v2 is disabled and not claimed."
+    },
+    {
+      "id": "models.provider-lifecycle",
+      "title": "Provider and model lifecycle management",
+      "status": "IMPLEMENTED",
+      "summary": "Session-neutral logical providers, immutable exact model recipes, evidence-gated lifecycle states, versioned champion/challenger routing, historical replay and verified rollback are durable. Credentials remain indirect references and placement requirements remain semantic rather than machine identities.",
+      "sources": [
+        "src/control/provider-lifecycle.ts",
+        "src/control/model-registry.ts"
+      ],
+      "tests": [
+        "src/control/provider-lifecycle.test.ts",
+        "src/control/model-registry.test.ts"
+      ],
+      "evidence": [
+        "docs/provider-model-lifecycle.md",
+        "docs/models/ADDING-A-PROVIDER.md"
+      ],
+      "limitation": "The lifecycle is implemented, but physical multi-provider promotion and automatic production Job adoption remain gated by physical observations for the frozen benchmark."
+    },
+    {
+      "id": "models.capability-routing-benchmark",
+      "title": "Frozen capability-routing and coordinator/baton benchmark",
+      "status": "PARTIAL",
+      "summary": "A frozen 60-task corpus with a 12-task holdout predeclares route-safety and physical-outcome criteria across LOCAL, SPARK, STANDARD and FRONTIER. It also compiles a same-job twelve-child coordinator experiment with separate parent/baton accounting.",
+      "sources": [
+        "src/control/capability-routing-benchmark.ts",
+        "scripts/benchmark-capability-routing.ts"
+      ],
+      "tests": [
+        "src/control/capability-routing-benchmark.test.ts"
+      ],
+      "evidence": [
+        "docs/capability-routing-benchmark.md",
+        "docs/evidence/capability-routing-benchmark-v1.json"
+      ],
+      "limitation": "The deterministic classifier passed 60/60 with zero unsafe false positives, but no physical model observations exist. Provider success, latency, token/cost, change-integrity and coordinator integration gates remain unqualified; automatic production routing stays disabled."
+    },
+    {
+      "id": "models.physical-multi-provider-chain",
+      "title": "Physical Luna/local/GLM/Luna governed chain",
+      "status": "QUALIFIED",
+      "summary": "A real bounded contract ran through exact gpt-5.6-luna, loopback qwen2.5-3b-instruct-q4_k_m.gguf, OpenRouter z-ai/glm-5.3-flash and Luna integration. Local YIELD, GLM SUBSTITUTE, minimal batons, controller reconstruction and independent child/parent verification all completed.",
+      "sources": [
+        "src/control/contract-runtime.ts",
+        "src/control/handoff-runtime.ts"
+      ],
+      "tests": [
+        "src/control/contract-runtime.test.ts",
+        "src/control/handoff-runtime.test.ts"
+      ],
+      "evidence": [
+        "docs/physical-multi-provider-qualification.md",
+        "docs/evidence/physical-multi-provider-chain-20260901.json"
+      ],
+      "limitation": "GLM required three bounded attempts, token/cost telemetry was unavailable, and this one synthetic contract does not satisfy the larger automatic-routing benchmark."
+    },
+    {
+      "id": "dashboard.runtime-observability",
+      "title": "Redacted ACP contract handoff and lifecycle dashboard projection",
+      "status": "IMPLEMENTED",
+      "summary": "GET /api/runtime and the existing Sessions, Systems and Models views project stable ACP v1 transport/session state, contract/process/PTY ownership, approvals, handoffs, baton hashes/sizes and immutable provider/model lifecycle without adding mutation authority.",
+      "sources": [
+        "src/control/runtime-observability.ts",
+        "src/control/application-service.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-sessions.js",
+        "assets/dashboard/dashboard-models.js",
+        "assets/dashboard/dashboard-enhancements.js"
+      ],
+      "tests": [
+        "src/control/runtime-observability.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/web-dashboard.md",
+        "docs/security-3.6.md",
+        "docs/evidence/agent-control-3.6-development-qualification.md"
+      ],
+      "limitation": "Persisted ACP bindings are transport-neutral, so per-session stdio versus remote attribution remains unknown. Remote listener liveness is configured-but-unobserved rather than inferred."
+    },
+    {
+      "id": "routing.token-aware-baton",
+      "title": "Token-aware baton routing and live telemetry",
+      "status": "QUALIFIED",
+      "summary": "Provider-neutral thread telemetry keeps cumulative lifetime tokens separate from current context occupancy and preserves total/fresh/cached input independently through Job, Work Parcel, baton, history and live dashboard records. Missing cache detail remains unknown, discount-sensitive cost fails closed, Codex cumulative turn usage is never relabeled as current context, and explicit unavailable post-compaction counts clear stale pressure. Configurable governor transitions, context lifecycle, sealed baton provenance, failed-handoff recovery and account/model/node-chain totals remain durable. Account-bound Codex review uses the existing local/remote node port with a strict immutable-context capability envelope, while the dashboard streams the reconciled projection over existing SSE.",
+      "sources": [
+        "src/control/token-aware-baton-routing.ts",
+        "src/control/direct-repository-review-executor.ts",
+        "src/control/parameterized-job-engine.ts",
+        "src/control/job-bootstrap.ts",
+        "src/control/contract-runtime.ts",
+        "src/control/handoff-runtime.ts",
+        "src/control/provider-account-profile.ts",
+        "src/control/account-profile-qualification.ts",
+        "src/control/codex-node-execution.ts",
+        "src/control/codex-repository-review-client.ts",
+        "src/control/codex-exec-provider.ts",
+        "src/control/model-registry.ts",
+        "src/control/openai-compatible-provider.ts",
+        "src/control/application-service.ts",
+        "src/control/web-server.ts",
+        "scripts/codex-node-windows.ps1",
+        "assets/dashboard/dashboard-enhancements.js",
+        "assets/dashboard/dashboard-models.js"
+      ],
+      "tests": [
+        "src/control/token-aware-baton-routing.test.ts",
+        "src/control/codex-exec-provider.test.ts",
+        "src/control/codex-node-execution.test.ts",
+        "src/control/account-profile-qualification.test.ts",
+        "src/control/model-registry.test.ts",
+        "src/control/openai-compatible-provider.test.ts",
+        "src/control/direct-repository-review-executor.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/token-aware-baton-routing.md",
+        "docs/evidence/agent-control-3.7-development-qualification.md",
+        "docs/evidence/agent-control-3.7-physical-qualification-20260902.md",
+        "docs/evidence/agent-control-3.7-physical-lifecycle-20260903.json",
+        "docs/evidence/agent-control-post-3.8.2-context-efficiency.md"
+      ],
+      "limitation": "The post-3.8.2 matched Codex sequences proved truthful cache/context accounting and removal of observed native command execution, but prompt-cache hits varied from 35% to 0% under identical prompts and no reliable token or latency saving was established. Codex exec supplies no authoritative current-context or turn-cost field. Persistent native sessions/compaction remain disabled until lifecycle isolation and a practical benefit are qualified."
+    },
+    {
+      "id": "routing.adaptive-multi-model",
+      "title": "Evidence-driven adaptive multi-model orchestration",
+      "status": "IMPLEMENTED",
+      "summary": "Persistent task-specific Model Capability and Workflow Leagues retain verified quality, reliability, confidence, recency/version, latency, token/cache and cost evidence by evidence class. Normal Work Parcels and repository reviews persist parent-linked operational routing decisions and project the same decision tree and human-readable report through the dashboard/API without storing private model reasoning.",
+      "sources": [
+        "src/control/adaptive-orchestration.ts",
+        "src/control/work-parcels.ts",
+        "src/control/direct-repository-review-executor.ts",
+        "src/control/job-bootstrap.ts",
+        "src/control/application-service.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-adaptive-orchestration.js",
+        "assets/dashboard/dashboard-adaptive-orchestration.css"
+      ],
+      "tests": [
+        "src/control/adaptive-orchestration.test.ts",
+        "src/control/web-server.test.ts",
+        "src/control/config.test.ts",
+        "src/control/configuration-store.test.ts"
+      ],
+      "limitation": "Physical provider/workflow qualification through the live dashboard and runtime remains a separate gate; this workstream does not claim that adaptive production routing has been physically qualified."
+    },
+    {
+      "id": "routing.cache-aware-experts",
+      "title": "Cache-Aware Expert Delegation",
+      "status": "QUALIFIED",
+      "summary": "A provider-neutral runtime registry derives temporary Warm Experts from genuine terminal invocation telemetry, binds evidence to exact worker/provider/account/model/node/session/cache/backend identity and hashed context, enforces strict compatibility and lifecycle decay, and contributes a bounded cache score only after capability, placement, health and transport-integrity gates. Normal Work Parcels persist candidate decisions, selected expert identity, batons, actual cache observations and independent verification; the dashboard/API exposes the same durable facts and natural operational transcript.",
+      "sources": [
+        "src/control/cache-aware-expert.ts",
+        "src/control/cache-evidence.ts",
+        "src/control/structured-chat-loop-provider.ts",
+        "src/control/work-parcels.ts",
+        "src/control/job-bootstrap.ts",
+        "src/control/application-service.ts",
+        "src/control/config.ts",
+        "src/control/configuration-store.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-cache-experts.js",
+        "assets/dashboard/dashboard-enhancements.js"
+      ],
+      "tests": [
+        "src/control/cache-aware-expert.test.ts",
+        "src/control/structured-chat-loop-provider.test.ts",
+        "src/control/work-parcels.test.ts",
+        "src/control/config.test.ts",
+        "src/control/configuration-store.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/cache-aware-expert-delegation.md",
+        "docs/non-openai-cache-qualification.md",
+        "docs/evidence/agent-control-4.3-integrated-qualification-20260909.md",
+        "docs/evidence/agent-control-4.3-integrated-qualification-20260909.json",
+        "docs/evidence/agent-control-4.3-integrated-transcript-20260909.md",
+        "docs/evidence-archive.md"
+      ],
+      "limitation": "Physical A-F proves governed delegation and authoritative local llama.cpp cache reuse. Monetary saving remains unavailable because this backend supplies no billing data; cross-provider cache portability is not claimed."
+    },
+    {
+      "id": "models.fast-execution-spark",
+      "title": "Governed fast-execution model class",
+      "status": "PARTIAL",
+      "summary": "Conservative trivial-work classification, authenticated Spark probing, exact registry selection, minimal sealed batons, clean-worktree Codex execution, one-attempt/zero-subagent policy, independent verification, escalation and telemetry are executable; the frozen live benchmark verified all seven Spark cases.",
+      "sources": [
+        "src/control/fast-execution.ts",
+        "scripts/benchmark-fast-execution.ts",
+        "src/control/config.ts",
+        "src/control/configuration-store.ts",
+        "src/control/application-service.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-enhancements.js",
+        "assets/dashboard/dashboard-sessions.js"
+      ],
+      "tests": [
+        "src/control/fast-execution.test.ts",
+        "src/control/config.test.ts",
+        "src/control/configuration-store.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.5-qualification.md",
+        "artifacts/fast-execution/benchmark-2026-09-01T19-56-37-144Z.json"
+      ],
+      "limitation": "Research-preview entitlement is not universal, cost was unreported, the corpus is small and production Job adoption is not yet qualified; keep spark.enabled false by default."
+    },
+    {
+      "id": "teammates.persistent-coordination",
+      "title": "Persistent Teammates and verified coordination",
+      "status": "QUALIFIED",
+      "summary": "Named teammates retain bounded instructions, evidence-backed context and routines; controlled conversations delegate specialist and synthesis work through ordinary capability-placed Jobs with telemetry and verifier gates.",
+      "sources": [
+        "src/control/teammates.ts",
+        "src/control/teammates-demo.ts",
+        "config/teammates.initial.json",
+        "scripts/init-teammates.ts",
+        "scripts/demo-persistent-teammates.ts"
+      ],
+      "tests": [
+        "src/control/teammates.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/persistent-teammates-3.2.0-verification.md"
+      ]
+    },
+    {
+      "id": "bootstrap.safe-empty-config",
+      "title": "Safe empty-configuration bootstrap",
+      "status": "IMPLEMENTED",
+      "summary": "An idempotent initializer creates a schema-valid empty configuration without discovering infrastructure or overwriting operator state.",
+      "sources": [
+        "scripts/config.mjs",
+        "scripts/init-config.mjs"
+      ],
+      "tests": [
+        "scripts/init-config.test.mjs"
+      ],
+      "evidence": [
+        "docs/evidence/truthful-bootstrap-status-20260825.md"
+      ]
+    },
+    {
+      "id": "status.universal-authoritative-command",
+      "title": "Universal authoritative status command",
+      "status": "IMPLEMENTED",
+      "summary": "The same agent-control status command reads the versioned AgentControlService projection used by the web dashboard, locally or through one fixed read-only localhost request over SSH.",
+      "sources": [
+        "scripts/agent-control.mjs",
+        "scripts/status-client.mjs",
+        "src/control/application-service.ts"
+      ],
+      "tests": [
+        "scripts/agent-control.test.mjs",
+        "scripts/status-client.test.mjs",
+        "src/control/application-service.test.ts",
+        "src/control/web-server.test.ts"
+      ]
+    },
+    {
+      "id": "nodes.generic-linux-management",
+      "title": "Generic managed Linux nodes",
+      "status": "QUALIFIED",
+      "summary": "Authorised Linux/SSH resources receive fixed read-only discovery, heartbeat and workload projection plus typed governed inspection and maintenance Actions without an arbitrary remote-command path.",
+      "sources": [
+        "src/control/managed-node.ts",
+        "src/control/managed-node-ssh.ts",
+        "src/control/managed-node-actions.ts"
+      ],
+      "tests": [
+        "src/control/managed-node.test.ts",
+        "src/control/managed-node-ssh.test.ts",
+        "src/control/managed-node-actions.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/worker-linux-managed-node-qualification-20260826.md"
+      ]
+    },
+    {
+      "id": "harness.default-work-dispatch",
+      "title": "Default adaptive-harness dispatch",
+      "status": "IMPLEMENTED",
+      "summary": "Normal WorkExecutor agent work builds and records an ExecutionRecipe and receives only a live policy gateway.",
+      "sources": [
+        "src/control/adaptive-harness.ts",
+        "src/control/harness-dispatch.ts",
+        "src/control/work-executor.ts"
+      ],
+      "tests": [
+        "src/control/harness-dispatch.test.ts",
+        "src/control/work-executor.test.ts"
+      ]
+    },
+    {
+      "id": "tools.central-live-policy",
+      "title": "Central live ToolPolicy gateway",
+      "status": "IMPLEMENTED",
+      "summary": "Gateway tools are checked against recipe grants, worker compatibility, live lease and ownership generations, approvals and human ownership.",
+      "sources": [
+        "src/control/adaptive-harness.ts",
+        "src/control/harness-dispatch.ts"
+      ],
+      "tests": [
+        "src/control/adaptive-harness.test.ts",
+        "src/control/harness-dispatch.test.ts"
+      ]
+    },
+    {
+      "id": "output.token-aware-command-results",
+      "title": "Token-aware command output and ripgrep expansion",
+      "status": "QUALIFIED",
+      "summary": "Authoritative local or remote command results can be represented as complete, compacted, truncated or artifact-only context with scoped progressive expansion, provenance and token accounting; ripgrep has a structured semantic index.",
+      "sources": [
+        "src/control/token-aware-output.ts",
+        "src/control/repository-search.ts",
+        "src/control/context.ts",
+        "src/control/harness-dispatch.ts"
+      ],
+      "tests": [
+        "src/control/token-aware-output.test.ts",
+        "src/control/token-aware-context.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/token-aware-output-benchmark-20260827.json"
+      ]
+    },
+    {
+      "id": "harness.efficiency-context-routing",
+      "title": "Harness efficiency telemetry and context profiles",
+      "status": "PARTIAL",
+      "summary": "Provider-neutral invocation telemetry, THIN/STANDARD/DEEP profiles, context packets, a neutral context-graph port, bounded structured mutation execution, deterministic diff verification, cumulative escalation outcomes and dashboard/API projections are executable; routing stays observational with STANDARD applied.",
+      "sources": [
+        "src/control/harness-efficiency.ts",
+        "src/control/harness-efficiency-benchmark.ts",
+        "src/control/harness-mutation-benchmark.ts",
+        "src/control/harness-mutation-context.ts",
+        "src/control/harness-mutation-workspace.ts",
+        "src/control/harness-mutation-verifier.ts",
+        "src/control/structured-chat-loop-provider.ts",
+        "src/control/adaptive-harness.ts",
+        "src/control/harness-dispatch.ts",
+        "src/control/job-runtime.ts",
+        "src/control/job-bootstrap.ts"
+      ],
+      "tests": [
+        "src/control/harness-efficiency.test.ts",
+        "src/control/harness-efficiency-benchmark.test.ts",
+        "src/control/harness-mutation-benchmark.test.ts",
+        "src/control/harness-mutation-workspace.test.ts",
+        "src/control/harness-mutation-verifier.test.ts",
+        "src/control/harness-mutation-reference-verifier.test.ts",
+        "src/control/structured-chat-loop-provider.test.ts",
+        "src/control/adaptive-harness.test.ts",
+        "src/control/harness-dispatch.test.ts",
+        "src/control/harness-job-action.test.ts",
+        "src/control/job-bootstrap.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/harness-mutation-report.md",
+        "artifacts/harness-mutation-report.json"
+      ],
+      "limitation": "The 12-task same-model real-mutation run did not qualify THIN, immediate DEEP selection or adaptive escalation: only 2/12 STANDARD outcomes verified and adaptive fresh tokens per verified outcome were materially higher. Keep production routing observational with STANDARD applied until a larger deterministic suite demonstrates success non-regression and cumulative-resource improvement."
+    },
+    {
+      "id": "jobs.catalog-scheduler-ledger",
+      "title": "Job Catalog, scheduler and Run Ledger",
+      "status": "IMPLEMENTED",
+      "summary": "Versioned Jobs and Schedules produce durable Runs with capability placement, locks, retries, artifacts, approvals and recovery.",
+      "sources": [
+        "src/control/job-catalog.ts",
+        "src/control/job-runtime.ts",
+        "src/control/job-bootstrap.ts",
+        "scripts/qualify-jobs.ts"
+      ],
+      "tests": [
+        "src/control/job-catalog.test.ts",
+        "src/control/job-runtime.test.ts",
+        "scripts/qualify-jobs.test.mjs"
+      ]
+    },
+    {
+      "id": "jobs.parameterized-platform",
+      "title": "Parameterised Jobs, schedules and repository review",
+      "status": "QUALIFIED",
+      "summary": "Versioned Job Definitions and typed parameters produce portable Saved Jobs, deterministic persistent schedules, immutable Runs and attributable Work Parcels; the built-in read-only repository review freezes exact Git revisions, handles successful delta baselines, routes a qualified provider directly, validates findings and preserves usage, cost and evidence.",
+      "sources": [
+        "src/control/parameterized-job-types.ts",
+        "src/control/parameterized-job-registry.ts",
+        "src/control/parameterized-job-engine.ts",
+        "src/control/job-bootstrap.ts",
+        "src/control/repository-review-definition.ts",
+        "src/control/repository-review-runtime.ts",
+        "src/control/direct-repository-review-executor.ts",
+        "assets/dashboard/dashboard-parameterized-jobs.js"
+      ],
+      "tests": [
+        "src/control/parameterized-jobs.test.ts",
+        "src/control/openai-compatible-provider.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.4.0-release-qualification.md"
+      ]
+    },
+    {
+      "id": "workers.capability-registry",
+      "title": "Capability-advertising Worker Registry",
+      "status": "IMPLEMENTED",
+      "summary": "Workers advertise semantic capabilities and health separately from provider/model routing. Execution locality is established from trusted Agent Control registration or configured transport provenance, not worker names or self-declared labels; controller-local workers avoid remote-node policy while genuine remote workers remain governed and unknown or inconsistent identities fail closed.",
+      "sources": [
+        "src/control/job-runtime.ts",
+        "src/control/job-bootstrap.ts",
+        "src/control/runtime-safety-supervisor.ts",
+        "src/control/environment-discovery.ts"
+      ],
+      "tests": [
+        "src/control/job-runtime.test.ts",
+        "src/control/worker-locality-upgrade.test.ts"
+      ]
+    },
+    {
+      "id": "models.provider-neutral-registry",
+      "title": "Provider-neutral external model registry",
+      "status": "QUALIFIED",
+      "summary": "Configured providers, models, node-scoped qualification, logical roles, explicit fallbacks, normalized usage, ephemeral Codex provider materialization and dashboard/API projections are executable and fail closed; a real governed GLM-5.3-Flash route completed direct-provider repository reviews with structured evidence and cost accounting.",
+      "sources": [
+        "src/control/model-registry.ts",
+        "src/control/model-qualification.ts",
+        "src/control/openai-compatible-provider.ts",
+        "src/control/codex-model-config.ts",
+        "src/control/codex-exec-provider.ts",
+        "src/control/work-parcels.ts",
+        "src/control/application-service.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-models.js"
+      ],
+      "tests": [
+        "src/control/model-registry.test.ts",
+        "src/control/model-qualification.test.ts",
+        "src/control/openai-compatible-provider.test.ts",
+        "src/control/codex-model-config.test.ts",
+        "src/control/codex-exec-provider.test.ts",
+        "src/control/work-parcels.test.ts",
+        "src/control/configuration-store.test.ts",
+        "src/control/web-server.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-3.4.0-release-qualification.md"
+      ]
+    },
+    {
+      "id": "jobs.model-backed-action",
+      "title": "Model-backed Job Action bridge",
+      "status": "QUALIFIED",
+      "summary": "Agent Actions delegate through HarnessDispatcher, return tool requests through ToolPolicy and stop at the verification boundary.",
+      "sources": [
+        "src/control/harness-dispatch.ts"
+      ],
+      "tests": [
+        "src/control/harness-job-action.test.ts",
+        "src/control/responses-provider-job.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/windows-openai-harness-qualification-20260824.md"
+      ]
+    },
+    {
+      "id": "providers.openai-responses",
+      "title": "OpenAI Responses API execution",
+      "status": "QUALIFIED",
+      "summary": "A real Responses API Job returned a policy-gated function call and a verified checksummed artifact.",
+      "sources": [
+        "src/control/responses-provider.ts"
+      ],
+      "tests": [
+        "src/control/responses-provider.test.ts",
+        "src/control/responses-provider-job.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/windows-openai-responses-live-20260824.json"
+      ]
+    },
+    {
+      "id": "providers.openai-codex-chatgpt-plan",
+      "title": "Codex execution with ChatGPT-plan authentication",
+      "status": "QUALIFIED",
+      "summary": "Real Codex Jobs use saved ChatGPT authentication under a strict ephemeral read-only envelope. Immutable structured review ignores user/rule/project context, disables known native action-capable tool surfaces, preserves provider-reported total/fresh/cached usage, and leaves current context unavailable when Codex exposes only cumulative turn usage; returned Agent Control tool requests still use the central gateway.",
+      "sources": [
+        "src/control/codex-exec-provider.ts",
+        "src/control/openai-provider-selector.ts"
+      ],
+      "tests": [
+        "src/control/codex-exec-provider.test.ts",
+        "src/control/openai-provider-selector.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/windows-openai-chatgpt-plan-live-20260824.json",
+        "docs/evidence/agent-control-post-3.8.2-context-efficiency.md"
+      ]
+    },
+    {
+      "id": "verification.universal-adapter-coverage",
+      "title": "Universal verification-to-acceptance coverage",
+      "status": "PARTIAL",
+      "summary": "Claim, evidence, verification and acceptance are distinct and model-backed Jobs are gated, but every adapter and task type is not yet universally covered.",
+      "sources": [
+        "src/control/verification.ts",
+        "src/control/job-runtime.ts"
+      ],
+      "tests": [
+        "src/control/verification.test.ts",
+        "src/control/harness-job-action.test.ts"
+      ],
+      "limitation": "Add task-specific verification policies and enforce them across every adapter and Action family."
+    },
+    {
+      "id": "executors.opaque-cli-internal-tools",
+      "title": "Opaque CLI internal-tool mediation",
+      "status": "PARTIAL",
+      "summary": "CLI processes can be constrained by an approved capability envelope, and immutable Codex review now disables its known native shell, multi-agent, retrieval and interactive action surfaces under strict config validation. Internal CLI actions are still not individually authorised by ToolPolicy; observed item types are post-run evidence only.",
+      "sources": [
+        "src/control/codex-exec-provider.ts",
+        "src/control/execution-provider.ts"
+      ],
+      "tests": [
+        "src/control/codex-exec-provider.test.ts",
+        "src/control/orca-execution-provider.test.ts"
+      ],
+      "limitation": "Keep provider-specific native surfaces disabled where the workload does not require them; add authoritative per-action mediation or immediate process suspension before claiming universal ToolPolicy coverage for an opaque CLI."
+    },
+    {
+      "id": "ux.governed-session-replay",
+      "title": "Governed UX Session Capture and Interactive Replay",
+      "status": "QUALIFIED",
+      "summary": "Terminal Job Runs project existing durable execution evidence into an immutable SHA-256-bound UX session. Audience-scoped read-only shares, interactive replay, conventional video, transcript and digest retain one identity; shares grant no operational or rerun authority. Normal memory presentation uses Your Memories while implementation backends remain hidden.",
+      "sources": [
+        "src/control/ux-session.ts",
+        "src/control/web-server.ts",
+        "src/web.ts",
+        "assets/session-player/index.html",
+        "assets/session-player/session-player.js",
+        "assets/session-player/session-player.css"
+      ],
+      "tests": [
+        "src/control/ux-session.test.ts",
+        "src/control/ux-session-web.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/agent-control-4.4-ux-session-replay-20260911.md",
+        "docs/evidence-archive.md"
+      ],
+      "limitation": "Your Memories is advisory. Automatic memory consolidation and idle model swapping are not released; MARM remains optional."
+    },
+    {
+      "id": "models.governed-learned-specialists",
+      "title": "Governed local skill learning and learned specialist routing",
+      "status": "QUALIFIED",
+      "summary": "A provider-neutral lifecycle freezes reviewed datasets and an unadapted baseline, records bounded training through an interchangeable adapter, independently qualifies exact base-plus-adaptation identity, and admits only materially improved current compositions to the existing adaptive-harness Job and Work Parcel path. Learned adaptation remains separate from Warm Expert cache state.",
+      "sources": [
+        "src/control/skill-learning.ts",
+        "src/control/skill-specialist-actions.ts",
+        "src/control/peft-specialist-execution.ts",
+        "assets/dashboard/dashboard-learned-specialists.js"
+      ],
+      "tests": [
+        "src/control/skill-learning.test.ts",
+        "src/control/skill-specialist-actions.test.ts"
+      ],
+      "evidence": [
+        "docs/skill-learning.md",
+        "docs/evidence/agent-control-4.5-governed-skill-learning-20260911.md",
+        "docs/evidence-archive.md"
+      ],
+      "limitation": "The first qualification is narrow route-intent JSON on one pinned 135M CPU base. Frozen accuracy improved from 0.00 to 0.40 and schema validity from 0.00 to 1.00; this does not establish broad expertise. Monetary cost, adapter composition and automatic training remain unavailable or unimplemented. The separate deterministic-skill promotion lifecycle does not automatically promote a model adapter."
+    },
+    {
+      "id": "skills.qualified-selection",
+      "title": "Qualified skill selection",
+      "status": "IMPLEMENTED",
+      "summary": "Only qualified, evidence-carrying skills may satisfy recipe capability requirements and skills cannot expand tool authority.",
+      "sources": [
+        "src/control/adaptive-harness.ts"
+      ],
+      "tests": [
+        "src/control/adaptive-harness.test.ts"
+      ]
+    },
+    {
+      "id": "skills.governed-lifecycle",
+      "title": "Governed skill proposal and promotion",
+      "status": "QUALIFIED",
+      "summary": "Repeated independently verified reasoning may be nominated as a versioned deterministic skill backed by a pre-registered hash-identified handler. Distinct source Work Parcels, originating route, assumptions, typed contracts, scope, freshness, invalidation conditions, explicit validation and operator promotion are durable; novelty, stale evidence, changed identity and failed verification fail closed to a recorded model escalation.",
+      "sources": [
+        "src/control/deterministic-skill.ts",
+        "src/control/deterministic-skill-actions.ts",
+        "config/work-parcels/jobs/deterministic-skill-execution.job.yaml",
+        "assets/dashboard/dashboard-learned-specialists.js"
+      ],
+      "tests": [
+        "src/control/deterministic-skill.test.ts",
+        "src/control/deterministic-skill-actions.test.ts",
+        "src/control/runtime-safety-supervisor.test.ts"
+      ],
+      "evidence": [
+        "docs/deterministic-skill-promotion.md",
+        "docs/evidence/agent-control-4.5-deterministic-skill-promotion-20260911.md",
+        "docs/evidence-archive.md"
+      ],
+      "limitation": "Qualification covers three bounded Agent Control operations on one measured node. General procedure synthesis, automatic code installation and automatic promotion remain forbidden. The separate cross-model Your Memories matrix has nine PASS/FIXED cells, two terminally UNSUPPORTED Pixel-reader aliases and one BLOCKED_EXTERNAL GLM route; it remains experimental."
+    },
+    {
+      "id": "memory.cross-device-session-vault",
+      "title": "Cross-device Session Vault and governed continuation",
+      "status": "QUALIFIED",
+      "summary": "Provider-native session bytes are retained as immutable content-addressed evidence with a redacted provider-neutral index, repository attribution, incremental replication, exclusive continuation leases and contextual continuation through existing governed sessions and Work Parcels. Approved findings enter Your Memories only through the existing ProjectMemoryPort.",
+      "sources": [
+        "src/control/session-vault.ts",
+        "src/control/session-vault-ssh.ts",
+        "src/control/poe.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-session-vault.js"
+      ],
+      "tests": [
+        "src/control/session-vault.test.ts",
+        "src/control/session-vault-ssh.test.ts",
+        "src/control/session-vault-web.test.ts",
+        "src/control/poe.test.ts"
+      ],
+      "evidence": [
+        "docs/session-vault.md",
+        "docs/evidence/agent-control-4.5-session-vault-physical-qualification-20260912.md",
+        "docs/evidence-archive.md"
+      ],
+      "limitation": "Core A-H qualification passed across two governed nodes, but the configured Windows Obsidian application was not physically exercised because node authentication was unavailable. Session Vault and Your Memories remain distinct; Obsidian is optional. The feature remains experimental for 4.5 release decisions."
+    },
+    {
+      "id": "runtime.process-map",
+      "title": "Live Runtime Map, Control Room, Replay and Compare",
+      "status": "QUALIFIED",
+      "summary": "One redacted projection of authoritative Work Parcel, Run, model, session, baton, cache, memory and verification evidence drives leader KPIs, fan-out/fan-in graph, progressive drill-down, read-only Live Shell, adaptive Control Room, time-bounded Replay and independent-identity graphical Compare. Exact configured identities link current work to Estate resources.",
+      "sources": [
+        "src/control/runtime-map.ts",
+        "src/control/application-service.ts",
+        "assets/dashboard/dashboard-runtime-map.js",
+        "assets/dashboard/dashboard-runtime-map.css"
+      ],
+      "tests": [
+        "src/control/runtime-map.test.ts",
+        "src/control/runtime-map-web.test.ts",
+        "src/control/work-parcels.test.ts"
+      ],
+      "evidence": [
+        "docs/runtime-map.md",
+        "docs/evidence/agent-control-4.5-runtime-map-visual-acceptance-20260912.md",
+        "docs/evidence-archive.md"
+      ],
+      "limitation": "The visual qualification proved six concurrent root Jobs, advancing real terminal output, retry/recovery, aggregation, verification, replay, comparison and Estate cross-linking. Map-originated pause/cancel/retry/approval remains intentionally unavailable until a node-scoped adapter can delegate to existing permission and audit APIs; WATCH grants no control authority."
+    },
+    {
+      "id": "environment.discovery-estate-map",
+      "title": "Setup, Environment Discovery and unified Estate Map",
+      "status": "PARTIAL",
+      "summary": "Read-only provider-neutral adapters inventory machines, accelerators, runtimes, models, agents, tools and credential presence; persist non-secret change history; gate recommendations and configuration Work Parcels; and project current evidence through the same graph schema and renderer as Process Map. User capabilities and bootstrap provenance use explicit review and fail-closed lifecycles.",
+      "sources": [
+        "src/control/environment-discovery.ts",
+        "src/control/capability-adapter-registry.ts",
+        "src/control/estate-map.ts",
+        "src/control/installation-lifecycle.ts",
+        "assets/dashboard/dashboard-environment-discovery.js",
+        "assets/dashboard/dashboard-runtime-map.js"
+      ],
+      "tests": [
+        "src/control/environment-discovery.test.ts",
+        "src/control/environment-discovery-web.test.ts",
+        "src/control/capability-adapter-registry.test.ts",
+        "src/control/estate-map.test.ts",
+        "src/control/installation-lifecycle.test.ts"
+      ],
+      "evidence": [
+        "docs/environment-discovery.md",
+        "docs/evidence/agent-control-4.5-environment-discovery-qualification-20260912.md",
+        "docs/evidence-archive.md"
+      ],
+      "limitation": "The physical run qualified only the local non-disruptive controller path. Configured remote/mobile transports, paid provider checks, real authentication actions and cross-device imported capabilities remain untested and cannot be counted as available. Desired-state estate management/remediation is planned for 4.6."
+    },
+    {
+      "id": "recipes.automatic-learning",
+      "title": "Automatic governed recipe learning",
+      "status": "PLANNED",
+      "summary": "Successive halving exists, but winners are not automatically promoted into a durable governed recipe catalog.",
+      "sources": [
+        "src/control/experiments.ts"
+      ],
+      "tests": [
+        "src/control/control.test.ts"
+      ],
+      "limitation": "Persist qualification evidence and require policy approval before learned recipes influence routing."
+    },
+    {
+      "id": "planning.dynamic-work-board",
+      "title": "Dynamic Work Board and parallel lane scheduling",
+      "status": "IMPLEMENTED",
+      "summary": "A durable user-controlled plan records ordering, priority, lanes, dependencies, blockers, approvals, resource conflicts and linked runs. Compatible independent work may execute in parallel while Agent Control Jobs and Work Parcels retain execution authority.",
+      "sources": [
+        "src/control/work-board.ts",
+        "src/control/work-board-control.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-work-board.js"
+      ],
+      "tests": [
+        "src/control/work-board.test.ts",
+        "src/control/work-board-control.test.ts",
+        "src/control/work-board-web.test.ts"
+      ],
+      "evidence": [
+        "docs/dynamic-work-board.md",
+        "docs/evidence/DYNAMIC_WORK_BOARD_QUALIFICATION.md",
+        "docs/evidence/QUARANTINE_SCHEDULING_QUALIFICATION.md"
+      ],
+      "limitation": "Some restart scenarios are automated-test qualified rather than separately physical. The dashboard does not yet provide a complete containment and recovery timeline."
+    },
+    {
+      "id": "safety.hierarchical-containment",
+      "title": "Hierarchical containment and quarantine scheduling fence",
+      "status": "IMPLEMENTED",
+      "summary": "Scheduler-independent containment governs job, lane, worker, model, node, workspace and Estate scopes. Durable worker/node quarantine excludes a route before health, priority or preference and survives reconnect and controller restart until evidenced recovery reaches AVAILABLE.",
+      "sources": [
+        "src/control/containment.ts",
+        "src/control/work-board.ts",
+        "src/index.ts",
+        "src/web.ts"
+      ],
+      "tests": [
+        "src/control/governance-containment.test.ts",
+        "src/control/work-board.test.ts",
+        "src/control/work-board-web.test.ts"
+      ],
+      "evidence": [
+        "docs/dynamic-work-board.md",
+        "docs/evidence/QUARANTINE_SCHEDULING_QUALIFICATION.md"
+      ],
+      "limitation": "There is no distinct runtime kill scope. Pixel and remote containment are unqualified; runtime routes inherit stable Worker/Node containment authority."
+    },
+    {
+      "id": "models.governed-improvement",
+      "title": "Governed Model Improvement Loop",
+      "status": "QUALIFIED",
+      "summary": "Evidence-backed weaknesses create durable opportunities against immutable baselines; isolated candidates are evaluated through the improvement ladder and may reach production only through a sealed proposal, exact candidate-bound approval, an allow-listed intervention adapter, independent applied-effect observation and a receipt-backed rollback path.",
+      "sources": [
+        "src/control/model-improvement.ts",
+        "src/control/model-intervention.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-models.js"
+      ],
+      "tests": [
+        "src/control/model-improvement.test.ts",
+        "src/control/model-improvement-web.test.ts"
+      ],
+      "evidence": [
+        "docs/evidence/AGENT_CONTROL_4.11_MODEL_IMPROVEMENT_CANDIDATE.md",
+        "docs/evidence/AGENT_CONTROL_4.11_PROMOTION_ROLLBACK_QUALIFICATION.md",
+        "docs/evidence/model-improvement-promotion-rollback-4.11.json"
+      ],
+      "limitation": "Only the PROMPT intervention is physically qualified, using a disposable prompt route above an immutable Qwen2.5 3B service. Generic canary allocation is not implemented, and arbitrary production-route promotion remains unqualified."
+    },
+    {
+      "id": "runtime.native-agent-templates",
+      "title": "Native governed Agent Templates and lean model interface",
+      "status": "QUALIFIED",
+      "summary": "Digest-bound, versioned Agent Templates resolve only registered allow-listed native actions and execute through the ordinary Work Parcel, Job Runtime, safety, evidence and independent-verification path. A provider-neutral lean model interface keeps model calls behind existing governed adapters.",
+      "sources": [
+        "src/control/agent-template.ts",
+        "src/control/lean-model-interface.ts",
+        "scripts/qualify-agent-templates-native.ts"
+      ],
+      "tests": [
+        "src/control/agent-template.test.ts",
+        "src/control/lean-model-interface.test.ts"
+      ],
+      "evidence": [
+        "docs/agent-templates.md",
+        "docs/qualification/4.12-lean-runtime/AGENT-CONTROL-4.12-LEAN-RUNTIME-QUALIFICATION.md"
+      ],
+      "limitation": "Qualification covers the registered specialist actions and recorded model/runtime combinations. A manifest grants no arbitrary shell, network or protected-resource authority, and the experimental model host remains a qualification adapter."
+    },
+    {
+      "id": "execution.multidimensional-runtime-budgets",
+      "title": "Measured multi-dimensional runtime and output budgets",
+      "status": "QUALIFIED",
+      "summary": "Governed execution derives bounded total, provider-call, no-progress and output-token budgets from declared policy and measured route evidence. Timeout and natural completion remain distinct, output ceilings are retained, and service-restoration evidence is part of qualification.",
+      "sources": [
+        "src/control/runtime-budget.ts",
+        "src/control/qualification-output-budget.ts"
+      ],
+      "tests": [
+        "src/control/runtime-budget.test.ts",
+        "src/control/qualification-output-budget.test.ts"
+      ],
+      "evidence": [
+        "docs/qualification/4.12-native-timeout/STANDARD-DEEP-RUNTIME-BUDGET-ANALYSIS.md",
+        "docs/qualification/4.12-qwen-output-budget/QWEN38-27B-OUTPUT-BUDGET-QUALIFICATION.md"
+      ],
+      "limitation": "Budgets are evidence-bound to qualified routes and workloads. They do not promise that every provider will report authoritative output usage or that every model will complete within the same envelope."
+    },
+    {
+      "id": "routing.cost-performance-policy",
+      "title": "Governed cost and performance routing policy",
+      "status": "IMPLEMENTED",
+      "summary": "Provider-neutral Economy, Balanced, Fast Capped and Custom policies enforce rate, invocation, job and token ceilings before billable dispatch; preserve fresh, cached, reasoning and output usage separately; and fail closed when required price evidence is unavailable. The authenticated dashboard supports explain, preview and exact-hash approval with retained operator reason.",
+      "sources": [
+        "src/control/cost-performance-routing.ts",
+        "src/control/cost-routing-projection.ts",
+        "src/control/openrouter-cost-routing.ts",
+        "src/control/configuration-store.ts",
+        "src/control/web-server.ts",
+        "assets/dashboard/dashboard-models.js"
+      ],
+      "tests": [
+        "src/control/cost-performance-routing.test.ts",
+        "src/control/cost-routing-projection.test.ts",
+        "src/control/configuration-store.test.ts"
+      ],
+      "evidence": [
+        "docs/cost-aware-openrouter-routing.md",
+        "docs/evidence/openrouter-cost-routing-qualification.json"
+      ],
+      "limitation": "The OpenRouter translation is contract- and fixture-qualified. No paid live OpenRouter request, account change or spend is claimed, and absent provider cost remains unavailable."
+    }
+  ]
+}

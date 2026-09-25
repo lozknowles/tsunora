@@ -1,0 +1,47 @@
+{
+  "schema": "agent-control.openai-windows-qualification-evidence/v1",
+  "classification": "EXPERIMENTALLY_VERIFIED",
+  "startedAt": "2026-08-24T17:23:42.275Z",
+  "completedAt": "2026-08-24T17:23:48.778Z",
+  "platform": "win32",
+  "provider": {
+    "id": "codex-chatgpt-plan",
+    "transport": "official codex exec JSONL",
+    "authentication": "saved ChatGPT-managed Codex login",
+    "authMode": "chatgpt-plan",
+    "selectionMode": "auto",
+    "selectionReason": "api_key_absent",
+    "modelId": "gpt-5.6-terra",
+    "capabilityEnvelope": "ephemeral read-only; user config disabled"
+  },
+  "execution": {
+    "runId": "run-86280a91-f3a6-4f37-8451-5fb7feb146de",
+    "recipeId": "recipe-13d3eeb995f4be4c",
+    "recipeFingerprint": "13d3eeb995f4be4c6a8638f9a7d02705521bdd80a25658322a52c3c1e8dd1a69",
+    "codexThreadId": "01a034cc-a6f3-7563-911f-006dc0adcabb",
+    "providerResponseSha256": "e76adc907528bc629d9ce8a66a077129367aca8c9c899b29cff785b3f238d068",
+    "requestedTool": "qualification.return-data",
+    "toolPolicyAllowed": true,
+    "leaseGeneration": 23,
+    "ownershipGeneration": 31,
+    "runStatus": "SUCCEEDED",
+    "stepStatus": "SUCCEEDED"
+  },
+  "artifact": {
+    "id": "artifact-628139c8-5c09-4494-b988-8c34c8309c9e",
+    "type": "application/json",
+    "schema": "openai-return-data/v1",
+    "version": "1.0.0",
+    "sha256": "4cfaaa97d1d8c100003e80fbf9d2d5822f23e00b597208401d854e0e1b082dbf",
+    "marker": "WINDOWS-OPENAI-HARNESS-OK"
+  },
+  "authority": {
+    "leasesMutatedByProvider": false,
+    "ownershipMutatedByProvider": false,
+    "schedulingAuthorityGranted": false,
+    "ptyWrites": false,
+    "humanTakeoverWeakened": false,
+    "providerAcceptedCompletion": false
+  },
+  "verdict": "WINDOWS_OPENAI_RETURN_DATA_QUALIFIED"
+}

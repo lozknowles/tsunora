@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "modelId": "openbmb-minicpm5-2b-gguf-q4-k-m-d00c954e",
+      "state": "FAILED",
+      "version": "minicpm5-code-repair-20260912-final",
+      "checkedAt": "2026-09-12T10:22:00.000Z",
+      "capabilities": [],
+      "nodes": ["qualification-node"],
+      "latencyMs": 59472,
+      "successRate": 0,
+      "evidence": [
+        "external-archive:source-separation-20260912",
+        "report:sha256:ad789682d510587929ac412e6a221e035adcc5f725903e1e521d0c9154c1cdff",
+        "recording:sha256:496dbb8534debc1d020872933fc74b9174091b611ab55c9801622d8f48020484",
+        "evidence-pack:sha256:584f650bed045fbffdeb83c62e61e4285a883cef6f4fd34c8d4b1fdb2f1f781c"
+      ],
+      "detail": "Final FAILED qualification. Governed code repair failed every recorded attempt. Other roles remain unqualified; practical scores are observations, not admission evidence.",
+      "configuration": {
+        "providerModel": "openbmb/MiniCPM5-2B-GGUF",
+        "modelRevision": "d00c954e5f9a0f2605468f24703ffa7e5cb0c492",
+        "artifactSha256": "ec2d5801640099e97d8d7e8003ad4d81f336e757811f03a26173dddf386602fd",
+        "quantization": "Q4_K_M",
+        "runtime": "llama.cpp 0.4.0-dev",
+        "runtimeRevision": "311d4211bf1611ff7ca6b67035a4a07c79766efc",
+        "runtimeBinarySha256": [
+          "902a94b3b3f1555c97998b51491934f94fd7fd35907f3aca9757218025f8969d",
+          "36ace3599a3f77d2d0b1a76dd0bb12279fd54a03cf07fb9205df1a2bd0ffdc91"
+        ]
+      },
+      "taskQualifications": [
+        {
+          "taskClass": "governed-code-repair",
+          "state": "FAILED",
+          "checkedAt": "2026-09-12T10:22:00.000Z",
+          "evidence": ["recorded-attempts:0/7", "known-good-control:passed", "scripted-control:passed"],
+          "detail": "Known-good and scripted controls passed; model attempts failed parsing or independent semantic acceptance. Runtime acceleration did not change quality."
+        },
+        {
+          "taskClass": "structured-extraction",
+          "state": "UNTESTED",
+          "checkedAt": "2026-09-12T10:22:00.000Z",
+          "evidence": [],
+          "detail": "Practical observations are not a separate qualification."
+        },
+        {
+          "taskClass": "general-reasoning",
+          "state": "UNTESTED",
+          "checkedAt": "2026-09-12T10:22:00.000Z",
+          "evidence": [],
+          "detail": "No separate role qualification was authorised or completed."
+        },
+        {
+          "taskClass": "large-context-above-16k",
+          "state": "UNTESTED",
+          "checkedAt": "2026-09-12T10:22:00.000Z",
+          "evidence": ["qualification-budget:max-16k"],
+          "detail": "32K, 64K and 128K capability remain untested by design."
+        }
+      ]
+    }
+  ]
+}

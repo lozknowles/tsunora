@@ -1,0 +1,88 @@
+{
+  "schema": "agent-control.protected-resource-dashboard-video/v1",
+  "recordedAt": "2026-09-07T18:52:41.594Z",
+  "source": "Genuine isolated Agent Control Work Parcel and production governed Git boundary; no simulated runtime events",
+  "evidence": {
+    "file": "agent-control-protected-resource-qualification.json",
+    "sha256": "8f9ba1b5e15ecc2916004e7a23af47f7127b474321257d906f8827436a4f0cfc"
+  },
+  "transcript": {
+    "file": "agent-control-protected-resource-transcript.md",
+    "sha256": "62c3c8cc7948c0d3a008472dabcc610c0cdb8e4349364ae560848989784799cf"
+  },
+  "video": {
+    "file": "agent-control-protected-resource-dashboard.mp4",
+    "sha256": "eeebb30951025527ff0e28573d017b4f32ea85e6b73893ee1f438c975ca4c185",
+    "bytes": 5495010,
+    "format": "MP4/H.264",
+    "stream": {
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "duration": "72.640000"
+    }
+  },
+  "browser": {
+    "engine": "Chromium",
+    "headless": true,
+    "viewport": "1920x1080"
+  },
+  "dashboard": {
+    "streamState": "LIVE",
+    "views": [
+      {
+        "view": "jobs",
+        "target": "#parcel-list",
+        "at": "2026-09-07T18:51:19.225Z"
+      },
+      {
+        "view": "lanes",
+        "target": "#lane-list",
+        "at": "2026-09-07T18:51:28.180Z"
+      },
+      {
+        "view": "crew",
+        "target": "#crew-live-grid",
+        "at": "2026-09-07T18:51:35.122Z"
+      },
+      {
+        "view": "routing",
+        "target": "#orchestration-decision-list",
+        "at": "2026-09-07T18:51:44.007Z"
+      },
+      {
+        "view": "jobs",
+        "target": "#run-history",
+        "at": "2026-09-07T18:51:52.923Z"
+      },
+      {
+        "view": "models",
+        "target": "#runtime-safety",
+        "at": "2026-09-07T18:52:07.286Z"
+      },
+      {
+        "view": "routing",
+        "target": "#orchestration-decision-list",
+        "at": "2026-09-07T18:52:15.256Z"
+      },
+      {
+        "view": "crew",
+        "target": "#crew-parcel-flow",
+        "at": "2026-09-07T18:52:22.240Z"
+      }
+    ],
+    "browserErrors": [],
+    "httpErrors": []
+  },
+  "screenshots": [
+    {
+      "file": "agent-control-protected-resource-screenshots/governed-run-detail.png",
+      "sha256": "2e131e29c42f578b2f3d7bf7e6829587f1ffb14b1865e1f09c2953d3c0968c80"
+    },
+    {
+      "file": "agent-control-protected-resource-screenshots/runtime-safety.png",
+      "sha256": "470998875e3dd641238c56e7b3818608323a73f1c0cecc706e276fbfa5364e2f"
+    }
+  ],
+  "qualificationExitCode": 0
+}

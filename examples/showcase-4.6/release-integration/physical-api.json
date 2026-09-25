@@ -1,0 +1,69 @@
+{
+  "state": "PASS",
+  "results": [
+    {
+      "label": "clean",
+      "checks": [
+        {
+          "path": "/api/status",
+          "status": 200,
+          "secretAbsent": true
+        },
+        {
+          "path": "/api/configuration",
+          "status": 200,
+          "secretAbsent": true
+        },
+        {
+          "path": "/api/runs",
+          "status": 200,
+          "secretAbsent": true
+        },
+        {
+          "path": "/api/environment-discovery",
+          "status": 200,
+          "secretAbsent": true
+        },
+        {
+          "path": "/api/estate-map",
+          "status": 200,
+          "secretAbsent": true
+        }
+      ],
+      "unauthenticated": 401,
+      "foreignOrigin": 403
+    },
+    {
+      "label": "upgraded",
+      "checks": [
+        {
+          "path": "/api/status",
+          "status": 200,
+          "secretAbsent": true
+        },
+        {
+          "path": "/api/configuration",
+          "status": 200,
+          "secretAbsent": true
+        },
+        {
+          "path": "/api/runs",
+          "status": 200,
+          "secretAbsent": true
+        },
+        {
+          "path": "/api/environment-discovery",
+          "status": 200,
+          "secretAbsent": true
+        },
+        {
+          "path": "/api/estate-map",
+          "status": 200,
+          "secretAbsent": true
+        }
+      ],
+      "unauthenticated": 401,
+      "foreignOrigin": 403
+    }
+  ]
+}

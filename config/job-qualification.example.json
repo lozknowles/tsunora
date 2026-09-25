@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "resources": [
+    {
+      "id": "qualification-mobile",
+      "name": "Qualification mobile worker",
+      "platform": "android",
+      "transport": {"type": "local"},
+      "capabilities": ["browser.mobile", "facebook.authenticated"]
+    },
+    {
+      "id": "qualification-publisher",
+      "name": "Qualification publisher",
+      "platform": "linux",
+      "transport": {"type": "local"},
+      "capabilities": ["localwalks.publisher", "node", "git", "production-access"]
+    },
+    {
+      "id": "qualification-observer",
+      "name": "Qualification verifier",
+      "platform": "linux",
+      "transport": {"type": "local"},
+      "capabilities": ["network.read"]
+    }
+  ],
+  "providers": [],
+  "services": [],
+  "lanes": [
+    {"id": 1, "name": "Qualification", "cwd": ".", "priority": 1, "mode": "auto"}
+  ]
+}

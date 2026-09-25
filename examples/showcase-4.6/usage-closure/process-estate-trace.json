@@ -1,0 +1,24 @@
+{
+  "invocationId": "usage-closure-run-0e6eba44-44b7-4230-ad04-fbacdc630812",
+  "runId": "run-0e6eba44-44b7-4230-ad04-fbacdc630812",
+  "parcelId": "parcel-social-5778da5b558b1736a3a0482a2701faf0811d2b2d34d0a30fb2016d16de9c0bc6",
+  "processNodeId": "run:run-0e6eba44-44b7-4230-ad04-fbacdc630812",
+  "machineId": "EXAMPLE_WORKER",
+  "processEvidence": [
+    {
+      "kind": "run",
+      "id": "run-0e6eba44-44b7-4230-ad04-fbacdc630812",
+      "sha256": "fa3606ea88e2d7dfd9c6945f9795bc26a5e5e605510f038bdcf7203f61391b99"
+    },
+    {
+      "kind": "work-parcel",
+      "id": "parcel-social-5778da5b558b1736a3a0482a2701faf0811d2b2d34d0a30fb2016d16de9c0bc6",
+      "sha256": "42558704f36c45a62dec599b2918487f6b81b1251e7be46c0442b0914a0db7af"
+    }
+  ],
+  "usageLinks": {
+    "process": "?view=runtime-map&parcelId=parcel-social-5778da5b558b1736a3a0482a2701faf0811d2b2d34d0a30fb2016d16de9c0bc6",
+    "estate": "?view=runtime-map&mode=estate&resource=machine%3Acontroller"
+  },
+  "nativeExecution": true
+}

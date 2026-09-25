@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/lozknowles/speech-services",
+  "commit": "3d23884564562738870a0c5b1224186959b5f602",
+  "file": "src/client.mjs",
+  "sha256": "b3d9d717eed35e635aef839e16d5d78921f896810c9bb4bf266970bd3eab5c2e",
+  "method": "Unmodified vendored backend SDK; no new protocol implementation; declarations local."
+}

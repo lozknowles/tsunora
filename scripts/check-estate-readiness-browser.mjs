@@ -1,0 +1,47 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {chromium} from 'playwright-core';
+const [connectionFile,output]=process.argv.slice(2);
+if(!connectionFile||!output||fs.existsSync(output))throw Error('Require isolated preview connection and NEW evidence directory');
+fs.mkdirSync(output,{recursive:true});
+const connection=JSON.parse(fs.readFileSync(connectionFile)),token=fs.readFileSync(connection.tokenFile,'utf8');
+if(!/^http:\/\/127\.0\.0\.1:\d+$/.test(connection.url))throw Error('Loopback preview required');
+const browser=await chromium.launch({headless:true,executablePath:process.env.AGENT_CONTROL_CHROMIUM||'/snap/bin/chromium',args:['--disable-dev-shm-usage']});
+const context=await browser.newContext({viewport:{width:1600,height:1100}}),page=await context.newPage(),errors=[];
+page.on('pageerror',e=>errors.push(e.message));
+const evidence={classification:'NATIVE_ESTATE_AUTOMATED_BROWSER_EVIDENCE',checks:[],screenshots:[],errors};
+const capture=async name=>{await page.screenshot({path:path.join(output,`${name}.png`),fullPage:true});evidence.screenshots.push(`${name}.png`);};
+const api=async route=>{const response=await context.request.get(connection.url+route,{headers:{Authorization:`Bearer ${token}`}});assert.equal(response.status(),200);return response.json();};
+try {
+  assert.equal((await context.request.get(connection.url+'/api/estate-heartbeat')).status(),401);
+  assert.equal((await context.request.get(connection.url+'/api/runtime-map?runId=unknown')).status(),401);
+  await page.goto(connection.url);await page.locator('#operator-button').click();await page.locator('#operator-token').fill(token);await page.locator('#operator-form button[type="submit"]').click();await page.locator('#operator-dialog').waitFor({state:'hidden'});
+  await page.locator('#estate-dashboard-heartbeat').filter({hasText:'jobs READY now'}).waitFor();
+  await capture('01-dashboard-heartbeat');
+  await page.locator('#estate-dashboard-heartbeat').click();await page.locator('#estate-job-picker').waitFor();
+  const initial=await api('/api/estate-map');fs.writeFileSync(path.join(output,'initial-map.json'),JSON.stringify(initial,null,2));
+  assert.ok(initial.estateCounts.blockers.find(b=>b.code==='CREDENTIAL_REQUIRED').count>0);
+  evidence.initialCounts=initial.estateCounts;evidence.scanId=initial.parcelId;
+  assert.equal(initial.estateCounts.resources.total,initial.nodes.filter(n=>n.detail.kind).length);assert.equal(initial.estateCounts.jobs.total,50);assert.equal(initial.estateCounts.jobs.operationalReady,2);
+  await capture('02-native-estate');
+  await page.locator('#estate-job-picker').selectOption('library-job:disk-space-check');await page.locator('#estate-readiness-explanation').filter({hasText:'WHY READY'}).waitFor();await capture('03-ready-chain');
+  await page.locator('[data-process-run]').first().click();await page.locator('#runtime-map-title').filter({hasText:'Process Map'}).waitFor();
+  await page.locator('[data-runtime-node]').first().click();await page.locator('[data-estate-id]').first().waitFor();await capture('04-estate-to-process');
+  await page.locator('[data-estate-id]').first().click();await page.locator('#runtime-map-title').filter({hasText:'Estate Map'}).waitFor();await page.locator('[data-runtime-node="machine:controller"].selected').waitFor();await capture('05-process-to-estate');
+  await page.locator('#estate-job-picker').selectOption('library-job:structured-extraction');await page.locator('#estate-readiness-explanation').filter({hasText:'WHY NOT READY'}).waitFor();await capture('06-blocked-chain');
+  evidence.checks.push('Authenticated heartbeat and full native estate','Two current exact read-only admissions','Ready and blocked causal chains','Estate to native run and exact target back to Estate');
+  const expires=Math.max(...initial.nodes.filter(n=>n.detail.admission).map(n=>Date.parse(n.detail.admission.expiresAt)));
+  while(Date.now()<expires+6000)await page.waitForTimeout(Math.min(1000,expires+6000-Date.now()));
+  await page.locator('#estate-job-picker').selectOption('library-job:disk-space-check');await page.locator('#estate-readiness-explanation').filter({hasText:'ADMISSION_EXPIRED'}).waitFor();await capture('07-real-time-expiry');
+  const expired=await api('/api/estate-map');evidence.expiredCounts=expired.estateCounts;fs.writeFileSync(path.join(output,'expired-map.json'),JSON.stringify(expired,null,2));assert.equal(expired.estateCounts.jobs.operationalReady,0);
+  // Explicitly authorised cheap native refresh; no automatic admission renewal.
+  const rescan=await context.request.post(connection.url+'/api/environment-discovery/scans',{headers:{Authorization:`Bearer ${token}`},data:{mode:'QUICK_RESCAN',testing:'QUICK_TEST',includeRemote:true,includeMemory:false}});assert.equal(rescan.status(),201);
+  await page.waitForFunction(id=>document.querySelector('#runtime-map-health')?.textContent.includes(id), (await rescan.json()).id,{timeout:20000});
+  const refreshed=await api('/api/estate-map');evidence.refreshedCounts=refreshed.estateCounts;assert.notEqual(refreshed.parcelId,initial.parcelId);assert.equal(refreshed.estateCounts.jobs.operationalReady,0);
+  fs.writeFileSync(path.join(output,'refreshed-map.json'),JSON.stringify(refreshed,null,2));await capture('08-native-refresh-admission-still-expired');
+  await page.locator('#estate-job-picker').selectOption('');await capture('09-all-refreshed-resources');
+  evidence.checks.push('Wall-clock admission expiry automatically removes READY','Native rescan updates graph without renewing admission');
+  assert.deepEqual(errors,[]);
+}finally {fs.writeFileSync(path.join(output,'browser-evidence.json'),JSON.stringify(evidence,null,2));await browser.close();}
+console.log(JSON.stringify({checks:evidence.checks,initial:evidence.initialCounts,expired:evidence.expiredCounts,refreshed:evidence.refreshedCounts,errors},null,2));

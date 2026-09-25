@@ -1,0 +1,9 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata: {id: freetoken-isolated-qualification, name: Isolated FreeToken qualification, version: 1.0.0}
+spec:
+  enabled: true
+  priority: normal
+  concurrency: no-overlap
+  steps: [{id: qualify, action: qualification.freetoken.isolated@1.0.0, requires: [qualification.local], resources: [port/1919, gpu/qualification], verification: [isolated-endpoint-healthy]}]
+

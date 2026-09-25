@@ -1,0 +1,7 @@
+{
+  "schema": "agent-control.benchmark-source-provenance-note/v1",
+  "historicalClassification": "EXTERNAL_HARNESS_EVIDENCE",
+  "newRuntimeClassification": "AGENT_CONTROL_RUNTIME_EVIDENCE",
+  "sourceIdentity": "Use the candidate git commit and checksummed source archive. Private historical source snapshots remain in operator-held evidence.",
+  "historicalRecordsChanged": false
+}

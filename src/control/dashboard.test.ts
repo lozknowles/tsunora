@@ -1,0 +1,4 @@
+import assert from 'node:assert/strict';import test from 'node:test';import{buildPtyRows,requestSelfRoute}from'./dashboard.js';import{PtyRegistry}from'./pty.js';
+test('PTY dashboard exposes owner and observers',()=>{const r=new PtyRegistry();r.upsert({id:'p1',cwd:'/repo',command:'psql',recovery:'reattachable'},'2');r.attach('p1','qwen','own');r.attach('p1','codex','observe');const row=buildPtyRows(r.list(),id=>r.attached(id))[0];assert.equal(row.owner,'qwen');assert.equal(row.observers,1);assert.equal(row.command,'psql');});
+test('self route substitution is approval gated',()=>{const r=requestSelfRoute(1,'substitute','architecture stage needs stronger model',.87,'codex');assert.equal(r.requiresApproval,true);assert.equal(r.targetModel,'codex');assert.equal(r.confidence,.87);});
+test('self route confidence is clamped',()=>{assert.equal(requestSelfRoute(1,'yield','done',2).confidence,1);});

@@ -1,0 +1,121 @@
+{
+  "schema": "agent-control.3.8.1-high-remediation-physical-evidence/v1",
+  "scopeProof": {
+    "schema": "agent-control.3.8.1-scope-physical-proof/v1",
+    "at": "2026-09-04T09:29:03.179Z",
+    "implementationCommit": "558e361e577de5785507428379ec6e8b11d12b5b",
+    "runId": "physical-scope-run",
+    "parcelId": "physical-scope-parcel",
+    "allowedFiles": [
+      "docs/allowed.md"
+    ],
+    "detectedFiles": [
+      "outside-scope.txt"
+    ],
+    "changedLines": 1,
+    "mutationEvidence": [
+      "diff-sha256:cd24c995c48ee5e702a34c84996b4dba610036983c3f307227f41b9c755d32ab"
+    ],
+    "outcome": "ESCALATED",
+    "rejectionReason": "unapproved-file-touched",
+    "independentVerifierCalled": false,
+    "dirtySurfaceObserved": true,
+    "artifactRemoved": true,
+    "repositoryCleanAfterCleanup": true,
+    "qualificationSubprocess": "fixed-audited-mutation-producer; production runner and coordinator unchanged"
+  },
+  "retryProof": {
+    "schema": "agent-control.3.8.1-retry-physical-proof/v1",
+    "at": "2026-09-04T09:33:26.679Z",
+    "implementationCommit": "558e361e577de5785507428379ec6e8b11d12b5b",
+    "runId": "aa35702d-ec9e-45c5-b0ff-b385c66a2625",
+    "status": "SUCCEEDED_WITH_FINDINGS",
+    "reviewedSha": "261f96a6f4af82fd9d8538630f327cbdbd1e960d",
+    "providerId": "openrouter",
+    "modelId": "glm-5.3-flash",
+    "retryHistory": [
+      {
+        "at": "2026-09-04T09:32:47.476Z",
+        "attempt": 1,
+        "reason": "controlled_physical_provider_transport_retry"
+      }
+    ],
+    "workParcelIds": [
+      "parcel-e84a4f67-01b5-46b0-bcb7-d606b3c09454",
+      "parcel-d4814f51-6da1-4ddf-9c3e-9133ae6575e9"
+    ],
+    "providerCalls": 2,
+    "threads": [
+      {
+        "id": "review:aa35702d-ec9e-45c5-b0ff-b385c66a2625:attempt-1:context-1-99bd49aaa0ba",
+        "parcelId": "parcel-e84a4f67-01b5-46b0-bcb7-d606b3c09454",
+        "providerId": "openrouter",
+        "modelId": "glm-5.3-flash",
+        "recoverable": true,
+        "cumulative": {
+          "inputTokens": null,
+          "outputTokens": null,
+          "totalTokens": null
+        },
+        "context": {
+          "tokens": null,
+          "limitTokens": null,
+          "authority": "unavailable",
+          "source": "controlled-qualification-transport"
+        },
+        "cost": {
+          "amount": null,
+          "currency": null,
+          "authority": "unavailable",
+          "source": "provider_not_reported"
+        }
+      },
+      {
+        "id": "review:aa35702d-ec9e-45c5-b0ff-b385c66a2625:attempt-2:context-1-99bd49aaa0ba",
+        "parcelId": "parcel-d4814f51-6da1-4ddf-9c3e-9133ae6575e9",
+        "providerId": "openrouter",
+        "modelId": "glm-5.3-flash",
+        "recoverable": true,
+        "cumulative": {
+          "inputTokens": 212,
+          "outputTokens": 3767,
+          "totalTokens": 3979
+        },
+        "context": {
+          "tokens": null,
+          "limitTokens": null,
+          "authority": "unavailable",
+          "source": "provider_did_not_report_current_context"
+        },
+        "cost": {
+          "amount": 0.0019153,
+          "currency": null,
+          "authority": "authoritative",
+          "source": "provider_usage"
+        }
+      }
+    ],
+    "parcels": [
+      {
+        "id": "parcel-e84a4f67-01b5-46b0-bcb7-d606b3c09454",
+        "status": "FAILED"
+      },
+      {
+        "id": "parcel-d4814f51-6da1-4ddf-9c3e-9133ae6575e9",
+        "status": "SUCCEEDED"
+      }
+    ],
+    "verification": "PASS_WITH_FINDINGS",
+    "usage": {
+      "inputTokens": 212,
+      "outputTokens": 3767,
+      "totalTokens": 3979,
+      "providerReportedCost": 0.0019153,
+      "cost": 0.0019153,
+      "source": "provider"
+    },
+    "originalErrorRetained": true,
+    "identityErrorHidden": false,
+    "credentialValuePersisted": false
+  }
+}

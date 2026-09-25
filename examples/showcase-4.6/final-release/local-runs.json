@@ -1,0 +1,27 @@
+[
+  {
+    "installation": "clean",
+    "runs": [
+      {
+        "id": "run-a49df93c-a3ac-4975-837d-78804ce25fd9",
+        "jobId": "operator-system-observation",
+        "status": "SUCCEEDED"
+      }
+    ]
+  },
+  {
+    "installation": "upgraded",
+    "runs": [
+      {
+        "id": "run-1c60f714-4f4f-4a04-a5ca-47c2f121607d",
+        "jobId": "operator-system-observation",
+        "status": "SUCCEEDED"
+      },
+      {
+        "id": "run-b1d23e41-4aad-422c-a824-203fae3f3985",
+        "jobId": "operator-system-observation",
+        "status": "SUCCEEDED"
+      }
+    ]
+  }
+]

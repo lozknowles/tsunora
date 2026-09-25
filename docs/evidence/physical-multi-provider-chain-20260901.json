@@ -1,0 +1,50 @@
+{
+  "schema": "agent-control.physical-multi-provider-qualification/v1",
+  "observedAt": "2026-09-01T22:30:28+01:00",
+  "classification": "PHYSICAL_PROVIDER_EXECUTION_WITH_DURABLE_AGENT_CONTROL_STATE",
+  "contractId": "physical-chain-v1",
+  "chain": [
+    {"sequence": 1, "role": "parent-decomposition", "providerId": "codex-chatgpt", "modelId": "gpt-5.6-luna", "runtimeId": "codex-cli-0.144.4", "outcome": "DELEGATE", "attempts": 1, "wallTimeMs": 6561, "outputSha256": "b2919019e5d8990a36c6c54a91118e807220ef2cab66c5f3fdaab0528253a418", "inputTokens": null, "outputTokens": null, "monetaryCost": null},
+    {"sequence": 2, "role": "bounded-normalization", "providerId": "local-llama.cpp", "modelId": "qwen2.5-3b-instruct-q4_k_m.gguf", "runtimeId": "llama.cpp", "outcome": "YIELD", "result": "agent-control", "reason": "review-authority-withheld", "attempts": 1, "wallTimeMs": 606, "outputSha256": "abea58daf5f7bb7658dc15376e13edd011413231201f96f63d55d33feaf6d0bb", "inputTokens": null, "outputTokens": null, "monetaryCost": 0},
+    {
+      "sequence": 3,
+      "role": "independent-regex-review-after-substitution",
+      "providerId": "openrouter",
+      "modelId": "z-ai/glm-5.3-flash",
+      "runtimeId": "openrouter-responses",
+      "outcome": "SUBSTITUTE",
+      "review": "PASS",
+      "reviewedResult": "agent-control",
+      "attempts": 3,
+      "attemptEvidence": [
+        {"attempt": 1, "transport": "responses", "maximumOutputTokens": 160, "outcome": "INCOMPLETE", "wallTimeMs": 3478},
+        {"attempt": 2, "transport": "chat-completions", "maximumOutputTokens": 512, "outcome": "CONNECTION_RESET", "wallTimeMs": 30001},
+        {"attempt": 3, "transport": "responses", "maximumOutputTokens": 1024, "outcome": "SUCCEEDED", "wallTimeMs": 18470}
+      ],
+      "outputSha256": "9c71279d0c8b7c51ba8c20ba8186cfb12f4e02bc35a29740db848c0f4dd67e4f",
+      "inputTokens": null,
+      "outputTokens": null,
+      "monetaryCost": null
+    },
+    {"sequence": 4, "role": "parent-integration", "providerId": "codex-chatgpt", "modelId": "gpt-5.6-luna", "runtimeId": "codex-cli-0.144.4", "outcome": "COMPLETE", "integratedResult": "agent-control", "submittedForVerification": true, "attempts": 1, "wallTimeMs": 8343, "outputSha256": "241c0a35c78f4e14bda59b14026b6436fac8ac095050db193a4cdf17b4aaf529", "inputTokens": null, "outputTokens": null, "monetaryCost": null}
+  ],
+  "batons": [
+    {"outcome": "DELEGATE", "contractId": "physical-chain-v1", "childContractId": "physical-chain-local", "sha256": "bd7fde493152bfe3fbe6343e1a707534c7276c0ed0695256c5b0c16b45bcef59", "sizeBytes": 86},
+    {"outcome": "YIELD", "contractId": "physical-chain-local", "sha256": "21ff9975579b03ffc2e407312d1b4f62729b6262fd1fd743859941ea16cb2d96", "sizeBytes": 26},
+    {"outcome": "SUBSTITUTE", "contractId": "physical-chain-local", "sha256": "8be13519809835978259e7ae0d1e34278cdd28dba0d946840ee30ca641259070", "sizeBytes": 51},
+    {"outcome": "COMPLETE", "contractId": "physical-chain-local", "sha256": "6d15e15b2cb04947da098ca096f08dafe13ade69382409bf0c4c3a94f29c8807", "sizeBytes": 17},
+    {"outcome": "COMPLETE", "contractId": "physical-chain-v1", "sha256": "69ac971faf7b9f3e83372bf423930994baf67638c7106b18bac36a6b60705ef4", "sizeBytes": 36}
+  ],
+  "durability": {"agentDetached": true, "consultingHumanRemainedReadOnly": true, "processStateAfterDetach": "RUNNING", "controllerReconstructedFromSnapshot": true, "processStateAfterRestart": "RUNNING", "batonHashPreserved": true},
+  "negativeControls": [{"condition": "review authority omitted from the delegated child envelope", "result": "substitution did not execute and the subsequent GLM completion was rejected for source-identity mismatch", "classification": "FAIL_CLOSED"}],
+  "independentVerification": {"verifierActorId": "agent-control:independent-verifier", "localRule": "normalization equals agent-control", "reviewRule": "result matches ^[a-z]+-[a-z]+$", "parentState": "VERIFIED", "parentVerification": "PASSED", "childState": "VERIFIED", "childVerification": "PASSED"},
+  "credentialHandling": {"codex": "existing ChatGPT authentication", "local": "no credential required on loopback", "openrouter": "indirect file reference; value not logged or retained", "credentialsInBatonsLogsOrEvidence": false},
+  "serviceRestoration": {"localLlamaInitialState": "inactive", "localLlamaQualificationState": "temporarily active", "localLlamaFinalState": "inactive", "loopbackPort8080AfterQualification": "unreachable", "liveAgentControlDeploymentChanged": false},
+  "verdict": "QUALIFIED_WITH_OBSERVED_PROVIDER_RETRIES",
+  "limitations": [
+    "This is one bounded physical chain, not the 50-attempt frozen capability-routing gate.",
+    "The GLM route required three bounded attempts: incomplete output, connection reset, then success.",
+    "Provider-reported token usage and monetary cost were not retained and remain unknown.",
+    "The result does not enable automatic production routing or promote any recipe to ACTIVE or PREFERRED."
+  ]
+}

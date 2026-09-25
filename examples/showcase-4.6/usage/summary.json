@@ -1,0 +1,29 @@
+{
+  "schema": "agent-control.usage-showcase-evidence/v1",
+  "status": "PARTIAL_QUALIFICATION",
+  "selectedInvocations": 5,
+  "nativeSources": 4,
+  "historyProjection": "MIGRATED",
+  "inputTokens": 685,
+  "outputTokens": 117,
+  "totalTokens": 802,
+  "verifiedSuccessfulJobs": 2,
+  "failedExactReconciliationJobs": 3,
+  "wholeNodeEnergy": "BLOCKED_EXTERNAL",
+  "workloadEnergyAttribution": "NOT_ATTRIBUTABLE",
+  "apiCharges": "LOCAL_NO_API_CHARGE_DECLARATIONS; no paid-provider charge qualification",
+  "electricityCost": "UNAVAILABLE",
+  "browserErrors": [],
+  "modelDownloads": 0,
+  "limitations": [
+    "Selected physical qualification runs, not whole-estate accounting history",
+    "Arithmetic checks passed; both reconciliation exact-JSON verifiers and the JSON-format follow-up failed",
+    "GPU board interval observations cannot establish energy per job or an efficiency ranking",
+    "Model and runtime SHA-256 identities are captured for reconciliation runs; earlier arithmetic identities remain unknown",
+    "Provider usage and response hashes retained; raw response content retained only for the separately identified JSON-format follow-up"
+  ],
+  "rawProviderContent": {
+    "availableInvocations": 1,
+    "selectedInvocations": 5
+  }
+}

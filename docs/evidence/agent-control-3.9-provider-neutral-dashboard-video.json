@@ -1,0 +1,203 @@
+{
+  "schema": "agent-control.dashboard-video-evidence/v1",
+  "recordedAt": "2026-09-05T08:54:11.079Z",
+  "source": "Real Agent Control dashboard over a loopback observer endpoint",
+  "qualificationEvidence": {
+    "file": "agent-control-3.9-provider-neutral-qualification.json",
+    "sha256": "2bfc26e6ddd8d619ceada263860769f330ca5625ee40eb2d6f61f9fd33b4a678"
+  },
+  "video": {
+    "file": "agent-control-3.9-provider-neutral-dashboard.mp4",
+    "sha256": "8828d3fe28e741f0694998629270d96498cd329177fe4f0824216f4d0fcdaaaa",
+    "bytes": 10354528,
+    "format": "MP4/H.264",
+    "resolution": "1920x1080"
+  },
+  "browser": {
+    "engine": "Chromium",
+    "version": "152.0.7977.64",
+    "headless": true
+  },
+  "dashboard": {
+    "streamState": "LIVE",
+    "observedAt": "2026-09-05T08:48:09.667Z"
+  },
+  "views": [
+    {
+      "view": "jobs",
+      "at": "2026-09-05T08:48:11.499Z",
+      "target": ".question-panel"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:48:48.049Z",
+      "target": ".model-intelligence-board"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:49:00.832Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "jobs",
+      "at": "2026-09-05T08:49:09.621Z",
+      "target": ".parcel-context-board"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:49:18.417Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:49:27.192Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:49:33.998Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:49:42.776Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:49:49.574Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:49:58.362Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:50:05.167Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:50:13.939Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:50:20.767Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:50:29.556Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:50:36.352Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:50:45.122Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:50:51.932Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:51:00.783Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:51:07.568Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:51:16.337Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:51:23.151Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:51:31.945Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:51:38.735Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:51:47.521Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:51:54.316Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:52:03.085Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:52:09.888Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:52:18.670Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:52:25.456Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:52:34.259Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:52:41.049Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "lanes",
+      "at": "2026-09-05T08:52:49.836Z",
+      "target": "#token-routing"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:52:56.622Z",
+      "target": "#model-history"
+    },
+    {
+      "view": "jobs",
+      "at": "2026-09-05T08:53:05.409Z",
+      "target": ".parcel-list"
+    },
+    {
+      "view": "models",
+      "at": "2026-09-05T08:53:11.188Z",
+      "target": ".model-intelligence-board"
+    }
+  ],
+  "qualificationExitCode": 0
+}

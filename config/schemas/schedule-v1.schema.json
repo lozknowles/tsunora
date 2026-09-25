@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-control.local/schemas/schedule-v1.schema.json",
+  "title": "Agent Control Schedule v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["apiVersion", "kind", "metadata", "spec"],
+  "properties": {
+    "apiVersion": {"const": "agent-control/v1"},
+    "kind": {"const": "Schedule"},
+    "metadata": {"type": "object", "additionalProperties": false, "required": ["id", "name"], "properties": {"id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{0,63}$"}, "name": {"type": "string", "minLength": 1}}},
+    "spec": {
+      "type": "object", "additionalProperties": false, "required": ["job", "cron", "timezone", "missedRunPolicy"],
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "job": {"type": "string"},
+        "cron": {"type": "string", "pattern": "^\\S+\\s+\\S+\\s+\\S+\\s+\\S+\\s+\\S+$"},
+        "timezone": {"type": "string", "minLength": 1},
+        "missedRunPolicy": {"enum": ["skip", "run-next-available", "run-once-immediately"]},
+        "parameters": {"type": "object"}
+      }
+    }
+  }
+}

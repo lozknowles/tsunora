@@ -1,0 +1,1235 @@
+{
+  "schema": "agent-control.usage-projection/v1",
+  "observedAt": "2026-09-13T09:05:50.608Z",
+  "period": {
+    "name": "all",
+    "start": "2026-09-13T09:05:01.574Z",
+    "end": "2026-09-13T09:05:50.608Z",
+    "timezone": "UTC",
+    "allocation": "invocation start; entire invocation assigned to start period"
+  },
+  "groupBy": "model",
+  "filters": {},
+  "totals": {
+    "outcomeRatios": {
+      "comparableJobType": false,
+      "successfulJobs": 3,
+      "tokensPerSuccessfulJob": "[REDACTED]",
+      "timeMsPerSuccessfulJob": null,
+      "retriesPerSuccessfulJob": null,
+      "apiCostPerSuccessfulJob": {}
+    },
+    "cacheHit": {
+      "value": 0,
+      "observedRatio": 0,
+      "reported": 3,
+      "total": 3,
+      "authority": "DERIVED"
+    },
+    "calls": 3,
+    "jobs": 3,
+    "unknownJobRunInvocations": 0,
+    "successfulJobs": 3,
+    "successAuthority": "VERIFIER_AND_FINAL_JOB_RESULT",
+    "knownZeroApiCalls": 3,
+    "localCalls": 3,
+    "input": {
+      "value": 186,
+      "knownTotal": 186,
+      "reported": 3,
+      "total": 3
+    },
+    "cached": {
+      "value": 0,
+      "knownTotal": 0,
+      "reported": 3,
+      "total": 3
+    },
+    "fresh": {
+      "value": null,
+      "knownTotal": 0,
+      "reported": 0,
+      "total": 3
+    },
+    "output": {
+      "value": 876,
+      "knownTotal": 876,
+      "reported": 3,
+      "total": 3
+    },
+    "reasoning": {
+      "value": null,
+      "knownTotal": 0,
+      "reported": 0,
+      "total": 3
+    },
+    "tokens": {
+      "value": 1062,
+      "knownTotal": 1062,
+      "reported": 3,
+      "total": 3
+    },
+    "durationMs": {
+      "value": 16617,
+      "knownTotal": 16617,
+      "reported": 3,
+      "total": 3
+    },
+    "apiCost": {
+      "currencies": {},
+      "reported": 0,
+      "total": 3
+    },
+    "cacheSaving": {
+      "currencies": {},
+      "reported": 0,
+      "total": 3
+    },
+    "retry": {
+      "count": 0,
+      "rate": 0,
+      "tokens": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "durationMs": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "cost": {
+        "currencies": {},
+        "reported": 0,
+        "total": 0
+      }
+    },
+    "energy": [
+      {
+        "machine": "machine:controller",
+        "sensor": "nvidia-gpu0",
+        "scope": "GPU_ONLY",
+        "measurementClass": "DERIVED",
+        "attribution": "NOT_ATTRIBUTABLE",
+        "observations": 3,
+        "observedWh": {
+          "value": 0.37782583888888893,
+          "knownTotal": 0.37782583888888893,
+          "reported": 3,
+          "total": 3
+        },
+        "attributedWh": {
+          "value": null,
+          "knownTotal": 0,
+          "reported": 0,
+          "total": 3
+        },
+        "incrementalWh": {
+          "value": null,
+          "knownTotal": 0,
+          "reported": 0,
+          "total": 3
+        },
+        "minimumCoverage": 0.6695906432748538,
+        "electricityCost": {
+          "currencies": {},
+          "reported": 0,
+          "total": 3
+        }
+      }
+    ],
+    "energyCoverage": {
+      "observedInvocations": 3,
+      "totalInvocations": 3,
+      "estimatedInvocations": 0,
+      "unavailableInvocations": 3
+    },
+    "comparability": {
+      "jobTypes": [
+        "ordered-integer-list-1-to-100",
+        "ordered-integer-list-1-to-100-observer-gap"
+      ],
+      "modelRevisions": [
+        "3da3afe6cf5c674ac195803ea0dd6fee7e1c228c2105c1ce8c66890d1d4ab460",
+        "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d"
+      ],
+      "runtimeVersions": [
+        "3f1000482d759661cadb1dc9b59f6292f52408ee0d2906298fa001837517fb4e"
+      ],
+      "warning": "Outcome ratios require equivalent workload, model revision, runtime and hardware; no universal ranking is inferred."
+    }
+  },
+  "previousPeriod": null,
+  "comparisonStatus": "INSUFFICIENT_CONTINUOUS_COVERAGE",
+  "projectedMonth": {
+    "value": null,
+    "reason": "Continuous accounting coverage and a representative complete-day baseline are not yet established."
+  },
+  "groups": [
+    {
+      "key": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "outcomeRatios": {
+        "comparableJobType": true,
+        "successfulJobs": 1,
+        "tokensPerSuccessfulJob": "[REDACTED]",
+        "timeMsPerSuccessfulJob": 5556,
+        "retriesPerSuccessfulJob": 0,
+        "apiCostPerSuccessfulJob": {}
+      },
+      "cacheHit": {
+        "value": 0,
+        "observedRatio": 0,
+        "reported": 1,
+        "total": 1,
+        "authority": "DERIVED"
+      },
+      "calls": 1,
+      "jobs": 1,
+      "unknownJobRunInvocations": 0,
+      "successfulJobs": 1,
+      "successAuthority": "VERIFIER_AND_FINAL_JOB_RESULT",
+      "knownZeroApiCalls": 1,
+      "localCalls": 1,
+      "input": {
+        "value": 62,
+        "knownTotal": 62,
+        "reported": 1,
+        "total": 1
+      },
+      "cached": {
+        "value": 0,
+        "knownTotal": 0,
+        "reported": 1,
+        "total": 1
+      },
+      "fresh": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 1
+      },
+      "output": {
+        "value": 292,
+        "knownTotal": 292,
+        "reported": 1,
+        "total": 1
+      },
+      "reasoning": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 1
+      },
+      "tokens": {
+        "value": 354,
+        "knownTotal": 354,
+        "reported": 1,
+        "total": 1
+      },
+      "durationMs": {
+        "value": 5556,
+        "knownTotal": 5556,
+        "reported": 1,
+        "total": 1
+      },
+      "apiCost": {
+        "currencies": {},
+        "reported": 0,
+        "total": 1
+      },
+      "cacheSaving": {
+        "currencies": {},
+        "reported": 0,
+        "total": 1
+      },
+      "retry": {
+        "count": 0,
+        "rate": 0,
+        "tokens": {
+          "value": null,
+          "knownTotal": 0,
+          "reported": 0,
+          "total": 0
+        },
+        "durationMs": {
+          "value": null,
+          "knownTotal": 0,
+          "reported": 0,
+          "total": 0
+        },
+        "cost": {
+          "currencies": {},
+          "reported": 0,
+          "total": 0
+        }
+      },
+      "energy": [
+        {
+          "machine": "machine:controller",
+          "sensor": "nvidia-gpu0",
+          "scope": "GPU_ONLY",
+          "measurementClass": "DERIVED",
+          "attribution": "NOT_ATTRIBUTABLE",
+          "observations": 1,
+          "observedWh": {
+            "value": 0.1420679277777778,
+            "knownTotal": 0.1420679277777778,
+            "reported": 1,
+            "total": 1
+          },
+          "attributedWh": {
+            "value": null,
+            "knownTotal": 0,
+            "reported": 0,
+            "total": 1
+          },
+          "incrementalWh": {
+            "value": null,
+            "knownTotal": 0,
+            "reported": 0,
+            "total": 1
+          },
+          "minimumCoverage": 1,
+          "electricityCost": {
+            "currencies": {},
+            "reported": 0,
+            "total": 1
+          }
+        }
+      ],
+      "energyCoverage": {
+        "observedInvocations": 1,
+        "totalInvocations": 1,
+        "estimatedInvocations": 0,
+        "unavailableInvocations": 1
+      },
+      "comparability": {
+        "jobTypes": [
+          "ordered-integer-list-1-to-100"
+        ],
+        "modelRevisions": [
+          "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d"
+        ],
+        "runtimeVersions": [
+          "3f1000482d759661cadb1dc9b59f6292f52408ee0d2906298fa001837517fb4e"
+        ],
+        "warning": "Outcome ratios require equivalent workload, model revision, runtime and hardware; no universal ranking is inferred."
+      }
+    },
+    {
+      "key": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "outcomeRatios": {
+        "comparableJobType": false,
+        "successfulJobs": 2,
+        "tokensPerSuccessfulJob": "[REDACTED]",
+        "timeMsPerSuccessfulJob": null,
+        "retriesPerSuccessfulJob": null,
+        "apiCostPerSuccessfulJob": {}
+      },
+      "cacheHit": {
+        "value": 0,
+        "observedRatio": 0,
+        "reported": 2,
+        "total": 2,
+        "authority": "DERIVED"
+      },
+      "calls": 2,
+      "jobs": 2,
+      "unknownJobRunInvocations": 0,
+      "successfulJobs": 2,
+      "successAuthority": "VERIFIER_AND_FINAL_JOB_RESULT",
+      "knownZeroApiCalls": 2,
+      "localCalls": 2,
+      "input": {
+        "value": 124,
+        "knownTotal": 124,
+        "reported": 2,
+        "total": 2
+      },
+      "cached": {
+        "value": 0,
+        "knownTotal": 0,
+        "reported": 2,
+        "total": 2
+      },
+      "fresh": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 2
+      },
+      "output": {
+        "value": 584,
+        "knownTotal": 584,
+        "reported": 2,
+        "total": 2
+      },
+      "reasoning": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 2
+      },
+      "tokens": {
+        "value": 708,
+        "knownTotal": 708,
+        "reported": 2,
+        "total": 2
+      },
+      "durationMs": {
+        "value": 11061,
+        "knownTotal": 11061,
+        "reported": 2,
+        "total": 2
+      },
+      "apiCost": {
+        "currencies": {},
+        "reported": 0,
+        "total": 2
+      },
+      "cacheSaving": {
+        "currencies": {},
+        "reported": 0,
+        "total": 2
+      },
+      "retry": {
+        "count": 0,
+        "rate": 0,
+        "tokens": {
+          "value": null,
+          "knownTotal": 0,
+          "reported": 0,
+          "total": 0
+        },
+        "durationMs": {
+          "value": null,
+          "knownTotal": 0,
+          "reported": 0,
+          "total": 0
+        },
+        "cost": {
+          "currencies": {},
+          "reported": 0,
+          "total": 0
+        }
+      },
+      "energy": [
+        {
+          "machine": "machine:controller",
+          "sensor": "nvidia-gpu0",
+          "scope": "GPU_ONLY",
+          "measurementClass": "DERIVED",
+          "attribution": "NOT_ATTRIBUTABLE",
+          "observations": 2,
+          "observedWh": {
+            "value": 0.2357579111111111,
+            "knownTotal": 0.2357579111111111,
+            "reported": 2,
+            "total": 2
+          },
+          "attributedWh": {
+            "value": null,
+            "knownTotal": 0,
+            "reported": 0,
+            "total": 2
+          },
+          "incrementalWh": {
+            "value": null,
+            "knownTotal": 0,
+            "reported": 0,
+            "total": 2
+          },
+          "minimumCoverage": 0.6695906432748538,
+          "electricityCost": {
+            "currencies": {},
+            "reported": 0,
+            "total": 2
+          }
+        }
+      ],
+      "energyCoverage": {
+        "observedInvocations": 2,
+        "totalInvocations": 2,
+        "estimatedInvocations": 0,
+        "unavailableInvocations": 2
+      },
+      "comparability": {
+        "jobTypes": [
+          "ordered-integer-list-1-to-100",
+          "ordered-integer-list-1-to-100-observer-gap"
+        ],
+        "modelRevisions": [
+          "3da3afe6cf5c674ac195803ea0dd6fee7e1c228c2105c1ce8c66890d1d4ab460"
+        ],
+        "runtimeVersions": [
+          "3f1000482d759661cadb1dc9b59f6292f52408ee0d2906298fa001837517fb4e"
+        ],
+        "warning": "Outcome ratios require equivalent workload, model revision, runtime and hardware; no universal ranking is inferred."
+      }
+    }
+  ],
+  "groupsTruncated": false,
+  "trend": [
+    {
+      "day": "2026-09-13",
+      "outcomeRatios": {
+        "comparableJobType": false,
+        "successfulJobs": 3,
+        "tokensPerSuccessfulJob": "[REDACTED]",
+        "timeMsPerSuccessfulJob": null,
+        "retriesPerSuccessfulJob": null,
+        "apiCostPerSuccessfulJob": {}
+      },
+      "cacheHit": {
+        "value": 0,
+        "observedRatio": 0,
+        "reported": 3,
+        "total": 3,
+        "authority": "DERIVED"
+      },
+      "calls": 3,
+      "jobs": 3,
+      "unknownJobRunInvocations": 0,
+      "successfulJobs": 3,
+      "successAuthority": "VERIFIER_AND_FINAL_JOB_RESULT",
+      "knownZeroApiCalls": 3,
+      "localCalls": 3,
+      "input": {
+        "value": 186,
+        "knownTotal": 186,
+        "reported": 3,
+        "total": 3
+      },
+      "cached": {
+        "value": 0,
+        "knownTotal": 0,
+        "reported": 3,
+        "total": 3
+      },
+      "fresh": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 3
+      },
+      "output": {
+        "value": 876,
+        "knownTotal": 876,
+        "reported": 3,
+        "total": 3
+      },
+      "reasoning": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 3
+      },
+      "tokens": {
+        "value": 1062,
+        "knownTotal": 1062,
+        "reported": 3,
+        "total": 3
+      },
+      "durationMs": {
+        "value": 16617,
+        "knownTotal": 16617,
+        "reported": 3,
+        "total": 3
+      },
+      "apiCost": {
+        "currencies": {},
+        "reported": 0,
+        "total": 3
+      },
+      "cacheSaving": {
+        "currencies": {},
+        "reported": 0,
+        "total": 3
+      },
+      "retry": {
+        "count": 0,
+        "rate": 0,
+        "tokens": {
+          "value": null,
+          "knownTotal": 0,
+          "reported": 0,
+          "total": 0
+        },
+        "durationMs": {
+          "value": null,
+          "knownTotal": 0,
+          "reported": 0,
+          "total": 0
+        },
+        "cost": {
+          "currencies": {},
+          "reported": 0,
+          "total": 0
+        }
+      },
+      "energy": [
+        {
+          "machine": "machine:controller",
+          "sensor": "nvidia-gpu0",
+          "scope": "GPU_ONLY",
+          "measurementClass": "DERIVED",
+          "attribution": "NOT_ATTRIBUTABLE",
+          "observations": 3,
+          "observedWh": {
+            "value": 0.37782583888888893,
+            "knownTotal": 0.37782583888888893,
+            "reported": 3,
+            "total": 3
+          },
+          "attributedWh": {
+            "value": null,
+            "knownTotal": 0,
+            "reported": 0,
+            "total": 3
+          },
+          "incrementalWh": {
+            "value": null,
+            "knownTotal": 0,
+            "reported": 0,
+            "total": 3
+          },
+          "minimumCoverage": 0.6695906432748538,
+          "electricityCost": {
+            "currencies": {},
+            "reported": 0,
+            "total": 3
+          }
+        }
+      ],
+      "energyCoverage": {
+        "observedInvocations": 3,
+        "totalInvocations": 3,
+        "estimatedInvocations": 0,
+        "unavailableInvocations": 3
+      },
+      "comparability": {
+        "jobTypes": [
+          "ordered-integer-list-1-to-100",
+          "ordered-integer-list-1-to-100-observer-gap"
+        ],
+        "modelRevisions": [
+          "3da3afe6cf5c674ac195803ea0dd6fee7e1c228c2105c1ce8c66890d1d4ab460",
+          "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d"
+        ],
+        "runtimeVersions": [
+          "3f1000482d759661cadb1dc9b59f6292f52408ee0d2906298fa001837517fb4e"
+        ],
+        "warning": "Outcome ratios require equivalent workload, model revision, runtime and hardware; no universal ranking is inferred."
+      }
+    }
+  ],
+  "localVsApi": [
+    {
+      "kind": "LOCAL",
+      "cloudEnergy": "UNKNOWN",
+      "outcomeRatios": {
+        "comparableJobType": false,
+        "successfulJobs": 3,
+        "tokensPerSuccessfulJob": "[REDACTED]",
+        "timeMsPerSuccessfulJob": null,
+        "retriesPerSuccessfulJob": null,
+        "apiCostPerSuccessfulJob": {}
+      },
+      "cacheHit": {
+        "value": 0,
+        "observedRatio": 0,
+        "reported": 3,
+        "total": 3,
+        "authority": "DERIVED"
+      },
+      "calls": 3,
+      "jobs": 3,
+      "unknownJobRunInvocations": 0,
+      "successfulJobs": 3,
+      "successAuthority": "VERIFIER_AND_FINAL_JOB_RESULT",
+      "knownZeroApiCalls": 3,
+      "localCalls": 3,
+      "input": {
+        "value": 186,
+        "knownTotal": 186,
+        "reported": 3,
+        "total": 3
+      },
+      "cached": {
+        "value": 0,
+        "knownTotal": 0,
+        "reported": 3,
+        "total": 3
+      },
+      "fresh": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 3
+      },
+      "output": {
+        "value": 876,
+        "knownTotal": 876,
+        "reported": 3,
+        "total": 3
+      },
+      "reasoning": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 3
+      },
+      "tokens": {
+        "value": 1062,
+        "knownTotal": 1062,
+        "reported": 3,
+        "total": 3
+      },
+      "durationMs": {
+        "value": 16617,
+        "knownTotal": 16617,
+        "reported": 3,
+        "total": 3
+      },
+      "apiCost": {
+        "currencies": {},
+        "reported": 0,
+        "total": 3
+      },
+      "cacheSaving": {
+        "currencies": {},
+        "reported": 0,
+        "total": 3
+      },
+      "retry": {
+        "count": 0,
+        "rate": 0,
+        "tokens": {
+          "value": null,
+          "knownTotal": 0,
+          "reported": 0,
+          "total": 0
+        },
+        "durationMs": {
+          "value": null,
+          "knownTotal": 0,
+          "reported": 0,
+          "total": 0
+        },
+        "cost": {
+          "currencies": {},
+          "reported": 0,
+          "total": 0
+        }
+      },
+      "energy": [
+        {
+          "machine": "machine:controller",
+          "sensor": "nvidia-gpu0",
+          "scope": "GPU_ONLY",
+          "measurementClass": "DERIVED",
+          "attribution": "NOT_ATTRIBUTABLE",
+          "observations": 3,
+          "observedWh": {
+            "value": 0.37782583888888893,
+            "knownTotal": 0.37782583888888893,
+            "reported": 3,
+            "total": 3
+          },
+          "attributedWh": {
+            "value": null,
+            "knownTotal": 0,
+            "reported": 0,
+            "total": 3
+          },
+          "incrementalWh": {
+            "value": null,
+            "knownTotal": 0,
+            "reported": 0,
+            "total": 3
+          },
+          "minimumCoverage": 0.6695906432748538,
+          "electricityCost": {
+            "currencies": {},
+            "reported": 0,
+            "total": 3
+          }
+        }
+      ],
+      "energyCoverage": {
+        "observedInvocations": 3,
+        "totalInvocations": 3,
+        "estimatedInvocations": 0,
+        "unavailableInvocations": 3
+      },
+      "comparability": {
+        "jobTypes": [
+          "ordered-integer-list-1-to-100",
+          "ordered-integer-list-1-to-100-observer-gap"
+        ],
+        "modelRevisions": [
+          "3da3afe6cf5c674ac195803ea0dd6fee7e1c228c2105c1ce8c66890d1d4ab460",
+          "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d"
+        ],
+        "runtimeVersions": [
+          "3f1000482d759661cadb1dc9b59f6292f52408ee0d2906298fa001837517fb4e"
+        ],
+        "warning": "Outcome ratios require equivalent workload, model revision, runtime and hardware; no universal ranking is inferred."
+      }
+    },
+    {
+      "kind": "API",
+      "cloudEnergy": "UNKNOWN",
+      "outcomeRatios": {
+        "comparableJobType": false,
+        "successfulJobs": 0,
+        "tokensPerSuccessfulJob": "[REDACTED]",
+        "timeMsPerSuccessfulJob": null,
+        "retriesPerSuccessfulJob": null,
+        "apiCostPerSuccessfulJob": {}
+      },
+      "cacheHit": {
+        "value": null,
+        "observedRatio": null,
+        "reported": 0,
+        "total": 0,
+        "authority": "UNKNOWN"
+      },
+      "calls": 0,
+      "jobs": 0,
+      "unknownJobRunInvocations": 0,
+      "successfulJobs": 0,
+      "successAuthority": "VERIFIER_AND_FINAL_JOB_RESULT",
+      "knownZeroApiCalls": 0,
+      "localCalls": 0,
+      "input": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "cached": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "fresh": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "output": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "reasoning": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "tokens": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "durationMs": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "apiCost": {
+        "currencies": {},
+        "reported": 0,
+        "total": 0
+      },
+      "cacheSaving": {
+        "currencies": {},
+        "reported": 0,
+        "total": 0
+      },
+      "retry": {
+        "count": 0,
+        "rate": null,
+        "tokens": {
+          "value": null,
+          "knownTotal": 0,
+          "reported": 0,
+          "total": 0
+        },
+        "durationMs": {
+          "value": null,
+          "knownTotal": 0,
+          "reported": 0,
+          "total": 0
+        },
+        "cost": {
+          "currencies": {},
+          "reported": 0,
+          "total": 0
+        }
+      },
+      "energy": [],
+      "energyCoverage": {
+        "observedInvocations": 0,
+        "totalInvocations": 0,
+        "estimatedInvocations": 0,
+        "unavailableInvocations": 0
+      },
+      "comparability": {
+        "jobTypes": [],
+        "modelRevisions": [],
+        "runtimeVersions": [],
+        "warning": "Outcome ratios require equivalent workload, model revision, runtime and hardware; no universal ranking is inferred."
+      }
+    },
+    {
+      "kind": "UNKNOWN",
+      "cloudEnergy": "UNKNOWN",
+      "outcomeRatios": {
+        "comparableJobType": false,
+        "successfulJobs": 0,
+        "tokensPerSuccessfulJob": "[REDACTED]",
+        "timeMsPerSuccessfulJob": null,
+        "retriesPerSuccessfulJob": null,
+        "apiCostPerSuccessfulJob": {}
+      },
+      "cacheHit": {
+        "value": null,
+        "observedRatio": null,
+        "reported": 0,
+        "total": 0,
+        "authority": "UNKNOWN"
+      },
+      "calls": 0,
+      "jobs": 0,
+      "unknownJobRunInvocations": 0,
+      "successfulJobs": 0,
+      "successAuthority": "VERIFIER_AND_FINAL_JOB_RESULT",
+      "knownZeroApiCalls": 0,
+      "localCalls": 0,
+      "input": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "cached": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "fresh": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "output": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "reasoning": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "tokens": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "durationMs": {
+        "value": null,
+        "knownTotal": 0,
+        "reported": 0,
+        "total": 0
+      },
+      "apiCost": {
+        "currencies": {},
+        "reported": 0,
+        "total": 0
+      },
+      "cacheSaving": {
+        "currencies": {},
+        "reported": 0,
+        "total": 0
+      },
+      "retry": {
+        "count": 0,
+        "rate": null,
+        "tokens": {
+          "value": null,
+          "knownTotal": 0,
+          "reported": 0,
+          "total": 0
+        },
+        "durationMs": {
+          "value": null,
+          "knownTotal": 0,
+          "reported": 0,
+          "total": 0
+        },
+        "cost": {
+          "currencies": {},
+          "reported": 0,
+          "total": 0
+        }
+      },
+      "energy": [],
+      "energyCoverage": {
+        "observedInvocations": 0,
+        "totalInvocations": 0,
+        "estimatedInvocations": 0,
+        "unavailableInvocations": 0
+      },
+      "comparability": {
+        "jobTypes": [],
+        "modelRevisions": [],
+        "runtimeVersions": [],
+        "warning": "Outcome ratios require equivalent workload, model revision, runtime and hardware; no universal ranking is inferred."
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "usage-closure-run-0e6eba44-44b7-4230-ad04-fbacdc630812",
+      "jobRun": "run-0e6eba44-44b7-4230-ad04-fbacdc630812",
+      "provider": "local-llama-0",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "modelRevision": "3da3afe6cf5c674ac195803ea0dd6fee7e1c228c2105c1ce8c66890d1d4ab460",
+      "agent": null,
+      "job": "usage-local-2",
+      "jobType": "ordered-integer-list-1-to-100-observer-gap",
+      "parcel": "parcel-social-5778da5b558b1736a3a0482a2701faf0811d2b2d34d0a30fb2016d16de9c0bc6",
+      "machine": "machine:controller",
+      "runtime": "llama.cpp",
+      "runtimeVersion": "3f1000482d759661cadb1dc9b59f6292f52408ee0d2906298fa001837517fb4e",
+      "executionKind": "LOCAL",
+      "outcome": "SUCCEEDED",
+      "at": "2026-09-13T09:05:30.039Z",
+      "completedAt": "2026-09-13T09:05:35.536Z",
+      "durationMs": 5497,
+      "usage": {
+        "inputTokens": 62,
+        "freshInputTokens": null,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 292,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 354
+      },
+      "usageAuthority": "ATTESTED",
+      "semantics": {
+        "id": "llama-chat-completions/v1",
+        "input": "INCLUDES_CACHE",
+        "reasoning": "UNKNOWN",
+        "total": "INPUT_PLUS_OUTPUT",
+        "billing": "UNKNOWN"
+      },
+      "revision": 0,
+      "provenance": "NATIVE",
+      "retryOf": null,
+      "parentInvocation": null,
+      "baton": null,
+      "apiCost": null,
+      "localApiChargeKnownZero": true,
+      "cacheSaving": null,
+      "verifiedSuccess": true,
+      "energy": [
+        {
+          "id": "energy-eb0d2445-0c5d-4967-b5a3-0eca160853b5",
+          "machine": "machine:controller",
+          "sensor": "nvidia-gpu0",
+          "scope": "GPU_ONLY",
+          "measurementClass": "DERIVED",
+          "sensorMeasurementClass": "COMPONENT_MEASURED",
+          "attribution": "NOT_ATTRIBUTABLE",
+          "coverage": 0.6695906432748538,
+          "grossWh": 0.09429330972222223,
+          "attributedWh": null,
+          "incrementalWh": null,
+          "averageWatts": 92.64626501091703,
+          "peakWatts": 99.93,
+          "electricityCost": null,
+          "startedAt": "2026-09-13T09:05:30.064Z",
+          "completedAt": "2026-09-13T09:05:35.536Z"
+        }
+      ],
+      "links": {
+        "process": "?view=runtime-map&parcelId=parcel-social-5778da5b558b1736a3a0482a2701faf0811d2b2d34d0a30fb2016d16de9c0bc6",
+        "estate": "?view=runtime-map&mode=estate&resource=machine%3Acontroller"
+      }
+    },
+    {
+      "id": "usage-closure-run-11d5fd63-1949-490d-96fb-266acadfcc2f",
+      "jobRun": "run-11d5fd63-1949-490d-96fb-266acadfcc2f",
+      "provider": "local-llama-1",
+      "model": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "modelRevision": "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d",
+      "agent": null,
+      "job": "usage-local-1",
+      "jobType": "ordered-integer-list-1-to-100",
+      "parcel": "parcel-social-5778da5b558b1736a3a0482a2701faf0811d2b2d34d0a30fb2016d16de9c0bc6",
+      "machine": "machine:controller",
+      "runtime": "llama.cpp",
+      "runtimeVersion": "3f1000482d759661cadb1dc9b59f6292f52408ee0d2906298fa001837517fb4e",
+      "executionKind": "LOCAL",
+      "outcome": "SUCCEEDED",
+      "at": "2026-09-13T09:05:15.488Z",
+      "completedAt": "2026-09-13T09:05:21.044Z",
+      "durationMs": 5556,
+      "usage": {
+        "inputTokens": 62,
+        "freshInputTokens": null,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 292,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 354
+      },
+      "usageAuthority": "ATTESTED",
+      "semantics": {
+        "id": "llama-chat-completions/v1",
+        "input": "INCLUDES_CACHE",
+        "reasoning": "UNKNOWN",
+        "total": "INPUT_PLUS_OUTPUT",
+        "billing": "UNKNOWN"
+      },
+      "revision": 0,
+      "provenance": "NATIVE",
+      "retryOf": null,
+      "parentInvocation": null,
+      "baton": null,
+      "apiCost": null,
+      "localApiChargeKnownZero": true,
+      "cacheSaving": null,
+      "verifiedSuccess": true,
+      "energy": [
+        {
+          "id": "energy-ccdcb392-4686-4277-96b8-b3a99233d356",
+          "machine": "machine:controller",
+          "sensor": "nvidia-gpu0",
+          "scope": "GPU_ONLY",
+          "measurementClass": "DERIVED",
+          "sensorMeasurementClass": "COMPONENT_MEASURED",
+          "attribution": "NOT_ATTRIBUTABLE",
+          "coverage": 1,
+          "grossWh": 0.1420679277777778,
+          "attributedWh": null,
+          "incrementalWh": null,
+          "averageWatts": 92.4520137382502,
+          "peakWatts": 99.05,
+          "electricityCost": null,
+          "startedAt": "2026-09-13T09:05:15.512Z",
+          "completedAt": "2026-09-13T09:05:21.044Z"
+        }
+      ],
+      "links": {
+        "process": "?view=runtime-map&parcelId=parcel-social-5778da5b558b1736a3a0482a2701faf0811d2b2d34d0a30fb2016d16de9c0bc6",
+        "estate": "?view=runtime-map&mode=estate&resource=machine%3Acontroller"
+      }
+    },
+    {
+      "id": "usage-closure-run-f84d96b7-4c0e-4ac7-8717-051fde1b9073",
+      "jobRun": "run-f84d96b7-4c0e-4ac7-8717-051fde1b9073",
+      "provider": "local-llama-0",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "modelRevision": "3da3afe6cf5c674ac195803ea0dd6fee7e1c228c2105c1ce8c66890d1d4ab460",
+      "agent": null,
+      "job": "usage-local-0",
+      "jobType": "ordered-integer-list-1-to-100",
+      "parcel": "parcel-social-5778da5b558b1736a3a0482a2701faf0811d2b2d34d0a30fb2016d16de9c0bc6",
+      "machine": "machine:controller",
+      "runtime": "llama.cpp",
+      "runtimeVersion": "3f1000482d759661cadb1dc9b59f6292f52408ee0d2906298fa001837517fb4e",
+      "executionKind": "LOCAL",
+      "outcome": "SUCCEEDED",
+      "at": "2026-09-13T09:05:01.574Z",
+      "completedAt": "2026-09-13T09:05:07.138Z",
+      "durationMs": 5564,
+      "usage": {
+        "inputTokens": 62,
+        "freshInputTokens": null,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 292,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 354
+      },
+      "usageAuthority": "ATTESTED",
+      "semantics": {
+        "id": "llama-chat-completions/v1",
+        "input": "INCLUDES_CACHE",
+        "reasoning": "UNKNOWN",
+        "total": "INPUT_PLUS_OUTPUT",
+        "billing": "UNKNOWN"
+      },
+      "revision": 0,
+      "provenance": "NATIVE",
+      "retryOf": null,
+      "parentInvocation": null,
+      "baton": null,
+      "apiCost": null,
+      "localApiChargeKnownZero": true,
+      "cacheSaving": null,
+      "verifiedSuccess": true,
+      "energy": [
+        {
+          "id": "energy-adf9edbb-1b13-4938-81b1-89054891d5c3",
+          "machine": "machine:controller",
+          "sensor": "nvidia-gpu0",
+          "scope": "GPU_ONLY",
+          "measurementClass": "DERIVED",
+          "sensorMeasurementClass": "COMPONENT_MEASURED",
+          "attribution": "NOT_ATTRIBUTABLE",
+          "coverage": 1,
+          "grossWh": 0.1414646013888889,
+          "attributedWh": null,
+          "incrementalWh": null,
+          "averageWatts": 91.92645577617328,
+          "peakWatts": 99.21,
+          "electricityCost": null,
+          "startedAt": "2026-09-13T09:05:01.598Z",
+          "completedAt": "2026-09-13T09:05:07.138Z"
+        }
+      ],
+      "links": {
+        "process": "?view=runtime-map&parcelId=parcel-social-5778da5b558b1736a3a0482a2701faf0811d2b2d34d0a30fb2016d16de9c0bc6",
+        "estate": "?view=runtime-map&mode=estate&resource=machine%3Acontroller"
+      }
+    }
+  ],
+  "coverage": {
+    "matching": 3,
+    "returned": 3,
+    "native": 3,
+    "migrated": 0,
+    "legacy": 0,
+    "historyStart": "2026-09-13T09:05:01.574Z",
+    "continuousCollectionEstablished": false
+  },
+  "history": {
+    "policy": "Retained until explicit usage visibility reset. Original execution and qualification evidence are preserved.",
+    "resetCount": 0,
+    "resetDigest": "3b13f7ff5ef89a263817d2d330aa7554f4cc45769b8532285444d8f7813b11bc"
+  },
+  "limitations": [
+    "No currencies converted. Amounts retain authority and reported coverage.",
+    "Energy groups must not be added across sensors or component/whole-node scopes.",
+    "Legacy rows retain historical numeric evidence and unattested provider semantics."
+  ]
+}

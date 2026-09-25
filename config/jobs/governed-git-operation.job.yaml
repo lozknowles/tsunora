@@ -1,0 +1,24 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata:
+  id: governed-git-operation
+  name: Governed Git operation
+  version: 1.0.0
+  description: Execute a bounded Git proposal only after semantic effect resolution and protected-resource policy enforcement.
+spec:
+  enabled: true
+  priority: normal
+  concurrency: queue
+  parameters:
+    repositoryPath:
+      type: string
+      required: true
+    proposal:
+      type: string
+      required: true
+  steps:
+    - id: execute
+      name: Resolve and execute governed Git effects
+      action: repository.git-governed@1.0.0
+      requires: [repository.git]
+      verification: [governed-git-effects-enforced]

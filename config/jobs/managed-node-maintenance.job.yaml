@@ -1,0 +1,37 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata:
+  id: managed-node-maintenance
+  name: Managed node maintenance
+  version: 1.0.0
+  description: Run one allow-listed disruptive operation only after the protected-workload override approval.
+spec:
+  enabled: true
+  priority: high
+  concurrency: no-overlap
+  parameters:
+    operation:
+      type: string
+      enum: [package.install, package.remove, package.update, service.start, service.stop, service.restart, housekeeping.journal-vacuum, runtime.update, system.reboot, system.shutdown]
+      required: true
+    target:
+      type: string
+    value:
+      type: integer
+      minimum: 16
+      maximum: 4096
+  steps:
+    - id: maintain
+      name: Approved typed maintenance
+      action: managed-node.maintain@1.0.0
+      requires: [managed-node.maintenance]
+      resources: [managed-node-maintenance]
+      approval: managed-node.protected-workload-override
+      timeoutSeconds: 300
+      outputs:
+        - name: result
+          type: application/json
+          schema: agent-control.managed-node-result/v1
+          version: 1.0.0
+          retention: run-history
+      verification: [managed-node-maintenance-result-v1]

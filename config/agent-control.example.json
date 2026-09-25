@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "tokenAwareOutput": {
+    "completeMaxLines": 48,
+    "completeMaxBytes": 12288,
+    "completeMaxTokens": 4096,
+    "completeMaxMatches": 40,
+    "completeMaxFiles": 8,
+    "indexMaxFiles": 160,
+    "indexMaxLinesPerFile": 120,
+    "genericHeadLines": 20,
+    "genericTailLines": 20,
+    "artifactOnlyAboveReturnedTokens": 16384,
+    "maxCaptureBytesPerStream": 67108864,
+    "retentionSeconds": 3600,
+    "contextBudgetFraction": 0.5,
+    "minimumCompleteTokens": 512,
+    "maximumExpansionContextLines": 10
+  },
+  "tokenBatonRouting": {
+    "continuePercent": 60,
+    "prepareBatonPercent": 75,
+    "compactPercent": 85,
+    "handoffPercent": 90,
+    "sampleRetention": 240
+  },
+  "retrieval": {
+    "enabled": false,
+    "providers": ["exact", "lexical"],
+    "maximumCalls": 4,
+    "maximumEvidenceItems": 12,
+    "maximumEvidenceTokens": 8192,
+    "minimumConfidence": 0.55,
+    "requiredCoverage": 0.6,
+    "contextPressurePercent": 75,
+    "contextPressureEvidenceFraction": 0.5,
+    "allowRemote": false,
+    "zgExecutable": "zg"
+  },
+  "adaptiveOrchestration": {
+    "enabled": true,
+    "minimumSamplesForPreference": 3,
+    "minimumQualityScore": 0.7,
+    "maxEvidenceAgeDays": 90,
+    "policyQualityFloor": 0.6,
+    "maxRouteCost": null,
+    "maxRouteLatencyMs": null,
+    "qualityWeight": 0.5,
+    "reliabilityWeight": 0.2,
+    "costWeight": 0.15,
+    "latencyWeight": 0.1,
+    "confidenceWeight": 0.05,
+    "explorationRate": 0.1
+  },
+  "cacheAwareExperts": {
+    "enabled": true,
+    "hotMinutes": 10,
+    "warmMinutes": 60,
+    "expiryMinutes": 240,
+    "hotReuseRatio": 0.7,
+    "minimumReuseRatio": 0.25,
+    "highCompatibilityMaximumDelta": 0.25,
+    "partialCompatibilityMaximumDelta": 0.6,
+    "maximumScoreBonus": 0.15,
+    "allowDerivedPreference": false
+  },
+  "harnessEfficiency": {
+    "routingMode": "observe",
+    "minimumVerifiedRuns": 10,
+    "minimumSuccessRate": 0.9,
+    "minimumSameModelControlledRuns": 10,
+    "profiles": {
+      "THIN": {"maximumInitialContextTokens": 4096, "maximumSources": 12, "maximumOptionalSkills": 1, "maximumTools": 6, "maximumTurns": 3, "allowBroadRepositoryContext": false, "allowSharedContext": false},
+      "STANDARD": {"maximumInitialContextTokens": 16384, "maximumSources": 48, "maximumOptionalSkills": 4, "maximumTools": 24, "maximumTurns": 10, "allowBroadRepositoryContext": false, "allowSharedContext": true},
+      "DEEP": {"maximumInitialContextTokens": 65536, "maximumSources": 192, "maximumOptionalSkills": 16, "maximumTools": 64, "maximumTurns": 32, "allowBroadRepositoryContext": true, "allowSharedContext": true}
+    }
+  },
+  "spark": {
+    "enabled": false,
+    "model": "gpt-5.3-codex-spark",
+    "modelRole": "fast-execution",
+    "maximumFiles": 1,
+    "maximumChangedLines": 80,
+    "maximumAttempts": 1,
+    "maximumSubagents": 0,
+    "maximumContextTokens": 2048,
+    "verificationRequired": true
+  },
+  "jobs": {
+    "repositoryRoots": ["/srv/repos"],
+    "repositoryRemotes": ["https://github.com/example-organisation"]
+  },
+  "resources": [
+    {
+      "id": "controller",
+      "name": "Controller",
+      "platform": "linux",
+      "transport": {"type": "local"},
+      "capabilities": ["control-plane", "repositories"]
+    },
+    {
+      "id": "worker-1",
+      "name": "Remote worker",
+      "platform": "linux",
+      "transport": {"type": "ssh", "host": "worker-1.example", "port": 22, "user": "operator", "identityFile": "~/.ssh/worker-1"},
+      "capabilities": ["harness.codex"],
+      "managedNode": {
+        "enabled": true,
+        "probeIntervalSeconds": 30,
+        "offlineAfterSeconds": 90,
+        "approvedServices": ["example-workload.service"],
+        "connectivity": [
+          {
+            "id": "private-overlay",
+            "label": "Private overlay",
+            "capability": "transport.secure-overlay",
+            "serviceUnit": "overlay-agent.service",
+            "interfaceName": "overlay0"
+          }
+        ],
+        "workloads": [
+          {
+            "id": "media-copy",
+            "capability": "workload.media-copy",
+            "protected": true,
+            "systemdUnit": "example-workload.service",
+            "processExecutables": ["media-copy-worker"],
+            "opticalAccess": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "windows-codex-1",
+      "name": "Windows Codex credential node",
+      "platform": "windows",
+      "transport": {"type": "ssh", "host": "windows-codex-1.example", "port": 22, "user": "operator", "identityFile": "~/.ssh/windows-codex-1"},
+      "capabilities": ["harness.codex"]
+    },
+    {
+      "id": "android-1",
+      "name": "Android resource",
+      "platform": "android",
+      "transport": {"type": "ssh", "host": "android-1.example", "port": 8022, "user": "termux", "identityFile": "~/.ssh/android-1"},
+      "healthUrl": "http://127.0.0.1:18088/health",
+      "capabilities": ["platform.android", "device.physical"],
+      "android": {
+        "localHealthUrl": "http://127.0.0.1:18088/health",
+        "remoteHealthUrl": "http://127.0.0.1:8788/health",
+        "remoteDirectory": "~/agent-control",
+        "startCommand": "./android/start-node.sh",
+        "credentialEnv": "AGENT_CONTROL_NODE_TOKEN"
+      },
+      "metadata": {"model": "example-only"}
+    }
+  ],
+  "providers": [
+    {
+      "id": "codex-chatgpt",
+      "name": "Codex with ChatGPT authentication",
+      "kind": "cli",
+      "enabled": true,
+      "capabilities": ["trivial.coding"],
+      "accountProfiles": [
+        {"id":"primary-pro","providerExecutionNodeId":"controller","credentialResidency":{"nodeId":"controller","store":{"type":"codex-home-env","env":"CODEX_HOME_PRIMARY_PRO"}},"label":"Primary Pro","plan":"ChatGPT Pro","planAuthority":"operator-configured","capabilities":["codex-chatgpt"],"qualification":{"state":"UNTESTED","version":"configured-v1"}},
+        {"id":"secondary-plus","providerExecutionNodeId":"controller","credentialResidency":{"nodeId":"controller","store":{"type":"codex-home-env","env":"CODEX_HOME_SECONDARY_PLUS"}},"label":"Secondary Plus","plan":"ChatGPT Plus","planAuthority":"operator-configured","capabilities":["codex-chatgpt"],"qualification":{"state":"UNTESTED","version":"configured-v1"}}
+      ]
+    },
+    {
+      "id": "openai-api",
+      "name": "OpenAI",
+      "kind": "responses",
+      "baseUrl": "https://api.openai.com/v1",
+      "wireApi": "responses",
+      "enabled": true,
+      "auth": {"type": "bearer-env", "env": "OPENAI_API_KEY"},
+      "requiresAuth": true,
+      "credentialEnv": "OPENAI_API_KEY",
+      "capabilities": ["coding", "reasoning", "tool-use", "structured-output"]
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "kind": "openai-compatible",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "wireApi": "responses",
+      "enabled": true,
+      "auth": {"type": "bearer-env", "env": "OPENROUTER_API_KEY"},
+      "requiresAuth": true,
+      "credentialEnv": "OPENROUTER_API_KEY",
+      "credentialFileEnv": "OPENROUTER_API_KEY_FILE",
+      "capabilities": ["coding", "reasoning", "tool-use"]
+    },
+    {
+      "id": "nvidia-hosted",
+      "name": "NVIDIA hosted models",
+      "kind": "openai-compatible",
+      "adapter": "nvidia-hosted-v1",
+      "baseUrl": "https://integrate.api.nvidia.com/v1",
+      "wireApi": "chat-completions",
+      "enabled": true,
+      "auth": {"type": "provider-secure-store", "reference": "provider:nvidia-hosted"},
+      "discovery": {"enabled": true, "path": "models"},
+      "requiresAuth": true,
+      "capabilities": ["chat-completions", "streaming"]
+    },
+    {
+      "id": "local-model",
+      "name": "Local OpenAI-compatible model",
+      "kind": "local",
+      "baseUrl": "http://127.0.0.1:19090/v1",
+      "qualificationModel": "example-model",
+      "requiresAuth": false,
+      "parallelism": 1,
+      "costClass": "free",
+      "capabilities": ["text", "tools"]
+    },
+    {
+      "id": "local-pixel",
+      "name": "Future Pixel-local provider",
+      "kind": "openai-compatible",
+      "baseUrl": "http://127.0.0.1:18080/v1",
+      "wireApi": "responses",
+      "enabled": false,
+      "auth": {"type": "none"},
+      "capabilities": []
+    }
+  ],
+  "models": [
+    {"id":"spark-fast-execution","provider":"codex-chatgpt","accountProfile":"primary-pro","providerModel":"gpt-5.3-codex-spark","displayName":"GPT-5.3-Codex-Spark","enabled":true,"capabilities":["trivial.coding"],"roles":["fast-execution"],"nodes":["controller"],"qualification":{"state":"UNTESTED","version":"configured-v1","evidence":[]}},
+    {"id":"openai-default","provider":"openai-api","providerModel":"configured-openai-default","displayName":"OpenAI default","enabled":true,"capabilities":["coding","reasoning","tool-use","repository-review"],"nodes":["controller"],"qualification":{"state":"UNTESTED","version":"migration-v1","evidence":[]}},
+    {"id":"glm-5.3-flash","provider":"openrouter","providerModel":"z-ai/glm-5.3-flash","displayName":"GLM-5.3-Flash","enabled":true,"capabilities":["reasoning","coding","tool-use","repository-review"],"roles":["external-fast","coding.fast"],"nodes":["controller"],"qualification":{"state":"UNTESTED","version":"configured-v1","evidence":[]}},
+    {"id":"glm-5.3","provider":"openrouter","providerModel":"z-ai/glm-5.3","displayName":"GLM-5.3","enabled":true,"capabilities":["reasoning","coding","tool-use","long-context","repository-review"],"roles":["external-deep","coding.deep","reasoning.deep"],"nodes":["controller"],"qualification":{"state":"UNTESTED","version":"configured-v1","evidence":[]}},
+    {"id":"pixel-local-example","provider":"local-pixel","providerModel":"local/model","displayName":"Future Pixel local model","enabled":false,"capabilities":["coding"],"roles":["local-code"],"nodes":["android-1"],"qualification":{"state":"DISABLED","version":"future-v1","evidence":[]}}
+  ],
+  "modelRouting": {
+    "defaultRole": "coding.default",
+    "roles": {
+      "coding.default": {"primary":"openai-default","fallback":["glm-5.3"],"requires":["coding"]},
+      "fast-execution": {"primary":"spark-fast-execution","fallback":[],"requires":["trivial.coding"]},
+      "coding.fast": {"primary":"glm-5.3-flash","fallback":["openai-default"],"requires":["coding"]},
+      "coding.deep": {"primary":"glm-5.3","fallback":["openai-default"],"requires":["coding","reasoning"]},
+      "reasoning.deep": {"primary":"glm-5.3","fallback":["openai-default"],"requires":["reasoning"]},
+      "external-fast": {"primary":"glm-5.3-flash","fallback":["glm-5.3"],"requires":["coding"]},
+      "external-deep": {"primary":"glm-5.3","fallback":[],"requires":["coding","reasoning"]},
+      "review.default": {"primary":"openai-default","fallback":["glm-5.3"],"requires":["repository-review"]},
+      "local-code": {"primary":"pixel-local-example","fallback":["openai-default"],"requires":["coding"]}
+    }
+  },
+  "learnedSkills": {
+    "enabled": true,
+    "routingEnabled": false,
+    "minimumImprovement": 0.1,
+    "maximumQualificationAgeDays": 90,
+    "requireHumanDatasetApproval": true
+  },
+  "deterministicSkills": {
+    "enabled": true,
+    "routingEnabled": false,
+    "minimumDistinctParcels": 3,
+    "maximumValidationAgeDays": 90
+  },
+  "services": [
+    {
+      "id": "local-model-service",
+      "healthUrl": "http://127.0.0.1:19090/health",
+      "optional": true,
+      "start": {"type": "systemd-user", "unit": "example-model.service"}
+    }
+  ],
+  "lanes": [
+    {"id": 1, "name": "Primary", "cwd": ".", "priority": 1, "mode": "auto"},
+    {"id": 2, "name": "Review", "cwd": ".", "priority": 1, "mode": "manual"}
+  ]
+}

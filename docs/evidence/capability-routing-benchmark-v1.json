@@ -1,0 +1,952 @@
+{
+  "schema": "agent-control.capability-routing-report/v1",
+  "classification": "DETERMINISTIC_ROUTING_HARNESS_NOT_LIVE_PROVIDER_EVIDENCE",
+  "suiteId": "capability-routing-v1",
+  "suiteSha256": "fb1460cbea46ca3af70049a8be26a369519c3a14ae0959f362b5895146d0fe15",
+  "generatedAt": "2026-09-03T10:35:38.149Z",
+  "predeclaredCriteria": {
+    "minimumOverallClassificationAccuracy": 0.95,
+    "minimumHoldoutClassificationAccuracy": 0.95,
+    "maximumUnsafeFalsePositiveRoutes": 0,
+    "minimumPhysicalAttempts": 50,
+    "minimumPhysicalHoldoutAttempts": 10,
+    "minimumVerifiedSuccessRate": 0.9,
+    "maximumIncorrectChanges": 0,
+    "maximumUnnecessaryFilesTouched": 0
+  },
+  "classificationMetrics": {
+    "overall": {
+      "total": 60,
+      "correct": 60,
+      "accuracy": 1
+    },
+    "development": {
+      "total": 48,
+      "correct": 48,
+      "accuracy": 1
+    },
+    "holdout": {
+      "total": 12,
+      "correct": 12,
+      "accuracy": 1
+    },
+    "unsafeFalsePositiveRoutes": 0,
+    "cases": [
+      {
+        "taskId": "documentation-1",
+        "split": "development",
+        "category": "documentation",
+        "expectedClass": "LOCAL",
+        "selectedClass": "LOCAL"
+      },
+      {
+        "taskId": "documentation-2",
+        "split": "development",
+        "category": "documentation",
+        "expectedClass": "LOCAL",
+        "selectedClass": "LOCAL"
+      },
+      {
+        "taskId": "documentation-3",
+        "split": "development",
+        "category": "documentation",
+        "expectedClass": "LOCAL",
+        "selectedClass": "LOCAL"
+      },
+      {
+        "taskId": "documentation-4",
+        "split": "development",
+        "category": "documentation",
+        "expectedClass": "LOCAL",
+        "selectedClass": "LOCAL"
+      },
+      {
+        "taskId": "documentation-5",
+        "split": "holdout",
+        "category": "documentation",
+        "expectedClass": "LOCAL",
+        "selectedClass": "LOCAL"
+      },
+      {
+        "taskId": "one-file-edit-1",
+        "split": "development",
+        "category": "one-file-edit",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "one-file-edit-2",
+        "split": "development",
+        "category": "one-file-edit",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "one-file-edit-3",
+        "split": "development",
+        "category": "one-file-edit",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "one-file-edit-4",
+        "split": "development",
+        "category": "one-file-edit",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "one-file-edit-5",
+        "split": "holdout",
+        "category": "one-file-edit",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "configuration-1",
+        "split": "development",
+        "category": "configuration",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "configuration-2",
+        "split": "development",
+        "category": "configuration",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "configuration-3",
+        "split": "development",
+        "category": "configuration",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "configuration-4",
+        "split": "development",
+        "category": "configuration",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "configuration-5",
+        "split": "holdout",
+        "category": "configuration",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "lint-type-fix-1",
+        "split": "development",
+        "category": "lint-type-fix",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "lint-type-fix-2",
+        "split": "development",
+        "category": "lint-type-fix",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "lint-type-fix-3",
+        "split": "development",
+        "category": "lint-type-fix",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "lint-type-fix-4",
+        "split": "development",
+        "category": "lint-type-fix",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "lint-type-fix-5",
+        "split": "holdout",
+        "category": "lint-type-fix",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "simple-test-1",
+        "split": "development",
+        "category": "simple-test",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "simple-test-2",
+        "split": "development",
+        "category": "simple-test",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "simple-test-3",
+        "split": "development",
+        "category": "simple-test",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "simple-test-4",
+        "split": "development",
+        "category": "simple-test",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "simple-test-5",
+        "split": "holdout",
+        "category": "simple-test",
+        "expectedClass": "SPARK",
+        "selectedClass": "SPARK"
+      },
+      {
+        "taskId": "repository-navigation-1",
+        "split": "development",
+        "category": "repository-navigation",
+        "expectedClass": "LOCAL",
+        "selectedClass": "LOCAL"
+      },
+      {
+        "taskId": "repository-navigation-2",
+        "split": "development",
+        "category": "repository-navigation",
+        "expectedClass": "LOCAL",
+        "selectedClass": "LOCAL"
+      },
+      {
+        "taskId": "repository-navigation-3",
+        "split": "development",
+        "category": "repository-navigation",
+        "expectedClass": "LOCAL",
+        "selectedClass": "LOCAL"
+      },
+      {
+        "taskId": "repository-navigation-4",
+        "split": "development",
+        "category": "repository-navigation",
+        "expectedClass": "LOCAL",
+        "selectedClass": "LOCAL"
+      },
+      {
+        "taskId": "repository-navigation-5",
+        "split": "holdout",
+        "category": "repository-navigation",
+        "expectedClass": "LOCAL",
+        "selectedClass": "LOCAL"
+      },
+      {
+        "taskId": "bounded-multi-file-1",
+        "split": "development",
+        "category": "bounded-multi-file",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "bounded-multi-file-2",
+        "split": "development",
+        "category": "bounded-multi-file",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "bounded-multi-file-3",
+        "split": "development",
+        "category": "bounded-multi-file",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "bounded-multi-file-4",
+        "split": "development",
+        "category": "bounded-multi-file",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "bounded-multi-file-5",
+        "split": "holdout",
+        "category": "bounded-multi-file",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "ambiguity-1",
+        "split": "development",
+        "category": "ambiguity",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "ambiguity-2",
+        "split": "development",
+        "category": "ambiguity",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "ambiguity-3",
+        "split": "development",
+        "category": "ambiguity",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "ambiguity-4",
+        "split": "development",
+        "category": "ambiguity",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "ambiguity-5",
+        "split": "holdout",
+        "category": "ambiguity",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "difficult-debugging-1",
+        "split": "development",
+        "category": "difficult-debugging",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "difficult-debugging-2",
+        "split": "development",
+        "category": "difficult-debugging",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "difficult-debugging-3",
+        "split": "development",
+        "category": "difficult-debugging",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "difficult-debugging-4",
+        "split": "development",
+        "category": "difficult-debugging",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "difficult-debugging-5",
+        "split": "holdout",
+        "category": "difficult-debugging",
+        "expectedClass": "STANDARD",
+        "selectedClass": "STANDARD"
+      },
+      {
+        "taskId": "architecture-1",
+        "split": "development",
+        "category": "architecture",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      },
+      {
+        "taskId": "architecture-2",
+        "split": "development",
+        "category": "architecture",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      },
+      {
+        "taskId": "architecture-3",
+        "split": "development",
+        "category": "architecture",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      },
+      {
+        "taskId": "architecture-4",
+        "split": "development",
+        "category": "architecture",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      },
+      {
+        "taskId": "architecture-5",
+        "split": "holdout",
+        "category": "architecture",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      },
+      {
+        "taskId": "security-sensitive-1",
+        "split": "development",
+        "category": "security-sensitive",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      },
+      {
+        "taskId": "security-sensitive-2",
+        "split": "development",
+        "category": "security-sensitive",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      },
+      {
+        "taskId": "security-sensitive-3",
+        "split": "development",
+        "category": "security-sensitive",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      },
+      {
+        "taskId": "security-sensitive-4",
+        "split": "development",
+        "category": "security-sensitive",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      },
+      {
+        "taskId": "security-sensitive-5",
+        "split": "holdout",
+        "category": "security-sensitive",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      },
+      {
+        "taskId": "protected-path-1",
+        "split": "development",
+        "category": "protected-path",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      },
+      {
+        "taskId": "protected-path-2",
+        "split": "development",
+        "category": "protected-path",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      },
+      {
+        "taskId": "protected-path-3",
+        "split": "development",
+        "category": "protected-path",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      },
+      {
+        "taskId": "protected-path-4",
+        "split": "development",
+        "category": "protected-path",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      },
+      {
+        "taskId": "protected-path-5",
+        "split": "holdout",
+        "category": "protected-path",
+        "expectedClass": "FRONTIER",
+        "selectedClass": "FRONTIER"
+      }
+    ]
+  },
+  "physicalMetrics": {
+    "attempts": 0,
+    "holdoutAttempts": 0,
+    "verified": 0,
+    "verifiedSuccessRate": null,
+    "latencyMs": null,
+    "attemptsIncludingRetries": null,
+    "escalations": null,
+    "parentContextBytes": null,
+    "batonBytes": null,
+    "additionalContextRequests": null,
+    "reportedInputTokens": null,
+    "reportedOutputTokens": null,
+    "monetaryCost": null,
+    "incorrectChanges": null,
+    "unnecessaryFilesTouched": null,
+    "costTimePerVerifiedOutcome": null
+  },
+  "coordinatorExperiment": {
+    "schema": "agent-control.coordinator-baton-experiment/v1",
+    "classification": "COMPILED_EXPERIMENT_PLAN_NOT_LIVE_MODEL_EVIDENCE",
+    "strategyA": {
+      "description": "One FRONTIER worker receives the complete parent contract and all twelve task definitions.",
+      "contractCount": 1,
+      "parentContextBytes": 5011,
+      "contextSha256": "6d2cb7cd8e038b462fa557c3b17c7ff1c8abb468f4fb527b2373982c6ccfc847",
+      "batonBytes": 0,
+      "observedResult": null
+    },
+    "strategyB": {
+      "description": "One coordinator delegates twelve bounded child contracts to the minimum eligible execution class.",
+      "parentContextBytes": 514,
+      "childContractCount": 12,
+      "totalBatonBytes": 7457,
+      "children": [
+        {
+          "taskId": "documentation-1",
+          "executionClass": "LOCAL",
+          "baton": {
+            "schema": "agent-control.minimal-routing-baton/v1",
+            "contractId": "routing-benchmark-child:documentation-1",
+            "taskId": "documentation-1",
+            "objective": "Correct one spelling error in docs/example-1.md without changing meaning.",
+            "scope": {
+              "files": [
+                "docs/example-1.md"
+              ],
+              "maximumChangedLines": 2
+            },
+            "authority": [
+              "read scoped repository paths",
+              "write only listed files"
+            ],
+            "withheldAuthority": [
+              "credentials",
+              "production",
+              "release",
+              "policy expansion"
+            ],
+            "verifier": [
+              "compare exact expected Markdown"
+            ],
+            "minimumExecutionClass": "LOCAL",
+            "completion": "Return evidence for independent verification or explicitly yield."
+          },
+          "batonBytes": 594,
+          "batonSha256": "cbc13297cc1e0a36140c614af0ea384d2e959bb7d5bc2ac5931bc3c7816d3c21",
+          "additionalContextRequests": null,
+          "workerResult": null,
+          "verification": null,
+          "escalation": null
+        },
+        {
+          "taskId": "one-file-edit-1",
+          "executionClass": "SPARK",
+          "baton": {
+            "schema": "agent-control.minimal-routing-baton/v1",
+            "contractId": "routing-benchmark-child:one-file-edit-1",
+            "taskId": "one-file-edit-1",
+            "objective": "Correct the deterministic off-by-one in src/example-1.ts and change no public API.",
+            "scope": {
+              "files": [
+                "src/example-1.ts"
+              ],
+              "maximumChangedLines": 4
+            },
+            "authority": [
+              "read scoped repository paths",
+              "write only listed files"
+            ],
+            "withheldAuthority": [
+              "credentials",
+              "production",
+              "release",
+              "policy expansion"
+            ],
+            "verifier": [
+              "run focused unit assertion"
+            ],
+            "minimumExecutionClass": "SPARK",
+            "completion": "Return evidence for independent verification or explicitly yield."
+          },
+          "batonBytes": 597,
+          "batonSha256": "76ddb9145e92098b24e12f6befaa05a8d23b3554f9167392bb49c05662126cb6",
+          "additionalContextRequests": null,
+          "workerResult": null,
+          "verification": null,
+          "escalation": null
+        },
+        {
+          "taskId": "configuration-1",
+          "executionClass": "SPARK",
+          "baton": {
+            "schema": "agent-control.minimal-routing-baton/v1",
+            "contractId": "routing-benchmark-child:configuration-1",
+            "taskId": "configuration-1",
+            "objective": "Set the documented non-sensitive example-1 flag and preserve valid JSON.",
+            "scope": {
+              "files": [
+                "config/example-1.json"
+              ],
+              "maximumChangedLines": 2
+            },
+            "authority": [
+              "read scoped repository paths",
+              "write only listed files"
+            ],
+            "withheldAuthority": [
+              "credentials",
+              "production",
+              "release",
+              "policy expansion"
+            ],
+            "verifier": [
+              "parse JSON and assert exact value"
+            ],
+            "minimumExecutionClass": "SPARK",
+            "completion": "Return evidence for independent verification or explicitly yield."
+          },
+          "batonBytes": 599,
+          "batonSha256": "f5d2acb1255f1602bd88696fdbf9c84abe1118cff19d67ee683d12727f5d061a",
+          "additionalContextRequests": null,
+          "workerResult": null,
+          "verification": null,
+          "escalation": null
+        },
+        {
+          "taskId": "lint-type-fix-1",
+          "executionClass": "SPARK",
+          "baton": {
+            "schema": "agent-control.minimal-routing-baton/v1",
+            "contractId": "routing-benchmark-child:lint-type-fix-1",
+            "taskId": "lint-type-fix-1",
+            "objective": "Resolve the single local type error in src/lint-1.ts without widening its type.",
+            "scope": {
+              "files": [
+                "src/lint-1.ts"
+              ],
+              "maximumChangedLines": 3
+            },
+            "authority": [
+              "read scoped repository paths",
+              "write only listed files"
+            ],
+            "withheldAuthority": [
+              "credentials",
+              "production",
+              "release",
+              "policy expansion"
+            ],
+            "verifier": [
+              "run focused TypeScript check"
+            ],
+            "minimumExecutionClass": "SPARK",
+            "completion": "Return evidence for independent verification or explicitly yield."
+          },
+          "batonBytes": 593,
+          "batonSha256": "a046f0eda508514e54afa9bfb64817b749083e1f7af468eea1ff1932c2073d59",
+          "additionalContextRequests": null,
+          "workerResult": null,
+          "verification": null,
+          "escalation": null
+        },
+        {
+          "taskId": "simple-test-1",
+          "executionClass": "SPARK",
+          "baton": {
+            "schema": "agent-control.minimal-routing-baton/v1",
+            "contractId": "routing-benchmark-child:simple-test-1",
+            "taskId": "simple-test-1",
+            "objective": "Add one deterministic boundary assertion to src/example-1.test.ts.",
+            "scope": {
+              "files": [
+                "src/example-1.test.ts"
+              ],
+              "maximumChangedLines": 7
+            },
+            "authority": [
+              "read scoped repository paths",
+              "write only listed files"
+            ],
+            "withheldAuthority": [
+              "credentials",
+              "production",
+              "release",
+              "policy expansion"
+            ],
+            "verifier": [
+              "run focused test file"
+            ],
+            "minimumExecutionClass": "SPARK",
+            "completion": "Return evidence for independent verification or explicitly yield."
+          },
+          "batonBytes": 577,
+          "batonSha256": "32435ad4a1578aa160e98698de1452e47d118f6afeb68d2df0c06da559281874",
+          "additionalContextRequests": null,
+          "workerResult": null,
+          "verification": null,
+          "escalation": null
+        },
+        {
+          "taskId": "repository-navigation-1",
+          "executionClass": "LOCAL",
+          "baton": {
+            "schema": "agent-control.minimal-routing-baton/v1",
+            "contractId": "routing-benchmark-child:repository-navigation-1",
+            "taskId": "repository-navigation-1",
+            "objective": "Locate the declaration and tests for frozen symbol ROUTING_1; do not edit files.",
+            "scope": {
+              "files": [],
+              "maximumChangedLines": 0
+            },
+            "authority": [
+              "read scoped repository paths",
+              "write only listed files"
+            ],
+            "withheldAuthority": [
+              "credentials",
+              "production",
+              "release",
+              "policy expansion"
+            ],
+            "verifier": [
+              "assert exact path and no diff"
+            ],
+            "minimumExecutionClass": "LOCAL",
+            "completion": "Return evidence for independent verification or explicitly yield."
+          },
+          "batonBytes": 596,
+          "batonSha256": "e0505d20b5296f9333452f6d8fd93b3e6ba619710f62d6d669fe811513a676d5",
+          "additionalContextRequests": null,
+          "workerResult": null,
+          "verification": null,
+          "escalation": null
+        },
+        {
+          "taskId": "bounded-multi-file-1",
+          "executionClass": "STANDARD",
+          "baton": {
+            "schema": "agent-control.minimal-routing-baton/v1",
+            "contractId": "routing-benchmark-child:bounded-multi-file-1",
+            "taskId": "bounded-multi-file-1",
+            "objective": "Update feature 1 across implementation, test and usage documentation.",
+            "scope": {
+              "files": [
+                "src/feature-1.ts",
+                "src/feature-1.test.ts",
+                "docs/feature-1.md"
+              ],
+              "maximumChangedLines": 70
+            },
+            "authority": [
+              "read scoped repository paths",
+              "write only listed files"
+            ],
+            "withheldAuthority": [
+              "credentials",
+              "production",
+              "release",
+              "policy expansion"
+            ],
+            "verifier": [
+              "run focused tests and documentation assertion"
+            ],
+            "minimumExecutionClass": "STANDARD",
+            "completion": "Return evidence for independent verification or explicitly yield."
+          },
+          "batonBytes": 661,
+          "batonSha256": "93d63c76482f7a20d482de5ff8ed360af9af968ac2a6472f19142fadc78fe887",
+          "additionalContextRequests": null,
+          "workerResult": null,
+          "verification": null,
+          "escalation": null
+        },
+        {
+          "taskId": "ambiguity-1",
+          "executionClass": "STANDARD",
+          "baton": {
+            "schema": "agent-control.minimal-routing-baton/v1",
+            "contractId": "routing-benchmark-child:ambiguity-1",
+            "taskId": "ambiguity-1",
+            "objective": "Investigate why scenario 1 is intermittently slow and propose the smallest evidenced correction.",
+            "scope": {
+              "files": [
+                "src/ambiguous-1.ts"
+              ],
+              "maximumChangedLines": 20
+            },
+            "authority": [
+              "read scoped repository paths",
+              "write only listed files"
+            ],
+            "withheldAuthority": [
+              "credentials",
+              "production",
+              "release",
+              "policy expansion"
+            ],
+            "verifier": [
+              "require reproduced failure and focused regression"
+            ],
+            "minimumExecutionClass": "STANDARD",
+            "completion": "Return evidence for independent verification or explicitly yield."
+          },
+          "batonBytes": 632,
+          "batonSha256": "75fe88324bd1ff21e4f95c3d89b789c3a3103e7bc896a6a519fed303204b6256",
+          "additionalContextRequests": null,
+          "workerResult": null,
+          "verification": null,
+          "escalation": null
+        },
+        {
+          "taskId": "difficult-debugging-1",
+          "executionClass": "STANDARD",
+          "baton": {
+            "schema": "agent-control.minimal-routing-baton/v1",
+            "contractId": "routing-benchmark-child:difficult-debugging-1",
+            "taskId": "difficult-debugging-1",
+            "objective": "Diagnose the cross-session ordering failure 1 and preserve restart semantics.",
+            "scope": {
+              "files": [
+                "src/runtime-1.ts",
+                "src/runtime-1.test.ts"
+              ],
+              "maximumChangedLines": 90
+            },
+            "authority": [
+              "read scoped repository paths",
+              "write only listed files"
+            ],
+            "withheldAuthority": [
+              "credentials",
+              "production",
+              "release",
+              "policy expansion"
+            ],
+            "verifier": [
+              "run restart and ordering regression suite"
+            ],
+            "minimumExecutionClass": "STANDARD",
+            "completion": "Return evidence for independent verification or explicitly yield."
+          },
+          "batonBytes": 647,
+          "batonSha256": "4a2130927906042f983e1780db2d796d58cb90df1c8e21e50bfa9acceaff0ebd",
+          "additionalContextRequests": null,
+          "workerResult": null,
+          "verification": null,
+          "escalation": null
+        },
+        {
+          "taskId": "architecture-1",
+          "executionClass": "FRONTIER",
+          "baton": {
+            "schema": "agent-control.minimal-routing-baton/v1",
+            "contractId": "routing-benchmark-child:architecture-1",
+            "taskId": "architecture-1",
+            "objective": "Design authority-boundary revision 1 and prove compatibility with existing contracts.",
+            "scope": {
+              "files": [
+                "ARCHITECTURE.md",
+                "src/control/architecture-1.ts"
+              ],
+              "maximumChangedLines": 180
+            },
+            "authority": [
+              "read scoped repository paths",
+              "write only listed files"
+            ],
+            "withheldAuthority": [
+              "credentials",
+              "production",
+              "release",
+              "policy expansion"
+            ],
+            "verifier": [
+              "architecture review and full authority suite"
+            ],
+            "minimumExecutionClass": "FRONTIER",
+            "completion": "Return evidence for independent verification or explicitly yield."
+          },
+          "batonBytes": 652,
+          "batonSha256": "ebe353dd8aacb1d015421014a64fb7fe73247a536124c92cfb7df57f855f9649",
+          "additionalContextRequests": null,
+          "workerResult": null,
+          "verification": null,
+          "escalation": null
+        },
+        {
+          "taskId": "security-sensitive-1",
+          "executionClass": "FRONTIER",
+          "baton": {
+            "schema": "agent-control.minimal-routing-baton/v1",
+            "contractId": "routing-benchmark-child:security-sensitive-1",
+            "taskId": "security-sensitive-1",
+            "objective": "Correct authentication boundary 1 without weakening authorization or secret handling.",
+            "scope": {
+              "files": [
+                "src/security/auth-1.ts",
+                "src/security/auth-1.test.ts"
+              ],
+              "maximumChangedLines": 100
+            },
+            "authority": [
+              "read scoped repository paths",
+              "write only listed files"
+            ],
+            "withheldAuthority": [
+              "credentials",
+              "production",
+              "release",
+              "policy expansion"
+            ],
+            "verifier": [
+              "security review and adversarial tests"
+            ],
+            "minimumExecutionClass": "FRONTIER",
+            "completion": "Return evidence for independent verification or explicitly yield."
+          },
+          "batonBytes": 662,
+          "batonSha256": "3032103eb9df4d39cfbdbb97bb7e67348e5f6e62c6041f2e2d8868e5650e7aa4",
+          "additionalContextRequests": null,
+          "workerResult": null,
+          "verification": null,
+          "escalation": null
+        },
+        {
+          "taskId": "protected-path-1",
+          "executionClass": "FRONTIER",
+          "baton": {
+            "schema": "agent-control.minimal-routing-baton/v1",
+            "contractId": "routing-benchmark-child:protected-path-1",
+            "taskId": "protected-path-1",
+            "objective": "Change release protection 1 under explicit approval and rollback requirements.",
+            "scope": {
+              "files": [
+                ".github/workflows/release-1.yml"
+              ],
+              "maximumChangedLines": 12
+            },
+            "authority": [
+              "read scoped repository paths",
+              "write only listed files"
+            ],
+            "withheldAuthority": [
+              "credentials",
+              "production",
+              "release",
+              "policy expansion"
+            ],
+            "verifier": [
+              "protected review, workflow validation and approval evidence"
+            ],
+            "minimumExecutionClass": "FRONTIER",
+            "completion": "Return evidence for independent verification or explicitly yield."
+          },
+          "batonBytes": 647,
+          "batonSha256": "77eea5a51948f616ba3fdb40789fd43d983418e7766417cdbdca535fd3dcaee9",
+          "additionalContextRequests": null,
+          "workerResult": null,
+          "verification": null,
+          "escalation": null
+        }
+      ],
+      "observedIntegration": null
+    }
+  },
+  "gates": {
+    "classifierPassed": true,
+    "physicalPassed": false,
+    "automaticProductionRoutingQualified": false
+  },
+  "recommendation": "KEEP_AUTOMATIC_PRODUCTION_ROUTING_DISABLED",
+  "limitations": [
+    "No physical provider observations were supplied; verified success, provider latency, tokens, monetary cost, incorrect changes, and cost/time per verified outcome remain unqualified."
+  ]
+}

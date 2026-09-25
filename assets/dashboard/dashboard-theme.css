@@ -1,0 +1,172 @@
+/* One system preference for every viewport. No storage, session mutation or theme JS.
+   Palette literals belong here; components consume semantic custom properties. */
+:root {
+  color-scheme: light;
+  --ac-background: #f3f6fa;
+  --ac-surface: #ffffff;
+  --ac-surface-elevated: #e8eff6;
+  --ac-surface-inset: #f1f5f9;
+  --ac-text: #152b40;
+  --ac-text-secondary: #425a70;
+  --ac-border: #6f8194;
+  --ac-border-subtle: #bac8d5;
+  --ac-accent: #00666b;
+  --ac-success: #17623f;
+  --ac-warning: #805000;
+  --ac-error: #a7263e;
+  --ac-info: #175ca4;
+  --ac-violet: #65449b;
+  --ac-accent-surface: #dff3f2;
+  --ac-success-surface: #e4f3eb;
+  --ac-warning-surface: #fff2d7;
+  --ac-error-surface: #fde8ec;
+  --ac-info-surface: #e8f1ff;
+  --ac-violet-surface: #f0eaff;
+  --ac-on-accent: #ffffff;
+  --ac-focus: #005cb4;
+  --ac-graph-edge: #526b82;
+  --ac-overlay: rgba(13,25,39,.45);
+  --ac-shadow-color: rgba(13,25,39,.15);
+  --ac-glow: rgba(0,102,107,.18);
+  --ac-running: var(--ac-warning);
+  --ac-complete: var(--ac-success);
+  --ac-blocked: var(--ac-error);
+  --ac-degraded: var(--ac-warning);
+  --ac-graph-node: var(--ac-surface-elevated);
+  --ac-tooltip: var(--ac-surface-elevated);
+  --bg: var(--ac-background);
+  --bg2: var(--ac-surface);
+  --panel: var(--ac-surface);
+  --panel-2: var(--ac-surface-elevated);
+  --line: var(--ac-border-subtle);
+  --border: var(--ac-border);
+  --muted: var(--ac-text-secondary);
+  --text: var(--ac-text);
+  --cyan: var(--ac-accent);
+  --green: var(--ac-success);
+  --amber: var(--ac-warning);
+  --red: var(--ac-error);
+  --violet: var(--ac-violet);
+  --blue: var(--ac-info);
+}
+@media (prefers-color-scheme: dark) {
+ :root {
+  color-scheme: dark;
+  --ac-background: #090d12;
+  --ac-surface: #101b26;
+  --ac-surface-elevated: #172b3b;
+  --ac-surface-inset: #0a131e;
+  --ac-text: #e7edf4;
+  --ac-text-secondary: #afc2d3;
+  --ac-border: #668096;
+  --ac-border-subtle: #355066;
+  --ac-accent: #63e5df;
+  --ac-success: #6ce5a1;
+  --ac-warning: #ffd17d;
+  --ac-error: #ff8ea2;
+  --ac-info: #84bfff;
+  --ac-violet: #c2a7ff;
+  --ac-accent-surface: #102f33;
+  --ac-success-surface: #12362b;
+  --ac-warning-surface: #392b13;
+  --ac-error-surface: #3d2028;
+  --ac-info-surface: #102b40;
+  --ac-violet-surface: #281e3c;
+  --ac-on-accent: #052626;
+  --ac-focus: #94d9ff;
+  --ac-graph-edge: #829db2;
+  --ac-overlay: rgba(2,8,13,.85);
+  --ac-shadow-color: rgba(0,0,0,.32);
+  --ac-glow: rgba(99,229,223,.2);
+ }
+}
+html,body { background-color:var(--ac-background); color:var(--ac-text); }
+input,select,textarea { color:var(--ac-text); background-color:var(--ac-surface); border-color:var(--ac-border); accent-color:var(--ac-accent); }
+input::placeholder,textarea::placeholder { color:var(--ac-text-secondary); opacity:1; }
+a { color:var(--ac-accent); }
+:focus-visible { outline:3px solid var(--ac-focus); outline-offset:3px; }
+::selection { background:var(--ac-accent); color:var(--ac-on-accent); }
+* { scrollbar-color:var(--ac-border) var(--ac-background); }
+.topbar { background:var(--ac-surface); }
+dialog::backdrop { background:var(--ac-overlay); }
+.runtime-edge { stroke:var(--ac-graph-edge); }
+.runtime-graph-node.selected rect { stroke:var(--ac-focus);stroke-width:4px; }
+.runtime-graph-node:focus-visible rect { stroke:var(--ac-focus);stroke-width:4px; }
+.runtime-graph-node text { fill:var(--ac-text); }
+.runtime-graph-node .runtime-node-subtitle { fill:var(--ac-text-secondary); }
+.runtime-graph-node rect { fill:var(--ac-graph-node); }
+.runtime-graph-node.estate-GREEN rect { fill:var(--ac-success-surface); }
+.runtime-graph-node.estate-ORANGE rect { fill:var(--ac-warning-surface); }
+.runtime-graph-node.estate-RED rect { fill:var(--ac-error-surface); }
+.runtime-graph-node.estate-GREY rect { fill:var(--ac-surface-elevated); }
+.runtime-edge.state-RUNNING { stroke:var(--ac-running); }
+.runtime-edge.state-SUCCEEDED { stroke:var(--ac-complete); }
+.runtime-edge.state-FAILED { stroke:var(--ac-error); }
+.runtime-edge.kind-handoff { stroke:var(--ac-violet); }
+.obs-status { border-color:currentColor; }
+.obs-active { color:var(--ac-running); }
+.obs-active::before { background:var(--ac-running); }
+.process-bubble.state-RUNNING { border-color:var(--ac-running); }
+.process-bubble.state-SUCCEEDED { border-color:var(--ac-complete); }
+.process-bubble.state-FAILED,.process-bubble.state-BLOCKED { border-color:var(--ac-blocked); }
+.process-bubble.state-DEGRADED { border-color:var(--ac-degraded); }
+.process-bubble.selected { outline-color:var(--ac-focus); }
+.process-bubble-heading>span { color:var(--ac-text); }
+
+/* Concept B observer workspace: shared semantic palette, intentionally light. */
+:root {
+  --precision-background: #f5f8fc;
+  --precision-surface: #ffffff;
+  --precision-map: #f7faff;
+  --precision-elevated: #edf4fc;
+  --precision-text: #142e4d;
+  --precision-secondary: #405772;
+  --precision-muted: #52667c;
+  --precision-border: #718ba5;
+  --precision-border-subtle: #c8d7e7;
+  --precision-accent: #0064bd;
+  --precision-success: #146248;
+  --precision-warning: #805009;
+  --precision-error: #a52437;
+  --precision-info: #145ea3;
+  --precision-focus: #005eb8;
+  --precision-selected: #e6f2ff;
+  --precision-warning-surface: #fff3db;
+  --precision-success-surface: #e8f4ee;
+  --precision-shadow: #18355016;
+  --precision-overlay: #0b203653;
+  --precision-node-hover: #0064bd08;
+  --precision-node-ring: #86afd580;
+  --precision-drawer-shadow: #12365320;
+}
+
+/* Run identity uses a narrow rail/chip; status keeps its own semantic palette. */
+:root {
+  --ac-identity-0:#365aa1; --ac-identity-1:#654b9a;
+  --ac-identity-2:#844b87; --ac-identity-3:#00606d;
+  --ac-identity-4:#8b3e46; --ac-identity-5:#4f6423;
+  --ac-identity-6:#795322; --ac-identity-7:#4a5e9b;
+  --ac-identity-8:#2e6839; --ac-identity-9:#7c4973;
+  --ac-identity-10:#005f5f; --ac-identity-11:#815037;
+}
+@media (prefers-color-scheme:dark) {
+  :root {
+    --ac-identity-0:#a7bcff; --ac-identity-1:#c4adff;
+    --ac-identity-2:#e0a9d7; --ac-identity-3:#88d1d8;
+    --ac-identity-4:#ffadb6; --ac-identity-5:#bddb87;
+    --ac-identity-6:#e2bf82; --ac-identity-7:#b5bfff;
+    --ac-identity-8:#a4d5a6; --ac-identity-9:#d8b2d0;
+    --ac-identity-10:#a7d9d3; --ac-identity-11:#e7b79b;
+  }
+}
+.job-identity { --job-identity:var(--ac-text-secondary); }
+.job-identity-badge { display:inline-flex;align-items:center;gap:.45em;max-width:100%;font:700 11px ui-monospace,monospace;color:var(--job-identity);white-space:normal;overflow-wrap:anywhere; }
+.job-identity-badge::before { content:"";width:.7em;height:.7em;flex:none;border:2px solid currentColor;border-radius:2px;transform:rotate(45deg); }
+.job-identity-rail { border-inline-start:3px solid var(--job-identity);padding-inline-start:10px; }
+.job-identity-name { color:var(--job-identity); }
+.job-identity-active { outline:2px solid var(--job-identity);outline-offset:-2px; }
+.event-list .job-identity-rail { border-inline-start:3px solid var(--job-identity);padding-inline-start:10px; }
+.event-job-filter-button { border:0;background:transparent;padding:0;margin-inline-end:8px;cursor:pointer; }
+
+/* Tsunora product palette. Scoped; inherited control-plane palette is unchanged. */
+.tsunora {--ts-bg:#191b1b;--ts-panel:#292c2b;--ts-text:#f1eee5;--ts-muted:#bfc0bb;--ts-signal:#df5a35;--ts-line:#686d69;color-scheme:dark;}

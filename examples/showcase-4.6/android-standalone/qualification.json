@@ -1,0 +1,110 @@
+{
+  "schema": "agent-control.android-standalone-qualification/v1",
+  "date": "2026-09-13",
+  "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+  "initialSourceCommit": "f9f95eda37760ba4b83d0558ed9634cf5f4400cc",
+  "verdict": "PASS_WITH_LIMITATIONS",
+  "verdictScope": "Base Android-hosted controller deployment only",
+  "fullModelBenchmarkShowcase": "BLOCKED",
+  "releaseReady": false,
+  "zeroApkProof": {
+    "agentControlApkRequired": false,
+    "rootRequired": false,
+    "remoteControllerRequired": false,
+    "androidControlPlane": true,
+    "localDashboard": true,
+    "localGovernedJob": true,
+    "localInference": false,
+    "benchmarkComplete": false
+  },
+  "environment": {
+    "device": "Pixel 8 Pro",
+    "android": "17",
+    "soc": "Tensor G3",
+    "architecture": "arm64",
+    "userspace": "Termux",
+    "node": "26.4.0",
+    "npm": "11.19.0",
+    "git": "2.55.0",
+    "chrome": "152.0.7977.83",
+    "totalMemoryBytes": 12135170048,
+    "controllerRssKiB": 105008,
+    "rssScope": "One process observation, not device energy or benchmark measurement",
+    "freshIsolatedConfig": true,
+    "factoryReset": false,
+    "remoteResources": 0,
+    "providers": 0,
+    "configuredModels": 0
+  },
+  "verification": {
+    "regression": {
+      "command": "npm run check",
+      "tests": 1454,
+      "pass": 1454,
+      "fail": 0,
+      "skipped": 0,
+      "durationMs": 145787.310416,
+      "logSha256": "438a2fba289284926a4e36287e4e4d17df87b02af79b537c4b1021577f0bd805",
+      "typecheck": "PASS",
+      "sourceDistribution": "PASS",
+      "bootstrapSyntax": "PASS",
+      "dashboardSyntax": "PASS",
+      "infrastructureNeutrality": "PASS",
+      "implementationStatus": "PASS",
+      "executionHost": "Development Linux host; distinct from physical Android checks"
+    },
+    "physicalJob": "SUCCEEDED",
+    "restartPersistence": "PASS",
+    "offlineShell": "PASS",
+    "pwaInstallability": "PASS_NO_ERRORS",
+    "pwaLauncherInstallation": "UNTESTED",
+    "apiSecurity": "PASS",
+    "showcaseStructure": "PASS_STRUCTURE_WITH_EXPLICIT_INCOMPLETE_RELEASE_GATE"
+  },
+  "blockers": [
+    {
+      "type": "PLATFORM_CAPABILITY",
+      "detail": "Base Termux cannot expose defensible battery, charging, thermal or network metering observations; paired local ADB reconnect attempts failed."
+    },
+    {
+      "type": "RESOURCE",
+      "detail": "Available RAM fluctuates below conservative reserve; no unrelated process was stopped."
+    },
+    {
+      "type": "IMPLEMENTATION",
+      "detail": "Android runtime qualification and data-only benchmark validator remain unimplemented; existing adapter assumes Linux sandbox facilities."
+    }
+  ],
+  "notPerformed": [
+    "Model artifact download",
+    "Local inference",
+    "Android benchmark",
+    "Personal league result",
+    "Thermal pause/resume",
+    "Reboot",
+    "OS reclamation",
+    "Battery shutdown",
+    "Interrupted Android model download or benchmark",
+    "Paid provider call",
+    "New helper APK",
+    "Public exposure"
+  ],
+  "failuresAndRetries": [
+    "Initial npm ci rejected repository without lockfile; documented npm install path passed.",
+    "Phone auth keyboard/pointer and menu stacking failures led to fixes and repeat physical checks.",
+    "Tiled CDP screenshots were rejected; native framebuffer captures used.",
+    "Paired phone-local ADB discovery succeeded but six reconnect attempts and explicit loopback/private routes failed.",
+    "Earlier full regression had one documentation-link failure while the new report was absent; final verification is recorded separately."
+  ],
+  "evidenceFiles": [
+    "bootstrap.txt",
+    "physical-ui.json",
+    "security.json",
+    "local-job-recovery.json",
+    "screenshots.json",
+    "researched-candidate.json",
+    "physical-offline.json",
+    "physical-local-job.json"
+  ],
+  "evidenceBoundary": "SSH and ADB were development/inspection transports; successful job, controller state and dashboard were phone-local. Historical inference is excluded."
+}

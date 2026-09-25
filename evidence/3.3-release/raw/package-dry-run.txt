@@ -1,0 +1,2287 @@
+npm warn gitignore-fallback No .npmignore file found, using .gitignore for file exclusion. Consider creating a .npmignore file to explicitly control published files.
+[
+  {
+    "id": "agent-control@3.3.0",
+    "name": "agent-control",
+    "version": "3.3.0",
+    "size": 761192,
+    "unpackedSize": 3438025,
+    "shasum": "da3656556e4b2cf9e2caddfb7d69087410fd3500",
+    "integrity": "sha512-2mdEQnCgc1zIn/SMDd4ZmA11u+YSzyIsVv1ev4kYv5ysYf/l4Vtlq2dBmLHpAgRMn9Z0M3UKvFVfGV3LqEOw2A==",
+    "filename": "agent-control-3.3.0.tgz",
+    "files": [
+      {
+        "path": ".gitattributes",
+        "size": 101,
+        "mode": 420
+      },
+      {
+        "path": "ARCHITECTURE.md",
+        "size": 27188,
+        "mode": 420
+      },
+      {
+        "path": "CHANGELOG.md",
+        "size": 34999,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 24471,
+        "mode": 420
+      },
+      {
+        "path": "android/install-boot.sh",
+        "size": 1313,
+        "mode": 420
+      },
+      {
+        "path": "android/node-server.mjs",
+        "size": 2444,
+        "mode": 420
+      },
+      {
+        "path": "android/README.md",
+        "size": 1750,
+        "mode": 420
+      },
+      {
+        "path": "android/resource-agent.sh",
+        "size": 1815,
+        "mode": 420
+      },
+      {
+        "path": "android/start-node.sh",
+        "size": 342,
+        "mode": 420
+      },
+      {
+        "path": "android/termux-boot-agent-control.sh",
+        "size": 1238,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-efficiency-live-report.json",
+        "size": 120758,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-efficiency-report.json",
+        "size": 83139,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-001-adaptive_thin_standard_deep-attempt-1.patch.gz",
+        "size": 197,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-001-adaptive_thin_standard_deep-attempt-2.patch.gz",
+        "size": 267,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-001-deep_only-attempt-1.patch.gz",
+        "size": 197,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-001-standard_only-attempt-1.patch.gz",
+        "size": 197,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-001-thin_only-attempt-1.patch.gz",
+        "size": 197,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-002-adaptive_thin_standard_deep-attempt-1.patch.gz",
+        "size": 311,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-002-adaptive_thin_standard_deep-attempt-3.patch.gz",
+        "size": 329,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-002-deep_only-attempt-1.patch.gz",
+        "size": 311,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-002-thin_only-attempt-1.patch.gz",
+        "size": 311,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-003-adaptive_thin_standard_deep-attempt-1.patch.gz",
+        "size": 296,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-003-adaptive_thin_standard_deep-attempt-2.patch.gz",
+        "size": 527,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-003-adaptive_thin_standard_deep-attempt-3.patch.gz",
+        "size": 658,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-003-deep_only-attempt-1.patch.gz",
+        "size": 530,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-003-standard_only-attempt-1.patch.gz",
+        "size": 554,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-003-thin_only-attempt-1.patch.gz",
+        "size": 296,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-004-standard_only-attempt-1.patch.gz",
+        "size": 624,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-005-adaptive_thin_standard_deep-attempt-1.patch.gz",
+        "size": 372,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-005-adaptive_thin_standard_deep-attempt-2.patch.gz",
+        "size": 261,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-005-adaptive_thin_standard_deep-attempt-3.patch.gz",
+        "size": 261,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-005-deep_only-attempt-1.patch.gz",
+        "size": 196,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-005-standard_only-attempt-1.patch.gz",
+        "size": 263,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-005-thin_only-attempt-1.patch.gz",
+        "size": 372,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-006-adaptive_thin_standard_deep-attempt-1.patch.gz",
+        "size": 323,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-006-adaptive_thin_standard_deep-attempt-2.patch.gz",
+        "size": 503,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-006-adaptive_thin_standard_deep-attempt-3.patch.gz",
+        "size": 524,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-006-thin_only-attempt-1.patch.gz",
+        "size": 392,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-007-adaptive_thin_standard_deep-attempt-3.patch.gz",
+        "size": 299,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-007-deep_only-attempt-1.patch.gz",
+        "size": 373,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-008-adaptive_thin_standard_deep-attempt-1.patch.gz",
+        "size": 296,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-008-adaptive_thin_standard_deep-attempt-2.patch.gz",
+        "size": 491,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-008-adaptive_thin_standard_deep-attempt-3.patch.gz",
+        "size": 491,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-008-deep_only-attempt-1.patch.gz",
+        "size": 615,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-008-standard_only-attempt-1.patch.gz",
+        "size": 313,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-008-thin_only-attempt-1.patch.gz",
+        "size": 296,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-009-adaptive_thin_standard_deep-attempt-2.patch.gz",
+        "size": 244,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-009-adaptive_thin_standard_deep-attempt-3.patch.gz",
+        "size": 331,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-009-deep_only-attempt-1.patch.gz",
+        "size": 278,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-009-standard_only-attempt-1.patch.gz",
+        "size": 347,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-010-adaptive_thin_standard_deep-attempt-1.patch.gz",
+        "size": 261,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-010-adaptive_thin_standard_deep-attempt-2.patch.gz",
+        "size": 456,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-010-adaptive_thin_standard_deep-attempt-3.patch.gz",
+        "size": 457,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-010-deep_only-attempt-1.patch.gz",
+        "size": 261,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-010-standard_only-attempt-1.patch.gz",
+        "size": 364,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-010-thin_only-attempt-1.patch.gz",
+        "size": 498,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-011-adaptive_thin_standard_deep-attempt-1.patch.gz",
+        "size": 310,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-011-adaptive_thin_standard_deep-attempt-2.patch.gz",
+        "size": 317,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-011-adaptive_thin_standard_deep-attempt-3.patch.gz",
+        "size": 310,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-011-deep_only-attempt-1.patch.gz",
+        "size": 310,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-011-standard_only-attempt-1.patch.gz",
+        "size": 310,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-011-thin_only-attempt-1.patch.gz",
+        "size": 310,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-012-adaptive_thin_standard_deep-attempt-3.patch.gz",
+        "size": 358,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-evidence/mut-012-standard_only-attempt-1.patch.gz",
+        "size": 715,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/harness-mutation-report.json",
+        "size": 948041,
+        "mode": 420
+      },
+      {
+        "path": "artifacts/release-qualification-3.1.0.json",
+        "size": 1814,
+        "mode": 420
+      },
+      {
+        "path": "assets/dashboard/dashboard-enhancements.js",
+        "size": 48827,
+        "mode": 420
+      },
+      {
+        "path": "assets/dashboard/dashboard-fixes.css",
+        "size": 39,
+        "mode": 420
+      },
+      {
+        "path": "assets/dashboard/dashboard-jobs.css",
+        "size": 16001,
+        "mode": 420
+      },
+      {
+        "path": "assets/dashboard/dashboard-parameters.js",
+        "size": 2409,
+        "mode": 420
+      },
+      {
+        "path": "assets/dashboard/dashboard-running-state.js",
+        "size": 2626,
+        "mode": 420
+      },
+      {
+        "path": "assets/dashboard/dashboard.css",
+        "size": 9249,
+        "mode": 420
+      },
+      {
+        "path": "assets/dashboard/dashboard.js",
+        "size": 9525,
+        "mode": 420
+      },
+      {
+        "path": "assets/dashboard/index.html",
+        "size": 7590,
+        "mode": 420
+      },
+      {
+        "path": "assets/releases/3.0.1/Agent-Control-3.0.1-Operator-Guide.pdf",
+        "size": 16662,
+        "mode": 420
+      },
+      {
+        "path": "assets/releases/3.1.0/Agent-Control-3.1.0-Operator-Guide.md",
+        "size": 18247,
+        "mode": 420
+      },
+      {
+        "path": "assets/releases/3.1.0/Agent-Control-3.1.0-Operator-Guide.pdf",
+        "size": 22513,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-efficiency-jobs.json",
+        "size": 8459,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/ARCHITECTURE.md",
+        "size": 1310,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/package.json",
+        "size": 176,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/README.md",
+        "size": 945,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/capabilities.js",
+        "size": 461,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/config.js",
+        "size": 360,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/constants.js",
+        "size": 260,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/context-packet.js",
+        "size": 422,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/dispatcher.js",
+        "size": 514,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/job-state.js",
+        "size": 812,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/policy.js",
+        "size": 999,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/provenance.js",
+        "size": 318,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/qualification.js",
+        "size": 203,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/queue.js",
+        "size": 640,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/router.js",
+        "size": 1012,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/routing-helpers.js",
+        "size": 310,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/scheduler.js",
+        "size": 314,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/telemetry.js",
+        "size": 883,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/tool-output.js",
+        "size": 845,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/src/utils.js",
+        "size": 498,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-fixture/test/runtime.test.js",
+        "size": 2287,
+        "mode": 420
+      },
+      {
+        "path": "benchmarks/harness-mutation-jobs.json",
+        "size": 14178,
+        "mode": 420
+      },
+      {
+        "path": "config/agent-control.example.json",
+        "size": 4040,
+        "mode": 420
+      },
+      {
+        "path": "config/implementation-status.json",
+        "size": 11581,
+        "mode": 420
+      },
+      {
+        "path": "config/job-qualification.example.json",
+        "size": 847,
+        "mode": 420
+      },
+      {
+        "path": "config/jobs/browser-headless.job.yaml",
+        "size": 894,
+        "mode": 420
+      },
+      {
+        "path": "config/jobs/dashboard-running-state-qualification.job.yaml",
+        "size": 901,
+        "mode": 420
+      },
+      {
+        "path": "config/jobs/events-refresh-qualification.job.yaml",
+        "size": 2765,
+        "mode": 420
+      },
+      {
+        "path": "config/jobs/events-refresh-qualification.schedule.yaml",
+        "size": 329,
+        "mode": 420
+      },
+      {
+        "path": "config/jobs/managed-node-inspection.job.yaml",
+        "size": 940,
+        "mode": 420
+      },
+      {
+        "path": "config/jobs/managed-node-maintenance.job.yaml",
+        "size": 1153,
+        "mode": 420
+      },
+      {
+        "path": "config/operator-jobs/agent-control-review.job.yaml",
+        "size": 1297,
+        "mode": 420
+      },
+      {
+        "path": "config/schemas/job-v1.schema.json",
+        "size": 3432,
+        "mode": 420
+      },
+      {
+        "path": "config/schemas/schedule-v1.schema.json",
+        "size": 1136,
+        "mode": 420
+      },
+      {
+        "path": "config/teammates.initial.json",
+        "size": 2792,
+        "mode": 420
+      },
+      {
+        "path": "config/work-parcels/jobs/freetoken-comparative-benchmark.job.yaml",
+        "size": 390,
+        "mode": 420
+      },
+      {
+        "path": "config/work-parcels/jobs/freetoken-inventory.job.yaml",
+        "size": 568,
+        "mode": 420
+      },
+      {
+        "path": "config/work-parcels/jobs/freetoken-isolated-qualification.job.yaml",
+        "size": 404,
+        "mode": 420
+      },
+      {
+        "path": "config/work-parcels/jobs/freetoken-provider-qualification.job.yaml",
+        "size": 382,
+        "mode": 420
+      },
+      {
+        "path": "config/work-parcels/jobs/freetoken-readiness-gate.job.yaml",
+        "size": 681,
+        "mode": 420
+      },
+      {
+        "path": "docs/Agent-Control-3.0.1-Operator-Guide.md",
+        "size": 11798,
+        "mode": 420
+      },
+      {
+        "path": "docs/Agent-Control-3.1.0-Operator-Guide.md",
+        "size": 18247,
+        "mode": 420
+      },
+      {
+        "path": "docs/architecture-v2-agnostic.md",
+        "size": 3104,
+        "mode": 420
+      },
+      {
+        "path": "docs/browser-capabilities.md",
+        "size": 2530,
+        "mode": 420
+      },
+      {
+        "path": "docs/concepts.md",
+        "size": 10344,
+        "mode": 420
+      },
+      {
+        "path": "docs/conceptual-integrity.md",
+        "size": 4705,
+        "mode": 420
+      },
+      {
+        "path": "docs/context-evidence-architecture.md",
+        "size": 4096,
+        "mode": 420
+      },
+      {
+        "path": "docs/dashboard-3.1-boundary-review.md",
+        "size": 6698,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/adaptive-harness-dispatch-qualification-20260824.md",
+        "size": 8540,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/adaptive-harness-recovery-20260824.md",
+        "size": 14449,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/agent-control-3.1-dashboard-qualification-20260824.md",
+        "size": 5778,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/agent-control-3.1.0-release-qualification-20260828.md",
+        "size": 3010,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/context-consensus-demo-20260823.json",
+        "size": 22084,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/context-shared-thread-implementation-20260823.md",
+        "size": 3997,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/infrastructure-agnostic-audit-3.0.1.md",
+        "size": 15225,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/job-scheduler-qualification-20260824.json",
+        "size": 5729,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/job-scheduler-qualification-20260824.md",
+        "size": 4809,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/legacy-infrastructure-qualification-summary.md",
+        "size": 846,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/worker-linux-managed-node-qualification-20260826.md",
+        "size": 5369,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/openai-chatkit-live-run-20260823.json",
+        "size": 386,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/openai-provider-qualification-20260823.md",
+        "size": 5499,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/persistent-teammates-3.2.0-verification.md",
+        "size": 2995,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/provider-live-qualification-20260823.json",
+        "size": 5982,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/real-harness-execution-qualification-20260824.md",
+        "size": 7592,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/release-documentation-3.1.0-20260824.md",
+        "size": 3730,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/token-aware-output-benchmark-20260827.json",
+        "size": 3795,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/truthful-bootstrap-status-20260825.md",
+        "size": 3792,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/windows-openai-chatgpt-plan-live-20260824.json",
+        "size": 1760,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/windows-openai-harness-live-20260824-attempt1-pre-dispatch-unclassified.json",
+        "size": 1441,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/windows-openai-harness-live-20260824-attempt2-invalid-intent.json",
+        "size": 1946,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/windows-openai-harness-live-20260824.json",
+        "size": 3885,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/windows-openai-harness-qualification-20260824.md",
+        "size": 7484,
+        "mode": 420
+      },
+      {
+        "path": "docs/evidence/windows-openai-responses-live-20260824.json",
+        "size": 1924,
+        "mode": 420
+      },
+      {
+        "path": "docs/harness-efficiency-architecture.md",
+        "size": 7477,
+        "mode": 420
+      },
+      {
+        "path": "docs/harness-efficiency-live-report.md",
+        "size": 6630,
+        "mode": 420
+      },
+      {
+        "path": "docs/harness-efficiency-report.md",
+        "size": 7480,
+        "mode": 420
+      },
+      {
+        "path": "docs/harness-efficiency.md",
+        "size": 9155,
+        "mode": 420
+      },
+      {
+        "path": "docs/harness-mutation-report.md",
+        "size": 7678,
+        "mode": 420
+      },
+      {
+        "path": "docs/implementation-status.md",
+        "size": 15759,
+        "mode": 420
+      },
+      {
+        "path": "docs/jobs-and-scheduler.md",
+        "size": 9245,
+        "mode": 420
+      },
+      {
+        "path": "docs/managed-nodes.md",
+        "size": 7635,
+        "mode": 420
+      },
+      {
+        "path": "docs/migration-3.1.md",
+        "size": 930,
+        "mode": 420
+      },
+      {
+        "path": "docs/persistent-teammates.md",
+        "size": 3677,
+        "mode": 420
+      },
+      {
+        "path": "docs/qualification.md",
+        "size": 2730,
+        "mode": 420
+      },
+      {
+        "path": "docs/release-notes-3.1.0.md",
+        "size": 5184,
+        "mode": 420
+      },
+      {
+        "path": "docs/release-notes-3.2.0.md",
+        "size": 1505,
+        "mode": 420
+      },
+      {
+        "path": "docs/release-notes-3.2.1.md",
+        "size": 738,
+        "mode": 420
+      },
+      {
+        "path": "docs/release-notes-3.3.0.md",
+        "size": 2105,
+        "mode": 420
+      },
+      {
+        "path": "docs/remote-qualification.md",
+        "size": 693,
+        "mode": 420
+      },
+      {
+        "path": "docs/reports/AGENT-CONTROL-3.2.1-AUDIT-REMEDIATION.md",
+        "size": 6705,
+        "mode": 420
+      },
+      {
+        "path": "docs/requirements-pdf.txt",
+        "size": 17,
+        "mode": 420
+      },
+      {
+        "path": "docs/status-command.md",
+        "size": 3740,
+        "mode": 420
+      },
+      {
+        "path": "docs/token-aware-command-output.md",
+        "size": 9393,
+        "mode": 420
+      },
+      {
+        "path": "docs/ui-target.md",
+        "size": 1116,
+        "mode": 420
+      },
+      {
+        "path": "docs/web-dashboard.md",
+        "size": 5836,
+        "mode": 420
+      },
+      {
+        "path": "docs/work-parcels.md",
+        "size": 2190,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/BASELINE.md",
+        "size": 690,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/DASHBOARD.md",
+        "size": 448,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/FINAL-VERIFICATION.md",
+        "size": 749,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/FORM-STATE.md",
+        "size": 566,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/INVOCATION-LIFECYCLE.json",
+        "size": 655,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/NON-STREAMING.md",
+        "size": 612,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/baseline-npm-check.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/baseline-npm-check.txt",
+        "size": 2546,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/baseline-npm-test.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/baseline-npm-test.txt",
+        "size": 39684,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/bootstrap.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/bootstrap.txt",
+        "size": 383,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/dashboard-form.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/dashboard-form.txt",
+        "size": 398,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/dashboard.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/dashboard.txt",
+        "size": 213,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/focused.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/focused.txt",
+        "size": 5589,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/npm-check.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/npm-check.txt",
+        "size": 2545,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/npm-test.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/npm-test.txt",
+        "size": 40101,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/runner.complete",
+        "size": 9,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/sr-regressions.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/sr-regressions.txt",
+        "size": 5162,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/status.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/status.txt",
+        "size": 124,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/typecheck.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-dashboard-invocation-telemetry/raw/typecheck.txt",
+        "size": 49,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-neutrality-release/NEUTRALITY.md",
+        "size": 1134,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-neutrality-release/raw/classification.txt",
+        "size": 988,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-neutrality-release/raw/neutrality-after.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-neutrality-release/raw/neutrality-after.txt",
+        "size": 439,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-neutrality-release/raw/neutrality-before.txt",
+        "size": 1881,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-neutrality-release/raw/typecheck-before-release.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-neutrality-release/raw/typecheck-before-release.txt",
+        "size": 49,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/bootstrap.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/bootstrap.txt",
+        "size": 383,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/dashboard.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/dashboard.txt",
+        "size": 213,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/full-tests.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/full-tests.txt",
+        "size": 38788,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/implementation-status.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/implementation-status.txt",
+        "size": 124,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/neutrality.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/neutrality.txt",
+        "size": 439,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/npm-check.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/npm-check.txt",
+        "size": 40171,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/package-dry-run.txt",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/sr-regressions.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/sr-regressions.txt",
+        "size": 5160,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/telemetry-regressions.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/telemetry-regressions.txt",
+        "size": 5596,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/typecheck.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-release/raw/typecheck.txt",
+        "size": 49,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/ANDROID-NONBLOCKING-EVIDENCE.json",
+        "size": 994,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/BASELINE.md",
+        "size": 984,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/CONCURRENCY-EVIDENCE.json",
+        "size": 1014,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/IMPLEMENTATION.md",
+        "size": 2359,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/PROTECTED-WORKLOAD-EVIDENCE.json",
+        "size": 927,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/concurrency-measurement.txt",
+        "size": 894,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-bootstrap.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-bootstrap.txt",
+        "size": 382,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-dashboard.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-dashboard.txt",
+        "size": 212,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-focused.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-focused.txt",
+        "size": 4833,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-neutrality.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-neutrality.txt",
+        "size": 1724,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-npm-check.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-npm-check.txt",
+        "size": 2537,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-npm-test.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-npm-test.txt",
+        "size": 39674,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-status.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-status.txt",
+        "size": 124,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-typecheck.status",
+        "size": 2,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/final-typecheck.txt",
+        "size": 48,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/focused-baseline.status",
+        "size": 19,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/focused-baseline.txt",
+        "size": 3296,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/npm-check-baseline.status",
+        "size": 21,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/npm-check-baseline.txt",
+        "size": 2610,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/npm-test-baseline.status",
+        "size": 20,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/raw/npm-test-baseline.txt",
+        "size": 37850,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/TESTS.md",
+        "size": 1203,
+        "mode": 420
+      },
+      {
+        "path": "evidence/3.3-safety-runtime-remediation/TIMEOUT-EVIDENCE.json",
+        "size": 958,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 3248,
+        "mode": 420
+      },
+      {
+        "path": "scripts/agent-control-privileged",
+        "size": 213,
+        "mode": 493
+      },
+      {
+        "path": "scripts/agent-control.mjs",
+        "size": 1936,
+        "mode": 493
+      },
+      {
+        "path": "scripts/agent-control.test.mjs",
+        "size": 755,
+        "mode": 420
+      },
+      {
+        "path": "scripts/benchmark-harness-efficiency-live.ts",
+        "size": 14503,
+        "mode": 420
+      },
+      {
+        "path": "scripts/benchmark-harness-efficiency.ts",
+        "size": 1180,
+        "mode": 420
+      },
+      {
+        "path": "scripts/benchmark-harness-mutation-live.ts",
+        "size": 25275,
+        "mode": 420
+      },
+      {
+        "path": "scripts/benchmark-token-aware-output.ts",
+        "size": 9089,
+        "mode": 420
+      },
+      {
+        "path": "scripts/browser-dashboard.test.mjs",
+        "size": 500,
+        "mode": 420
+      },
+      {
+        "path": "scripts/config.mjs",
+        "size": 4956,
+        "mode": 420
+      },
+      {
+        "path": "scripts/control-plane-config.test.mjs",
+        "size": 2258,
+        "mode": 420
+      },
+      {
+        "path": "scripts/control-plane.mjs",
+        "size": 7319,
+        "mode": 420
+      },
+      {
+        "path": "scripts/dashboard-parameters.test.mjs",
+        "size": 3848,
+        "mode": 420
+      },
+      {
+        "path": "scripts/dashboard-running-state.test.mjs",
+        "size": 2301,
+        "mode": 420
+      },
+      {
+        "path": "scripts/demo-context-consensus.mjs",
+        "size": 10048,
+        "mode": 420
+      },
+      {
+        "path": "scripts/demo-persistent-teammates.ts",
+        "size": 895,
+        "mode": 420
+      },
+      {
+        "path": "scripts/generate-operator-guide.py",
+        "size": 8584,
+        "mode": 420
+      },
+      {
+        "path": "scripts/harness-boundary.test.mjs",
+        "size": 2024,
+        "mode": 420
+      },
+      {
+        "path": "scripts/implementation-status.mjs",
+        "size": 4836,
+        "mode": 420
+      },
+      {
+        "path": "scripts/implementation-status.test.mjs",
+        "size": 1341,
+        "mode": 420
+      },
+      {
+        "path": "scripts/infrastructure-neutrality.test.mjs",
+        "size": 2439,
+        "mode": 420
+      },
+      {
+        "path": "scripts/init-config.mjs",
+        "size": 792,
+        "mode": 420
+      },
+      {
+        "path": "scripts/init-config.test.mjs",
+        "size": 3014,
+        "mode": 420
+      },
+      {
+        "path": "scripts/init-teammates.ts",
+        "size": 508,
+        "mode": 420
+      },
+      {
+        "path": "scripts/managed-node-action.sh",
+        "size": 4035,
+        "mode": 420
+      },
+      {
+        "path": "scripts/managed-node-probe.sh",
+        "size": 3797,
+        "mode": 420
+      },
+      {
+        "path": "scripts/operator-guide.test.mjs",
+        "size": 2779,
+        "mode": 420
+      },
+      {
+        "path": "scripts/owned-processes.mjs",
+        "size": 463,
+        "mode": 420
+      },
+      {
+        "path": "scripts/owned-processes.test.mjs",
+        "size": 984,
+        "mode": 420
+      },
+      {
+        "path": "scripts/prove-android-resolution.ts",
+        "size": 2250,
+        "mode": 420
+      },
+      {
+        "path": "scripts/provision-android.mjs",
+        "size": 9249,
+        "mode": 420
+      },
+      {
+        "path": "scripts/provision-android.test.mjs",
+        "size": 1544,
+        "mode": 420
+      },
+      {
+        "path": "scripts/qualify-all.mjs",
+        "size": 3401,
+        "mode": 420
+      },
+      {
+        "path": "scripts/qualify-browser-capabilities.ts",
+        "size": 8426,
+        "mode": 420
+      },
+      {
+        "path": "scripts/qualify-jobs.test.mjs",
+        "size": 1264,
+        "mode": 420
+      },
+      {
+        "path": "scripts/qualify-jobs.ts",
+        "size": 6611,
+        "mode": 420
+      },
+      {
+        "path": "scripts/qualify-managed-node.ts",
+        "size": 2846,
+        "mode": 420
+      },
+      {
+        "path": "scripts/qualify-openai-chatkit.mjs",
+        "size": 2929,
+        "mode": 420
+      },
+      {
+        "path": "scripts/qualify-openai-windows-harness.ts",
+        "size": 9660,
+        "mode": 420
+      },
+      {
+        "path": "scripts/qualify-real-harness-job.ts",
+        "size": 10872,
+        "mode": 420
+      },
+      {
+        "path": "scripts/qualify-remote.sh",
+        "size": 673,
+        "mode": 493
+      },
+      {
+        "path": "scripts/status-client.mjs",
+        "size": 14641,
+        "mode": 420
+      },
+      {
+        "path": "scripts/status-client.test.mjs",
+        "size": 5683,
+        "mode": 420
+      },
+      {
+        "path": "scripts/telemetry-report.ts",
+        "size": 537,
+        "mode": 420
+      },
+      {
+        "path": "src/adapter.ts",
+        "size": 1375,
+        "mode": 420
+      },
+      {
+        "path": "src/control-plane.test.ts",
+        "size": 2673,
+        "mode": 420
+      },
+      {
+        "path": "src/control-plane.ts",
+        "size": 4208,
+        "mode": 420
+      },
+      {
+        "path": "src/control/adaptive-harness.test.ts",
+        "size": 12387,
+        "mode": 420
+      },
+      {
+        "path": "src/control/adaptive-harness.ts",
+        "size": 16093,
+        "mode": 420
+      },
+      {
+        "path": "src/control/android-provisioning-adb-resume.test.ts",
+        "size": 2677,
+        "mode": 420
+      },
+      {
+        "path": "src/control/android-provisioning-apk-resume.test.ts",
+        "size": 2518,
+        "mode": 420
+      },
+      {
+        "path": "src/control/android-provisioning-hook-resume.test.ts",
+        "size": 2435,
+        "mode": 420
+      },
+      {
+        "path": "src/control/android-provisioning-migration.test.ts",
+        "size": 2216,
+        "mode": 420
+      },
+      {
+        "path": "src/control/android-provisioning-reboot-gate.test.ts",
+        "size": 2579,
+        "mode": 420
+      },
+      {
+        "path": "src/control/android-provisioning-runtime.test.ts",
+        "size": 4216,
+        "mode": 420
+      },
+      {
+        "path": "src/control/android-provisioning-runtime.ts",
+        "size": 9413,
+        "mode": 420
+      },
+      {
+        "path": "src/control/android-provisioning.test.ts",
+        "size": 3577,
+        "mode": 420
+      },
+      {
+        "path": "src/control/android-provisioning.ts",
+        "size": 6215,
+        "mode": 420
+      },
+      {
+        "path": "src/control/android-recovery.test.ts",
+        "size": 6865,
+        "mode": 420
+      },
+      {
+        "path": "src/control/android-recovery.ts",
+        "size": 7903,
+        "mode": 420
+      },
+      {
+        "path": "src/control/android-resource.test.ts",
+        "size": 1529,
+        "mode": 420
+      },
+      {
+        "path": "src/control/application-service.test.ts",
+        "size": 6183,
+        "mode": 420
+      },
+      {
+        "path": "src/control/application-service.ts",
+        "size": 25210,
+        "mode": 420
+      },
+      {
+        "path": "src/control/architecture.test.ts",
+        "size": 2402,
+        "mode": 420
+      },
+      {
+        "path": "src/control/architecture.ts",
+        "size": 2404,
+        "mode": 420
+      },
+      {
+        "path": "src/control/browser-actions.test.ts",
+        "size": 1760,
+        "mode": 420
+      },
+      {
+        "path": "src/control/browser-actions.ts",
+        "size": 1394,
+        "mode": 420
+      },
+      {
+        "path": "src/control/browser-capabilities.test.ts",
+        "size": 2193,
+        "mode": 420
+      },
+      {
+        "path": "src/control/browser-capabilities.ts",
+        "size": 3458,
+        "mode": 420
+      },
+      {
+        "path": "src/control/browser-worker.ts",
+        "size": 6245,
+        "mode": 420
+      },
+      {
+        "path": "src/control/capabilities.test.ts",
+        "size": 1492,
+        "mode": 420
+      },
+      {
+        "path": "src/control/capabilities.ts",
+        "size": 3047,
+        "mode": 420
+      },
+      {
+        "path": "src/control/codex-exec-provider.test.ts",
+        "size": 6055,
+        "mode": 420
+      },
+      {
+        "path": "src/control/codex-exec-provider.ts",
+        "size": 13701,
+        "mode": 420
+      },
+      {
+        "path": "src/control/config.test.ts",
+        "size": 9847,
+        "mode": 420
+      },
+      {
+        "path": "src/control/config.ts",
+        "size": 18051,
+        "mode": 420
+      },
+      {
+        "path": "src/control/context-operator.ts",
+        "size": 1699,
+        "mode": 420
+      },
+      {
+        "path": "src/control/context-readers.test.ts",
+        "size": 14509,
+        "mode": 420
+      },
+      {
+        "path": "src/control/context-readers.ts",
+        "size": 13810,
+        "mode": 420
+      },
+      {
+        "path": "src/control/context.test.ts",
+        "size": 14648,
+        "mode": 420
+      },
+      {
+        "path": "src/control/context.ts",
+        "size": 24977,
+        "mode": 420
+      },
+      {
+        "path": "src/control/control.test.ts",
+        "size": 1577,
+        "mode": 420
+      },
+      {
+        "path": "src/control/dashboard.test.ts",
+        "size": 902,
+        "mode": 420
+      },
+      {
+        "path": "src/control/dashboard.ts",
+        "size": 1914,
+        "mode": 420
+      },
+      {
+        "path": "src/control/economic-routing.test.ts",
+        "size": 3187,
+        "mode": 420
+      },
+      {
+        "path": "src/control/economic-routing.ts",
+        "size": 10825,
+        "mode": 420
+      },
+      {
+        "path": "src/control/execution-provider.ts",
+        "size": 1871,
+        "mode": 420
+      },
+      {
+        "path": "src/control/experiments.ts",
+        "size": 3140,
+        "mode": 420
+      },
+      {
+        "path": "src/control/freetoken-actions.ts",
+        "size": 3447,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-dispatch.test.ts",
+        "size": 11971,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-dispatch.ts",
+        "size": 18314,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-efficiency-benchmark.test.ts",
+        "size": 2900,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-efficiency-benchmark.ts",
+        "size": 19357,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-efficiency-live-benchmark.test.ts",
+        "size": 5218,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-efficiency-live-benchmark.ts",
+        "size": 20528,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-efficiency.test.ts",
+        "size": 16263,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-efficiency.ts",
+        "size": 41475,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-job-action.test.ts",
+        "size": 6266,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-mutation-benchmark.test.ts",
+        "size": 9014,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-mutation-benchmark.ts",
+        "size": 30615,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-mutation-context.ts",
+        "size": 7708,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-mutation-reference-verifier.test.ts",
+        "size": 8540,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-mutation-verifier.test.ts",
+        "size": 3333,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-mutation-verifier.ts",
+        "size": 19670,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-mutation-workspace.test.ts",
+        "size": 3565,
+        "mode": 420
+      },
+      {
+        "path": "src/control/harness-mutation-workspace.ts",
+        "size": 18334,
+        "mode": 420
+      },
+      {
+        "path": "src/control/hosts.test.ts",
+        "size": 1795,
+        "mode": 420
+      },
+      {
+        "path": "src/control/hosts.ts",
+        "size": 2169,
+        "mode": 420
+      },
+      {
+        "path": "src/control/job-bootstrap.test.ts",
+        "size": 2649,
+        "mode": 420
+      },
+      {
+        "path": "src/control/job-bootstrap.ts",
+        "size": 6197,
+        "mode": 420
+      },
+      {
+        "path": "src/control/job-catalog.test.ts",
+        "size": 4301,
+        "mode": 420
+      },
+      {
+        "path": "src/control/job-catalog.ts",
+        "size": 9992,
+        "mode": 420
+      },
+      {
+        "path": "src/control/job-runtime.test.ts",
+        "size": 24931,
+        "mode": 420
+      },
+      {
+        "path": "src/control/job-runtime.ts",
+        "size": 36235,
+        "mode": 420
+      },
+      {
+        "path": "src/control/job-scheduler-concurrency.test.ts",
+        "size": 7959,
+        "mode": 420
+      },
+      {
+        "path": "src/control/job-types.ts",
+        "size": 5481,
+        "mode": 420
+      },
+      {
+        "path": "src/control/linux-pty.test.ts",
+        "size": 1351,
+        "mode": 420
+      },
+      {
+        "path": "src/control/linux-pty.ts",
+        "size": 2587,
+        "mode": 420
+      },
+      {
+        "path": "src/control/managed-node-actions.test.ts",
+        "size": 6371,
+        "mode": 420
+      },
+      {
+        "path": "src/control/managed-node-actions.ts",
+        "size": 3537,
+        "mode": 420
+      },
+      {
+        "path": "src/control/managed-node-ssh.test.ts",
+        "size": 2374,
+        "mode": 420
+      },
+      {
+        "path": "src/control/managed-node-ssh.ts",
+        "size": 4755,
+        "mode": 420
+      },
+      {
+        "path": "src/control/managed-node.test.ts",
+        "size": 12763,
+        "mode": 420
+      },
+      {
+        "path": "src/control/managed-node.ts",
+        "size": 23605,
+        "mode": 420
+      },
+      {
+        "path": "src/control/node-client.test.ts",
+        "size": 1759,
+        "mode": 420
+      },
+      {
+        "path": "src/control/node-client.ts",
+        "size": 2192,
+        "mode": 420
+      },
+      {
+        "path": "src/control/openai-provider-selector.test.ts",
+        "size": 1970,
+        "mode": 420
+      },
+      {
+        "path": "src/control/openai-provider-selector.ts",
+        "size": 1623,
+        "mode": 420
+      },
+      {
+        "path": "src/control/operator-review-actions.test.ts",
+        "size": 999,
+        "mode": 420
+      },
+      {
+        "path": "src/control/operator-review-actions.ts",
+        "size": 15409,
+        "mode": 420
+      },
+      {
+        "path": "src/control/orca-execution-provider.test.ts",
+        "size": 7990,
+        "mode": 420
+      },
+      {
+        "path": "src/control/orca-execution-provider.ts",
+        "size": 10240,
+        "mode": 420
+      },
+      {
+        "path": "src/control/owned-process.ts",
+        "size": 4513,
+        "mode": 420
+      },
+      {
+        "path": "src/control/provider-health.ts",
+        "size": 784,
+        "mode": 420
+      },
+      {
+        "path": "src/control/providers.test.ts",
+        "size": 1349,
+        "mode": 420
+      },
+      {
+        "path": "src/control/providers.ts",
+        "size": 2418,
+        "mode": 420
+      },
+      {
+        "path": "src/control/pty.ts",
+        "size": 2119,
+        "mode": 420
+      },
+      {
+        "path": "src/control/qualification.ts",
+        "size": 2455,
+        "mode": 420
+      },
+      {
+        "path": "src/control/reference-actions.ts",
+        "size": 5387,
+        "mode": 420
+      },
+      {
+        "path": "src/control/repository-search.ts",
+        "size": 12707,
+        "mode": 420
+      },
+      {
+        "path": "src/control/responses-client.test.ts",
+        "size": 339,
+        "mode": 420
+      },
+      {
+        "path": "src/control/responses-client.ts",
+        "size": 1576,
+        "mode": 420
+      },
+      {
+        "path": "src/control/responses-provider-job.test.ts",
+        "size": 4627,
+        "mode": 420
+      },
+      {
+        "path": "src/control/responses-provider.test.ts",
+        "size": 5295,
+        "mode": 420
+      },
+      {
+        "path": "src/control/responses-provider.ts",
+        "size": 8984,
+        "mode": 420
+      },
+      {
+        "path": "src/control/routing-policy.test.ts",
+        "size": 2346,
+        "mode": 420
+      },
+      {
+        "path": "src/control/routing.ts",
+        "size": 6214,
+        "mode": 420
+      },
+      {
+        "path": "src/control/structured-chat-loop-provider.test.ts",
+        "size": 5866,
+        "mode": 420
+      },
+      {
+        "path": "src/control/structured-chat-loop-provider.ts",
+        "size": 15866,
+        "mode": 420
+      },
+      {
+        "path": "src/control/structured-chat-provider.test.ts",
+        "size": 6500,
+        "mode": 420
+      },
+      {
+        "path": "src/control/structured-chat-provider.ts",
+        "size": 8956,
+        "mode": 420
+      },
+      {
+        "path": "src/control/teammates-demo.ts",
+        "size": 5636,
+        "mode": 420
+      },
+      {
+        "path": "src/control/teammates.test.ts",
+        "size": 9226,
+        "mode": 420
+      },
+      {
+        "path": "src/control/teammates.ts",
+        "size": 21604,
+        "mode": 420
+      },
+      {
+        "path": "src/control/telemetry.test.ts",
+        "size": 579,
+        "mode": 420
+      },
+      {
+        "path": "src/control/telemetry.ts",
+        "size": 2101,
+        "mode": 420
+      },
+      {
+        "path": "src/control/token-aware-context.test.ts",
+        "size": 2434,
+        "mode": 420
+      },
+      {
+        "path": "src/control/token-aware-output.test.ts",
+        "size": 22692,
+        "mode": 420
+      },
+      {
+        "path": "src/control/token-aware-output.ts",
+        "size": 46283,
+        "mode": 420
+      },
+      {
+        "path": "src/control/types.ts",
+        "size": 1906,
+        "mode": 420
+      },
+      {
+        "path": "src/control/verification.test.ts",
+        "size": 2951,
+        "mode": 420
+      },
+      {
+        "path": "src/control/verification.ts",
+        "size": 5627,
+        "mode": 420
+      },
+      {
+        "path": "src/control/web-server.test.ts",
+        "size": 17342,
+        "mode": 420
+      },
+      {
+        "path": "src/control/web-server.ts",
+        "size": 16671,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-batch.test.ts",
+        "size": 1951,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-batch.ts",
+        "size": 1891,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-coordinator.test.ts",
+        "size": 2098,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-coordinator.ts",
+        "size": 1839,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-demo.test.ts",
+        "size": 1401,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-demo.ts",
+        "size": 1881,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-executor.test.ts",
+        "size": 8844,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-executor.ts",
+        "size": 8729,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-observability.test.ts",
+        "size": 1690,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-observability.ts",
+        "size": 2484,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-parcels.test.ts",
+        "size": 11227,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-parcels.ts",
+        "size": 32495,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-policy.test.ts",
+        "size": 1509,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-policy.ts",
+        "size": 1516,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-queue-recovery.test.ts",
+        "size": 664,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-queue-store.ts",
+        "size": 1071,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-queue.test.ts",
+        "size": 2326,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-queue.ts",
+        "size": 5774,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-scheduler.test.ts",
+        "size": 2350,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-scheduler.ts",
+        "size": 1437,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-telemetry.test.ts",
+        "size": 1746,
+        "mode": 420
+      },
+      {
+        "path": "src/control/work-telemetry.ts",
+        "size": 1515,
+        "mode": 420
+      },
+      {
+        "path": "src/index.ts",
+        "size": 18699,
+        "mode": 420
+      },
+      {
+        "path": "src/state-v2.test.ts",
+        "size": 792,
+        "mode": 420
+      },
+      {
+        "path": "src/state.ts",
+        "size": 5458,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control-room.test.ts",
+        "size": 2051,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/control-room.ts",
+        "size": 2602,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/theme.test.ts",
+        "size": 791,
+        "mode": 420
+      },
+      {
+        "path": "src/ui/theme.ts",
+        "size": 2042,
+        "mode": 420
+      },
+      {
+        "path": "src/version.ts",
+        "size": 46,
+        "mode": 420
+      },
+      {
+        "path": "src/web.ts",
+        "size": 5120,
+        "mode": 420
+      },
+      {
+        "path": "tsconfig.json",
+        "size": 243,
+        "mode": 420
+      }
+    ],
+    "entryCount": 454,
+    "bundled": []
+  }
+]

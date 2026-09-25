@@ -1,0 +1,40 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import test from 'node:test';
+import {JobCatalog} from './job-catalog.js';
+import {ActionRegistry,ArtifactStore,JobRuntime,ResourceLockManager,RunLedger,WorkerRegistry} from './job-runtime.js';
+import type {JobDefinition} from './job-types.js';
+import {SkillLearningRuntime,skillSha256,type SkillDatasetManifest,type SkillMetric} from './skill-learning.js';
+import {registerLearnedSpecialistActions} from './skill-specialist-actions.js';
+import {WorkParcelCoordinator,WorkParcelStore,type WorkParcelPlan} from './work-parcels.js';
+
+const sha=(value:string)=>skillSha256(value);
+const metric=(value:number):SkillMetric=>({name:'frozen_accuracy',value,unit:'ratio',authority:'MEASURED',direction:'HIGHER_IS_BETTER'});
+
+function qualifiedSkills(){
+  const runtime=new SkillLearningRuntime(undefined,{routingEnabled:true,minimumImprovement:.1},()=> '2026-09-11T12:00:00Z');
+  const candidate=runtime.observe({label:'Route intent specialist',taskClass:'route-intent-json',capabilities:['route.intent.classify'],sourceEvidence:['parcel:observed'],reason:'Repeated bounded classifications',expectedBenefit:'Higher held-out accuracy',actor:'operator'});
+  runtime.identify(candidate.id,{actor:'operator',reason:'Candidate reviewed'});
+  const dataset:SkillDatasetManifest={schema:'agent-control.skill-dataset/v1',id:'route-intent-v1',version:'1',taskClass:'route-intent-json',trainingExampleIds:['train-1'],evaluationExampleIds:['eval-1'],trainingSha256:sha('train'),evaluationSha256:sha('eval'),schemaSha256:sha('schema'),provenance:[{sourceId:'fixture',sourceSha256:sha('source'),authority:'operator-approved'}],duplicateCount:0,malformedCount:0,disagreementCount:0,contaminationCount:0,humanReview:{state:'APPROVED',actor:'operator',at:'2026-09-11T10:00:00Z'},createdAt:'2026-09-11T10:00:00Z'};
+  runtime.attachDataset(candidate.id,dataset,{actor:'operator',reason:'Frozen split approved'});
+  runtime.recordBaseline(candidate.id,{metrics:[metric(.4)],actor:'verifier',reason:'Baseline measured',evidence:['baseline']});
+  runtime.beginTraining(candidate.id,{identity:{method:'lora',framework:'peft',frameworkVersion:'0.17.1',runtimeId:'transformers-cpu',runtimeVersion:'4.56.1',precision:'fp32',quantization:null,rank:8,gradientAccumulationSteps:4,gradientCheckpointing:false,seed:45,configurationSha256:sha('config'),environmentSha256:sha('environment')},actor:'operator',reason:'Approved training'});
+  runtime.completeTraining(candidate.id,{resultRef:'managed://learned-skills/route-intent/1',resultSha256:sha('adapter'),actor:'trainer',reason:'Training completed'});
+  const adapter=runtime.qualify(candidate.id,{adapter:{id:'route-intent-lora',version:'1',format:'peft-lora',artefactSha256:sha('adapter'),sizeBytes:1024,storageRef:'managed://learned-skills/route-intent/1'},base:{modelId:'tiny-base',modelVersion:'rev-1',modelSha256:sha('base')},specialistMetrics:[metric(.8)],evaluatorId:'independent-verifier',evidence:['specialist-eval'],protectedRegressions:[],runtimeIds:['transformers-cpu'],minimumRuntimeVersions:{'transformers-cpu':'4.56.1'},actor:'verifier',reason:'Frozen holdout passed'});
+  runtime.enableRouting(adapter.id,adapter.version,{actor:'operator',reason:'Explicit qualification admission'});
+  return runtime;
+}
+
+function fixture(taskClass='route-intent-json'){
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),'learned-specialist-job-')),skills=qualifiedSkills(),actions=new ActionRegistry(),calls:{input:unknown}[]=[];
+  registerLearnedSpecialistActions(actions,skills,{execute:async input=>{calls.push({input});return{actual:{baseModelId:input.baseModelId,baseModelSha256:input.baseModelSha256,runtimeId:input.runtimeId,adapterId:input.adapterId,adapterVersion:input.adapterVersion,adapterSha256:input.adapterSha256},output:{lane:'LANE_REVIEW'},usage:{inputTokens:17,outputTokens:6,totalTokens:23},elapsedMs:9};}},{verify:({output})=>({passed:(output as {lane?:string})?.lane==='LANE_REVIEW',summary:'Independent route-intent verifier passed.',evidence:['verification:frozen-expectation']})},{baseModelId:'tiny-base',baseModelVersion:'rev-1',baseModelSha256:sha('base'),runtimeId:'transformers-cpu',runtimeVersion:'4.56.1',requiredCapabilities:['route.intent.classify']});
+  const job:JobDefinition={apiVersion:'agent-control/v1',kind:'Job',metadata:{id:'learned-route-intent',name:'Learned route intent',version:'1.0.0'},spec:{priority:'normal',concurrency:'queue',parameters:{taskClass:{type:'string',required:true},input:{type:'string',required:true}},steps:[{id:'execute',action:'learned-specialist.execute@1.0.0',requires:['qualification.local'],outputs:[{name:'specialist-result',type:'application/json',schema:'agent-control.learned-specialist-result/v1',version:'1.0.0'}]},{id:'verify',action:'learned-specialist.verify@1.0.0',requires:['qualification.local'],dependsOn:['execute'],inputs:{result:'execute.specialist-result'},outputs:[{name:'specialist-verification',type:'application/json',schema:'agent-control.learned-specialist-verification/v1',version:'1.0.0'}],verification:['learned-specialist-independent-verification']}]}};
+  const catalog=new JobCatalog(actions.ids());catalog.addJob(job);const workers=new WorkerRegistry().register({id:'controller-cpu',capabilities:['qualification.local'],health:'healthy',capacity:1,active:0,observedAt:'2026-09-11T12:00:00Z'}),runtime=new JobRuntime(catalog,actions,workers,new RunLedger(path.join(root,'runs.json')),new ArtifactStore(path.join(root,'artifacts')),new ResourceLockManager(path.join(root,'locks.json')),{approval:()=>true}),plan:WorkParcelPlan={objective:'Classify a bounded route intent',planner:{kind:'deterministic',reason:'Qualified specialist fixture'},stages:[{id:'classify',name:'Classify route intent',job:'learned-route-intent@1.0.0',parameters:{taskClass,input:'Please review the release evidence.'}}]},coordinator=new WorkParcelCoordinator(runtime,new WorkParcelStore(path.join(root,'parcels.json')),{plan:()=>plan});
+  return{root,skills,calls,runtime,coordinator};
+}
+
+test('qualified learned specialist executes and is independently verified through a real Work Parcel',async()=>{const f=fixture();try{const parcel=await f.coordinator.submit('Classify this request through the governed learned specialist','operator');for(let i=0;i<4;i++){await f.coordinator.tick();await f.runtime.tick();await f.coordinator.tick();}const result=f.coordinator.get(parcel.id);assert.equal(result.status,'SUCCEEDED',JSON.stringify(result,null,2));assert.equal(f.calls.length,1);assert.equal(result.stages[0].baton?.schema,'agent-control.work-parcel-baton/v2');const run=f.runtime.ledger.get(result.stages[0].runId!)!;assert.equal(run.status,'SUCCEEDED');assert.ok(run.provenance.some(item=>item.detail.includes('agent:learned-specialist.execute@1.0.0:adaptive-harness')));const verification=f.runtime.artifacts.list(run.id).find(item=>item.name==='specialist-verification');assert.ok(verification);assert.deepEqual(f.runtime.artifacts.read(verification.id),{schema:'agent-control.learned-specialist-verification/v1',passed:true,summary:'Independent route-intent verifier passed.',routeDecisionId:f.skills.decisions()[0].id});assert.equal(f.skills.decisions()[0]?.selected?.adapterId,'route-intent-lora');}finally{fs.rmSync(f.root,{recursive:true,force:true});}});
+
+test('inappropriate task fails closed before learned specialist invocation',async()=>{const f=fixture('unrelated-task');try{const parcel=await f.coordinator.submit('Do not route an unrelated task to the specialist','operator');for(let i=0;i<3;i++){await f.coordinator.tick();await f.runtime.tick();await f.coordinator.tick();}const result=f.coordinator.get(parcel.id);assert.equal(result.status,'FAILED');assert.equal(f.calls.length,0);assert.equal(f.skills.decisions()[0]?.selected,null);assert.match(result.stages[0].error??'',/learned_specialist_route_unavailable/);}finally{fs.rmSync(f.root,{recursive:true,force:true});}});

@@ -1,0 +1,11 @@
+[
+  {
+    "job": "operator-system-observation@1.1.0",
+    "purpose": "Capture current registered worker health in a read-only evidence artifact.",
+    "owner": "Lane Master",
+    "changes": "Creates a local governed Run and evidence artifact. Does not alter machines, applications, schedules or external systems.",
+    "externalMutation": false,
+    "publication": false,
+    "permitted": true
+  }
+]

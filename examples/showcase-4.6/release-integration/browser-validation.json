@@ -1,0 +1,39 @@
+{
+  "state": "PASS",
+  "authenticationRefresh": "Within 2 seconds of UI login",
+  "controls": [
+    {
+      "id": "runtime-search",
+      "left": 295.96875,
+      "right": 503.96875,
+      "containerLeft": 219,
+      "containerRight": 1011
+    },
+    {
+      "id": "runtime-filter",
+      "left": 873,
+      "right": 997,
+      "containerLeft": 219,
+      "containerRight": 1011
+    },
+    {
+      "id": "estate-job-picker",
+      "left": 233,
+      "right": 605,
+      "containerLeft": 219,
+      "containerRight": 1011
+    },
+    {
+      "id": "runtime-map-summary",
+      "left": 233,
+      "right": 997,
+      "containerLeft": 219,
+      "containerRight": 1011
+    }
+  ],
+  "dimensions": {
+    "width": 390,
+    "document": 390
+  },
+  "errors": []
+}

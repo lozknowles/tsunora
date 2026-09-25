@@ -1,0 +1,3 @@
+
+> agent-control@3.3.0 check:dashboard
+> node --check assets/dashboard/dashboard.js assets/dashboard/dashboard-parameters.js assets/dashboard/dashboard-running-state.js assets/dashboard/dashboard-enhancements.js

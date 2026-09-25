@@ -1,0 +1,3472 @@
+{
+  "schema": "agent-control.harness-efficiency-live-report/v1",
+  "benchmarkId": "00bbc0f7f5d8f3c581e05a5e5ac84d9319216d5c850b8b2f9cd84bef30e14220",
+  "suiteId": "harness-efficiency-20-v1",
+  "generatedAt": "2026-08-28T05:53:56.152Z",
+  "classification": "LIVE_SAME_MODEL_CONTROLLED_CONTEXT_RETRIEVAL_NOT_REPOSITORY_MUTATION_EVIDENCE",
+  "modelControl": {
+    "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+    "provider": "controlled-live-openai-compatible",
+    "parameters": {
+      "temperature": 0,
+      "maximumOutputTokens": 256,
+      "responseFormat": "json_object"
+    },
+    "suiteDeclaredParameters": {
+      "temperature": 0,
+      "seed": 3101
+    },
+    "sameModelAcrossProfiles": true,
+    "liveModelInvoked": true
+  },
+  "endpoint": {
+    "scope": "loopback",
+    "modelListSha256": "ad979e38b0aa13c940dc4028b5b48c3806002651f09b7db9998a4e878a21794d"
+  },
+  "measurement": {
+    "providerUsageAvailable": true,
+    "providerCostAvailable": false,
+    "cacheMetricsAvailable": true,
+    "cacheWriteMetricsAvailable": false,
+    "componentMethod": "deterministic_utf8_bytes_divided_by_3",
+    "monetaryCostReason": "The existing local endpoint exposes no billing price or provider-reported monetary cost; infrastructure and energy costs were not fabricated."
+  },
+  "startupTax": {
+    "THIN": {
+      "profile": "THIN",
+      "verifierResult": "PASS",
+      "providerInputTokens": 801,
+      "providerOutputTokens": 58,
+      "providerTotalTokens": 859,
+      "cachedInputTokens": 800,
+      "elapsedMs": 2785,
+      "startup": {
+        "components": [
+          {
+            "name": "system_instructions",
+            "estimatedTokens": 98,
+            "bytes": 291,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "87f5a223c8ef8285999b746ab405fcb56df3ba0eabb04d707226238c1d824a72",
+              "live-benchmark:system"
+            ],
+            "percentage": 11.316397228637413
+          },
+          {
+            "name": "agent_control_instructions",
+            "estimatedTokens": 65,
+            "bytes": 192,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "87f5a223c8ef8285999b746ab405fcb56df3ba0eabb04d707226238c1d824a72",
+              "live-benchmark:control"
+            ],
+            "percentage": 7.505773672055427
+          },
+          {
+            "name": "tool_schemas",
+            "estimatedTokens": 41,
+            "bytes": 120,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "87f5a223c8ef8285999b746ab405fcb56df3ba0eabb04d707226238c1d824a72",
+              "live-benchmark:tool-schema"
+            ],
+            "percentage": 4.734411085450346
+          },
+          {
+            "name": "skills",
+            "estimatedTokens": 0,
+            "bytes": 0,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [],
+            "percentage": 0
+          },
+          {
+            "name": "workspace_bootstrap",
+            "estimatedTokens": 0,
+            "bytes": 0,
+            "persistent": false,
+            "measurement": "estimated",
+            "provenanceIds": [],
+            "percentage": 0
+          },
+          {
+            "name": "memory_shared_context",
+            "estimatedTokens": 0,
+            "bytes": 0,
+            "persistent": false,
+            "measurement": "estimated",
+            "provenanceIds": [],
+            "percentage": 0
+          },
+          {
+            "name": "repository_instructions",
+            "estimatedTokens": 60,
+            "bytes": 180,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "live-benchmark:repository-rules"
+            ],
+            "percentage": 6.928406466512701
+          },
+          {
+            "name": "task_context",
+            "estimatedTokens": 602,
+            "bytes": 1805,
+            "persistent": false,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "live-benchmark:task:startup-floor-thin",
+              "live-benchmark:evidence:startup-floor-thin",
+              "live-benchmark:targeted:startup-floor-thin"
+            ],
+            "percentage": 69.5150115473441
+          },
+          {
+            "name": "conversation_history",
+            "estimatedTokens": 0,
+            "bytes": 0,
+            "persistent": false,
+            "measurement": "estimated",
+            "provenanceIds": [],
+            "percentage": 0
+          },
+          {
+            "name": "other",
+            "estimatedTokens": 0,
+            "bytes": 0,
+            "persistent": false,
+            "measurement": "estimated",
+            "provenanceIds": [],
+            "percentage": 0
+          }
+        ],
+        "startupContextTokens": 264,
+        "taskContextTokens": 602,
+        "conversationHistoryTokens": 0,
+        "totalEstimatedContextTokens": 866,
+        "repeatedContextCostEstimate": 264,
+        "turns": 1
+      },
+      "contextPacketId": "context-e2f7d4604b264b2af2a9",
+      "contextSourceIds": [
+        "startup-floor-thin:control",
+        "startup-floor-thin:repository-rules",
+        "startup-floor-thin:system",
+        "startup-floor-thin:task",
+        "startup-floor-thin:tool",
+        "startup-floor-thin:authoritative",
+        "startup-floor-thin:targeted"
+      ]
+    },
+    "STANDARD": {
+      "profile": "STANDARD",
+      "verifierResult": "PASS",
+      "providerInputTokens": 2081,
+      "providerOutputTokens": 57,
+      "providerTotalTokens": 2138,
+      "cachedInputTokens": 2080,
+      "elapsedMs": 2662,
+      "startup": {
+        "components": [
+          {
+            "name": "system_instructions",
+            "estimatedTokens": 98,
+            "bytes": 291,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "486fa65b4d5712bd96db31df11b66c0b576ff67885ea0fe86f1509178f7f41a5",
+              "live-benchmark:system"
+            ],
+            "percentage": 3.9028275587415373
+          },
+          {
+            "name": "agent_control_instructions",
+            "estimatedTokens": 65,
+            "bytes": 192,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "486fa65b4d5712bd96db31df11b66c0b576ff67885ea0fe86f1509178f7f41a5",
+              "live-benchmark:control"
+            ],
+            "percentage": 2.5886101154918357
+          },
+          {
+            "name": "tool_schemas",
+            "estimatedTokens": 321,
+            "bytes": 959,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "486fa65b4d5712bd96db31df11b66c0b576ff67885ea0fe86f1509178f7f41a5",
+              "live-benchmark:tool-schema",
+              "live-benchmark:optional-tools"
+            ],
+            "percentage": 12.783751493428912
+          },
+          {
+            "name": "skills",
+            "estimatedTokens": 0,
+            "bytes": 0,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [],
+            "percentage": 0
+          },
+          {
+            "name": "workspace_bootstrap",
+            "estimatedTokens": 345,
+            "bytes": 1034,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "live-benchmark:workspace"
+            ],
+            "percentage": 13.739545997610513
+          },
+          {
+            "name": "memory_shared_context",
+            "estimatedTokens": 580,
+            "bytes": 1739,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "live-benchmark:shared-context"
+            ],
+            "percentage": 23.098367184388692
+          },
+          {
+            "name": "repository_instructions",
+            "estimatedTokens": 60,
+            "bytes": 180,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "live-benchmark:repository-rules"
+            ],
+            "percentage": 2.3894862604540026
+          },
+          {
+            "name": "task_context",
+            "estimatedTokens": 667,
+            "bytes": 1997,
+            "persistent": false,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "live-benchmark:task:startup-floor-standard",
+              "live-benchmark:evidence:startup-floor-standard",
+              "live-benchmark:targeted:startup-floor-standard"
+            ],
+            "percentage": 26.563122262046996
+          },
+          {
+            "name": "conversation_history",
+            "estimatedTokens": 375,
+            "bytes": 1124,
+            "persistent": false,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "live-benchmark:history"
+            ],
+            "percentage": 14.934289127837516
+          },
+          {
+            "name": "other",
+            "estimatedTokens": 0,
+            "bytes": 0,
+            "persistent": false,
+            "measurement": "estimated",
+            "provenanceIds": [],
+            "percentage": 0
+          }
+        ],
+        "startupContextTokens": 1469,
+        "taskContextTokens": 667,
+        "conversationHistoryTokens": 375,
+        "totalEstimatedContextTokens": 2511,
+        "repeatedContextCostEstimate": 1469,
+        "turns": 1
+      },
+      "contextPacketId": "context-1ea6a8dd2d7cfd5b68e9",
+      "contextSourceIds": [
+        "startup-floor-standard:control",
+        "startup-floor-standard:repository-rules",
+        "startup-floor-standard:system",
+        "startup-floor-standard:task",
+        "startup-floor-standard:tool",
+        "startup-floor-standard:authoritative",
+        "startup-floor-standard:targeted",
+        "startup-floor-standard:memory",
+        "startup-floor-standard:optional-tools",
+        "startup-floor-standard:workspace",
+        "startup-floor-standard:history"
+      ]
+    },
+    "DEEP": {
+      "profile": "DEEP",
+      "verifierResult": "PASS",
+      "providerInputTokens": 5376,
+      "providerOutputTokens": 59,
+      "providerTotalTokens": 5435,
+      "cachedInputTokens": 5375,
+      "elapsedMs": 23504,
+      "startup": {
+        "components": [
+          {
+            "name": "system_instructions",
+            "estimatedTokens": 98,
+            "bytes": 291,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "2c1e0a716cd2b6582521a6a3da21887fc185776c879376833ddee8ab337b937b",
+              "live-benchmark:system"
+            ],
+            "percentage": 1.6065573770491801
+          },
+          {
+            "name": "agent_control_instructions",
+            "estimatedTokens": 65,
+            "bytes": 192,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "2c1e0a716cd2b6582521a6a3da21887fc185776c879376833ddee8ab337b937b",
+              "live-benchmark:control"
+            ],
+            "percentage": 1.0655737704918031
+          },
+          {
+            "name": "tool_schemas",
+            "estimatedTokens": 321,
+            "bytes": 959,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "2c1e0a716cd2b6582521a6a3da21887fc185776c879376833ddee8ab337b937b",
+              "live-benchmark:tool-schema",
+              "live-benchmark:optional-tools"
+            ],
+            "percentage": 5.262295081967213
+          },
+          {
+            "name": "skills",
+            "estimatedTokens": 0,
+            "bytes": 0,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [],
+            "percentage": 0
+          },
+          {
+            "name": "workspace_bootstrap",
+            "estimatedTokens": 345,
+            "bytes": 1034,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "live-benchmark:workspace"
+            ],
+            "percentage": 5.655737704918033
+          },
+          {
+            "name": "memory_shared_context",
+            "estimatedTokens": 580,
+            "bytes": 1739,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "live-benchmark:shared-context"
+            ],
+            "percentage": 9.508196721311474
+          },
+          {
+            "name": "repository_instructions",
+            "estimatedTokens": 60,
+            "bytes": 180,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "live-benchmark:repository-rules"
+            ],
+            "percentage": 0.9836065573770493
+          },
+          {
+            "name": "task_context",
+            "estimatedTokens": 2669,
+            "bytes": 8004,
+            "persistent": false,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "live-benchmark:task:startup-floor-deep",
+              "live-benchmark:evidence:startup-floor-deep",
+              "live-benchmark:targeted:startup-floor-deep",
+              "live-benchmark:broad-repository"
+            ],
+            "percentage": 43.75409836065573
+          },
+          {
+            "name": "conversation_history",
+            "estimatedTokens": 375,
+            "bytes": 1124,
+            "persistent": false,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "live-benchmark:history"
+            ],
+            "percentage": 6.147540983606557
+          },
+          {
+            "name": "other",
+            "estimatedTokens": 1587,
+            "bytes": 4759,
+            "persistent": true,
+            "measurement": "estimated",
+            "provenanceIds": [
+              "live-benchmark:graph"
+            ],
+            "percentage": 26.01639344262295
+          }
+        ],
+        "startupContextTokens": 3056,
+        "taskContextTokens": 2669,
+        "conversationHistoryTokens": 375,
+        "totalEstimatedContextTokens": 6100,
+        "repeatedContextCostEstimate": 3056,
+        "turns": 1
+      },
+      "contextPacketId": "context-4d64dc7a7ccd8225a916",
+      "contextSourceIds": [
+        "startup-floor-deep:control",
+        "startup-floor-deep:repository-rules",
+        "startup-floor-deep:system",
+        "startup-floor-deep:task",
+        "startup-floor-deep:tool",
+        "startup-floor-deep:authoritative",
+        "startup-floor-deep:targeted",
+        "startup-floor-deep:broad-repository",
+        "startup-floor-deep:graph",
+        "startup-floor-deep:memory",
+        "startup-floor-deep:optional-tools",
+        "startup-floor-deep:workspace",
+        "startup-floor-deep:history"
+      ]
+    }
+  },
+  "results": [
+    {
+      "taskId": "trivial-value",
+      "category": "trivial edit",
+      "minimumProfile": "THIN",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-bd14933f9782e5a6",
+      "contextPacketId": "context-b9d5c74e32059a9a727c",
+      "contextSourceIds": [
+        "trivial-value:control",
+        "trivial-value:repository-rules",
+        "trivial-value:system",
+        "trivial-value:task",
+        "trivial-value:tool",
+        "trivial-value:authoritative",
+        "trivial-value:targeted"
+      ],
+      "omittedSourceIds": [
+        "trivial-value:optional-tools",
+        "trivial-value:workspace",
+        "trivial-value:memory",
+        "trivial-value:history",
+        "trivial-value:broad-repository",
+        "trivial-value:graph"
+      ],
+      "usage": {
+        "inputTokens": 690,
+        "freshInputTokens": 10,
+        "cachedInputTokens": 680,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 746
+      },
+      "elapsedMs": 2674,
+      "toolCalls": 1,
+      "invocationId": "inv-8ec96e91-922a-41ad-8133-099643ce033c",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-WBIECtYbOo3K3IdKf5VEaEXqb9krW4fl",
+        "provider_response_sha256:199586b37008fd5caedb27e37af12a4b73a6c23b8150bb69e9c15c8aa38edc68",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "trivial-value",
+      "category": "trivial edit",
+      "minimumProfile": "THIN",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-d43364206fc42be2",
+      "contextPacketId": "context-c834fa7579a9b63af651",
+      "contextSourceIds": [
+        "trivial-value:control",
+        "trivial-value:repository-rules",
+        "trivial-value:system",
+        "trivial-value:task",
+        "trivial-value:tool",
+        "trivial-value:authoritative",
+        "trivial-value:targeted",
+        "trivial-value:memory",
+        "trivial-value:optional-tools",
+        "trivial-value:workspace",
+        "trivial-value:history"
+      ],
+      "omittedSourceIds": [
+        "trivial-value:broad-repository",
+        "trivial-value:graph"
+      ],
+      "usage": {
+        "inputTokens": 2022,
+        "freshInputTokens": 1342,
+        "cachedInputTokens": 680,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2078
+      },
+      "elapsedMs": 5203,
+      "toolCalls": 1,
+      "invocationId": "inv-bfd23937-f3c9-41db-9a1d-676cc3f2cf00",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-XEaKK3NnLsBFPMfficlalyBTgYNN3Gr0",
+        "provider_response_sha256:199586b37008fd5caedb27e37af12a4b73a6c23b8150bb69e9c15c8aa38edc68",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "trivial-value",
+      "category": "trivial edit",
+      "minimumProfile": "THIN",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-a8cba310b83d0f08",
+      "contextPacketId": "context-29f4dfca771fa60fe119",
+      "contextSourceIds": [
+        "trivial-value:control",
+        "trivial-value:repository-rules",
+        "trivial-value:system",
+        "trivial-value:task",
+        "trivial-value:tool",
+        "trivial-value:authoritative",
+        "trivial-value:targeted",
+        "trivial-value:broad-repository",
+        "trivial-value:graph",
+        "trivial-value:memory",
+        "trivial-value:optional-tools",
+        "trivial-value:workspace",
+        "trivial-value:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5252,
+        "freshInputTokens": 1,
+        "cachedInputTokens": 5251,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5308
+      },
+      "elapsedMs": 2793,
+      "toolCalls": 1,
+      "invocationId": "inv-aec2239b-e19c-403a-ac23-9fe7650d31d5",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-EAkCUuqzImvUbUDY9Xufq0ahobcjSxck",
+        "provider_response_sha256:199586b37008fd5caedb27e37af12a4b73a6c23b8150bb69e9c15c8aa38edc68",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "known-function",
+      "category": "bounded code change",
+      "minimumProfile": "THIN",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-b1fecc465fee0b42",
+      "contextPacketId": "context-b29573c619449c995c68",
+      "contextSourceIds": [
+        "known-function:control",
+        "known-function:repository-rules",
+        "known-function:system",
+        "known-function:task",
+        "known-function:tool",
+        "known-function:authoritative",
+        "known-function:targeted"
+      ],
+      "omittedSourceIds": [
+        "known-function:optional-tools",
+        "known-function:workspace",
+        "known-function:memory",
+        "known-function:history",
+        "known-function:broad-repository",
+        "known-function:graph"
+      ],
+      "usage": {
+        "inputTokens": 691,
+        "freshInputTokens": 691,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 747
+      },
+      "elapsedMs": 3823,
+      "toolCalls": 1,
+      "invocationId": "inv-6e918e7a-1281-43bc-b11c-7444f928dbc7",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-DuIiJ2zIqxDXz3CA5k7FF8gquyTHb1Gi",
+        "provider_response_sha256:b29a7849471294d0ea5b920b3c31c4c4169ebaa87ad076cbe2f20c3bc277c539",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "known-function",
+      "category": "bounded code change",
+      "minimumProfile": "THIN",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-2f0dd1f9816e373c",
+      "contextPacketId": "context-fc9d9a353b6670d4cbba",
+      "contextSourceIds": [
+        "known-function:control",
+        "known-function:repository-rules",
+        "known-function:system",
+        "known-function:task",
+        "known-function:tool",
+        "known-function:authoritative",
+        "known-function:targeted",
+        "known-function:memory",
+        "known-function:optional-tools",
+        "known-function:workspace",
+        "known-function:history"
+      ],
+      "omittedSourceIds": [
+        "known-function:broad-repository",
+        "known-function:graph"
+      ],
+      "usage": {
+        "inputTokens": 2023,
+        "freshInputTokens": 1342,
+        "cachedInputTokens": 681,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2079
+      },
+      "elapsedMs": 5213,
+      "toolCalls": 1,
+      "invocationId": "inv-c1fc0d44-642f-49fb-ae67-f6cf1e32cf9b",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-hgBYYSEvmHQBz7uxXsqRJ9eEm3DHj4Xu",
+        "provider_response_sha256:b29a7849471294d0ea5b920b3c31c4c4169ebaa87ad076cbe2f20c3bc277c539",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "known-function",
+      "category": "bounded code change",
+      "minimumProfile": "THIN",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-e288438834280f3f",
+      "contextPacketId": "context-1c650d33c9faa49db0e2",
+      "contextSourceIds": [
+        "known-function:control",
+        "known-function:repository-rules",
+        "known-function:system",
+        "known-function:task",
+        "known-function:tool",
+        "known-function:authoritative",
+        "known-function:targeted",
+        "known-function:broad-repository",
+        "known-function:graph",
+        "known-function:memory",
+        "known-function:optional-tools",
+        "known-function:workspace",
+        "known-function:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5253,
+        "freshInputTokens": 4567,
+        "cachedInputTokens": 686,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5309
+      },
+      "elapsedMs": 13593,
+      "toolCalls": 1,
+      "invocationId": "inv-fd854912-fd35-4a1f-8367-4f3495585d66",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-IKKuTTz3uswrWdDJzw18ay0mRzB2DDUv",
+        "provider_response_sha256:b29a7849471294d0ea5b920b3c31c4c4169ebaa87ad076cbe2f20c3bc277c539",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "single-dependency",
+      "category": "dependency update",
+      "minimumProfile": "THIN",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-8287eb0b735ccda0",
+      "contextPacketId": "context-38b98bc26b3ab7c279ce",
+      "contextSourceIds": [
+        "single-dependency:control",
+        "single-dependency:repository-rules",
+        "single-dependency:system",
+        "single-dependency:task",
+        "single-dependency:tool",
+        "single-dependency:authoritative",
+        "single-dependency:targeted"
+      ],
+      "omittedSourceIds": [
+        "single-dependency:optional-tools",
+        "single-dependency:workspace",
+        "single-dependency:memory",
+        "single-dependency:history",
+        "single-dependency:broad-repository",
+        "single-dependency:graph"
+      ],
+      "usage": {
+        "inputTokens": 746,
+        "freshInputTokens": 746,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 58,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 804
+      },
+      "elapsedMs": 4058,
+      "toolCalls": 1,
+      "invocationId": "inv-a558d85b-bd8b-41a9-b792-443144cbf2d6",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-2ok2g1VJOrNpYDK7W1NjQ7Ljmy9KSgwL",
+        "provider_response_sha256:665e3b5393fd4d2d415b46464bc543d05011ae7659712ef4dc2b1c2716301d39",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "single-dependency",
+      "category": "dependency update",
+      "minimumProfile": "THIN",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-fad3612bb29bea21",
+      "contextPacketId": "context-43eb6fb255efbda89086",
+      "contextSourceIds": [
+        "single-dependency:control",
+        "single-dependency:repository-rules",
+        "single-dependency:system",
+        "single-dependency:task",
+        "single-dependency:tool",
+        "single-dependency:authoritative",
+        "single-dependency:targeted",
+        "single-dependency:memory",
+        "single-dependency:optional-tools",
+        "single-dependency:workspace",
+        "single-dependency:history"
+      ],
+      "omittedSourceIds": [
+        "single-dependency:broad-repository",
+        "single-dependency:graph"
+      ],
+      "usage": {
+        "inputTokens": 2082,
+        "freshInputTokens": 1346,
+        "cachedInputTokens": 736,
+        "cacheWriteTokens": null,
+        "outputTokens": 58,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2140
+      },
+      "elapsedMs": 5340,
+      "toolCalls": 1,
+      "invocationId": "inv-9daaa955-86cc-44d9-803e-dd7c015eaf1b",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-7DXv21mh5K0mINOA4bcjUfuGnI9bToAu",
+        "provider_response_sha256:665e3b5393fd4d2d415b46464bc543d05011ae7659712ef4dc2b1c2716301d39",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "single-dependency",
+      "category": "dependency update",
+      "minimumProfile": "THIN",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-ff0005e239b102bf",
+      "contextPacketId": "context-284dc27cc13d8eb5949d",
+      "contextSourceIds": [
+        "single-dependency:control",
+        "single-dependency:repository-rules",
+        "single-dependency:system",
+        "single-dependency:task",
+        "single-dependency:tool",
+        "single-dependency:authoritative",
+        "single-dependency:targeted",
+        "single-dependency:broad-repository",
+        "single-dependency:graph",
+        "single-dependency:memory",
+        "single-dependency:optional-tools",
+        "single-dependency:workspace",
+        "single-dependency:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5314,
+        "freshInputTokens": 4573,
+        "cachedInputTokens": 741,
+        "cacheWriteTokens": null,
+        "outputTokens": 58,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5372
+      },
+      "elapsedMs": 13699,
+      "toolCalls": 1,
+      "invocationId": "inv-61c400ec-cc89-4f6e-af8b-05396d8ad99b",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-wlVQmU9OJovWmPiauOx1YMzKmOHJrgiT",
+        "provider_response_sha256:665e3b5393fd4d2d415b46464bc543d05011ae7659712ef4dc2b1c2716301d39",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "known-bug",
+      "category": "bug fix",
+      "minimumProfile": "THIN",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-000640189263ecfd",
+      "contextPacketId": "context-e6bdf2451a4f705e9677",
+      "contextSourceIds": [
+        "known-bug:control",
+        "known-bug:repository-rules",
+        "known-bug:system",
+        "known-bug:task",
+        "known-bug:tool",
+        "known-bug:authoritative",
+        "known-bug:targeted"
+      ],
+      "omittedSourceIds": [
+        "known-bug:optional-tools",
+        "known-bug:workspace",
+        "known-bug:memory",
+        "known-bug:history",
+        "known-bug:broad-repository",
+        "known-bug:graph"
+      ],
+      "usage": {
+        "inputTokens": 743,
+        "freshInputTokens": 743,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 55,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 798
+      },
+      "elapsedMs": 3906,
+      "toolCalls": 1,
+      "invocationId": "inv-fca0474c-7ae1-4252-8eba-5452044c5e0e",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-InqchBC1iW8E1Y5PAZnOwOtxUMt58Vzj",
+        "provider_response_sha256:663937d5822aa37adbce39e5c7c02f7573bd153c02f8a5f2c8b00a953752b79a",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "known-bug",
+      "category": "bug fix",
+      "minimumProfile": "THIN",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-bd550c9b42f0e23b",
+      "contextPacketId": "context-56e3d1fe9b6167f82c03",
+      "contextSourceIds": [
+        "known-bug:control",
+        "known-bug:repository-rules",
+        "known-bug:system",
+        "known-bug:task",
+        "known-bug:tool",
+        "known-bug:authoritative",
+        "known-bug:targeted",
+        "known-bug:memory",
+        "known-bug:optional-tools",
+        "known-bug:workspace",
+        "known-bug:history"
+      ],
+      "omittedSourceIds": [
+        "known-bug:broad-repository",
+        "known-bug:graph"
+      ],
+      "usage": {
+        "inputTokens": 2079,
+        "freshInputTokens": 1346,
+        "cachedInputTokens": 733,
+        "cacheWriteTokens": null,
+        "outputTokens": 55,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2134
+      },
+      "elapsedMs": 5243,
+      "toolCalls": 1,
+      "invocationId": "inv-8f8405a5-d288-4c67-b79e-f05536c7d23c",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-WbypMY58NM4u5AZk0cFKtSmExd5n96yX",
+        "provider_response_sha256:663937d5822aa37adbce39e5c7c02f7573bd153c02f8a5f2c8b00a953752b79a",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "known-bug",
+      "category": "bug fix",
+      "minimumProfile": "THIN",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-eaa7ee68b1789d5f",
+      "contextPacketId": "context-5466343fdb9bf3342128",
+      "contextSourceIds": [
+        "known-bug:control",
+        "known-bug:repository-rules",
+        "known-bug:system",
+        "known-bug:task",
+        "known-bug:tool",
+        "known-bug:authoritative",
+        "known-bug:targeted",
+        "known-bug:broad-repository",
+        "known-bug:graph",
+        "known-bug:memory",
+        "known-bug:optional-tools",
+        "known-bug:workspace",
+        "known-bug:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5311,
+        "freshInputTokens": 4573,
+        "cachedInputTokens": 738,
+        "cacheWriteTokens": null,
+        "outputTokens": 55,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5366
+      },
+      "elapsedMs": 13508,
+      "toolCalls": 1,
+      "invocationId": "inv-d2476898-29e4-4ef6-b38b-94520a6f45ac",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-2IPw94tTqhVXdmF7FPoWxf2g1MzF2kjZ",
+        "provider_response_sha256:663937d5822aa37adbce39e5c7c02f7573bd153c02f8a5f2c8b00a953752b79a",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "single-test-repair",
+      "category": "test repair",
+      "minimumProfile": "THIN",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-accfdba3bc47efb2",
+      "contextPacketId": "context-87d9cdb574f328c88593",
+      "contextSourceIds": [
+        "single-test-repair:control",
+        "single-test-repair:repository-rules",
+        "single-test-repair:system",
+        "single-test-repair:task",
+        "single-test-repair:tool",
+        "single-test-repair:authoritative",
+        "single-test-repair:targeted"
+      ],
+      "omittedSourceIds": [
+        "single-test-repair:optional-tools",
+        "single-test-repair:workspace",
+        "single-test-repair:memory",
+        "single-test-repair:history",
+        "single-test-repair:broad-repository",
+        "single-test-repair:graph"
+      ],
+      "usage": {
+        "inputTokens": 800,
+        "freshInputTokens": 800,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 57,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 857
+      },
+      "elapsedMs": 4134,
+      "toolCalls": 1,
+      "invocationId": "inv-7f918009-bad4-43e1-b760-6a27bdde1c3c",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-pE29FVa8fvuA8x7Sp0QzNhJeSiyJCyn2",
+        "provider_response_sha256:127101d302d2c605244849b49ba8c901555beab8938f6c391f0cb1cbf75ee8ac",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "single-test-repair",
+      "category": "test repair",
+      "minimumProfile": "THIN",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-994d9371a64620d0",
+      "contextPacketId": "context-a750385e3ba329f13baa",
+      "contextSourceIds": [
+        "single-test-repair:control",
+        "single-test-repair:repository-rules",
+        "single-test-repair:system",
+        "single-test-repair:task",
+        "single-test-repair:tool",
+        "single-test-repair:authoritative",
+        "single-test-repair:targeted",
+        "single-test-repair:memory",
+        "single-test-repair:optional-tools",
+        "single-test-repair:workspace",
+        "single-test-repair:history"
+      ],
+      "omittedSourceIds": [
+        "single-test-repair:broad-repository",
+        "single-test-repair:graph"
+      ],
+      "usage": {
+        "inputTokens": 2140,
+        "freshInputTokens": 1350,
+        "cachedInputTokens": 790,
+        "cacheWriteTokens": null,
+        "outputTokens": 57,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2197
+      },
+      "elapsedMs": 5398,
+      "toolCalls": 1,
+      "invocationId": "inv-1f638cd7-e935-420c-b068-33960a4e6e88",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-2Yam1Cgn5dXhc46eCosMZg4OxmJjCzRp",
+        "provider_response_sha256:127101d302d2c605244849b49ba8c901555beab8938f6c391f0cb1cbf75ee8ac",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "single-test-repair",
+      "category": "test repair",
+      "minimumProfile": "THIN",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-c770344a16409267",
+      "contextPacketId": "context-c12977eff7f3e4325dec",
+      "contextSourceIds": [
+        "single-test-repair:control",
+        "single-test-repair:repository-rules",
+        "single-test-repair:system",
+        "single-test-repair:task",
+        "single-test-repair:tool",
+        "single-test-repair:authoritative",
+        "single-test-repair:targeted",
+        "single-test-repair:broad-repository",
+        "single-test-repair:graph",
+        "single-test-repair:memory",
+        "single-test-repair:optional-tools",
+        "single-test-repair:workspace",
+        "single-test-repair:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5374,
+        "freshInputTokens": 4579,
+        "cachedInputTokens": 795,
+        "cacheWriteTokens": null,
+        "outputTokens": 57,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5431
+      },
+      "elapsedMs": 13957,
+      "toolCalls": 1,
+      "invocationId": "inv-6e110aee-6ad1-4526-a123-013067f20e33",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-pfyoHelvSL1gomNBJfbOaCO0SXktFXyk",
+        "provider_response_sha256:127101d302d2c605244849b49ba8c901555beab8938f6c391f0cb1cbf75ee8ac",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "exact-search",
+      "category": "repository search",
+      "minimumProfile": "THIN",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-fe17907471b29122",
+      "contextPacketId": "context-55b750c9643a64b7913d",
+      "contextSourceIds": [
+        "exact-search:control",
+        "exact-search:repository-rules",
+        "exact-search:system",
+        "exact-search:task",
+        "exact-search:tool",
+        "exact-search:authoritative",
+        "exact-search:targeted"
+      ],
+      "omittedSourceIds": [
+        "exact-search:optional-tools",
+        "exact-search:workspace",
+        "exact-search:memory",
+        "exact-search:history",
+        "exact-search:broad-repository",
+        "exact-search:graph"
+      ],
+      "usage": {
+        "inputTokens": 689,
+        "freshInputTokens": 689,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 745
+      },
+      "elapsedMs": 3866,
+      "toolCalls": 1,
+      "invocationId": "inv-e5f8601b-7957-4c3e-88cc-e31045dc5f74",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-eqJI3slBFocSzrUsaI9HUqW7UegY2Zvr",
+        "provider_response_sha256:13249fbd6ade8a4f879e86ed9882a6d242859cb824d6ae0864d0eeb7be52d493",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "exact-search",
+      "category": "repository search",
+      "minimumProfile": "THIN",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-f644391aae040447",
+      "contextPacketId": "context-709d488d2f379c6a8c48",
+      "contextSourceIds": [
+        "exact-search:control",
+        "exact-search:repository-rules",
+        "exact-search:system",
+        "exact-search:task",
+        "exact-search:tool",
+        "exact-search:authoritative",
+        "exact-search:targeted",
+        "exact-search:memory",
+        "exact-search:optional-tools",
+        "exact-search:workspace",
+        "exact-search:history"
+      ],
+      "omittedSourceIds": [
+        "exact-search:broad-repository",
+        "exact-search:graph"
+      ],
+      "usage": {
+        "inputTokens": 2021,
+        "freshInputTokens": 1342,
+        "cachedInputTokens": 679,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2077
+      },
+      "elapsedMs": 5247,
+      "toolCalls": 1,
+      "invocationId": "inv-dc4f2d72-b1b0-48fa-aa93-908212b59d65",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-SMgXrGpzCVMB7cZ78vWBJfwP9XYQISt5",
+        "provider_response_sha256:13249fbd6ade8a4f879e86ed9882a6d242859cb824d6ae0864d0eeb7be52d493",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "exact-search",
+      "category": "repository search",
+      "minimumProfile": "THIN",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-267493ae4db9df25",
+      "contextPacketId": "context-81b61f020accab047895",
+      "contextSourceIds": [
+        "exact-search:control",
+        "exact-search:repository-rules",
+        "exact-search:system",
+        "exact-search:task",
+        "exact-search:tool",
+        "exact-search:authoritative",
+        "exact-search:targeted",
+        "exact-search:broad-repository",
+        "exact-search:graph",
+        "exact-search:memory",
+        "exact-search:optional-tools",
+        "exact-search:workspace",
+        "exact-search:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5251,
+        "freshInputTokens": 4567,
+        "cachedInputTokens": 684,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5307
+      },
+      "elapsedMs": 13658,
+      "toolCalls": 1,
+      "invocationId": "inv-31181913-d9bb-4873-a79f-cb74d0944325",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-ZPyyHOJfQkeLncjOsyiOJ2dAPx4X1adH",
+        "provider_response_sha256:13249fbd6ade8a4f879e86ed9882a6d242859cb824d6ae0864d0eeb7be52d493",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "known-config",
+      "category": "configuration change",
+      "minimumProfile": "THIN",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-ce3c5afe2f8cf95b",
+      "contextPacketId": "context-1ab4c91dc0577148994c",
+      "contextSourceIds": [
+        "known-config:control",
+        "known-config:repository-rules",
+        "known-config:system",
+        "known-config:task",
+        "known-config:tool",
+        "known-config:authoritative",
+        "known-config:targeted"
+      ],
+      "omittedSourceIds": [
+        "known-config:optional-tools",
+        "known-config:workspace",
+        "known-config:memory",
+        "known-config:history",
+        "known-config:broad-repository",
+        "known-config:graph"
+      ],
+      "usage": {
+        "inputTokens": 687,
+        "freshInputTokens": 687,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 54,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 741
+      },
+      "elapsedMs": 3855,
+      "toolCalls": 1,
+      "invocationId": "inv-b941cf54-4289-4147-b70f-77d7dda09214",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-SMrXuOrap3yL0fgAQu4nXszdHzwYNFea",
+        "provider_response_sha256:15b17a7cd13c60b142b749ae1a3bc66b04cb36cee3b995cb413f76f1bec3c0d9",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "known-config",
+      "category": "configuration change",
+      "minimumProfile": "THIN",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-1eb83a26df14e694",
+      "contextPacketId": "context-66169b289993f6fdfd61",
+      "contextSourceIds": [
+        "known-config:control",
+        "known-config:repository-rules",
+        "known-config:system",
+        "known-config:task",
+        "known-config:tool",
+        "known-config:authoritative",
+        "known-config:targeted",
+        "known-config:memory",
+        "known-config:optional-tools",
+        "known-config:workspace",
+        "known-config:history"
+      ],
+      "omittedSourceIds": [
+        "known-config:broad-repository",
+        "known-config:graph"
+      ],
+      "usage": {
+        "inputTokens": 2019,
+        "freshInputTokens": 1342,
+        "cachedInputTokens": 677,
+        "cacheWriteTokens": null,
+        "outputTokens": 54,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2073
+      },
+      "elapsedMs": 5062,
+      "toolCalls": 1,
+      "invocationId": "inv-22f7ae34-4afa-4838-892c-6319bfb9c9eb",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-BxsJa2UrKFdwS4DLcAsCjFAjH94M7k5J",
+        "provider_response_sha256:15b17a7cd13c60b142b749ae1a3bc66b04cb36cee3b995cb413f76f1bec3c0d9",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "known-config",
+      "category": "configuration change",
+      "minimumProfile": "THIN",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-17e17d3c21cc1407",
+      "contextPacketId": "context-604c8ef66fff48139366",
+      "contextSourceIds": [
+        "known-config:control",
+        "known-config:repository-rules",
+        "known-config:system",
+        "known-config:task",
+        "known-config:tool",
+        "known-config:authoritative",
+        "known-config:targeted",
+        "known-config:broad-repository",
+        "known-config:graph",
+        "known-config:memory",
+        "known-config:optional-tools",
+        "known-config:workspace",
+        "known-config:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5249,
+        "freshInputTokens": 4567,
+        "cachedInputTokens": 682,
+        "cacheWriteTokens": null,
+        "outputTokens": 54,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5303
+      },
+      "elapsedMs": 13502,
+      "toolCalls": 1,
+      "invocationId": "inv-8ccb07f5-2d49-42ac-8bb8-ca5e34753c10",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-RG83OV8wmsMmHTwFvnLJWZABZqKbqlai",
+        "provider_response_sha256:15b17a7cd13c60b142b749ae1a3bc66b04cb36cee3b995cb413f76f1bec3c0d9",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "known-doc",
+      "category": "documentation change",
+      "minimumProfile": "THIN",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-1fc858ac6c87faa3",
+      "contextPacketId": "context-be0a257e24860fe0a561",
+      "contextSourceIds": [
+        "known-doc:control",
+        "known-doc:repository-rules",
+        "known-doc:system",
+        "known-doc:task",
+        "known-doc:tool",
+        "known-doc:authoritative",
+        "known-doc:targeted"
+      ],
+      "omittedSourceIds": [
+        "known-doc:optional-tools",
+        "known-doc:workspace",
+        "known-doc:memory",
+        "known-doc:history",
+        "known-doc:broad-repository",
+        "known-doc:graph"
+      ],
+      "usage": {
+        "inputTokens": 688,
+        "freshInputTokens": 688,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 55,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 743
+      },
+      "elapsedMs": 3857,
+      "toolCalls": 1,
+      "invocationId": "inv-b446f439-f0a5-4784-ae97-ed6868d26439",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-cSgZy9ZI0cRHT3m7rHdqV4nvYduVydqa",
+        "provider_response_sha256:d292b90ae8489a58ed871774708c12c5d9e22854de9c82a66c056fe826177e36",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "known-doc",
+      "category": "documentation change",
+      "minimumProfile": "THIN",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-fc3db6feba6ac3bc",
+      "contextPacketId": "context-61b965d6fa2a6c31dfae",
+      "contextSourceIds": [
+        "known-doc:control",
+        "known-doc:repository-rules",
+        "known-doc:system",
+        "known-doc:task",
+        "known-doc:tool",
+        "known-doc:authoritative",
+        "known-doc:targeted",
+        "known-doc:memory",
+        "known-doc:optional-tools",
+        "known-doc:workspace",
+        "known-doc:history"
+      ],
+      "omittedSourceIds": [
+        "known-doc:broad-repository",
+        "known-doc:graph"
+      ],
+      "usage": {
+        "inputTokens": 2020,
+        "freshInputTokens": 1342,
+        "cachedInputTokens": 678,
+        "cacheWriteTokens": null,
+        "outputTokens": 55,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2075
+      },
+      "elapsedMs": 5181,
+      "toolCalls": 1,
+      "invocationId": "inv-0d2e0e40-1d6a-4dc9-b00d-c6738f71880c",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-eeZtqjDAPZucXy4JMUR8hhxeq2B1qMt3",
+        "provider_response_sha256:d292b90ae8489a58ed871774708c12c5d9e22854de9c82a66c056fe826177e36",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "known-doc",
+      "category": "documentation change",
+      "minimumProfile": "THIN",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-ff62611dfe81ce80",
+      "contextPacketId": "context-c7659406895d4de39e46",
+      "contextSourceIds": [
+        "known-doc:control",
+        "known-doc:repository-rules",
+        "known-doc:system",
+        "known-doc:task",
+        "known-doc:tool",
+        "known-doc:authoritative",
+        "known-doc:targeted",
+        "known-doc:broad-repository",
+        "known-doc:graph",
+        "known-doc:memory",
+        "known-doc:optional-tools",
+        "known-doc:workspace",
+        "known-doc:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5250,
+        "freshInputTokens": 4567,
+        "cachedInputTokens": 683,
+        "cacheWriteTokens": null,
+        "outputTokens": 55,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5305
+      },
+      "elapsedMs": 13539,
+      "toolCalls": 1,
+      "invocationId": "inv-9e9f3be8-02c0-4754-9a37-0bbf2e0bffb4",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-ykiBPYJemf9jwOctNj5haS3gcMlkVpcx",
+        "provider_response_sha256:d292b90ae8489a58ed871774708c12c5d9e22854de9c82a66c056fe826177e36",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "two-file-contract",
+      "category": "bounded multi-file change",
+      "minimumProfile": "THIN",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-294bd4f9c5165934",
+      "contextPacketId": "context-938f47b4d373e78a6898",
+      "contextSourceIds": [
+        "two-file-contract:control",
+        "two-file-contract:repository-rules",
+        "two-file-contract:system",
+        "two-file-contract:task",
+        "two-file-contract:tool",
+        "two-file-contract:authoritative",
+        "two-file-contract:targeted"
+      ],
+      "omittedSourceIds": [
+        "two-file-contract:optional-tools",
+        "two-file-contract:workspace",
+        "two-file-contract:memory",
+        "two-file-contract:history",
+        "two-file-contract:broad-repository",
+        "two-file-contract:graph"
+      ],
+      "usage": {
+        "inputTokens": 806,
+        "freshInputTokens": 806,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 59,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 865
+      },
+      "elapsedMs": 4127,
+      "toolCalls": 1,
+      "invocationId": "inv-fb8d6004-3aca-4fb7-9640-e152649fc4f1",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-hS9rLakd8DNuOhlXHRVyyWvzZncJjPex",
+        "provider_response_sha256:271c0fecf854a4ea7732f5a3e8cd48317b658ecc3cf90dd0073006cba80160e6",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "two-file-contract",
+      "category": "bounded multi-file change",
+      "minimumProfile": "THIN",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-a1d859636741fe58",
+      "contextPacketId": "context-b0a18a97d44be0cd71f8",
+      "contextSourceIds": [
+        "two-file-contract:control",
+        "two-file-contract:repository-rules",
+        "two-file-contract:system",
+        "two-file-contract:task",
+        "two-file-contract:tool",
+        "two-file-contract:authoritative",
+        "two-file-contract:targeted",
+        "two-file-contract:memory",
+        "two-file-contract:optional-tools",
+        "two-file-contract:workspace",
+        "two-file-contract:history"
+      ],
+      "omittedSourceIds": [
+        "two-file-contract:broad-repository",
+        "two-file-contract:graph"
+      ],
+      "usage": {
+        "inputTokens": 2146,
+        "freshInputTokens": 1350,
+        "cachedInputTokens": 796,
+        "cacheWriteTokens": null,
+        "outputTokens": 59,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2205
+      },
+      "elapsedMs": 5345,
+      "toolCalls": 1,
+      "invocationId": "inv-e927dcb1-0eef-434d-8f38-edaf55596ddb",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-cWM6pTBS3RMipxZ0grwn4WJV1moKK7DA",
+        "provider_response_sha256:271c0fecf854a4ea7732f5a3e8cd48317b658ecc3cf90dd0073006cba80160e6",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "two-file-contract",
+      "category": "bounded multi-file change",
+      "minimumProfile": "THIN",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-c1243a00f29cb3af",
+      "contextPacketId": "context-b205099ba2ad6435a7d8",
+      "contextSourceIds": [
+        "two-file-contract:control",
+        "two-file-contract:repository-rules",
+        "two-file-contract:system",
+        "two-file-contract:task",
+        "two-file-contract:tool",
+        "two-file-contract:authoritative",
+        "two-file-contract:targeted",
+        "two-file-contract:broad-repository",
+        "two-file-contract:graph",
+        "two-file-contract:memory",
+        "two-file-contract:optional-tools",
+        "two-file-contract:workspace",
+        "two-file-contract:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5380,
+        "freshInputTokens": 4579,
+        "cachedInputTokens": 801,
+        "cacheWriteTokens": null,
+        "outputTokens": 59,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5439
+      },
+      "elapsedMs": 13902,
+      "toolCalls": 1,
+      "invocationId": "inv-345d5f5b-4f54-45c7-b38a-bb7ac26cec26",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-oJszvP9iUEH0ustfFa10ZQx1bx08pAsz",
+        "provider_response_sha256:271c0fecf854a4ea7732f5a3e8cd48317b658ecc3cf90dd0073006cba80160e6",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "schema-migration-plan",
+      "category": "configuration change",
+      "minimumProfile": "STANDARD",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-c274d8ae25311ad5",
+      "contextPacketId": "context-ab27d945c2367b892473",
+      "contextSourceIds": [
+        "schema-migration-plan:control",
+        "schema-migration-plan:repository-rules",
+        "schema-migration-plan:system",
+        "schema-migration-plan:task",
+        "schema-migration-plan:tool",
+        "schema-migration-plan:targeted"
+      ],
+      "omittedSourceIds": [
+        "schema-migration-plan:authoritative",
+        "schema-migration-plan:optional-tools",
+        "schema-migration-plan:workspace",
+        "schema-migration-plan:memory",
+        "schema-migration-plan:history",
+        "schema-migration-plan:broad-repository",
+        "schema-migration-plan:graph"
+      ],
+      "usage": {
+        "inputTokens": 738,
+        "freshInputTokens": 738,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 45,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 783
+      },
+      "elapsedMs": 3420,
+      "toolCalls": 1,
+      "invocationId": "inv-bc161938-75e9-4db0-a21a-97126e1a35a5",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-dKkYPiLSmPR81Gy9MLSzThqjHLKt6389",
+        "provider_response_sha256:15e8bec7a04b691df93ce8d68ad78ff51814807cf9aaa223cc21d2d82f64e212",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "schema-migration-plan",
+      "category": "configuration change",
+      "minimumProfile": "STANDARD",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-ecfa576c798974fd",
+      "contextPacketId": "context-70d2c62adc4895426abb",
+      "contextSourceIds": [
+        "schema-migration-plan:control",
+        "schema-migration-plan:repository-rules",
+        "schema-migration-plan:system",
+        "schema-migration-plan:task",
+        "schema-migration-plan:tool",
+        "schema-migration-plan:authoritative",
+        "schema-migration-plan:targeted",
+        "schema-migration-plan:memory",
+        "schema-migration-plan:optional-tools",
+        "schema-migration-plan:workspace",
+        "schema-migration-plan:history"
+      ],
+      "omittedSourceIds": [
+        "schema-migration-plan:broad-repository",
+        "schema-migration-plan:graph"
+      ],
+      "usage": {
+        "inputTokens": 2144,
+        "freshInputTokens": 1805,
+        "cachedInputTokens": 339,
+        "cacheWriteTokens": null,
+        "outputTokens": 60,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2204
+      },
+      "elapsedMs": 6420,
+      "toolCalls": 1,
+      "invocationId": "inv-1fb29c6d-da3b-4a77-be4d-5892a798e9d4",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-44xFxsdiTF7DLsTIBMiwUyvxOzt0iAuA",
+        "provider_response_sha256:8a2510a0c5e41bf4edfa35e5e91218ab4312eee38c969b00a73cc0e2dd14d146",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "schema-migration-plan",
+      "category": "configuration change",
+      "minimumProfile": "STANDARD",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-0ca440216e6dca6c",
+      "contextPacketId": "context-2c921bb70fec407d2769",
+      "contextSourceIds": [
+        "schema-migration-plan:control",
+        "schema-migration-plan:repository-rules",
+        "schema-migration-plan:system",
+        "schema-migration-plan:task",
+        "schema-migration-plan:tool",
+        "schema-migration-plan:authoritative",
+        "schema-migration-plan:targeted",
+        "schema-migration-plan:broad-repository",
+        "schema-migration-plan:graph",
+        "schema-migration-plan:memory",
+        "schema-migration-plan:optional-tools",
+        "schema-migration-plan:workspace",
+        "schema-migration-plan:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5378,
+        "freshInputTokens": 4579,
+        "cachedInputTokens": 799,
+        "cacheWriteTokens": null,
+        "outputTokens": 60,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5438
+      },
+      "elapsedMs": 14081,
+      "toolCalls": 1,
+      "invocationId": "inv-c76b1492-3c7c-4801-9f57-3ae15e3b9039",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-IZK5i0bidca1gvZLDUWqwvGx2PEjyJQA",
+        "provider_response_sha256:8a2510a0c5e41bf4edfa35e5e91218ab4312eee38c969b00a73cc0e2dd14d146",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "cross-module-bug",
+      "category": "bug fix",
+      "minimumProfile": "STANDARD",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-0048c6ec2d526c30",
+      "contextPacketId": "context-aa6cd4bf867a02ae4d47",
+      "contextSourceIds": [
+        "cross-module-bug:control",
+        "cross-module-bug:repository-rules",
+        "cross-module-bug:system",
+        "cross-module-bug:task",
+        "cross-module-bug:tool",
+        "cross-module-bug:targeted"
+      ],
+      "omittedSourceIds": [
+        "cross-module-bug:authoritative",
+        "cross-module-bug:optional-tools",
+        "cross-module-bug:workspace",
+        "cross-module-bug:memory",
+        "cross-module-bug:history",
+        "cross-module-bug:broad-repository",
+        "cross-module-bug:graph"
+      ],
+      "usage": {
+        "inputTokens": 738,
+        "freshInputTokens": 738,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 45,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 783
+      },
+      "elapsedMs": 3453,
+      "toolCalls": 1,
+      "invocationId": "inv-ba6a0d27-62f6-4ec1-a430-b4f17daa83a5",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-iCm07mJWWt6ODb7mnDdAR5tyHKOCZtcR",
+        "provider_response_sha256:ad698c74858db635e0571a6029fe569f2d906bc3885a4a0d7b229247f4125353",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "cross-module-bug",
+      "category": "bug fix",
+      "minimumProfile": "STANDARD",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-69cf9ecbe6db1e07",
+      "contextPacketId": "context-9a0a034962e2bbd1ff6b",
+      "contextSourceIds": [
+        "cross-module-bug:control",
+        "cross-module-bug:repository-rules",
+        "cross-module-bug:system",
+        "cross-module-bug:task",
+        "cross-module-bug:tool",
+        "cross-module-bug:authoritative",
+        "cross-module-bug:targeted",
+        "cross-module-bug:memory",
+        "cross-module-bug:optional-tools",
+        "cross-module-bug:workspace",
+        "cross-module-bug:history"
+      ],
+      "omittedSourceIds": [
+        "cross-module-bug:broad-repository",
+        "cross-module-bug:graph"
+      ],
+      "usage": {
+        "inputTokens": 2140,
+        "freshInputTokens": 1801,
+        "cachedInputTokens": 339,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2196
+      },
+      "elapsedMs": 6206,
+      "toolCalls": 1,
+      "invocationId": "inv-c6e7b9a5-2947-44ad-a2c5-8ecd1b17f7d1",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-AeThqnJJy5Z2oSECH3WYfMcU3h1gJgIC",
+        "provider_response_sha256:28b02f8f2c0275309daae7fd491c30b8ace2567cf6efa536ee2c9e7ea6ce7c07",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "cross-module-bug",
+      "category": "bug fix",
+      "minimumProfile": "STANDARD",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-6f321845fec5428a",
+      "contextPacketId": "context-d321f1772257ade257a5",
+      "contextSourceIds": [
+        "cross-module-bug:control",
+        "cross-module-bug:repository-rules",
+        "cross-module-bug:system",
+        "cross-module-bug:task",
+        "cross-module-bug:tool",
+        "cross-module-bug:authoritative",
+        "cross-module-bug:targeted",
+        "cross-module-bug:broad-repository",
+        "cross-module-bug:graph",
+        "cross-module-bug:memory",
+        "cross-module-bug:optional-tools",
+        "cross-module-bug:workspace",
+        "cross-module-bug:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5374,
+        "freshInputTokens": 4579,
+        "cachedInputTokens": 795,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5430
+      },
+      "elapsedMs": 13877,
+      "toolCalls": 1,
+      "invocationId": "inv-e606a9e3-ac48-454d-8428-300a25f1c844",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-VelRFqSrTVQIiget2gagziMGfnRxPsPa",
+        "provider_response_sha256:28b02f8f2c0275309daae7fd491c30b8ace2567cf6efa536ee2c9e7ea6ce7c07",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "broad-symbol-search",
+      "category": "repository search",
+      "minimumProfile": "STANDARD",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-0475aa0f2c40cc98",
+      "contextPacketId": "context-f99d8b0f9dd4524a0b88",
+      "contextSourceIds": [
+        "broad-symbol-search:control",
+        "broad-symbol-search:repository-rules",
+        "broad-symbol-search:system",
+        "broad-symbol-search:task",
+        "broad-symbol-search:tool",
+        "broad-symbol-search:targeted"
+      ],
+      "omittedSourceIds": [
+        "broad-symbol-search:authoritative",
+        "broad-symbol-search:optional-tools",
+        "broad-symbol-search:workspace",
+        "broad-symbol-search:memory",
+        "broad-symbol-search:history",
+        "broad-symbol-search:broad-repository",
+        "broad-symbol-search:graph"
+      ],
+      "usage": {
+        "inputTokens": 686,
+        "freshInputTokens": 686,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 45,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 731
+      },
+      "elapsedMs": 3436,
+      "toolCalls": 1,
+      "invocationId": "inv-f04320ab-9f13-4718-a0fd-4c40d1879708",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-3wfOGMGrKUFIHUpVjztWcei6JcgpiVFq",
+        "provider_response_sha256:c02ffceea411f1babc054a6b6aef0c131214aed4bce4e45a990f5177c47f7ae6",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "broad-symbol-search",
+      "category": "repository search",
+      "minimumProfile": "STANDARD",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-d4a0ab3501395bcd",
+      "contextPacketId": "context-493687a9078d15d34439",
+      "contextSourceIds": [
+        "broad-symbol-search:control",
+        "broad-symbol-search:repository-rules",
+        "broad-symbol-search:system",
+        "broad-symbol-search:task",
+        "broad-symbol-search:tool",
+        "broad-symbol-search:authoritative",
+        "broad-symbol-search:targeted",
+        "broad-symbol-search:memory",
+        "broad-symbol-search:optional-tools",
+        "broad-symbol-search:workspace",
+        "broad-symbol-search:history"
+      ],
+      "omittedSourceIds": [
+        "broad-symbol-search:broad-repository",
+        "broad-symbol-search:graph"
+      ],
+      "usage": {
+        "inputTokens": 2084,
+        "freshInputTokens": 1752,
+        "cachedInputTokens": 332,
+        "cacheWriteTokens": null,
+        "outputTokens": 58,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2142
+      },
+      "elapsedMs": 6225,
+      "toolCalls": 1,
+      "invocationId": "inv-72a5dfde-7703-4e7d-8451-e5aa034a96d0",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-pKLLJICNoUhiTZVxNhf4coc44tHNyQRk",
+        "provider_response_sha256:a16e44ea04e79364042bf48894b14d61eed82fcba4a218dd7f1837a023e0ff3c",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "broad-symbol-search",
+      "category": "repository search",
+      "minimumProfile": "STANDARD",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-93ab1614f1b342b1",
+      "contextPacketId": "context-2e908f3ff314e9bbb012",
+      "contextSourceIds": [
+        "broad-symbol-search:control",
+        "broad-symbol-search:repository-rules",
+        "broad-symbol-search:system",
+        "broad-symbol-search:task",
+        "broad-symbol-search:tool",
+        "broad-symbol-search:authoritative",
+        "broad-symbol-search:targeted",
+        "broad-symbol-search:broad-repository",
+        "broad-symbol-search:graph",
+        "broad-symbol-search:memory",
+        "broad-symbol-search:optional-tools",
+        "broad-symbol-search:workspace",
+        "broad-symbol-search:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5316,
+        "freshInputTokens": 4573,
+        "cachedInputTokens": 743,
+        "cacheWriteTokens": null,
+        "outputTokens": 58,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5374
+      },
+      "elapsedMs": 13754,
+      "toolCalls": 1,
+      "invocationId": "inv-1880380d-88e5-4bab-9e31-752f96108a3b",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-Qvu7NU03jtOmcnM7qN8yO62KRdcm3Pes",
+        "provider_response_sha256:a16e44ea04e79364042bf48894b14d61eed82fcba4a218dd7f1837a023e0ff3c",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "compiler-diagnostic",
+      "category": "debugging task",
+      "minimumProfile": "STANDARD",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-7a9b796764a3a7dc",
+      "contextPacketId": "context-b3f537a3d2b4cebb422c",
+      "contextSourceIds": [
+        "compiler-diagnostic:control",
+        "compiler-diagnostic:repository-rules",
+        "compiler-diagnostic:system",
+        "compiler-diagnostic:task",
+        "compiler-diagnostic:tool",
+        "compiler-diagnostic:targeted"
+      ],
+      "omittedSourceIds": [
+        "compiler-diagnostic:authoritative",
+        "compiler-diagnostic:optional-tools",
+        "compiler-diagnostic:workspace",
+        "compiler-diagnostic:memory",
+        "compiler-diagnostic:history",
+        "compiler-diagnostic:broad-repository",
+        "compiler-diagnostic:graph"
+      ],
+      "usage": {
+        "inputTokens": 684,
+        "freshInputTokens": 684,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 44,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 728
+      },
+      "elapsedMs": 3353,
+      "toolCalls": 1,
+      "invocationId": "inv-4330bf0f-42b0-4296-824d-1b0eaa80b3be",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-4cdxfN3pKCduuJ6QG93VC60oLtuTtFGK",
+        "provider_response_sha256:b4d1891628f83a2f20d4a5cf83e2d29a7e6a547d9d2511bff546ed5581ff44b8",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "compiler-diagnostic",
+      "category": "debugging task",
+      "minimumProfile": "STANDARD",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-705ac4fee11948ed",
+      "contextPacketId": "context-9dddac68b1bd2c151b7c",
+      "contextSourceIds": [
+        "compiler-diagnostic:control",
+        "compiler-diagnostic:repository-rules",
+        "compiler-diagnostic:system",
+        "compiler-diagnostic:task",
+        "compiler-diagnostic:tool",
+        "compiler-diagnostic:authoritative",
+        "compiler-diagnostic:targeted",
+        "compiler-diagnostic:memory",
+        "compiler-diagnostic:optional-tools",
+        "compiler-diagnostic:workspace",
+        "compiler-diagnostic:history"
+      ],
+      "omittedSourceIds": [
+        "compiler-diagnostic:broad-repository",
+        "compiler-diagnostic:graph"
+      ],
+      "usage": {
+        "inputTokens": 2079,
+        "freshInputTokens": 1748,
+        "cachedInputTokens": 331,
+        "cacheWriteTokens": null,
+        "outputTokens": 54,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2133
+      },
+      "elapsedMs": 5935,
+      "toolCalls": 1,
+      "invocationId": "inv-a8094664-632f-4b7d-8d11-d0a8cd1a951e",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-L1eNgxdKQ2HBMLrceDgBUJYkjSbhJ4Tm",
+        "provider_response_sha256:fd970e4f4b4df422d017e0a58e11ed0b0aa7841b0efc3d783f551b3c46a0cf0d",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "compiler-diagnostic",
+      "category": "debugging task",
+      "minimumProfile": "STANDARD",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-a9137632130eceb1",
+      "contextPacketId": "context-8384f6114570574d503b",
+      "contextSourceIds": [
+        "compiler-diagnostic:control",
+        "compiler-diagnostic:repository-rules",
+        "compiler-diagnostic:system",
+        "compiler-diagnostic:task",
+        "compiler-diagnostic:tool",
+        "compiler-diagnostic:authoritative",
+        "compiler-diagnostic:targeted",
+        "compiler-diagnostic:broad-repository",
+        "compiler-diagnostic:graph",
+        "compiler-diagnostic:memory",
+        "compiler-diagnostic:optional-tools",
+        "compiler-diagnostic:workspace",
+        "compiler-diagnostic:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5311,
+        "freshInputTokens": 4573,
+        "cachedInputTokens": 738,
+        "cacheWriteTokens": null,
+        "outputTokens": 54,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5365
+      },
+      "elapsedMs": 13573,
+      "toolCalls": 1,
+      "invocationId": "inv-4f119fbd-5140-4fe8-b873-2625cbd834b5",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-9NsxYDpcCi0rp0BQXeIIrxcnQwCEUyOK",
+        "provider_response_sha256:fd970e4f4b4df422d017e0a58e11ed0b0aa7841b0efc3d783f551b3c46a0cf0d",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "multi-file-feature",
+      "category": "multi-file implementation",
+      "minimumProfile": "STANDARD",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-7ae8c9f789bb579e",
+      "contextPacketId": "context-c0881bb85d208034ca95",
+      "contextSourceIds": [
+        "multi-file-feature:control",
+        "multi-file-feature:repository-rules",
+        "multi-file-feature:system",
+        "multi-file-feature:task",
+        "multi-file-feature:tool",
+        "multi-file-feature:targeted"
+      ],
+      "omittedSourceIds": [
+        "multi-file-feature:authoritative",
+        "multi-file-feature:optional-tools",
+        "multi-file-feature:workspace",
+        "multi-file-feature:memory",
+        "multi-file-feature:history",
+        "multi-file-feature:broad-repository",
+        "multi-file-feature:graph"
+      ],
+      "usage": {
+        "inputTokens": 686,
+        "freshInputTokens": 686,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 44,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 730
+      },
+      "elapsedMs": 3246,
+      "toolCalls": 1,
+      "invocationId": "inv-8f059321-cfd8-490a-b23d-2bbc8931dd5f",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-FHWGVO3nCPiuwYN0tbcFNBMrF2kFRl6g",
+        "provider_response_sha256:98a809ff8973cb974e1d3297c7c09e369f696299deb6a5368c1edb91f465fac6",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "multi-file-feature",
+      "category": "multi-file implementation",
+      "minimumProfile": "STANDARD",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-6d77dcd646a97c76",
+      "contextPacketId": "context-fdb3981bf62f30c7b03c",
+      "contextSourceIds": [
+        "multi-file-feature:control",
+        "multi-file-feature:repository-rules",
+        "multi-file-feature:system",
+        "multi-file-feature:task",
+        "multi-file-feature:tool",
+        "multi-file-feature:authoritative",
+        "multi-file-feature:targeted",
+        "multi-file-feature:memory",
+        "multi-file-feature:optional-tools",
+        "multi-file-feature:workspace",
+        "multi-file-feature:history"
+      ],
+      "omittedSourceIds": [
+        "multi-file-feature:broad-repository",
+        "multi-file-feature:graph"
+      ],
+      "usage": {
+        "inputTokens": 2084,
+        "freshInputTokens": 1752,
+        "cachedInputTokens": 332,
+        "cacheWriteTokens": null,
+        "outputTokens": 57,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2141
+      },
+      "elapsedMs": 6048,
+      "toolCalls": 1,
+      "invocationId": "inv-a6ca3fd5-1b82-46ac-a605-a81adf89bee6",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-44A4DMVCUqEUwi8oSU2jhOm2TzObZsmj",
+        "provider_response_sha256:0f750a13b7ffed5e926193fc0042028a2c91f3431f9361ebedbd55c88cd1b26f",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "multi-file-feature",
+      "category": "multi-file implementation",
+      "minimumProfile": "STANDARD",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-ac3ddf6d0fc62e01",
+      "contextPacketId": "context-394cf0c8324abefbf753",
+      "contextSourceIds": [
+        "multi-file-feature:control",
+        "multi-file-feature:repository-rules",
+        "multi-file-feature:system",
+        "multi-file-feature:task",
+        "multi-file-feature:tool",
+        "multi-file-feature:authoritative",
+        "multi-file-feature:targeted",
+        "multi-file-feature:broad-repository",
+        "multi-file-feature:graph",
+        "multi-file-feature:memory",
+        "multi-file-feature:optional-tools",
+        "multi-file-feature:workspace",
+        "multi-file-feature:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5316,
+        "freshInputTokens": 4573,
+        "cachedInputTokens": 743,
+        "cacheWriteTokens": null,
+        "outputTokens": 57,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5373
+      },
+      "elapsedMs": 13492,
+      "toolCalls": 1,
+      "invocationId": "inv-897fd157-a890-4bf6-be34-2d3453c540e4",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-MpqdxIXL4ECh87yJxnZ9Ki9BQ1B0u5z2",
+        "provider_response_sha256:0f750a13b7ffed5e926193fc0042028a2c91f3431f9361ebedbd55c88cd1b26f",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "provider-adapter",
+      "category": "multi-file implementation",
+      "minimumProfile": "STANDARD",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-87eee14bec20ae6a",
+      "contextPacketId": "context-d89145fc8e5092253be4",
+      "contextSourceIds": [
+        "provider-adapter:control",
+        "provider-adapter:repository-rules",
+        "provider-adapter:system",
+        "provider-adapter:task",
+        "provider-adapter:tool",
+        "provider-adapter:targeted"
+      ],
+      "omittedSourceIds": [
+        "provider-adapter:authoritative",
+        "provider-adapter:optional-tools",
+        "provider-adapter:workspace",
+        "provider-adapter:memory",
+        "provider-adapter:history",
+        "provider-adapter:broad-repository",
+        "provider-adapter:graph"
+      ],
+      "usage": {
+        "inputTokens": 686,
+        "freshInputTokens": 686,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 44,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 730
+      },
+      "elapsedMs": 3271,
+      "toolCalls": 1,
+      "invocationId": "inv-c09c1d04-91aa-453a-95a1-67df086fb2a8",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-iUCFVMqKC1nJsr09mVy0WN91FkTShUyI",
+        "provider_response_sha256:9e76d387767b4f2e98efafed467a2163cdbad01ac7e678a142558401fe710584",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "provider-adapter",
+      "category": "multi-file implementation",
+      "minimumProfile": "STANDARD",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-14afbf1c3fb11121",
+      "contextPacketId": "context-0128cf5dc70677571d78",
+      "contextSourceIds": [
+        "provider-adapter:control",
+        "provider-adapter:repository-rules",
+        "provider-adapter:system",
+        "provider-adapter:task",
+        "provider-adapter:tool",
+        "provider-adapter:authoritative",
+        "provider-adapter:targeted",
+        "provider-adapter:memory",
+        "provider-adapter:optional-tools",
+        "provider-adapter:workspace",
+        "provider-adapter:history"
+      ],
+      "omittedSourceIds": [
+        "provider-adapter:broad-repository",
+        "provider-adapter:graph"
+      ],
+      "usage": {
+        "inputTokens": 2083,
+        "freshInputTokens": 1751,
+        "cachedInputTokens": 332,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2139
+      },
+      "elapsedMs": 5992,
+      "toolCalls": 1,
+      "invocationId": "inv-9a9457c1-7f57-4179-8dd5-9f9b8a3dd81c",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-otSi5sD2U6cY1M6mj06pmNsIqqHBPrKW",
+        "provider_response_sha256:5387389cfd0245e1e71b27747a4fa5817cb592899142c8340c2bc3cc0e7936f7",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "provider-adapter",
+      "category": "multi-file implementation",
+      "minimumProfile": "STANDARD",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-4b7364141a5ed2a0",
+      "contextPacketId": "context-6939e909e6e17ff938cc",
+      "contextSourceIds": [
+        "provider-adapter:control",
+        "provider-adapter:repository-rules",
+        "provider-adapter:system",
+        "provider-adapter:task",
+        "provider-adapter:tool",
+        "provider-adapter:authoritative",
+        "provider-adapter:targeted",
+        "provider-adapter:broad-repository",
+        "provider-adapter:graph",
+        "provider-adapter:memory",
+        "provider-adapter:optional-tools",
+        "provider-adapter:workspace",
+        "provider-adapter:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5315,
+        "freshInputTokens": 4573,
+        "cachedInputTokens": 742,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5371
+      },
+      "elapsedMs": 12681,
+      "toolCalls": 1,
+      "invocationId": "inv-d2e4e800-f3c1-44fd-9969-4d8835ad15a8",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-RH8jUjxadsSBJgY83Th3Ddxne08EwMvi",
+        "provider_response_sha256:5387389cfd0245e1e71b27747a4fa5817cb592899142c8340c2bc3cc0e7936f7",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "race-diagnosis",
+      "category": "debugging task",
+      "minimumProfile": "DEEP",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-bb22ffc82bef4fd9",
+      "contextPacketId": "context-15852c39bfe2696a7593",
+      "contextSourceIds": [
+        "race-diagnosis:control",
+        "race-diagnosis:repository-rules",
+        "race-diagnosis:system",
+        "race-diagnosis:task",
+        "race-diagnosis:tool",
+        "race-diagnosis:targeted"
+      ],
+      "omittedSourceIds": [
+        "race-diagnosis:authoritative",
+        "race-diagnosis:optional-tools",
+        "race-diagnosis:workspace",
+        "race-diagnosis:memory",
+        "race-diagnosis:history",
+        "race-diagnosis:broad-repository",
+        "race-diagnosis:graph"
+      ],
+      "usage": {
+        "inputTokens": 685,
+        "freshInputTokens": 685,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 44,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 729
+      },
+      "elapsedMs": 3225,
+      "toolCalls": 1,
+      "invocationId": "inv-1cffea76-3783-47de-921a-addd379e6380",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-ksvEvqfIHCQaVLE939WxyxlcQNN64aRk",
+        "provider_response_sha256:1379b343f74a38e3a2f7a374761cd116074ea68d925ad0e597cafe1ca8fbb7b7",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "race-diagnosis",
+      "category": "debugging task",
+      "minimumProfile": "DEEP",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-9fd11de47d0264af",
+      "contextPacketId": "context-bc9c82d61bb076959b9a",
+      "contextSourceIds": [
+        "race-diagnosis:control",
+        "race-diagnosis:repository-rules",
+        "race-diagnosis:system",
+        "race-diagnosis:task",
+        "race-diagnosis:tool",
+        "race-diagnosis:targeted",
+        "race-diagnosis:memory",
+        "race-diagnosis:optional-tools",
+        "race-diagnosis:workspace",
+        "race-diagnosis:history"
+      ],
+      "omittedSourceIds": [
+        "race-diagnosis:authoritative",
+        "race-diagnosis:broad-repository",
+        "race-diagnosis:graph"
+      ],
+      "usage": {
+        "inputTokens": 2020,
+        "freshInputTokens": 1345,
+        "cachedInputTokens": 675,
+        "cacheWriteTokens": null,
+        "outputTokens": 44,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2064
+      },
+      "elapsedMs": 4281,
+      "toolCalls": 1,
+      "invocationId": "inv-e85dce03-9987-42af-9e02-436f575d7763",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-jCyW5GNh876SpHZAWzvJZV94vJvxLAfM",
+        "provider_response_sha256:1379b343f74a38e3a2f7a374761cd116074ea68d925ad0e597cafe1ca8fbb7b7",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "race-diagnosis",
+      "category": "debugging task",
+      "minimumProfile": "DEEP",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-4d0f338e13bc8e12",
+      "contextPacketId": "context-26caecbc461ad0701ee5",
+      "contextSourceIds": [
+        "race-diagnosis:control",
+        "race-diagnosis:repository-rules",
+        "race-diagnosis:system",
+        "race-diagnosis:task",
+        "race-diagnosis:tool",
+        "race-diagnosis:authoritative",
+        "race-diagnosis:targeted",
+        "race-diagnosis:broad-repository",
+        "race-diagnosis:graph",
+        "race-diagnosis:memory",
+        "race-diagnosis:optional-tools",
+        "race-diagnosis:workspace",
+        "race-diagnosis:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5316,
+        "freshInputTokens": 5316,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 59,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5375
+      },
+      "elapsedMs": 13851,
+      "toolCalls": 1,
+      "invocationId": "inv-5f2207d7-bff0-4109-b01c-d02242a7b9d0",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-oOqcfw8dGJzoPOExbjCL5IwmsLUxp9hf",
+        "provider_response_sha256:56a42ab481c2cfed5acc489ae175ac7775eacaf676e038d7844b197d33d9db94",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "scheduler-architecture",
+      "category": "architectural task",
+      "minimumProfile": "DEEP",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-daecc4e0dd89bc3e",
+      "contextPacketId": "context-4836a280da3b6dcf2b87",
+      "contextSourceIds": [
+        "scheduler-architecture:control",
+        "scheduler-architecture:repository-rules",
+        "scheduler-architecture:system",
+        "scheduler-architecture:task",
+        "scheduler-architecture:tool",
+        "scheduler-architecture:targeted"
+      ],
+      "omittedSourceIds": [
+        "scheduler-architecture:authoritative",
+        "scheduler-architecture:optional-tools",
+        "scheduler-architecture:workspace",
+        "scheduler-architecture:memory",
+        "scheduler-architecture:history",
+        "scheduler-architecture:broad-repository",
+        "scheduler-architecture:graph"
+      ],
+      "usage": {
+        "inputTokens": 685,
+        "freshInputTokens": 685,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 44,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 729
+      },
+      "elapsedMs": 2891,
+      "toolCalls": 1,
+      "invocationId": "inv-f8209bc0-b593-408b-a9b2-61dc379e6b1c",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-VKSAKbe7o67DMKgqAvOcu02wuMYfzcNr",
+        "provider_response_sha256:2a43477dcaac36ebb393ce338b33f23709341e45d3c48aa4bbb93083d5428151",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "scheduler-architecture",
+      "category": "architectural task",
+      "minimumProfile": "DEEP",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-e08e7e3f4a98ac5c",
+      "contextPacketId": "context-ae8415152eac4cae5015",
+      "contextSourceIds": [
+        "scheduler-architecture:control",
+        "scheduler-architecture:repository-rules",
+        "scheduler-architecture:system",
+        "scheduler-architecture:task",
+        "scheduler-architecture:tool",
+        "scheduler-architecture:targeted",
+        "scheduler-architecture:memory",
+        "scheduler-architecture:optional-tools",
+        "scheduler-architecture:workspace",
+        "scheduler-architecture:history"
+      ],
+      "omittedSourceIds": [
+        "scheduler-architecture:authoritative",
+        "scheduler-architecture:broad-repository",
+        "scheduler-architecture:graph"
+      ],
+      "usage": {
+        "inputTokens": 2020,
+        "freshInputTokens": 1345,
+        "cachedInputTokens": 675,
+        "cacheWriteTokens": null,
+        "outputTokens": 44,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2064
+      },
+      "elapsedMs": 3778,
+      "toolCalls": 1,
+      "invocationId": "inv-ba629a52-e638-43a0-8bb1-88ceb991a757",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-nX9g0vNAVV7JHa5L6mTm4QGSVyDSdCVF",
+        "provider_response_sha256:2a43477dcaac36ebb393ce338b33f23709341e45d3c48aa4bbb93083d5428151",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "scheduler-architecture",
+      "category": "architectural task",
+      "minimumProfile": "DEEP",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-6466c8e818632ebf",
+      "contextPacketId": "context-756e0b0314c12e47ad01",
+      "contextSourceIds": [
+        "scheduler-architecture:control",
+        "scheduler-architecture:repository-rules",
+        "scheduler-architecture:system",
+        "scheduler-architecture:task",
+        "scheduler-architecture:tool",
+        "scheduler-architecture:authoritative",
+        "scheduler-architecture:targeted",
+        "scheduler-architecture:broad-repository",
+        "scheduler-architecture:graph",
+        "scheduler-architecture:memory",
+        "scheduler-architecture:optional-tools",
+        "scheduler-architecture:workspace",
+        "scheduler-architecture:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5313,
+        "freshInputTokens": 5313,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5369
+      },
+      "elapsedMs": 13442,
+      "toolCalls": 1,
+      "invocationId": "inv-335a1de2-8480-432b-acd8-fd0c5becc78c",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-dDCM3CceoDPvFywuJhIgyCzggVg8LXtU",
+        "provider_response_sha256:6af0ee78edeebbd99a0bfc9946dfb1f7f148fe480c43695c991bc48907272816",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "security-boundary",
+      "category": "architectural task",
+      "minimumProfile": "DEEP",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-7b5783d61144e995",
+      "contextPacketId": "context-1af137e72fa4e36d0fca",
+      "contextSourceIds": [
+        "security-boundary:control",
+        "security-boundary:repository-rules",
+        "security-boundary:system",
+        "security-boundary:task",
+        "security-boundary:tool",
+        "security-boundary:targeted"
+      ],
+      "omittedSourceIds": [
+        "security-boundary:authoritative",
+        "security-boundary:optional-tools",
+        "security-boundary:workspace",
+        "security-boundary:memory",
+        "security-boundary:history",
+        "security-boundary:broad-repository",
+        "security-boundary:graph"
+      ],
+      "usage": {
+        "inputTokens": 685,
+        "freshInputTokens": 685,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 44,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 729
+      },
+      "elapsedMs": 3018,
+      "toolCalls": 1,
+      "invocationId": "inv-31942fe1-7b17-49be-93ad-74e7f3b38e23",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-FtBTW6koYbs1cxisEUpUXeYjJyrHm4Vw",
+        "provider_response_sha256:80b07a24bc91546467e6436f25bc5d140912bb77555df5be9e33e6751895e765",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "security-boundary",
+      "category": "architectural task",
+      "minimumProfile": "DEEP",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-96ecfc0b8283f22a",
+      "contextPacketId": "context-68e915dd37e7bf4e23fa",
+      "contextSourceIds": [
+        "security-boundary:control",
+        "security-boundary:repository-rules",
+        "security-boundary:system",
+        "security-boundary:task",
+        "security-boundary:tool",
+        "security-boundary:targeted",
+        "security-boundary:memory",
+        "security-boundary:optional-tools",
+        "security-boundary:workspace",
+        "security-boundary:history"
+      ],
+      "omittedSourceIds": [
+        "security-boundary:authoritative",
+        "security-boundary:broad-repository",
+        "security-boundary:graph"
+      ],
+      "usage": {
+        "inputTokens": 2020,
+        "freshInputTokens": 1345,
+        "cachedInputTokens": 675,
+        "cacheWriteTokens": null,
+        "outputTokens": 44,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2064
+      },
+      "elapsedMs": 4365,
+      "toolCalls": 1,
+      "invocationId": "inv-4c769a39-caaa-43fa-83b6-75c2cb0cff2f",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-wxRHjRMPA8YKRxiayBbLjU9jwyrujidu",
+        "provider_response_sha256:80b07a24bc91546467e6436f25bc5d140912bb77555df5be9e33e6751895e765",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "security-boundary",
+      "category": "architectural task",
+      "minimumProfile": "DEEP",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-64ec78e7af4ea778",
+      "contextPacketId": "context-24a472bed3cdf2330f53",
+      "contextSourceIds": [
+        "security-boundary:control",
+        "security-boundary:repository-rules",
+        "security-boundary:system",
+        "security-boundary:task",
+        "security-boundary:tool",
+        "security-boundary:authoritative",
+        "security-boundary:targeted",
+        "security-boundary:broad-repository",
+        "security-boundary:graph",
+        "security-boundary:memory",
+        "security-boundary:optional-tools",
+        "security-boundary:workspace",
+        "security-boundary:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5313,
+        "freshInputTokens": 5313,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5369
+      },
+      "elapsedMs": 12677,
+      "toolCalls": 1,
+      "invocationId": "inv-b02fd72c-800f-4448-84b1-794e5820b54d",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-qGgjB73hkdhguDMVJTGygTchxXeZGTAy",
+        "provider_response_sha256:a4d1e0fa081889a434dafe2ed583f3f5a63bdb4d4370333c136639567d82cbe6",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "recovery-redesign",
+      "category": "architectural task",
+      "minimumProfile": "DEEP",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-4c798f110af6d433",
+      "contextPacketId": "context-2d3cd0af2ef09f625a2b",
+      "contextSourceIds": [
+        "recovery-redesign:control",
+        "recovery-redesign:repository-rules",
+        "recovery-redesign:system",
+        "recovery-redesign:task",
+        "recovery-redesign:tool",
+        "recovery-redesign:targeted"
+      ],
+      "omittedSourceIds": [
+        "recovery-redesign:authoritative",
+        "recovery-redesign:optional-tools",
+        "recovery-redesign:workspace",
+        "recovery-redesign:memory",
+        "recovery-redesign:history",
+        "recovery-redesign:broad-repository",
+        "recovery-redesign:graph"
+      ],
+      "usage": {
+        "inputTokens": 687,
+        "freshInputTokens": 687,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 45,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 732
+      },
+      "elapsedMs": 2658,
+      "toolCalls": 1,
+      "invocationId": "inv-21af8824-9ead-4c63-9e05-d65b7089cee8",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-SZSPqpz5vbZMC2WZ49Mb2cSf5Dwlg7O7",
+        "provider_response_sha256:651f132db3728ead72bf9a8c48a3c2c690c1f902c3249148fb7894fe433a1c95",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "recovery-redesign",
+      "category": "architectural task",
+      "minimumProfile": "DEEP",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-962f8f7d146d8cc6",
+      "contextPacketId": "context-c2a615a65622006ff4e1",
+      "contextSourceIds": [
+        "recovery-redesign:control",
+        "recovery-redesign:repository-rules",
+        "recovery-redesign:system",
+        "recovery-redesign:task",
+        "recovery-redesign:tool",
+        "recovery-redesign:targeted",
+        "recovery-redesign:memory",
+        "recovery-redesign:optional-tools",
+        "recovery-redesign:workspace",
+        "recovery-redesign:history"
+      ],
+      "omittedSourceIds": [
+        "recovery-redesign:authoritative",
+        "recovery-redesign:broad-repository",
+        "recovery-redesign:graph"
+      ],
+      "usage": {
+        "inputTokens": 2022,
+        "freshInputTokens": 1345,
+        "cachedInputTokens": 677,
+        "cacheWriteTokens": null,
+        "outputTokens": 45,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2067
+      },
+      "elapsedMs": 2741,
+      "toolCalls": 1,
+      "invocationId": "inv-4725f805-0d4b-48c2-9947-eafb96d83628",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-7m3e38pLDVMcdbPamxqn8chEIB4Ubw9I",
+        "provider_response_sha256:651f132db3728ead72bf9a8c48a3c2c690c1f902c3249148fb7894fe433a1c95",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "recovery-redesign",
+      "category": "architectural task",
+      "minimumProfile": "DEEP",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-f1728aec21d6e847",
+      "contextPacketId": "context-5aed3995f6ffe1d68b34",
+      "contextSourceIds": [
+        "recovery-redesign:control",
+        "recovery-redesign:repository-rules",
+        "recovery-redesign:system",
+        "recovery-redesign:task",
+        "recovery-redesign:tool",
+        "recovery-redesign:authoritative",
+        "recovery-redesign:targeted",
+        "recovery-redesign:broad-repository",
+        "recovery-redesign:graph",
+        "recovery-redesign:memory",
+        "recovery-redesign:optional-tools",
+        "recovery-redesign:workspace",
+        "recovery-redesign:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5314,
+        "freshInputTokens": 5314,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5370
+      },
+      "elapsedMs": 7793,
+      "toolCalls": 1,
+      "invocationId": "inv-95f3786c-05dc-4db1-8ea8-0d4c4dab61e9",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-D3an0n1xIOT7jAZL99kzfJDxCqlrCohn",
+        "provider_response_sha256:49d15c6e88ac446574b877ec7ba01fefe317cd47b80776a07710b31dc5628e3a",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "cross-service-change",
+      "category": "multi-file implementation",
+      "minimumProfile": "DEEP",
+      "profile": "THIN",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-7765d58bffb84c42",
+      "contextPacketId": "context-66b7e2fc2c0e49fd4fbd",
+      "contextSourceIds": [
+        "cross-service-change:control",
+        "cross-service-change:repository-rules",
+        "cross-service-change:system",
+        "cross-service-change:task",
+        "cross-service-change:tool",
+        "cross-service-change:targeted"
+      ],
+      "omittedSourceIds": [
+        "cross-service-change:authoritative",
+        "cross-service-change:optional-tools",
+        "cross-service-change:workspace",
+        "cross-service-change:memory",
+        "cross-service-change:history",
+        "cross-service-change:broad-repository",
+        "cross-service-change:graph"
+      ],
+      "usage": {
+        "inputTokens": 687,
+        "freshInputTokens": 687,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 44,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 731
+      },
+      "elapsedMs": 1664,
+      "toolCalls": 1,
+      "invocationId": "inv-49fee428-25f4-4252-94f5-83fc3b532126",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-Ztj5I7rQ1ZxQmGVknlmolQGK8PSNlZ1u",
+        "provider_response_sha256:41abe93ced95e9ec4112c9008f0f787035826b2b99be324bbbec0f64c432c63d",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "cross-service-change",
+      "category": "multi-file implementation",
+      "minimumProfile": "DEEP",
+      "profile": "STANDARD",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "FAIL",
+      "success": false,
+      "expectedContextAvailable": false,
+      "submittedMissingContext": false,
+      "failureReason": "verifier_rejected",
+      "recipeId": "recipe-cd95f9718a17a3d7",
+      "contextPacketId": "context-7ec1459815f5c10c60dc",
+      "contextSourceIds": [
+        "cross-service-change:control",
+        "cross-service-change:repository-rules",
+        "cross-service-change:system",
+        "cross-service-change:task",
+        "cross-service-change:tool",
+        "cross-service-change:targeted",
+        "cross-service-change:memory",
+        "cross-service-change:optional-tools",
+        "cross-service-change:workspace",
+        "cross-service-change:history"
+      ],
+      "omittedSourceIds": [
+        "cross-service-change:authoritative",
+        "cross-service-change:broad-repository",
+        "cross-service-change:graph"
+      ],
+      "usage": {
+        "inputTokens": 2022,
+        "freshInputTokens": 1345,
+        "cachedInputTokens": 677,
+        "cacheWriteTokens": null,
+        "outputTokens": 44,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 2066
+      },
+      "elapsedMs": 2338,
+      "toolCalls": 1,
+      "invocationId": "inv-cbb1c470-54d1-47df-9bb0-525f6caba9fe",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-6Y8tzkfvXWASpcxulGwfvZujPADGGVJz",
+        "provider_response_sha256:41abe93ced95e9ec4112c9008f0f787035826b2b99be324bbbec0f64c432c63d",
+        "tool_executed:benchmark.submit"
+      ]
+    },
+    {
+      "taskId": "cross-service-change",
+      "category": "multi-file implementation",
+      "minimumProfile": "DEEP",
+      "profile": "DEEP",
+      "model": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "provider": "controlled-live-openai-compatible",
+      "verifierResult": "PASS",
+      "success": true,
+      "expectedContextAvailable": true,
+      "submittedMissingContext": false,
+      "failureReason": null,
+      "recipeId": "recipe-91309138dcb347dc",
+      "contextPacketId": "context-81966020d8f433943345",
+      "contextSourceIds": [
+        "cross-service-change:control",
+        "cross-service-change:repository-rules",
+        "cross-service-change:system",
+        "cross-service-change:task",
+        "cross-service-change:tool",
+        "cross-service-change:authoritative",
+        "cross-service-change:targeted",
+        "cross-service-change:broad-repository",
+        "cross-service-change:graph",
+        "cross-service-change:memory",
+        "cross-service-change:optional-tools",
+        "cross-service-change:workspace",
+        "cross-service-change:history"
+      ],
+      "omittedSourceIds": [],
+      "usage": {
+        "inputTokens": 5315,
+        "freshInputTokens": 5315,
+        "cachedInputTokens": 0,
+        "cacheWriteTokens": null,
+        "outputTokens": 56,
+        "reasoningTokens": null,
+        "totalProcessedTokens": 5371
+      },
+      "elapsedMs": 7798,
+      "toolCalls": 1,
+      "invocationId": "inv-5b3f52f0-97b0-477d-a0b6-3693b20b2592",
+      "provenanceEvidenceIds": [
+        "provider_response:chatcmpl-6tU0NhefSZs7cXWXhgrrOjG7LcwiCDMg",
+        "provider_response_sha256:108fffc19134a5f573d6167d3a796c928b50ce0a17c78ee190ac5aa356309546",
+        "tool_executed:benchmark.submit"
+      ]
+    }
+  ],
+  "aggregates": {
+    "THIN": {
+      "profile": "THIN",
+      "tasks": 20,
+      "verifiedSuccesses": 9,
+      "successRate": 0.45,
+      "expectedContextRuns": 9,
+      "expectedContextVerifiedSuccesses": 9,
+      "expectedContextSuccessRate": 1,
+      "totalInputTokens": 14187,
+      "freshInputTokens": 13507,
+      "cachedInputTokens": 680,
+      "outputTokens": 994,
+      "totalProcessedTokens": 15181,
+      "medianInputTokens": 687.5,
+      "medianElapsedMs": 3428,
+      "cacheEffectiveness": 0.04793120462395151,
+      "tokensPerVerifiedOutcome": 1686.7777777777778,
+      "freshTokensPerVerifiedOutcome": 1500.7777777777778,
+      "providerReportedCost": null,
+      "calculatedCost": null,
+      "costPerVerifiedOutcome": null
+    },
+    "STANDARD": {
+      "profile": "STANDARD",
+      "tasks": 20,
+      "verifiedSuccesses": 15,
+      "successRate": 0.75,
+      "expectedContextRuns": 15,
+      "expectedContextVerifiedSuccesses": 15,
+      "expectedContextSuccessRate": 1,
+      "totalInputTokens": 41270,
+      "freshInputTokens": 29436,
+      "cachedInputTokens": 11834,
+      "outputTokens": 1068,
+      "totalProcessedTokens": 42338,
+      "medianInputTokens": 2051,
+      "medianElapsedMs": 5245,
+      "cacheEffectiveness": 0.2867458202083838,
+      "tokensPerVerifiedOutcome": 2822.5333333333333,
+      "freshTokensPerVerifiedOutcome": 1962.4,
+      "providerReportedCost": null,
+      "calculatedCost": null,
+      "costPerVerifiedOutcome": null
+    },
+    "DEEP": {
+      "profile": "DEEP",
+      "tasks": 20,
+      "verifiedSuccesses": 20,
+      "successRate": 1,
+      "expectedContextRuns": 20,
+      "expectedContextVerifiedSuccesses": 20,
+      "expectedContextSuccessRate": 1,
+      "totalInputTokens": 106215,
+      "freshInputTokens": 90594,
+      "cachedInputTokens": 15621,
+      "outputTokens": 1130,
+      "totalProcessedTokens": 107345,
+      "medianInputTokens": 5314,
+      "medianElapsedMs": 13556,
+      "cacheEffectiveness": 0.14706962293461376,
+      "tokensPerVerifiedOutcome": 5367.25,
+      "freshTokensPerVerifiedOutcome": 4529.7,
+      "providerReportedCost": null,
+      "calculatedCost": null,
+      "costPerVerifiedOutcome": null
+    }
+  },
+  "conclusions": {
+    "boundedThinVerifiedSuccessRate": 1,
+    "thinProviderFloorReductionVsStandardPercent": 61.50888995675157,
+    "standardAdditionalVerifiedTasks": 6,
+    "deepAdditionalVerifiedTasks": 5,
+    "providerCachedInputPercent": 17.40251867979613,
+    "sameModelControlledRuns": 60,
+    "automaticRoutingSupportedByEvidence": false,
+    "reason": "Live evidence covers controlled typed context retrieval with deterministic verification, not repository mutation or production coding outcomes. Production routing therefore remains observational."
+  },
+  "governance": {
+    "routingMode": "EXPERIMENT",
+    "productionRoutingChanged": false,
+    "typedToolOnly": true,
+    "repositoryMutated": false,
+    "servicesChanged": false
+  }
+}

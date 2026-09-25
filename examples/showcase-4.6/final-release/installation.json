@@ -1,0 +1,18 @@
+[
+  {
+    "installation": "clean",
+    "source": "558e7a5202007ee162b61efdce45197e549f72fd",
+    "state": "BOOTSTRAP_PASS",
+    "stateFilesPreserved": null,
+    "sourceDelivery": "exact git archive into isolated container Git fixture",
+    "logSha256": "9da3241932a542e7b39cea9829a96e074e7a29d3de4e4bdf962550b24117cb9e"
+  },
+  {
+    "installation": "upgraded",
+    "source": "558e7a5202007ee162b61efdce45197e549f72fd",
+    "state": "BOOTSTRAP_PASS",
+    "stateFilesPreserved": 21,
+    "sourceDelivery": "exact git archive into isolated container Git fixture",
+    "logSha256": "88581259b16c3ef8349a00726c312ed43905c98e20a42da67df930927886df4a"
+  }
+]

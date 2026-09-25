@@ -1,0 +1,28 @@
+*.sh text eol=lf
+*.mjs text eol=lf
+*.ts text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.pdf binary
+
+# Private historical qualification records and environment-bound research drivers.
+# Retained unchanged in Git; intentionally absent from public source archives.
+/.qualification-evidence-root export-ignore
+/docs/evidence export-ignore
+/docs/qualification export-ignore
+/docs/social-voice/evidence export-ignore
+/evidence/3.3-dashboard-invocation-telemetry export-ignore
+/evidence/3.3-neutrality-release export-ignore
+/evidence/3.3-safety-runtime-remediation export-ignore
+/scripts/build-memory-route-qualifications-4.5.ts export-ignore
+/scripts/qualify-cross-model-memory-4.5.ts export-ignore
+/scripts/qualify-marm-memory.ts export-ignore
+/scripts/qualify-memory-conditions-consolidation-4.5.ts export-ignore
+/scripts/qualify-power-aware-poe-4.5.ts export-ignore
+/scripts/reconcile-release-gate-4.5.mjs export-ignore
+/scripts/reconcile-release-gate-completion-4.5.mjs export-ignore
+/scripts/record-cross-model-memory-4.5.ts export-ignore
+/scripts/record-session-vault-4.5.ts export-ignore
+
+# Reviewed bounded patch fixtures are retained for regression; screenshots stay external.
+/docs/media export-ignore

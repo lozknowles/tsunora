@@ -1,0 +1,22 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata:
+  id: deterministic-skill-execution
+  name: Governed deterministic skill execution
+  version: 1.0.0
+  description: Execute a previously promoted, hash-identified deterministic skill when its exact typed contract and freshness gates pass.
+spec:
+  enabled: true
+  priority: normal
+  concurrency: allow
+  parameters:
+    taskClass: {type: string, required: true}
+    input: {type: string, required: true}
+  steps:
+    - id: execute
+      action: deterministic-skill.execute@1.0.0
+      requires: [qualification.local]
+      outputs:
+        - {name: deterministic-skill-result, type: application/json, schema: agent-control.deterministic-skill-result/v1, version: 1.0.0}
+      verification: [deterministic-skill-independent-verification]
+      timeoutSeconds: 30

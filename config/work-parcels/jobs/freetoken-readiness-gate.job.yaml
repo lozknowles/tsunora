@@ -1,0 +1,15 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata: {id: freetoken-readiness-gate, name: FreeToken readiness gate, version: 1.0.0, description: Fail closed unless capacity and a compatible checkpoint are proven.}
+spec:
+  enabled: true
+  priority: normal
+  concurrency: no-overlap
+  parameters:
+    minimumFreeVramMiB: {type: integer, default: 8192, minimum: 8192}
+  steps:
+    - id: gate
+      action: qualification.freetoken.gate@1.0.0
+      requires: [qualification.local]
+      outputs: [{name: gate, type: application/vnd.agent-control.freetoken-gate+json, schema: freetoken-gate/v1, version: 1.0.0}]
+      verification: [freetoken-capacity-safe, freetoken-compatible-checkpoint]

@@ -1,0 +1,22 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata:
+  id: repository-tests
+  name: Approved repository tests
+  version: 1.0.0
+  description: Execute a fixed test suite in an explicitly approved repository through owned process cleanup.
+spec:
+  enabled: true
+  priority: normal
+  concurrency: no-overlap
+  parameters:
+    repositoryPath: {type: string, required: true}
+    suite: {type: string, enum: [messaging, typecheck], default: typecheck}
+  steps:
+    - id: tests
+      action: repository.tests@1.0.0
+      requires: [repository.test]
+      timeoutSeconds: 120
+      outputs:
+        - {name: test-result, type: application/json, schema: agent-control.repository-tests/v1, version: 1.0.0}
+      verification: [tests-passed]

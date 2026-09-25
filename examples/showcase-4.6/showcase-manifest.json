@@ -1,0 +1,359 @@
+{
+  "version": "4.8.0",
+  "screenshots": [
+    {
+      "kind": "usage-overview",
+      "file": "docs/media/4.6/usage/01-overview.png",
+      "sha256": "0833162fb47a1b2bd19da9c25d517dc242f471bb41fa8556de2eb621e790c970",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-trend",
+      "file": "docs/media/4.6/usage/02-trend.png",
+      "sha256": "7474c57240534787ad4e0398693507ef4df5d08782307e6ee6a5886ffc2d9bc2",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-breakdown",
+      "file": "docs/media/4.6/usage/03-breakdown.png",
+      "sha256": "6685a7418b6ae324372d7515fe1faba31bb1a5470b6443752b6ecefec9037dcd",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-cache-retries",
+      "file": "docs/media/4.6/usage/04-cache-retries.png",
+      "sha256": "fde5d90bacc3ee4e4cb2d802f5f74de70ea7563c368d05c3201d3a3355a212a7",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-energy",
+      "file": "docs/media/4.6/usage/05-energy.png",
+      "sha256": "e76ab0053eb854add50f095deb79692b4d8f54758991554a0163306125c3216f",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-local-vs-api",
+      "file": "docs/media/4.6/usage/06-local-vs-api.png",
+      "sha256": "5aa5748ff1a32be934d19963ccd76f108d1de765d16362dbf77cbba2caeb008d",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-model-history",
+      "file": "docs/media/4.6/usage/07-model-history.png",
+      "sha256": "3e41f6c4b0ccd293787ade9bac19e71e0e2aadf6dd3ad0565680bf638aa30178",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-invocations",
+      "file": "docs/media/4.6/usage/08-invocations.png",
+      "sha256": "abaead1d4897bbdd73d2c90eeb25a7f08c122188c51fef51c020a70d64cd55af",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-invocation-detail",
+      "file": "docs/media/4.6/usage/09-invocation-detail.png",
+      "sha256": "ffe466ce3ccfb09c68375d9ecdc4a64273592a9bd71d9ab969b90139fcb454ba",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "usage-mobile",
+      "file": "docs/media/4.6/usage/10-mobile.png",
+      "sha256": "fe4dc5940e2f777c14fba6f9d92a0e6608cac28e8b43983a941a216a984332fa",
+      "sourceCommit": "7494c2dce3296da531852e8f5f3545f8e89cfe0e",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Selected physical qualification histories; not estate-wide usage"
+    },
+    {
+      "kind": "dashboard",
+      "file": "docs/media/4.6/public/01-first-dashboard.png",
+      "sha256": "c998cec320b664b4342238fbe6d9ade9509c57a00886abaf158c218b86e4af25",
+      "sourceCommit": "a15dada53f0c3e0d2f4f3fd00da7cad936dc494e",
+      "synthetic": false,
+      "scope": "Actual first load and setup before first scan",
+      "privacyReviewed": true
+    },
+    {
+      "kind": "discovery-start",
+      "file": "docs/media/4.6/public/02-setup.png",
+      "sha256": "4650f417fba2d4459e1cf4795e2dfba84a85f3c277b943650e11846e8cfe79e3",
+      "sourceCommit": "a15dada53f0c3e0d2f4f3fd00da7cad936dc494e",
+      "synthetic": false,
+      "scope": "Actual first load and setup before first scan",
+      "privacyReviewed": true
+    },
+    {
+      "kind": "discovery-running",
+      "file": "docs/media/4.6/public/03-discovery-running.png",
+      "sha256": "d7fbc81c69ffdc40a9142bf68c48d52882fd2dbbc812a79ba9ca01fd50e80ada",
+      "sourceCommit": "a15dada53f0c3e0d2f4f3fd00da7cad936dc494e",
+      "synthetic": false,
+      "scope": "Actual disposable public install; Discovery and Estate use native public projection",
+      "privacyReviewed": true
+    },
+    {
+      "kind": "discovery-completed",
+      "file": "docs/media/4.6/public/04-discovery-results.png",
+      "sha256": "7792e5945fbce27f89c0f104f4c87a66168c0b71afa63ae1335996b1e3d12785",
+      "sourceCommit": "a15dada53f0c3e0d2f4f3fd00da7cad936dc494e",
+      "synthetic": false,
+      "scope": "Actual disposable public install; Discovery and Estate use native public projection",
+      "privacyReviewed": true
+    },
+    {
+      "kind": "estate",
+      "file": "docs/media/4.6/public/05-estate.png",
+      "sha256": "e58e2d3df5c120837f91968ca84c09e007aad3cd1c4dd6f5ebbc0a65b397b259",
+      "sourceCommit": "a15dada53f0c3e0d2f4f3fd00da7cad936dc494e",
+      "synthetic": false,
+      "scope": "Actual disposable public install; Discovery and Estate use native public projection",
+      "privacyReviewed": true
+    },
+    {
+      "kind": "resource-inspector",
+      "file": "docs/media/4.6/public/06-inspector.png",
+      "sha256": "cc40c4f06d54d88b577938843b6ba9fd20a4859600de459d5bc3fc433567998a",
+      "sourceCommit": "a15dada53f0c3e0d2f4f3fd00da7cad936dc494e",
+      "synthetic": false,
+      "scope": "Actual disposable public install; Discovery and Estate use native public projection",
+      "privacyReviewed": true
+    },
+    {
+      "kind": "crew",
+      "file": "docs/media/4.6/public/10-crew.png",
+      "sha256": "096b6da3a0c2a25ecd808acf0dbb25ade4cc29837276c674ce30f868d5397ac9",
+      "sourceCommit": "4139185948179751485c05bad6629187b94914f2",
+      "synthetic": false,
+      "scope": "Actual disposable public install; Discovery and Estate use native public projection",
+      "privacyReviewed": true
+    },
+    {
+      "kind": "mallow",
+      "file": "docs/media/4.6/public/11-mallow.png",
+      "sha256": "85c242c9c4107719f392e747c823eb6a16843ba85a8e553b5f54a822255fc2bf",
+      "sourceCommit": "4139185948179751485c05bad6629187b94914f2",
+      "synthetic": false,
+      "scope": "Actual disposable public install; Discovery and Estate use native public projection",
+      "privacyReviewed": true
+    },
+    {
+      "kind": "mallow-proposal",
+      "file": "docs/media/4.6/public/12-mallow-proposal.png",
+      "sha256": "a2367182866b120c0e9a931365f19e06f695f711da5818fd36d832195d4fb68f",
+      "sourceCommit": "a15dada53f0c3e0d2f4f3fd00da7cad936dc494e",
+      "synthetic": false,
+      "scope": "Actual disposable public install; Discovery and Estate use native public projection",
+      "privacyReviewed": true
+    },
+    {
+      "kind": "first-run-mobile",
+      "file": "docs/media/4.6/public/13-mobile.png",
+      "sha256": "27d5ef15a138e16cb8f0af6753bdd0760253f0923e44b1abcad4ef776fda41fc",
+      "sourceCommit": "a15dada53f0c3e0d2f4f3fd00da7cad936dc494e",
+      "synthetic": false,
+      "scope": "Actual disposable public install; Discovery and Estate use native public projection",
+      "privacyReviewed": true
+    },
+    {
+      "kind": "process-completed",
+      "file": "docs/media/4.6/public/07-process.png",
+      "sha256": "2b2376e3571e7205bb5a221a4f7d130a7c14ee2f017e38195ac4f44935ca97c4",
+      "sourceCommit": "4139185948179751485c05bad6629187b94914f2",
+      "synthetic": false,
+      "scope": "Actual approved observation job; final breadcrumb fix verified",
+      "privacyReviewed": true
+    },
+    {
+      "kind": "usage-overview-current",
+      "file": "docs/media/4.6/public/08-usage.png",
+      "sha256": "e5e998371044be99c8d6b2ec9aa20cccd1b6ef6cb29be26f85bfe0b3f1e80a8a",
+      "sourceCommit": "4139185948179751485c05bad6629187b94914f2",
+      "synthetic": false,
+      "scope": "Current product renders copy of sealed physical native-inference history; no new inference or measurement",
+      "privacyReviewed": true
+    },
+    {
+      "kind": "usage-energy-current",
+      "file": "docs/media/4.6/public/09-energy.png",
+      "sha256": "bb2591efe49493a323f68e3c8c87204fd09536a659eaa93f23c111cd462977f4",
+      "sourceCommit": "4139185948179751485c05bad6629187b94914f2",
+      "synthetic": false,
+      "scope": "Current product renders copy of sealed physical native-inference history; no new inference or measurement",
+      "privacyReviewed": true
+    },
+    {
+      "kind": "android-android-local-dashboard",
+      "file": "docs/media/4.6/android/android-local-dashboard.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "e814b0330cf8bc947712288ddccc09ad91f6620cf7380cca9cc30185fae59174",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Original handset capture."
+    },
+    {
+      "kind": "android-android-discovery",
+      "file": "docs/media/4.6/android/android-discovery.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "ecd4056dad2055ada5edaf8b0eefc744b86e613fea1c587ea7c8eb185d6622de",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Original handset capture."
+    },
+    {
+      "kind": "android-android-estate",
+      "file": "docs/media/4.6/android/android-estate.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "e03d0a0264d15a61de0e940ae77eed6a10e6e802e97b6476b6cb15687d5dceb2",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Original handset capture."
+    },
+    {
+      "kind": "android-android-phone-inspector",
+      "file": "docs/media/4.6/android/android-phone-inspector.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "4399b44f331c5668737259bf3e983e807f98760c383040957d9385ccac58e840",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Expired observation and qualification gaps are intentionally visible."
+    },
+    {
+      "kind": "android-android-local-process",
+      "file": "docs/media/4.6/android/android-local-process.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "100af5724c6c2e3bfa6ef2e45329dda949e7c457ae6750197923271f203da9fd",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Original handset capture."
+    },
+    {
+      "kind": "android-android-crew",
+      "file": "docs/media/4.6/android/android-crew.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "3734a43fcc7b8db13c587dbfde4abeb4bb788b40e5bfd6a04d20a5e5bb2b5e16",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Original handset capture."
+    },
+    {
+      "kind": "android-android-mallow-readiness",
+      "file": "docs/media/4.6/android/android-mallow-readiness.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "262d2346d8b37f458933778a0d013d87c9d883d7060269f61b9a94377c4159fc",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Original handset capture."
+    },
+    {
+      "kind": "android-physical-offline",
+      "file": "docs/media/4.6/android/physical-offline.png",
+      "sourceCommit": "f9f95eda37760ba4b83d0558ed9634cf5f4400cc",
+      "sha256": "ef929432dcf2998cc92050864043daf78c4be2b1f8a0882e5df92121f7bd00fd",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Original handset capture."
+    },
+    {
+      "kind": "android-android-process-control-room",
+      "file": "docs/media/4.6/android/android-process-control-room.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "3f68c120adc1af3047df6a36cb764087c26d1046ffe73282e92d1cb81daa5352",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Control Room displays the retained successful local run at readable handset scale."
+    },
+    {
+      "kind": "model-intelligence",
+      "file": "docs/media/4.6/integration/intelligence-baseline.png",
+      "sourceCommit": "e8862223efaa4f3694145089fb1c142e8a75850f",
+      "sha256": "ec09ab59c48f5ee20cf5260b28e7100eb84ed7950063e3eb6aef994182764c13",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Real baseline: existing artifact observations, two reviewed candidates, approval required; zero benchmarked."
+    },
+    {
+      "kind": "morning-brief",
+      "file": "docs/media/4.6/integration/morning-followup.png",
+      "sourceCommit": "e8862223efaa4f3694145089fb1c142e8a75850f",
+      "sha256": "fc42183935a1e344cd04322691302c8a75fa1b6b4afeb430331b611d8d22ccb0",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Real follow-up: zero observed changes, incomplete runtime source coverage disclosed."
+    },
+    {
+      "kind": "model-intelligence-mobile",
+      "file": "docs/media/4.6/integration/intelligence-mobile.png",
+      "sourceCommit": "e8862223efaa4f3694145089fb1c142e8a75850f",
+      "sha256": "f4282e6d2d058d02585049fa9cafb0accce9d0e2997fa82f9d855ecc5f6923b3",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Actual dashboard in desktop mobile viewport emulation; not physical handset qualification."
+    },
+    {
+      "kind": "estate-current",
+      "file": "docs/media/4.6/integration/estate.png",
+      "sourceCommit": "5ed7495bc46108ad2968bdfe8ef5cf47731c4ad1",
+      "sha256": "2b65c5a2181667fb78cdbde0a8457093808a7d0f1a5f0302ef6bad67cf8b302f",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Fresh native Discovery and current Estate header; wrapped filters."
+    },
+    {
+      "kind": "process-completed-current",
+      "file": "docs/media/4.6/integration/process.png",
+      "sourceCommit": "5ed7495bc46108ad2968bdfe8ef5cf47731c4ad1",
+      "sha256": "57816e0d4718fb244ccceae432129101d56ef879cf006f3512d73df7a00ce35d",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Actual successful governed local job, retained history; not an active model benchmark."
+    },
+    {
+      "kind": "process-mobile-current",
+      "file": "docs/media/4.6/integration/process-mobile.png",
+      "sourceCommit": "5ed7495bc46108ad2968bdfe8ef5cf47731c4ad1",
+      "sha256": "9b117032735434d202a51c1aabb74cf1b8a81152c52e8f64d5c4b36c9c56a473",
+      "synthetic": false,
+      "privacyReviewed": true,
+      "scope": "Actual dashboard in desktop mobile viewport emulation; not physical handset qualification."
+    }
+  ],
+  "intelligence": {
+    "file": "examples/showcase-4.6/model-intelligence.json",
+    "changesDetected": 17,
+    "relevantCandidates": 2,
+    "benchmarked": 0
+  },
+  "benchmarks": [],
+  "acceptance": {
+    "cleanInstall": "PASS_REVIEWED_README",
+    "overnight": "PENDING",
+    "androidStandalone": "PASS_WITH_LIMITATIONS"
+  }
+}

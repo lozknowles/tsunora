@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import {once} from 'node:events';
+import type {AddressInfo} from 'node:net';
+import test from 'node:test';
+import {startWebDashboard} from './web-server.js';
+import {sealUxSession,UxSessionAnnotationStore,UxSessionShareStore,UxSessionStore} from './ux-session.js';
+
+test('read-only share URL exposes a bounded projection and no operational API',async t=>{const root=fs.mkdtempSync(path.join(os.tmpdir(),'ux-web-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));const sessions=new UxSessionStore(path.join(root,'sessions')),shares=new UxSessionShareStore(path.join(root,'shares.json')),annotations=new UxSessionAnnotationStore(path.join(root,'annotations.json')),record=sessions.write(sealUxSession({id:'physical',title:'Physical lane run',startedAt:'2026-09-10T00:00:00Z',completedAt:'2026-09-10T00:01:00Z',sources:[{kind:'qualification-evidence',reference:'internal/source.json',sha256:'f'.repeat(64),authority:'durable'}],events:[{id:'event',at:'2026-09-10T00:00:01Z',layer:'UX',kind:'USER_INTERACTION',title:'Started',summary:'Operator started work',parentIds:[],evidenceRefs:[],authorised:{content:'private implementation',sourcePaths:['C:\\Users\\Example\\secret.ts']}}],lanes:[],outcome:{verdict:'PASS',summary:'Verified',selectedLaneId:null,escalationInvoked:false},totals:{inputTokens:null,outputTokens:null,totalTokens:null,cost:null,currency:null,authority:'UNAVAILABLE'},artifacts:[]}));const created=shares.create(record,'EXECUTION_OVERVIEW',{expiresAt:'2099-01-01T00:00:00Z'}),server=startWebDashboard({} as never,{host:'127.0.0.1',port:0,operatorToken:'operator',assetsDir:path.resolve('assets/dashboard'),uxSessions:sessions,uxSessionShares:shares,uxSessionAnnotations:annotations,uxSessionPlayerDir:path.resolve('assets/session-player')});await once(server,'listening');t.after(()=>server.close());const base=`http://127.0.0.1:${(server.address() as AddressInfo).port}`;
+  assert.equal((await fetch(`${base}/share/ux/${created.share.id}`)).status,200);const player=await(await fetch(`${base}/session-player.js`)).text();assert.match(player,/Your Memories/);assert.doesNotMatch(player,/MARM|generic memory abstraction|memory optimi[sz]ation/i);assert.doesNotMatch(player,/sessionStorage/);assert.match(player,/laneClass\(lane\.outcome\)/);
+  assert.equal((await fetch(`${base}/api/share/ux/${created.share.id}`)).status,401);const response=await fetch(`${base}/api/share/ux/${created.share.id}`,{headers:{Authorization:`Bearer ${created.token}`}});assert.equal(response.status,200);const body=await response.json();assert.equal(body.capabilities.operationalAccess,false);assert.equal(body.capabilities.rerun,false);assert.doesNotMatch(JSON.stringify(body),/secret\.ts|private implementation|C:\\Users/);
+  assert.equal((await fetch(`${base}/api/ux-sessions`)).status,401);assert.equal((await fetch(`${base}/api/ux-sessions`,{headers:{Authorization:'Bearer operator'}})).status,200);
+});

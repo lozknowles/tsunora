@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-control.local/schemas/job-v1.schema.json",
+  "title": "Agent Control Job v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["apiVersion", "kind", "metadata", "spec"],
+  "properties": {
+    "apiVersion": {"const": "agent-control/v1"},
+    "kind": {"const": "Job"},
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "version"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{0,63}$"},
+        "name": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+        "description": {"type": "string"},
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "digest", "path"],
+          "properties": {
+            "kind": {"const": "agent-control-lab"},
+            "digest": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+            "path": {"type": "string", "pattern": "^jobs/[a-z0-9._/-]+$"}
+          }
+        }
+      }
+    },
+    "spec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["priority", "concurrency", "steps"],
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "priority": {"enum": ["background", "low", "normal", "high", "urgent"]},
+        "concurrency": {"enum": ["allow", "no-overlap", "replace-running", "queue"]},
+        "parameters": {"type": "object", "additionalProperties": {"$ref": "#/$defs/parameter"}},
+        "retry": {"$ref": "#/$defs/retry"},
+        "steps": {
+          "type": "array", "minItems": 1,
+          "$comment": "Cross-step invariants are mandatory: validateJobManifest enforces unique step IDs, existing dependency targets, and an acyclic dependency graph after JSON Schema validation.",
+          "items": {"$ref": "#/$defs/step"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "parameter": {
+      "type": "object", "additionalProperties": false, "required": ["type"],
+      "properties": {
+        "type": {"enum": ["string", "integer", "number", "boolean"]},
+        "default": {}, "required": {"type": "boolean"}, "secretRef": {"type": "boolean"},
+        "minimum": {"type": "number"}, "maximum": {"type": "number"}, "enum": {"type": "array"}
+      }
+    },
+    "retry": {
+      "type": "object", "additionalProperties": false,
+      "required": ["attempts", "backoffSeconds"],
+      "properties": {
+        "attempts": {"type": "integer", "minimum": 0, "maximum": 10},
+        "backoffSeconds": {"type": "integer", "minimum": 0, "maximum": 86400},
+        "backoffMultiplier": {"type": "number", "minimum": 1, "maximum": 10},
+        "maxBackoffSeconds": {"type": "integer", "minimum": 0, "maximum": 86400},
+        "overallDeadlineSeconds": {"type": "integer", "minimum": 1, "maximum": 604800}
+      }
+    },
+    "artifact": {
+      "type": "object", "additionalProperties": false, "required": ["name", "type", "schema", "version"],
+      "properties": {"name": {"type": "string"}, "type": {"type": "string"}, "schema": {"type": "string"}, "version": {"type": "string"}, "retention": {"type": "string"}}
+    },
+    "step": {
+      "type": "object", "additionalProperties": false, "required": ["id", "action", "requires"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{0,63}$"},
+        "name": {"type": "string"},
+        "action": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*@[0-9]+\\.[0-9]+\\.[0-9]+$"},
+        "requires": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "resources": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "dependsOn": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "inputs": {"type": "object", "additionalProperties": {"type": "string"}},
+        "outputs": {"type": "array", "items": {"$ref": "#/$defs/artifact"}},
+        "timeoutSeconds": {"type": "integer", "minimum": 1, "maximum": 604800},
+        "retry": {"$ref": "#/$defs/retry"},
+        "approval": {"type": "string"},
+        "verification": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

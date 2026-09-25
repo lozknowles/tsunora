@@ -1,0 +1,58 @@
+# Agent Control 3.9 evidence-gap matrix
+
+Date: 2026-09-05
+
+Proposed release: `3.9.0` — Resilient Execution and Trustworthy Telemetry
+
+Branch: `feature/3.9-resilient-execution`
+
+Base: released `v3.8.2` (`b51623dae1b764a31198424e8fc6ea9076d04089`) plus the clean, pushed cached-input accounting checkpoint `d3d0376db6e00bed76deb8c5336fa49cdfc1554a`.
+
+This is the implementation-start record requested before production changes. Historical tests and evidence identify prior art; they do not qualify the 3.9 tree.
+
+## Source and provenance classification
+
+| Source | Classification | Use in this work |
+| --- | --- | --- |
+| [`rebroad/codex` reconnect/auth commits](https://github.com/rebroad/codex/compare/openai:main...rebroad:alpha) | Re Broadley-authored downstream changes on the divergent `alpha` branch, not inherited OpenAI main behavior | Behavioral reference only: bounded same-identity recovery, authoritative reattachment and truthful local state reconciliation. No source is copied or adapted. |
+| [`de4151c`](https://github.com/rebroad/codex/commit/de4151cf265448f7764da6099e8db126281a3ed1) | Downstream implementation | Evidence for distinguishing revoked enrollment from retryable transport failure and bounding recovery. |
+| [`5e6931a`](https://github.com/rebroad/codex/commit/5e6931aac7c3621363eccbd3bf090d67017f9881) | Downstream implementation | Evidence for refreshing local state from the authoritative thread snapshot after reconnect. |
+| [`087c873`](https://github.com/rebroad/codex/commit/087c8731b160b95a57b9a5d214ae8f76f613bbe5) | Downstream implementation | Evidence that process-group absence, not leader exit alone, must gate cleanup completion. |
+| [`0eebc20`](https://github.com/rebroad/codex/commit/0eebc200a94350aff578921688408ad8eebe4a44) | Downstream implementation | Evidence that UI countdowns must be tied to real deadlines and cleared when state changes. |
+| [`rebroad/htop` fallback commits](https://github.com/rebroad/htop/commits/main/) | Re Broadley-authored changes subsequently present in htop upstream main | Behavioral reference for syscall/sysfs fallbacks and their limitations. Agent Control uses independent resource-adapter code. |
+| [`325efa1`](https://github.com/rebroad/htop/commit/325efa1dddf7e45b96fbfc93547fd82e7279537d) | Upstreamed implementation | Per-CPU idle-state counters can support a derived busy-time estimate when `/proc/stat` is inaccessible; they do not supply a user/system split. |
+| [`b282c8a`](https://github.com/rebroad/htop/commit/b282c8a2c0f7d0ecd3c352dd387f05865db6ce9d) | Upstreamed implementation | System-call-backed uptime/load are viable fallbacks when proc files are unavailable. |
+| [`rebroad/android-adb-helpers`](https://github.com/rebroad/android-adb-helpers) | Standalone implementation | Behavioral comparison only. Its direct mDNS daemon/notification flow is not copied, and its command-line PIN mechanism is explicitly rejected. |
+| [`GUARDIAN_PROMPT_CACHE_FIX.md`](https://github.com/rebroad/codex/blob/alpha/GUARDIAN_PROMPT_CACHE_FIX.md) | Design proposal, not demonstrated implementation | Hypotheses for stable prefixes, typed capability-gated cache controls and baseline/candidate measurement. No saving is presumed. |
+
+## Gap and verification matrix
+
+| Finding | Existing Agent Control behavior at the base | Gap | Intended 3.9 change | Required verification |
+| --- | --- | --- | --- | --- |
+| Durable reconnect must reconcile against execution authority | Durable Job/Work Parcel ledgers and fail-closed `RunLedger` recovery exist. SSE sends a fresh snapshot on connection. | `ParameterizedJobEngine` rewrites interrupted `RESOLVING`, `RUNNING` and `VALIDATING` runs to `QUEUED`, allowing duplicate work. Reconnect/auth/retry state is not represented consistently. | Provider-neutral execution identity and reconciliation result; no automatic replay while remote state is unresolved; bounded same-route recovery with classified failures, deadline and retry budget. | Restart during execution, missed completion, changed execution ID, reconnect during cancellation/handoff, no duplicate invocation or terminal event, account/profile/node unchanged. |
+| Authentication failures need actionable classes | Action failures can be tagged `authentication`; account profiles and credential residency are sealed in routes. | Human action, expired enrollment, transient transport and permanent configuration collapse into coarse failure text/state. | Typed recovery classification and safe operator reason; retry only eligible classes; preserve selected credentials. | Deterministic classification/redaction tests plus physical same-profile reconnect/auth-blocked evidence where available. |
+| Cleanup completion must be proven | Owned local processes receive TERM/KILL; contract state includes `CANCEL_PENDING`/`UNKNOWN`. | Runtime callers mark cancellation/timeout complete after sending a signal. Descendant survival, PID reuse, Windows outcome and uncertainty do not gate lease/lane release. | Typed cleanup report, captured process identity, bounded descendant/group verification through platform adapters, explicit cleanup uncertainty, terminalization and resource release only when safe. | Linux process-tree tests, mocked Windows adapter tests, Android supported-path test, PID-reuse case, forced uncertainty, cancellation/timeout/handoff integration. |
+| Dashboard state must derive from durable truth | Run/step states, Work Parcels, token telemetry and SSE snapshots already exist. Context occupancy and lifetime/cache/cost are separate. | No explicit auth-blocked/reconnecting/cancelling/cleanup-uncertain projection; retry deadlines/budget/freshness are incomplete; some reconnect paths can leave stale running state. | Durable lifecycle projection with reason, elapsed time, real deadline/next retry, remaining budget, source and observed time; full-snapshot reconciliation on reload/SSE reconnect. | Navigate lanes and reload/reconnect during running, wait/retry and cleanup; assert no duplicate/stale terminal events; countdown only for real deadlines. |
+| Android must publish ADB capability only after usable connectivity | Isolated commit `b45d7b9` independently added stdin-only pairing, bounded endpoint rediscovery and `adb devices` verification with 16 focused tests. It is not in v3.8.2. | The isolated helper lacks serialized attempt ownership/stale-state recovery and a strong device/service identity correlation. Its boot integration has not been qualified on the current release. | Selectively port the independent helper; add attempt lease/state, stable service identity, notification-safe discovery state, bounded reconnect, supervised stop, and fail-closed capability publication. Keep pairing local and human-approved. | Current focused suite plus physical Pixel disconnect/reconnect, changed endpoint, failed pairing, verified governed execution/session resume; never expose PIN or arbitrary ADB shell. |
+| Missing host measurements must remain unknown | Managed-node probe reads procfs and supplies source-independent scalar values. | Inaccessible procfs is encoded as numeric zero. There is no metric authority/source/freshness, and no supported idle-counter fallback. | Nullable metric envelopes with provenance; command/system fallback for uptime/load; interval-based sysfs idle-counter busy estimate in adapter; never turn it into user/system CPU or admission authority. | First sample, normal interval, reset, offline CPU, partial visibility, stale sample and missing-source tests; routing remains unaffected until separately qualified. |
+| Cache accounting must be truthful and portable | Checkpoint `d3d0376` preserves top-level/camel-case cached input, distinguishes total/fresh/cache/current context and prevents unsupported cost arithmetic. Stable content now precedes changing IDs. | Explicit provider cache controls and repeatable savings are unproven; one physical sequence is insufficient to claim economic benefit. | Retain portable stable-prefix construction and correct attribution. Add controls only inside a verified provider capability adapter. Unsupported routes keep their request shape. | Official-document capability check; cold/start, warm, changed-context and retry baseline/candidate measurements with prompt/schema hashes, latency, tokens and cost assumptions reported separately. |
+| Aggregate accounting must survive worker/reviewer/retry paths | Work Parcel token routing aggregates per provider/account/model/node and cached/fresh totals without using lifetime usage as current context. | New recovery/retry paths could accidentally duplicate usage or attribute child totals twice. | Reconciliation keys by durable invocation/leg identity; parent summaries aggregate once and retain provider authority. | Retry/reconnect, worker/reviewer and baton-chain tests with exact per-leg equals parcel totals and no reset/double count. |
+
+## Prior work disposition
+
+| Prior work | Verified disposition before 3.9 implementation |
+| --- | --- |
+| Android ADB helper `b45d7b9` | Clean historical commit on `feature/android-adb-pairing-helper-20260831`; not merged into v3.8.2. It will be selectively integrated and requalified, not treated as already complete. |
+| Pixel native Codex and persisted session/resume | Historical qualification evidence exists outside this branch. It establishes feasibility only; current installed version and current 3.9 execution/resume must be checked without updating the Pixel. |
+| Android evergreen harness `f990a96c16b0d2bac9094802e47784a34e361b06` | Preserved in the separate Android Codex release worktree/branch. It is not an Agent Control 3.9 implementation commit and will not be duplicated. |
+| Credential residency, token governor/batons, governed retrieval and accounting | Released through 3.8.2 and retained. The clean post-release cache/context checkpoint is the 3.9 base, avoiding loss or duplicate implementation. |
+
+## Initial gate state (historical)
+
+At implementation start, no 3.9 production behavior or physical gate was claimed. The open set was implementation, focused regression coverage, complete repository validation, install/build checks, Pixel qualification, cache baseline/candidate measurement, real concurrent-lane dashboard recording, documentation consistency, push and PR.
+
+## Candidate disposition
+
+Implementation began at `b45daf5871d36da4f12f4d60b7c29c092a87e233`; the final candidate lineage and every qualification-discovered correction are mapped in the [candidate qualification](agent-control-3.9-qualification.md). No reviewed source was copied. Focused/full deterministic validation, package/install checks, documentation and PR status are recorded against the final branch commit rather than inferred from the initial implementation checkpoint.
+
+The dashboard/concurrent-work/reload/Linux-cleanup gate passed physically and remains valid because later changes did not alter the Linux process-group path. Subsequent accepted runs physically passed Windows cancellation/timeout/identity/uncertainty, separate-authority controller-restart recovery plus auth/retry/cancel states, and the complete current Pixel local-ADB pairing/reconnect/capability/governed-execution/session-resume lifecycle. Superseded attempts remain preserved and identified in the consolidated report. A matched known-answer cache follow-up produced equal independent quality scores but materially higher candidate token/time totals; it resolves the quality ambiguity but supports no savings claim. Explicit Responses cache controls remain an optional, disabled capability until an exact provider/model route is qualified.

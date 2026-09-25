@@ -1,0 +1,100 @@
+{
+  "state": "PASS",
+  "files": [
+    {
+      "file": "examples/showcase-4.6/android-standalone/bootstrap.txt",
+      "sha256": "25861ffc8978c2aad910f6349794084dbbd79b952afefb2351f78b54fd0cfeee",
+      "unchangedFrom": "720577b8aa82c78a8f0ae6156b8d826e868e3502"
+    },
+    {
+      "file": "examples/showcase-4.6/android-standalone/local-job-recovery.json",
+      "sha256": "26d83b81293ec142d0fdd59bec9a659afe4643a58a39aa6390ff825c41f8b5dc",
+      "unchangedFrom": "720577b8aa82c78a8f0ae6156b8d826e868e3502"
+    },
+    {
+      "file": "examples/showcase-4.6/android-standalone/physical-local-job.json",
+      "sha256": "69597f9431d624ab27ff7eadc743bda35fb07150f436fe40fb7f42eb8f3010ab",
+      "unchangedFrom": "720577b8aa82c78a8f0ae6156b8d826e868e3502"
+    },
+    {
+      "file": "examples/showcase-4.6/android-standalone/physical-offline.json",
+      "sha256": "6bac6e09200746daaf45c90e62f9906057c10078976f5ed28c5d7c7b2b3e15c6",
+      "unchangedFrom": "720577b8aa82c78a8f0ae6156b8d826e868e3502"
+    },
+    {
+      "file": "examples/showcase-4.6/android-standalone/physical-ui.json",
+      "sha256": "4b8a332f6880ef47996cc97575d325ccd5fa9d9cb3b2833887196579332e3653",
+      "unchangedFrom": "720577b8aa82c78a8f0ae6156b8d826e868e3502"
+    },
+    {
+      "file": "examples/showcase-4.6/android-standalone/qualification.json",
+      "sha256": "8e47552cbc09094bfab25f849ac89d7d8dfa87933be91343254bbe0fd869b85c",
+      "unchangedFrom": "720577b8aa82c78a8f0ae6156b8d826e868e3502"
+    },
+    {
+      "file": "examples/showcase-4.6/android-standalone/researched-candidate.json",
+      "sha256": "b4eb200d88f676a2c2b8771f1ad425c9a44b964aa5b891e3fcc255d8212ca6a7",
+      "unchangedFrom": "720577b8aa82c78a8f0ae6156b8d826e868e3502"
+    },
+    {
+      "file": "examples/showcase-4.6/android-standalone/screenshots.json",
+      "sha256": "177df07facee970ed342b3f4e5856cad124f5921ef36a356a794bf84d261f630",
+      "unchangedFrom": "720577b8aa82c78a8f0ae6156b8d826e868e3502"
+    },
+    {
+      "file": "examples/showcase-4.6/android-standalone/security.json",
+      "sha256": "75a7eca9b7d4f3f6d61520bf95ca51949060a89fb975b8c98b93f8082ba295f7",
+      "unchangedFrom": "720577b8aa82c78a8f0ae6156b8d826e868e3502"
+    },
+    {
+      "file": "examples/showcase-4.6/usage-closure/acceptance-matrix.json",
+      "sha256": "6944bfd86f1546e87d5209d5d725ed1a7ddefa9fdda488aeabb97bd1c8f72bc2",
+      "unchangedFrom": "5bbdf0b09410a608e7b185a0d58d05d9d8fd023e"
+    },
+    {
+      "file": "examples/showcase-4.6/usage-closure/external-discovery.json",
+      "sha256": "9ff77d091c3306f5b17039aab173c2e70ee8e1a2de9adb2efdf7b47b67b9093c",
+      "unchangedFrom": "5bbdf0b09410a608e7b185a0d58d05d9d8fd023e"
+    },
+    {
+      "file": "examples/showcase-4.6/usage-closure/failure-preservation-proof.json",
+      "sha256": "d54f2976be3e5a677993b2540edc0452d033d1c4436ff9e93d8352ee8bc2c1ae",
+      "unchangedFrom": "5bbdf0b09410a608e7b185a0d58d05d9d8fd023e"
+    },
+    {
+      "file": "examples/showcase-4.6/usage-closure/mallow-accounting-proof.json",
+      "sha256": "4c540db02290d818f154ab3eca496fe6aced21ad4edf5e912c3b87b8824481ae",
+      "unchangedFrom": "5bbdf0b09410a608e7b185a0d58d05d9d8fd023e"
+    },
+    {
+      "file": "examples/showcase-4.6/usage-closure/physical-summary.json",
+      "sha256": "6e2fc5656cbfaa1957fa9364f96f6192fadb10c465c6e731efcc5c86b9530e93",
+      "unchangedFrom": "5bbdf0b09410a608e7b185a0d58d05d9d8fd023e"
+    },
+    {
+      "file": "examples/showcase-4.6/usage-closure/pre-fix-local-evidence-manifest.json",
+      "sha256": "1d92ad12f8f1ad9776522a7b3ebd6c67e31eae16f4a75a740f2233fd67a89cdc",
+      "unchangedFrom": "5bbdf0b09410a608e7b185a0d58d05d9d8fd023e"
+    },
+    {
+      "file": "examples/showcase-4.6/usage-closure/preserved-failures.json",
+      "sha256": "dac26d72926cef39c0c9b12b0c7325836ad812434a1aae00d68fddf802e89b5d",
+      "unchangedFrom": "5bbdf0b09410a608e7b185a0d58d05d9d8fd023e"
+    },
+    {
+      "file": "examples/showcase-4.6/usage-closure/process-estate-trace.json",
+      "sha256": "707b69973a560812313bf1fe6fca7fffca030b1b8c85e2f41e2482d9c7aedaa0",
+      "unchangedFrom": "5bbdf0b09410a608e7b185a0d58d05d9d8fd023e"
+    },
+    {
+      "file": "examples/showcase-4.6/usage-closure/projection.json",
+      "sha256": "5f9e454e69d1174231214bbc8ef57be960a0b1b4565d2ea346773947f872459a",
+      "unchangedFrom": "5bbdf0b09410a608e7b185a0d58d05d9d8fd023e"
+    },
+    {
+      "file": "examples/showcase-4.6/usage-closure/validation.json",
+      "sha256": "fe58f5fc94c21105624e2605459a7119202b52d22b17b053b80422eb2e8674f9",
+      "unchangedFrom": "5bbdf0b09410a608e7b185a0d58d05d9d8fd023e"
+    }
+  ]
+}

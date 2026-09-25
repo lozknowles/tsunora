@@ -1,0 +1,321 @@
+{
+  "schema": "agent-control.known-limitations/v1",
+  "version": "4.8.0",
+  "items": [
+    {
+      "id": "AC46-ANDROID-01",
+      "capability": "Android local inference and benchmark league",
+      "status": "FUTURE_WORK",
+      "why": "Runtime qualification and data-only validator still assume Linux facilities.",
+      "userImpact": "No Android model recommendation or local inference league result is advertised.",
+      "workaround": "Use the verified deterministic local jobs.",
+      "closure": "A capability adapter, validator tests, approved real inference and independent benchmark evidence.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/android-standalone-qualification.md",
+        "examples/showcase-4.6/android-standalone/qualification.json"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC46-ANDROID-02",
+      "capability": "Phone battery, charging, thermal, metering and accelerator telemetry",
+      "status": "PLATFORM_LIMITATION",
+      "why": "Base Termux cannot obtain the required observations; existing phone-local ADB reconnect failed.",
+      "userImpact": "Conservative policy blocks optional model acquisition and benchmarking. GPU/NPU and power remain unknown.",
+      "workaround": "Read available RAM/storage; do not substitute server sensors or infer watts.",
+      "closure": "A read-only phone-local adapter with identity, units, freshness and physical validation.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/android-standalone-qualification.md",
+        "examples/showcase-4.6/android-standalone/qualification.json"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC46-ANDROID-03",
+      "capability": "Model resource feasibility on a busy handset",
+      "status": "KNOWN_LIMITATION",
+      "why": "Available RAM fluctuated below the reserve despite larger installed RAM.",
+      "userImpact": "Some otherwise compatible models cannot be admitted safely.",
+      "workaround": "Continue lightweight local jobs; review capacity before explicitly approving model work.",
+      "closure": "Fresh sufficient available resources and a qualified runtime; total RAM alone is insufficient.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/android-standalone-qualification.md",
+        "examples/showcase-4.6/android-standalone/qualification.json"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC46-ANDROID-04",
+      "capability": "Android background reliability and recovery breadth",
+      "status": "PLATFORM_LIMITATION",
+      "why": "Android may reclaim Termux. Reboot, battery shutdown and forced OS reclamation were not exercised.",
+      "userImpact": "No server-grade daemon or automatic reboot recovery claim.",
+      "workaround": "Keep Termux foreground; restart using the documented command and inspect retained state.",
+      "closure": "Device-specific interruption, reboot and resource-pressure evidence without weakening governance.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/android-standalone-qualification.md",
+        "examples/showcase-4.6/android-standalone/qualification.json"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC46-ANDROID-05",
+      "capability": "Additional phones and optional PWA launcher",
+      "status": "PARTIAL_SUPPORT",
+      "why": "Physical standalone evidence covers one Pixel and the browser path; PWA installability passed but launcher install was not exercised.",
+      "userImpact": "Other handset and launcher combinations are unqualified.",
+      "workaround": "Use the tested local browser path.",
+      "closure": "Reproducible handset reports and launcher close/reopen tests, with no identifying or credential payloads.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/android-standalone-qualification.md",
+        "examples/showcase-4.6/android-standalone/qualification.json"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC46-BILLING-01",
+      "capability": "Exact metered API billing",
+      "status": "BLOCKED_EXTERNAL",
+      "why": "No already-authorised metered provider was discovered. Included subscription access is non-metered.",
+      "userImpact": "No physical exact-money API comparison.",
+      "workaround": "Show unavailable billing separately from token counts.",
+      "closure": "An authorised billed request with provider usage/price revision and reconciliation evidence.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/usage-energy-physical-closure-4.6.md",
+        "examples/showcase-4.6/usage-closure/acceptance-matrix.json"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC46-BILLING-02",
+      "capability": "Positive billed cache and delayed billing corrections",
+      "status": "BLOCKED_EXTERNAL",
+      "why": "Provider billing evidence is unavailable.",
+      "userImpact": "Cached token semantics are not represented as proven billed savings.",
+      "workaround": "Preserve unavailable cost and the deterministic accounting tests.",
+      "closure": "A provider-supported positive cache charge and delayed adjustment, reconciled to the ledger.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/usage-energy-physical-closure-4.6.md",
+        "examples/showcase-4.6/usage-closure/acceptance-matrix.json"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC46-ENERGY-01",
+      "capability": "Attributable job and baseline electricity",
+      "status": "BLOCKED_EXTERNAL",
+      "why": "Shared device load prevents defensible exclusive allocation.",
+      "userImpact": "No Wh/job, tokens/Wh or incremental baseline saving.",
+      "workaround": "Publish coverage-labelled component intervals only.",
+      "closure": "A qualified baseline, matching load boundary and justified allocation, with preserved raw samples.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/usage-energy-physical-closure-4.6.md",
+        "examples/showcase-4.6/usage-closure/acceptance-matrix.json"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC46-ENERGY-02",
+      "capability": "Electricity tariff",
+      "status": "BLOCKED_EXTERNAL",
+      "why": "No operator tariff evidence was configured.",
+      "userImpact": "No measured local electricity cost.",
+      "workaround": "Keep monetary electricity fields unavailable.",
+      "closure": "A time-effective tariff/currency/unit reference and attributable measured energy.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/usage-energy-physical-closure-4.6.md",
+        "examples/showcase-4.6/usage-closure/acceptance-matrix.json"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC46-ENERGY-03",
+      "capability": "Whole-node energy",
+      "status": "BLOCKED_EXTERNAL",
+      "why": "No actual W/Wh/kWh sensor with a defensible machine binding was discovered.",
+      "userImpact": "No whole-node or local-versus-cloud energy comparison.",
+      "workaround": "Use explicitly scoped GPU board observations. Never derive watts from UPS load percentage.",
+      "closure": "Read-only measurement integration, units, sample semantics and explicit machine/outlet binding; aggregate UPS load alone is insufficient.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/usage-energy-physical-closure-4.6.md",
+        "examples/showcase-4.6/usage-closure/acceptance-matrix.json"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC46-MODEL-01",
+      "capability": "End-to-end target-model showcase",
+      "status": "PARTIAL_SUPPORT",
+      "why": "The integrated pipeline has source and control evidence; fresh exact-plan model execution is separately gated.",
+      "userImpact": "No universal winner, unseen target result or overnight improvement may be inferred.",
+      "workaround": "Review the real source shortlist and the exact execution proposal.",
+      "closure": "Approved acquisition, validated native attempts, personal league ingestion and linked Process/Estate evidence.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/model-intelligence-showcase.md"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC46-WATCH-01",
+      "capability": "Overnight unattended qualification",
+      "status": "PARTIAL_SUPPORT",
+      "why": "Schedule/deduplication/budget controls are tested; a real overnight-duration run has not been qualified.",
+      "userImpact": "The morning view is a recorded intelligence brief, not proof of unattended overnight success.",
+      "workaround": "Run an explicitly approved manual watch and inspect evidence.",
+      "closure": "An authorised bounded overnight watch with timestamps, interruption/reconciliation and notification evidence.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/model-intelligence-showcase.md"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC46-WATCH-02",
+      "capability": "External notifications and source integrations",
+      "status": "BLOCKED_EXTERNAL",
+      "why": "No destination is configured; additional feeds need source approval and adapters.",
+      "userImpact": "No external delivery or universal source coverage claim.",
+      "workaround": "Read the in-product brief and source coverage.",
+      "closure": "A configured authorised destination and delivery evidence; additional origin-restricted source adapters.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/model-intelligence-showcase.md"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC46-RUNTIME-01",
+      "capability": "Additional runtime, API and subjective benchmark execution",
+      "status": "FUTURE_WORK",
+      "why": "Only qualified existing adapters can execute; generic provisioners and judge adapters are incomplete.",
+      "userImpact": "Some providers/runtimes/validators remain unsupported despite view and schema support.",
+      "workaround": "Use the supported local deterministic validator path.",
+      "closure": "Capability-specific adapters with bounded authority, verified artifacts, cancellation and result provenance tests.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/model-intelligence-showcase.md"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC46-RULES-01",
+      "capability": "Estate rules builder and household automation showcase",
+      "status": "FUTURE_WORK",
+      "why": "Typed governed rules exist; a full rules-builder UI and physical household demonstration do not.",
+      "userImpact": "No no-code household automation claim.",
+      "workaround": "Use small approved typed rules through the documented programmatic boundary.",
+      "closure": "Usable rule editing/review plus a separately authorised non-destructive physical qualification.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/model-intelligence-showcase.md"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC47-VOICE-LIVE",
+      "capability": "Live voice provider/account",
+      "status": "BLOCKED_EXTERNAL",
+      "why": "No configured authorised provider reference found.",
+      "userImpact": "Actual live audio and final provider usage are unqualified.",
+      "workaround": "Use existing speech or text.",
+      "closure": "Bounded actual session using an existing authorised account.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/known-limitations-4.7.md",
+        "docs/mallow-voice.md"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC47-VOICE-PIXEL",
+      "capability": "Physical Pixel voice",
+      "status": "BLOCKED_EXTERNAL",
+      "why": "Existing browser/ADB control route unavailable.",
+      "userImpact": "Viewport checks do not establish physical audio or network behavior.",
+      "workaround": "Use the qualified text interface.",
+      "closure": "Physical microphone, playback, permission and network tests.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/known-limitations-4.7.md",
+        "docs/mallow-voice.md"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC47-VOICE-LATENCY",
+      "capability": "Local conversational synthesis",
+      "status": "KNOWN_LIMITATION",
+      "why": "2.62 seconds of CPU audio required 52.33 seconds to generate.",
+      "userImpact": "This fallback is not advertised as natural real-time conversation.",
+      "workaround": "Use text.",
+      "closure": "Qualify a responsive authorised route.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/known-limitations-4.7.md",
+        "docs/mallow-voice.md"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC47-VOICE-SHOWCASE",
+      "capability": "Spoken model/baton/cache completion",
+      "status": "FUTURE_WORK",
+      "why": "Only a synthetic-input deterministic local voice job was exercised.",
+      "userImpact": "No full spoken model showcase is claimed.",
+      "workaround": "Use the independently qualified typed model workflow.",
+      "closure": "Real governed model execution and audible completion.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/known-limitations-4.7.md",
+        "docs/mallow-voice.md"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    },
+    {
+      "id": "AC47-VOICE-ALLOCATION",
+      "capability": "Voice and model cost allocation",
+      "status": "PARTIAL_SUPPORT",
+      "why": "A shared voice session may cover several jobs and model cost may be unavailable.",
+      "userImpact": "Combined job cost remains unknown without defensible allocation.",
+      "workaround": "Inspect separate voice and model telemetry.",
+      "closure": "Actual provider telemetry and a qualified allocation method.",
+      "releaseBlocking": false,
+      "evidence": [
+        "docs/known-limitations-4.7.md",
+        "docs/mallow-voice.md"
+      ],
+      "helpWanted": true,
+      "impact": "OPTIONAL_CAPABILITY"
+    }
+  ]
+}

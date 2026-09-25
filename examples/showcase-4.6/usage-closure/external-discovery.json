@@ -1,0 +1,55 @@
+{
+  "schema": "agent-control.usage-closure-external-discovery/v1",
+  "observedAt": "2026-09-13T09:03:46.396209+00:00",
+  "mode": "READ_ONLY",
+  "provider": {
+    "verdict": "BLOCKED_EXTERNAL",
+    "source": "Four distinct running Agent Control configuration files plus local Environment Discovery; provider credential presence metadata only",
+    "configuredPaths": [
+      "subscription-included Codex CLI"
+    ],
+    "meteredProviderFound": false,
+    "credentialAcquisition": false,
+    "paidCalls": 0,
+    "minimumRequirement": "An existing operator-authorised metered API configuration with defensible provider usage and current price basis."
+  },
+  "wholeNode": {
+    "verdict": "BLOCKED_EXTERNAL",
+    "homeAssistant": {
+      "running": true,
+      "upsIntegrationEntries": 0,
+      "apcUpsDeviceRegistryMatches": 0,
+      "powerEnergySensorCandidates": 0,
+      "readScope": "UPS integration, device and entity metadata; no complete state database or credential values"
+    },
+    "estateMonitor": {
+      "readOnlyReportChecked": true,
+      "upsMeasurementMatch": false
+    },
+    "localHosts": {
+      "controllerApcUsbMatch": false,
+      "windowsApcPnpMatch": false,
+      "controllerUpsTelemetryClientAvailable": false,
+      "controllerUpsTelemetryConfigFound": false
+    },
+    "bindingFound": false,
+    "reason": "The existing APC has no discoverable configured watts/Wh/kWh observation endpoint and no verified sensor-to-measured-machine binding in the inspected estate sources. This does not establish that no APC exists elsewhere.",
+    "minimumRequirement": "Identify the existing APC telemetry endpoint and exact downstream machine/outlet relationship; expose actual W or Wh/kWh via an authorised read-only source. A whole-UPS aggregate shared by other machines is insufficient for dedicated machine energy."
+  },
+  "cpuPackage": {
+    "verdict": "BLOCKED_EXTERNAL",
+    "counterPresent": true,
+    "readPermission": false,
+    "permissionsChanged": false
+  },
+  "tariff": {
+    "verdict": "BLOCKED_EXTERNAL",
+    "configuredEffectiveTariffFound": false,
+    "inventedTariff": false
+  },
+  "attribution": {
+    "verdict": "BLOCKED_EXTERNAL",
+    "reason": "Multiple resident GPU compute services and no shared scheduler reservation or measured allocation basis; board intervals remain NOT_ATTRIBUTABLE."
+  },
+  "userSteer": "No additional references known; included Codex is non-metered; do not acquire credentials or change device configuration."
+}

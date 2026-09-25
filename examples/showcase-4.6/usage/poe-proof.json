@@ -1,0 +1,20 @@
+{
+  "responseMode": "DETERMINISTIC",
+  "text": "Usage accounting\n\n5 observed calls; 2 verified successful jobs. Values apply to 2026-09-13T08:02:42.202Z through 2026-09-13T08:40:35.829Z. Unknown metrics cannot establish savings or energy efficiency.\n\nCanonical usage: {\"source\":\"CANONICAL_USAGE_PROJECTION\",\"observedAt\":\"2026-09-13T08:40:35.829Z\",\"period\":{\"name\":\"all\",\"start\":\"2026-09-13T08:02:42.202Z\",\"end\":\"2026-09-13T08:40:35.829Z\",\"timezone\":\"UTC\",\"allocation\":\"invocation start; entire invocation assigned to start period\"},\"apiCost\":{\"currencies\":{},\"reported\":0,\"total\":5},\"retryRate\":0,\"cacheSaving\":{\"currencies\":{},\"reported\":0,\"total\":5},\"energy\":[{\"machine\":\"machine:controller\",\"sensor\":\"nvidia-gpu0\",\"scope\":\"GPU_ONLY\",\"measurementClass\":\"DERIVED\",\"attribution\":\"NOT_ATTRIBUTABLE\",\"observations\":5,\"observedWh\":{\"value\":0.04906967499999999,\"knownTotal\":0.04906967499999999,\"reported\":5,\"total\":5},\"attributedWh\":{\"value\":null,\"knownTotal\":0,\"reported\":0,\"total\":5},\"incrementalWh\":{\"value\":null,\"knownTotal\":0,\"reported\":0,\"total\":5},\"minimumCoverage\":1,\"electricityCost\":{\"currencies\":{},\"reported\":0,\"total\":5}}],\"coverage\":{\"matching\":5,\"returned\":5,\"native\":0,\"migrated\":5,\"legacy\":0,\"historyStart\":\"2026-09-13T08:02:42.202Z\",\"continuousCollectionEstablished\":false},\"routingAuthority\":\"NONE\",\"qualityCapabilitySafetyApprovalRequired\":true} (agent control)",
+  "evidence": {
+    "title": "Usage accounting",
+    "summary": "5 observed calls; 2 verified successful jobs. Values apply to 2026-09-13T08:02:42.202Z through 2026-09-13T08:40:35.829Z. Unknown metrics cannot establish savings or energy efficiency.",
+    "facts": [
+      {
+        "label": "Canonical usage",
+        "value": "{\"source\":\"CANONICAL_USAGE_PROJECTION\",\"observedAt\":\"2026-09-13T08:40:35.829Z\",\"period\":{\"name\":\"all\",\"start\":\"2026-09-13T08:02:42.202Z\",\"end\":\"2026-09-13T08:40:35.829Z\",\"timezone\":\"UTC\",\"allocation\":\"invocation start; entire invocation assigned to start period\"},\"apiCost\":{\"currencies\":{},\"reported\":0,\"total\":5},\"retryRate\":0,\"cacheSaving\":{\"currencies\":{},\"reported\":0,\"total\":5},\"energy\":[{\"machine\":\"machine:controller\",\"sensor\":\"nvidia-gpu0\",\"scope\":\"GPU_ONLY\",\"measurementClass\":\"DERIVED\",\"attribution\":\"NOT_ATTRIBUTABLE\",\"observations\":5,\"observedWh\":{\"value\":0.04906967499999999,\"knownTotal\":0.04906967499999999,\"reported\":5,\"total\":5},\"attributedWh\":{\"value\":null,\"knownTotal\":0,\"reported\":0,\"total\":5},\"incrementalWh\":{\"value\":null,\"knownTotal\":0,\"reported\":0,\"total\":5},\"minimumCoverage\":1,\"electricityCost\":{\"currencies\":{},\"reported\":0,\"total\":5}}],\"coverage\":{\"matching\":5,\"returned\":5,\"native\":0,\"migrated\":5,\"legacy\":0,\"historyStart\":\"2026-09-13T08:02:42.202Z\",\"continuousCollectionEstablished\":false},\"routingAuthority\":\"NONE\",\"qualityCapabilitySafetyApprovalRequired\":true}",
+        "authority": "AGENT_CONTROL",
+        "observedAt": "2026-09-13T08:40:35.847Z",
+        "evidence": [
+          "/api/usage/answer"
+        ]
+      }
+    ],
+    "related": []
+  }
+}

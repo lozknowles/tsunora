@@ -1,0 +1,33 @@
+{
+  "sourceCommit": "558e7a5202007ee162b61efdce45197e549f72fd",
+  "sourceDigest": "dc31f2f599163f66b601b265a9d8012330eedef28cdf7c43c21fa3193d51b143",
+  "version": "4.6.0",
+  "regression": {
+    "status": "PASS",
+    "command": "npm run check",
+    "tests": 3,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "durationMs": 213.841704,
+    "logSha256": "ff7097cbe5ce2c17404f6b2bf361b94c4dd6ffe87c00d4e3a7158238e90cc5f0",
+    "firstMechanicalRun": {
+      "status": "RERUN_REQUIRED",
+      "initialTests": 1466,
+      "initialPassed": 1465,
+      "initialFailed": 1,
+      "initialFailure": "Final evidence links were referenced before their receipts were written; no assertion was weakened.",
+      "initialLogSha256": "de55b2ca611d3a6298d886e6074564b6fc3067a9a54be959e98230d5650266cb"
+    }
+  },
+  "typecheck": "PASS",
+  "build": "NOT_APPLICABLE: source TypeScript runtime; no build script",
+  "installation": "PASS: exact source isolated Linux bootstrap",
+  "upgrade": "PASS: preserved 21 stable state files through bootstrap; original run retained and new local job succeeded",
+  "processEstate": "PASS: native Mallow approval, job, Discovery and browser integration",
+  "security": "PASS for tested authentication, origin and token-redaction boundaries",
+  "priorPhysicalQualification": "Accepted RC Android, Windows and usage evidence remains separately scoped; no new phone inference or paid billing claimed.",
+  "documentation": "PASS: final complete distribution Markdown checker and 189 release-facing links/anchors",
+  "screenshots": "PASS: 38 accepted screenshot checksums; final-source browser evidence confirms assets unchanged from RC",
+  "privacy": "PASS for tested API and release-document patterns; no exhaustive security certification claimed"
+}

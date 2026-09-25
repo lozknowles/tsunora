@@ -1,0 +1,23 @@
+import {LabAdmissionBlocked} from './model-hardware-qualification.js';
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {createTransportLlamaLabAdapter,type TransportLabProfile} from './transport-llama-lab-adapter.js';
+const profile=():TransportLabProfile=>({id:'p',device:'arbitrary-device',environment:'arbitrary-env',model:'arbitrary-model',modelPath:'/model',modelSha256:'a'.repeat(64),runtimePath:'/runtime',runtimeSha256:'b'.repeat(64),runtimeVersion:'test',quantisation:'test',context:2048,threads:2,gpuLayers:0,batch:64,microBatch:32,maxTokens:64,startupTimeoutSeconds:60,inferenceTimeoutSeconds:60});
+const spec=(p:TransportLabProfile):any=>({profileRef:p.id,target:{device:p.device,environment:p.environment,model:p.model,modelSha256:p.modelSha256,runtimeSha256:p.runtimeSha256}});
+const context:any={recordEvidence(){}};
+test('transport adapter refuses model, environment and profile substitution before dispatch',async()=>{const p=profile();let calls=0;const a=createTransportLlamaLabAdapter({profile:p,admit:async()=>({available:true,evidence:{}}),execute:async()=>{calls++;return{} as any;}});for(const field of ['device','environment','model','modelSha256','runtimeSha256']){const s=spec(p);s.target[field]='changed';await assert.rejects(()=>a.invoke(s,{id:'case',prompt:'test'},context),/mismatch/);}p.threads=3;await assert.rejects(()=>a.invoke(spec(p),{id:'case',prompt:'test'},context),/mismatch/);assert.equal(calls,0);});
+test('failed current admission prevents inference and does not replace target',async()=>{const p=profile();let calls=0;const a=createTransportLlamaLabAdapter({profile:p,admit:async()=>({available:false,evidence:{reason:'offline'}}),execute:async()=>{calls++;return{} as any;}});assert.equal((await a.compatibility(spec(p),context)).status,'BLOCKED');await assert.rejects(()=>a.invoke(spec(p),{id:'x',prompt:'hello'},context),/admission_failed/);assert.equal(calls,0);});
+test('arbitrary transport receives sealed fixture without expected answer; missing telemetry survives',async()=>{const p=profile();let request:any;const result:any={tokens:{input:0,cached:null,output:null}};const a=createTransportLlamaLabAdapter({profile:p,admit:async()=>({available:true,evidence:{}}),execute:async r=>{request=r;return result;}});assert.equal(await a.invoke(spec(p),{id:'x',prompt:'Return READY'},context),result);assert.deepEqual(request.input.messages,[{role:'user',content:'Return READY'}]);assert.equal('expected' in request,false);assert.equal(request.profile.device,'arbitrary-device');});
+test('quality validators distinguish correct JSON, prose and unavailable independent code validation',async()=>{const p=profile();const a=createTransportLlamaLabAdapter({profile:p,admit:async()=>({available:true,evidence:{}}),execute:async()=>({} as any)});const task:any={validator:'json-schema',expected:{type:'object',required:['answer'],properties:{answer:{const:42}},additionalProperties:false}};assert.equal((await a.validate(task,{output:'{"answer":42}'} as any,context)).passed,true);assert.equal((await a.validate(task,{output:'Probably 42'} as any,context)).passed,false);assert.equal((await a.validate({...task,validator:'python-function-tests'},{output:'code'} as any,context)).passed,null);});
+
+test('code quality delegates to the separately governed validator and preserves unavailable outcome',async()=>{
+ const p=profile();let called=0;const task:any={validator:'python-function-tests',input:[[1,2]],expected:[3]};const result:any={output:'def solve(values): return sum(values)'};
+ const a=createTransportLlamaLabAdapter({profile:p,admit:async()=>({available:true,evidence:{}}),execute:async()=>result,validateCode:async(t,r,c)=>{called++;assert.equal(t,task);assert.equal(r,result);assert.equal(c,context);return{passed:null,reason:'Sandbox unavailable',evidence:{exitCode:1}};}});
+ assert.equal((await a.validate(task,result,context)).passed,null);assert.equal(called,1);
+});
+
+test('denied transport admission throws a typed evidence reference before executing',async()=>{
+ const p=profile();let dispatched=false;const c:any={recordEvidence:()=>({id:'admission-record',sha256:'e'.repeat(64)})};
+ const a=createTransportLlamaLabAdapter({profile:p,admit:async()=>({available:false,evidence:{private:'do-not-copy-into-error'}}),execute:async()=>{dispatched=true;return {} as any;}});
+ await assert.rejects(()=>a.invoke(spec(p),{id:'case',prompt:'READY'},c),(error:unknown)=>{assert.ok(error instanceof LabAdmissionBlocked);assert.deepEqual(error.evidence,{id:'admission-record',sha256:'e'.repeat(64)});assert.ok(!JSON.stringify(error).includes('do-not-copy'));return true;});assert.equal(dispatched,false);
+});

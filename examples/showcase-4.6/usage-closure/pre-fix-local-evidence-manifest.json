@@ -1,0 +1,69 @@
+{
+  "scope": "Pre-fix local-a diagnostic run; not overwritten by follow-up",
+  "files": [
+    {
+      "name": "discovery.json",
+      "sha256": "64c9ae9ee628b0deb50480f59ddb01741230219d1a86ff355f3b98c77c16c009"
+    },
+    {
+      "name": "energy.json",
+      "sha256": "f1ebd2f865cf2958840aa62a5d8ed216ed526ccd21b89995084ff264d4f889ef"
+    },
+    {
+      "name": "execution-status.json",
+      "sha256": "5af04658ba2075b91e1f4b92abb257f27387e86edaa7f0e684985c040250eb00"
+    },
+    {
+      "name": "locks.json",
+      "sha256": "dc8d39153c0e0e67aee3abea031749238848c3d77345d19559d1610b7f8347eb"
+    },
+    {
+      "name": "model-invocations.json",
+      "sha256": "e53fecf80c80cddf03621195782f23bd266b9ea84da63b378af117e8e40fef5b"
+    },
+    {
+      "name": "parcels.json",
+      "sha256": "07bf2a82b39694a021e365dac3d55b3c7243fa14f113b937313d199dc63d0453"
+    },
+    {
+      "name": "poe-accounting-proof.json",
+      "sha256": "38d1daf9df365a5a032f9677c23e04c87801cfbd7f46e27b26158b959bbd272d"
+    },
+    {
+      "name": "projection.json",
+      "sha256": "0bcb596ce22f586fda5d0bca8121f1834ae43fec495283ec5a97092f3ed02543"
+    },
+    {
+      "name": "qualification.json",
+      "sha256": "792509d15bb1330b680e68f632de620a4e9721c827d12ccd04edd932fb9a7c9d"
+    },
+    {
+      "name": "runs.json",
+      "sha256": "f3e5a803f2e77b160648f6bb0801a14ac42ab5c1607ae142c0995b8aedffc0fd"
+    },
+    {
+      "name": "usage-closure-run-995c7a6c-b5a2-491d-b75a-57693cd2ea41-provider-response.json",
+      "sha256": "87be540df7715401e1fe19b948bd62b75eef4a5548072ddcbb04bf5729f6c09f"
+    },
+    {
+      "name": "usage-closure-run-995c7a6c-b5a2-491d-b75a-57693cd2ea41.json",
+      "sha256": "cc6d958d52095b7cf217b6d4c15a59b4e9a50ed55da9114eb3287a683028335c"
+    },
+    {
+      "name": "usage-closure-run-9c3f0c3f-bde2-453e-b302-04e29c568edc-provider-response.json",
+      "sha256": "56733b62fc251382e3e934f8b8a12f685a9414fa47343117fbd56567466df88f"
+    },
+    {
+      "name": "usage-closure-run-9c3f0c3f-bde2-453e-b302-04e29c568edc.json",
+      "sha256": "a49abb4e428aac24e2d1958ebfb0b40ce43958ee904dd388bd0b22c55abdd425"
+    },
+    {
+      "name": "usage-closure-run-b0f71fd8-0924-4b98-a6eb-637e3e1dd5f8-provider-response.json",
+      "sha256": "3bfb071aa1d7e84afa09581683c2dc3419b10b1c529353f1fe3c2a981f005bb8"
+    },
+    {
+      "name": "usage-closure-run-b0f71fd8-0924-4b98-a6eb-637e3e1dd5f8.json",
+      "sha256": "727cac991edc1c2237d9d34b3853af00b08d82f0cc40dad10286dbdf8666bcb7"
+    }
+  ]
+}

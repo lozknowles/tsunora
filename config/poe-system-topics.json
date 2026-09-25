@@ -1,0 +1,155 @@
+[
+  {
+    "id": "poe-role",
+    "title": "Mallow's role",
+    "terms": ["your role", "who are you", "what can you do", "introduce yourself", "who is mallow", "who is mallow"],
+    "text": "Mallow is the chief steward, conversational operator and Agent Control tour guide. He greets the operator, explains the feature being shown, finds registered jobs, schedules and evidence, and prepares governed job requests for explicit review and approval. The existing runtimes own execution and verification. His original character has short silver hair, a clean-shaven face, a midnight-teal utility jacket and a copper badge. He is warm, capable and quietly witty. Cadence handles dispatch; Mallow helps the operator understand and work with the crew.",
+    "source": "config/poe-system-topics.json#poe-role"
+  },
+  {
+    "id": "purpose",
+    "title": "Purpose",
+    "terms": [
+      "agent control",
+      "system works"
+    ],
+    "text": "Agent Control coordinates governed work across registered jobs, workers, model providers and execution locations. Mallow explains evidence and prepares requests; the existing runtimes execute and verify them.",
+    "source": "config/poe-system-topics.json#purpose"
+  },
+  {
+    "id": "crew",
+    "title": "Crew",
+    "terms": [
+      "crew",
+      "lane master"
+    ],
+    "text": "Crew characters project responsible operational roles. Their activity must come from runtime events; animation does not grant authority or imply execution.",
+    "source": "config/poe-system-topics.json#crew"
+  },
+  {
+    "id": "jobs",
+    "title": "Jobs",
+    "terms": [
+      "job definitions",
+      "reusable jobs"
+    ],
+    "text": "A Job is a versioned registered definition with typed inputs, action steps, capabilities and verification. A script existing in a repository is not an executable registration.",
+    "source": "config/poe-system-topics.json#jobs"
+  },
+  {
+    "id": "parcels",
+    "title": "Work Parcels",
+    "terms": [
+      "parcel"
+    ],
+    "text": "A Work Parcel preserves the initiating request, plan, stages, constraints, routing and evidence. Approved work follows its normal execution and verification lifecycle.",
+    "source": "config/poe-system-topics.json#parcels"
+  },
+  {
+    "id": "lanes",
+    "title": "Lanes",
+    "terms": [
+      "lane"
+    ],
+    "text": "A lane projects an execution contract, current work, model route and continuation baton. Consult its current record for actual activity.",
+    "source": "config/poe-system-topics.json#lanes"
+  },
+  {
+    "id": "models",
+    "title": "Models and routing",
+    "terms": [
+      "model",
+      "provider",
+      "routing"
+    ],
+    "text": "Model Registry roles and qualification govern model selection. Provider identity, execution location and observed usage belong to the run. A configured model is not automatically qualified or available.",
+    "source": "config/poe-system-topics.json#models"
+  },
+  {
+    "id": "escalation",
+    "title": "Quality escalation",
+    "terms": [
+      "escalation",
+      "quality"
+    ],
+    "text": "A failed quality gate can justify a governed model transition. Record the reason and target route; do not silently substitute providers.",
+    "source": "config/poe-system-topics.json#escalation"
+  },
+  {
+    "id": "batons",
+    "title": "Sealed continuation",
+    "terms": [
+      "baton",
+      "continuation"
+    ],
+    "text": "Sealed batons carry bounded evidence, constraints and continuation state between governed execution stages. They preserve lineage without exposing hidden reasoning.",
+    "source": "config/poe-system-topics.json#batons"
+  },
+  {
+    "id": "approvals",
+    "title": "Approvals and capabilities",
+    "terms": [
+      "approval",
+      "capabilities"
+    ],
+    "text": "Mallow's proposed job starts and cancellations require explicit approval of the sealed request in the dashboard. Benchmark plans must be frozen and explicitly approved before submission. Reading status, inspecting evidence and conversation do not start work. Authentication identifies the operator; capabilities restrict workers. Approval covers only the reviewed action, so material changes require fresh approval. Schedule changes, staging and publication retain their separate governed controls and approval boundaries.",
+    "source": "config/poe-system-topics.json#approvals"
+  },
+  {
+    "id": "verification",
+    "title": "Independent verification",
+    "terms": [
+      "verification",
+      "verify"
+    ],
+    "text": "Execution success and verified success are separate. Required independent verification evidence must pass before a final successful result is claimed.",
+    "source": "config/poe-system-topics.json#verification"
+  },
+  {
+    "id": "schedules",
+    "title": "Scheduled work",
+    "terms": [
+      "scheduled work"
+    ],
+    "text": "Schedules come only from registered manifest or saved-job stores. Enabled state, timezone and durable execution cursors control scheduled work; documentation does not create a schedule.",
+    "source": "config/poe-system-topics.json#schedules"
+  },
+  {
+    "id": "systems",
+    "title": "Machines",
+    "terms": [
+      "execution locations"
+    ],
+    "text": "Resource configuration identifies possible execution locations. Live health, transport and authenticated capability observations determine readiness.",
+    "source": "config/poe-system-topics.json#systems"
+  },
+  {
+    "id": "voice",
+    "title": "Social and voice ingress",
+    "terms": [
+      "voice",
+      "whatsapp"
+    ],
+    "text": "Authenticated browser and enrolled social channels retain separate conversation provenance. Speech transcripts are untrusted data; voice does not bypass consequential approval.",
+    "source": "config/poe-system-topics.json#voice"
+  },
+  {
+    "id": "pixel",
+    "title": "Pixel workflows",
+    "terms": [
+      "pixel workflow"
+    ],
+    "text": "Device reachability, ADB transport, Termux, browser/session and Facebook login are distinct readiness gates. Collect sources with provenance, review uncertain or duplicate events, and approve staging and publication separately.",
+    "source": "config/poe-system-topics.json#pixel"
+  },
+  {
+    "id": "limits",
+    "title": "Limitations",
+    "terms": [
+      "limitations",
+      "unavailable"
+    ],
+    "text": "Missing records, unmeasured telemetry and unqualified capabilities must be reported as unavailable. Historical evidence does not establish current readiness.",
+    "source": "config/poe-system-topics.json#limits"
+  }
+]

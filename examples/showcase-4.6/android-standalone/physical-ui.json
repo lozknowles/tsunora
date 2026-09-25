@@ -1,0 +1,119 @@
+{
+  "captures": [
+    "android-local-dashboard",
+    "android-discovery",
+    "android-estate",
+    "android-phone-inspector",
+    "android-local-process",
+    "android-crew",
+    "android-mallow-readiness"
+  ],
+  "dimensions": [
+    {
+      "view": "discovery",
+      "width": 395,
+      "document": 395,
+      "height": 731,
+      "scale": 1
+    },
+    {
+      "view": "home",
+      "width": 395,
+      "document": 395,
+      "height": 731,
+      "scale": 1
+    },
+    {
+      "view": "estate",
+      "width": 395,
+      "document": 395,
+      "height": 731,
+      "scale": 1
+    },
+    {
+      "view": "process",
+      "width": 395,
+      "document": 395,
+      "height": 731,
+      "scale": 1
+    },
+    {
+      "view": "crew",
+      "width": 395,
+      "document": 395,
+      "height": 731,
+      "scale": 1
+    }
+  ],
+  "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+  "discovery": {
+    "status": "COMPLETED",
+    "summary": {
+      "machines": 1,
+      "gpus": 0,
+      "localModels": 0,
+      "providers": 0,
+      "agents": 2,
+      "tools": 27,
+      "memorySources": 0,
+      "healthy": 50,
+      "needsQualification": 0,
+      "unavailable": 0,
+      "new": 0
+    },
+    "android": {
+      "hostname": "EXAMPLE_WORKER",
+      "platform": "android",
+      "release": "6.1.157-android14-11-gbd23337e42e7-ab14791245",
+      "architecture": "arm64",
+      "cpuModel": "Tensor G3",
+      "cpuLogical": null,
+      "totalMemoryBytes": 12135170048,
+      "availableMemoryBytes": 303796224,
+      "agentControlVersion": "4.6.0-rc.1",
+      "diskTotalBytes": 117742587904,
+      "diskAvailableBytes": 12503920640,
+      "deploymentProfile": "ANDROID_STANDALONE_WEB",
+      "computeClass": "MOBILE_LOCAL",
+      "androidVersion": "17",
+      "batteryPercent": null,
+      "charging": null,
+      "thermalCelsius": null,
+      "metered": null,
+      "backgroundReliability": "ANDROID_MAY_TERMINATE_PROCESS",
+      "accelerator": "UNKNOWN",
+      "controllerLocation": "this-device",
+      "localModelRequired": false
+    }
+  },
+  "mallow": "Agent Control can run local deterministic jobs without a model. This Android phone needs a qualified local benchmark runtime and validator. Available RAM is 278 MiB. Charging, battery, thermal and network-metering evidence is unavailable in base Termux, so the conservative mobile policy blocks model provisioning and benchmarking. No server-side sensor is substituted. No model has been downloaded or benchmarked by this request.",
+  "pwa": {
+    "installabilityErrors": []
+  },
+  "additionalReadOnlyViews": [
+    {
+      "view": "jobs",
+      "width": 395,
+      "document": 395,
+      "height": 731
+    },
+    {
+      "view": "models",
+      "width": 395,
+      "document": 395,
+      "height": 731
+    },
+    {
+      "view": "model-watches",
+      "width": 395,
+      "document": 395,
+      "height": 731
+    },
+    {
+      "view": "configuration",
+      "width": 395,
+      "document": 395,
+      "height": 731
+    }
+  ]
+}

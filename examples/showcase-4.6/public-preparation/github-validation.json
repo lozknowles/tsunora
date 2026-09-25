@@ -1,0 +1,52 @@
+{
+  "commit": "26522925aa95cd9668025a0817ead2c044e9689b",
+  "renderedPages": [
+    {
+      "file": "README.md",
+      "url": "https://github.com/lozknowles/agent-control/blob/26522925aa95cd9668025a0817ead2c044e9689b/README.md",
+      "status": 200,
+      "imagesLoaded": 4,
+      "title": "agent-control/README.md at 26522925aa95cd9668025a0817ead2c044e9689b \u00b7 lozknowles/agent-control \u00b7 GitHub"
+    },
+    {
+      "file": "docs/public-installation-journey.md",
+      "url": "https://github.com/lozknowles/agent-control/blob/26522925aa95cd9668025a0817ead2c044e9689b/docs/public-installation-journey.md",
+      "status": 200,
+      "imagesLoaded": 13,
+      "title": "agent-control/docs/public-installation-journey.md at 26522925aa95cd9668025a0817ead2c044e9689b \u00b7 lozknowles/agent-control \u00b7 GitHub"
+    }
+  ],
+  "status": "PASS",
+  "externalLinks": [
+    {
+      "url": "https://github.com/lozknowles/agent-control-jobs",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/lozknowles/agent-control/blob/feature/4.6-model-intelligence-showcase/README.md",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/lozknowles/agent-control/blob/feature/4.6-model-intelligence-showcase/docs/installation-first-run.md",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/lozknowles/agent-control/blob/v4.5.1/docs/DEPLOYMENT.md",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/lozknowles/agent-control/releases/tag/v4.5.1",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/lozknowles/agent-control/tree/feature/4.6-model-intelligence-showcase",
+      "status": 200
+    }
+  ],
+  "rawImages": {
+    "count": 22,
+    "sha256": "PASS",
+    "evidence": "All raw-image checksum assertions passed in both Linux attempts before HTML link rate limiting."
+  },
+  "limitations": "Linux GitHub HTML requests received HTTP 429. Windows browser and link requests passed."
+}

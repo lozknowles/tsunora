@@ -1,0 +1,98 @@
+{
+  "schema": "agent-control.android-screenshots/v1",
+  "capturedOn": "2026-09-13",
+  "device": "Pixel 8 Pro",
+  "captures": [
+    {
+      "file": "docs/media/4.6/android/android-local-dashboard.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "e814b0330cf8bc947712288ddccc09ad91f6620cf7380cca9cc30185fae59174",
+      "bytes": 576348,
+      "capture": "physical Pixel framebuffer via ADB screencap",
+      "altered": false,
+      "privacyReview": "PASS: no credentials, private endpoints or notification message contents visible",
+      "note": "Original handset capture."
+    },
+    {
+      "file": "docs/media/4.6/android/android-discovery.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "ecd4056dad2055ada5edaf8b0eefc744b86e613fea1c587ea7c8eb185d6622de",
+      "bytes": 507086,
+      "capture": "physical Pixel framebuffer via ADB screencap",
+      "altered": false,
+      "privacyReview": "PASS: no credentials, private endpoints or notification message contents visible",
+      "note": "Original handset capture."
+    },
+    {
+      "file": "docs/media/4.6/android/android-estate.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "e03d0a0264d15a61de0e940ae77eed6a10e6e802e97b6476b6cb15687d5dceb2",
+      "bytes": 307494,
+      "capture": "physical Pixel framebuffer via ADB screencap",
+      "altered": false,
+      "privacyReview": "PASS: no credentials, private endpoints or notification message contents visible",
+      "note": "Original handset capture."
+    },
+    {
+      "file": "docs/media/4.6/android/android-phone-inspector.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "4399b44f331c5668737259bf3e983e807f98760c383040957d9385ccac58e840",
+      "bytes": 506582,
+      "capture": "physical Pixel framebuffer via ADB screencap",
+      "altered": false,
+      "privacyReview": "PASS: no credentials, private endpoints or notification message contents visible",
+      "note": "Expired observation and qualification gaps are intentionally visible."
+    },
+    {
+      "file": "docs/media/4.6/android/android-local-process.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "100af5724c6c2e3bfa6ef2e45329dda949e7c457ae6750197923271f203da9fd",
+      "bytes": 332109,
+      "capture": "physical Pixel framebuffer via ADB screencap",
+      "altered": false,
+      "privacyReview": "PASS: no credentials, private endpoints or notification message contents visible",
+      "note": "Original handset capture."
+    },
+    {
+      "file": "docs/media/4.6/android/android-crew.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "3734a43fcc7b8db13c587dbfde4abeb4bb788b40e5bfd6a04d20a5e5bb2b5e16",
+      "bytes": 681742,
+      "capture": "physical Pixel framebuffer via ADB screencap",
+      "altered": false,
+      "privacyReview": "PASS: no credentials, private endpoints or notification message contents visible",
+      "note": "Original handset capture."
+    },
+    {
+      "file": "docs/media/4.6/android/android-mallow-readiness.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "262d2346d8b37f458933778a0d013d87c9d883d7060269f61b9a94377c4159fc",
+      "bytes": 703899,
+      "capture": "physical Pixel framebuffer via ADB screencap",
+      "altered": false,
+      "privacyReview": "PASS: no credentials, private endpoints or notification message contents visible",
+      "note": "Original handset capture."
+    },
+    {
+      "file": "docs/media/4.6/android/physical-offline.png",
+      "sourceCommit": "f9f95eda37760ba4b83d0558ed9634cf5f4400cc",
+      "sha256": "ef929432dcf2998cc92050864043daf78c4be2b1f8a0882e5df92121f7bd00fd",
+      "bytes": 167235,
+      "capture": "physical Pixel framebuffer via ADB screencap",
+      "altered": false,
+      "privacyReview": "PASS: no credentials, private endpoints or notification message contents visible",
+      "note": "Original handset capture."
+    },
+    {
+      "file": "docs/media/4.6/android/android-process-control-room.png",
+      "sourceCommit": "2df2f9a1a8c21acb00b515d0249cbb6035eecccd",
+      "sha256": "3f68c120adc1af3047df6a36cb764087c26d1046ffe73282e92d1cb81daa5352",
+      "bytes": 357307,
+      "capture": "physical Pixel framebuffer via ADB screencap",
+      "altered": false,
+      "privacyReview": "PASS: no credentials, private endpoints or notification message contents visible",
+      "note": "Control Room displays the retained successful local run at readable handset scale."
+    }
+  ],
+  "excluded": "Tiled CDP captures, harness failure captures and notification-obscured frames."
+}

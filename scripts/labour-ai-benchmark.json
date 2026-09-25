@@ -1,0 +1,208 @@
+{
+  "schema": "agent-control.ai-labour-benchmark/v1",
+  "provenance": "Authored from existing qualification-suite-v1 structured/code-modification patterns and Agent Control permission, reservation, retry-accounting contracts. Synthetic operational records; no private production data.",
+  "frozenBeforeExecution": true,
+  "calibration": [
+    {
+      "id": "classify",
+      "jobType": "classification",
+      "prompt": "Classify this operational report as HEALTHY, DEGRADED or BLOCKED: All health probes pass and no jobs are failing.",
+      "expected": {
+        "status": "HEALTHY"
+      }
+    },
+    {
+      "id": "extract",
+      "jobType": "extraction",
+      "prompt": "Extract job_id and retries from: Job audit-41 completed after 2 retries.",
+      "expected": {
+        "job_id": "audit-41",
+        "retries": 2
+      }
+    },
+    {
+      "id": "structure",
+      "jobType": "structured-output",
+      "prompt": "Return JSON with action=STOP and authorised=false. No extra keys.",
+      "expected": {
+        "action": "STOP",
+        "authorised": false
+      }
+    },
+    {
+      "id": "reason",
+      "jobType": "reasoning",
+      "prompt": "Policy: a worker needs both qualification and permission. Worker A is qualified but has no permission. Worker B has permission but no qualification. Return eligible as the list of eligible worker letters.",
+      "expected": {
+        "eligible": []
+      }
+    },
+    {
+      "id": "code",
+      "jobType": "coding",
+      "prompt": "In JavaScript, replace only the comparison in `if (retries > maxRetries) stop();` so the limit also stops at equality. Return JSON {\"comparison\":\"...\"}.",
+      "expected": {
+        "comparison": "retries >= maxRetries"
+      }
+    },
+    {
+      "id": "tool",
+      "jobType": "tool-mediated",
+      "prompt": "Use the approved sum tool to add 17, 23, and -4. Return ONLY {\"tool\":\"sum\",\"arguments\":[17,23,-4]}.",
+      "expected": {
+        "tool": "sum",
+        "arguments": [
+          17,
+          23,
+          -4
+        ]
+      }
+    }
+  ],
+  "heldOut": [
+    {
+      "id": "classify1",
+      "jobType": "classification",
+      "prompt": "Classify as HEALTHY, DEGRADED or BLOCKED: The API remains usable, but 3 of 20 requests timed out and retries are increasing.",
+      "expected": {
+        "status": "DEGRADED"
+      }
+    },
+    {
+      "id": "classify2",
+      "jobType": "classification",
+      "prompt": "Classify as HEALTHY, DEGRADED or BLOCKED: A required operator approval is absent. Policy forbids starting this job until approval arrives.",
+      "expected": {
+        "status": "BLOCKED"
+      }
+    },
+    {
+      "id": "extract1",
+      "jobType": "extraction",
+      "prompt": "Extract job_id and retries from: Job reconcile-08 completed without retrying. An earlier job archive-22 needed 7 retries.",
+      "expected": {
+        "job_id": "reconcile-08",
+        "retries": 0
+      }
+    },
+    {
+      "id": "extract2",
+      "jobType": "extraction",
+      "prompt": "Extract job_id and retries for the failed job: Job index-19 succeeded after 1 retry. Job verify-27 failed after 3 retries.",
+      "expected": {
+        "job_id": "verify-27",
+        "retries": 3
+      }
+    },
+    {
+      "id": "structure1",
+      "jobType": "structured-output",
+      "prompt": "Return JSON only with worker_id=worker-7, permission=false, and capabilities as the empty list. No extra keys.",
+      "expected": {
+        "worker_id": "worker-7",
+        "permission": false,
+        "capabilities": []
+      }
+    },
+    {
+      "id": "structure2",
+      "jobType": "structured-output",
+      "prompt": "Return JSON only with outcome=INTERRUPTED, retry_allowed=false, and external_cost=null (unknown, not zero). No extra keys.",
+      "expected": {
+        "outcome": "INTERRUPTED",
+        "retry_allowed": false,
+        "external_cost": null
+      }
+    },
+    {
+      "id": "reason1",
+      "jobType": "reasoning",
+      "prompt": "A needs qualification Q and permission P. Workers: A has Q and P but is quarantined; B has Q and P and is available; C is available with Q but no P. Quarantine always denies dispatch. Return eligible as a list of worker letters.",
+      "expected": {
+        "eligible": [
+          "B"
+        ]
+      }
+    },
+    {
+      "id": "reason2",
+      "jobType": "reasoning",
+      "prompt": "An organisation has budget 100 units, settled costs 35 and in-flight reservations 40. A new order requires a maximum reservation of 30. Reservations cannot oversubscribe the budget. Return {\"admit\":boolean,\"available\":number}.",
+      "expected": {
+        "admit": false,
+        "available": 25
+      }
+    },
+    {
+      "id": "code1",
+      "jobType": "coding",
+      "prompt": "Repair this JavaScript comparison only: `if (worker.status = \"available\") dispatch();`. It must compare using strict equality without assigning. Return {\"comparison\":\"...\"}.",
+      "expected": {
+        "comparison": "worker.status === \"available\""
+      }
+    },
+    {
+      "id": "code2",
+      "jobType": "coding",
+      "prompt": "For `const total = attempts.reduce((sum, attempt) => EXPRESSION, 0);`, replace EXPRESSION to accumulate every attempt.totalCost. Return {\"expression\":\"...\"}.",
+      "expected": {
+        "expression": "sum + attempt.totalCost"
+      }
+    },
+    {
+      "id": "tool1",
+      "jobType": "tool-mediated",
+      "prompt": "Use the approved sum tool for the full cost: first attempt 13, verifier 2, retry 21, second verifier 2. Return {\"tool\":\"sum\",\"arguments\":[...]} in that order.",
+      "expected": {
+        "tool": "sum",
+        "arguments": [
+          13,
+          2,
+          21,
+          2
+        ]
+      }
+    },
+    {
+      "id": "tool2",
+      "jobType": "tool-mediated",
+      "prompt": "Use the approved sum tool to compute net allocation: reserved 70, refund -15, new charge 8. Return {\"tool\":\"sum\",\"arguments\":[...]} in that order.",
+      "expected": {
+        "tool": "sum",
+        "arguments": [
+          70,
+          -15,
+          8
+        ]
+      }
+    }
+  ],
+  "protocol": {
+    "workers": [
+      "LOCAL-GENERAL-3B",
+      "LOCAL-CODER-3B",
+      "LOCAL-CODER-7B"
+    ],
+    "fixedWorker": "LOCAL-CODER-7B",
+    "strategies": [
+      "fixed",
+      "cheapest",
+      "broker"
+    ],
+    "caseOrder": "listed; strategy order rotates by case index",
+    "history": "each strategy forks the identical calibration ledger; held-out history updates only within its strategy",
+    "sampling": {
+      "temperature": 0,
+      "seed": 415,
+      "maximumOutputTokens": 160
+    },
+    "maximumAttempts": 3,
+    "deadlineSeconds": 240,
+    "threads": 4,
+    "cpuOnly": true,
+    "monetaryConversion": null,
+    "primaryMeasuredResource": "process CPU milliseconds including cold model load; independently measured GNU time user+system",
+    "naturalFailureRule": "No deliberate impairment within comparison. Fault injection separate.",
+    "scoring": "Exact parsed JSON keys and values; coding compares token-normalized expression, not general coding correctness; tool requests executed only for approved bounded sum and verified separately."
+  }
+}

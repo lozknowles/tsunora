@@ -1,0 +1,35 @@
+{
+  "schema": "agent-control.provider-techniques/v1",
+  "techniques": [
+    {
+      "id": "compact-portable-continuation",
+      "origin": "OpenAI Codex context management and Agent Control 3.7 qualification",
+      "genericPrinciple": "Separate cumulative usage from active context and preserve compact portable continuation state.",
+      "agentControlImplementation": "Token governor lifecycle records plus provider-neutral sealed batons and Evidence Packet references.",
+      "providerDependencies": [],
+      "classification": "CORE",
+      "benchmarkEvidence": ["docs/evidence/agent-control-3.7-codex-0.153-review.md"],
+      "status": "ADOPTED"
+    },
+    {
+      "id": "bounded-progressive-retrieval",
+      "origin": "zvec-ai/zvec-grep retrieval pipeline and established information-retrieval practice",
+      "genericPrinciple": "Begin with cheap exact evidence and escalate only when measured coverage or confidence is insufficient.",
+      "agentControlImplementation": "Provider-neutral Retrieval Governor with exact, BM25 and optional semantic/hybrid adapters.",
+      "providerDependencies": [],
+      "classification": "CORE",
+      "benchmarkEvidence": ["docs/evidence/agent-control-3.8-retrieval-benchmark.json"],
+      "status": "ADOPTED"
+    },
+    {
+      "id": "zg-local-hybrid-search",
+      "origin": "zvec-ai/zvec-grep 0.2.1",
+      "genericPrinciple": "Fuse lexical and semantic ranks while preserving compact path/line evidence and freshness.",
+      "agentControlImplementation": "Optional search-only zg adapter beneath RetrievalProvider; index mutation is a separate capability.",
+      "providerDependencies": ["zg executable and local index"],
+      "classification": "OPTIONAL",
+      "benchmarkEvidence": ["docs/evidence/agent-control-3.8-retrieval-benchmark.json"],
+      "status": "EVALUATING"
+    }
+  ]
+}

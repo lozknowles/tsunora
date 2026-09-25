@@ -1,0 +1,19 @@
+{
+  "approvalStatus": 202,
+  "scanStatus": "COMPLETED",
+  "summary": {
+    "machines": 2,
+    "gpus": 0,
+    "localModels": 1,
+    "providers": 1,
+    "agents": 4,
+    "tools": 27,
+    "memorySources": 0,
+    "healthy": 53,
+    "needsQualification": 2,
+    "unavailable": 0,
+    "new": 58
+  },
+  "errors": [],
+  "processText": "Start operator-system-observation@1.1.0 · SUCCEEDEDStart operator-system-observation@1.1.0 · SUCCEEDED"
+}

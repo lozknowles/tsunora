@@ -1,0 +1,377 @@
+{
+  "schema": "agent-control.fast-execution-benchmark/v1",
+  "createdAt": "2026-09-01T19:56:37.144Z",
+  "availability": {
+    "available": true,
+    "model": "gpt-5.3-codex-spark",
+    "codexVersion": "codex-cli 0.144.4",
+    "authMode": "chatgpt",
+    "checkedAt": "2026-09-01T19:51:30.317Z",
+    "reason": "authenticated-bounded-codex-exec-succeeded",
+    "evidence": [
+      "codex-version:codex-cli 0.144.4",
+      "model:gpt-5.3-codex-spark",
+      "response:SPARK_AVAILABLE"
+    ],
+    "latencyMs": 3899
+  },
+  "classifier": {
+    "total": 10,
+    "falsePositive": 0,
+    "falseNegative": 0,
+    "correct": 10,
+    "cases": [
+      {
+        "id": "docs",
+        "expectedSpark": true,
+        "selected": true,
+        "reasons": [],
+        "contextTokens": 29
+      },
+      {
+        "id": "config",
+        "expectedSpark": true,
+        "selected": true,
+        "reasons": [],
+        "contextTokens": 29
+      },
+      {
+        "id": "rename",
+        "expectedSpark": true,
+        "selected": true,
+        "reasons": [],
+        "contextTokens": 29
+      },
+      {
+        "id": "bug",
+        "expectedSpark": true,
+        "selected": true,
+        "reasons": [],
+        "contextTokens": 24
+      },
+      {
+        "id": "lint",
+        "expectedSpark": true,
+        "selected": true,
+        "reasons": [],
+        "contextTokens": 32
+      },
+      {
+        "id": "test",
+        "expectedSpark": true,
+        "selected": true,
+        "reasons": [],
+        "contextTokens": 29
+      },
+      {
+        "id": "search",
+        "expectedSpark": true,
+        "selected": true,
+        "reasons": [],
+        "contextTokens": 35
+      },
+      {
+        "id": "ambiguous",
+        "expectedSpark": false,
+        "selected": false,
+        "reasons": [
+          "task-not-trivial",
+          "risk-not-low",
+          "non-deterministic-verification"
+        ],
+        "contextTokens": null
+      },
+      {
+        "id": "multi-file",
+        "expectedSpark": false,
+        "selected": false,
+        "reasons": [
+          "multi-file-task"
+        ],
+        "contextTokens": null
+      },
+      {
+        "id": "protected",
+        "expectedSpark": false,
+        "selected": false,
+        "reasons": [
+          "risk-not-low",
+          "protected-path",
+          "sensitive-task"
+        ],
+        "contextTokens": null
+      }
+    ]
+  },
+  "live": true,
+  "models": {
+    "spark": "gpt-5.3-codex-spark",
+    "standard": "gpt-5.6-luna"
+  },
+  "results": [
+    {
+      "id": "docs",
+      "route": "spark-first",
+      "model": "gpt-5.3-codex-spark",
+      "verified": true,
+      "elapsedMs": 14464,
+      "inputTokens": 50348,
+      "outputTokens": 1192,
+      "cost": null,
+      "currency": null,
+      "contextTokens": 29,
+      "status": "SUCCEEDED",
+      "files": [
+        "docs/guide.md"
+      ],
+      "changedLines": 2
+    },
+    {
+      "id": "docs",
+      "route": "standard-baseline",
+      "model": "gpt-5.6-luna",
+      "verified": true,
+      "elapsedMs": 26070,
+      "inputTokens": 51357,
+      "outputTokens": 639,
+      "cost": null,
+      "currency": null,
+      "contextTokens": 29,
+      "status": "SUCCEEDED",
+      "files": [
+        "docs/guide.md"
+      ],
+      "changedLines": 2
+    },
+    {
+      "id": "config",
+      "route": "spark-first",
+      "model": "gpt-5.3-codex-spark",
+      "verified": true,
+      "elapsedMs": 19347,
+      "inputTokens": 49715,
+      "outputTokens": 834,
+      "cost": null,
+      "currency": null,
+      "contextTokens": 29,
+      "status": "SUCCEEDED",
+      "files": [
+        "config/feature.json"
+      ],
+      "changedLines": 2
+    },
+    {
+      "id": "config",
+      "route": "standard-baseline",
+      "model": "gpt-5.6-luna",
+      "verified": false,
+      "elapsedMs": 28156,
+      "inputTokens": 50861,
+      "outputTokens": 685,
+      "cost": null,
+      "currency": null,
+      "contextTokens": 29,
+      "status": "ESCALATE",
+      "files": [
+        "config/feature.json"
+      ],
+      "changedLines": 2
+    },
+    {
+      "id": "rename",
+      "route": "spark-first",
+      "model": "gpt-5.3-codex-spark",
+      "verified": true,
+      "elapsedMs": 18580,
+      "inputTokens": 63242,
+      "outputTokens": 1331,
+      "cost": null,
+      "currency": null,
+      "contextTokens": 29,
+      "status": "SUCCEEDED",
+      "files": [
+        "src/name.js"
+      ],
+      "changedLines": 2
+    },
+    {
+      "id": "rename",
+      "route": "standard-baseline",
+      "model": "gpt-5.6-luna",
+      "verified": true,
+      "elapsedMs": 24707,
+      "inputTokens": 51255,
+      "outputTokens": 660,
+      "cost": null,
+      "currency": null,
+      "contextTokens": 29,
+      "status": "SUCCEEDED",
+      "files": [
+        "src/name.js"
+      ],
+      "changedLines": 2
+    },
+    {
+      "id": "bug",
+      "route": "spark-first",
+      "model": "gpt-5.3-codex-spark",
+      "verified": true,
+      "elapsedMs": 13768,
+      "inputTokens": 49672,
+      "outputTokens": 989,
+      "cost": null,
+      "currency": null,
+      "contextTokens": 24,
+      "status": "SUCCEEDED",
+      "files": [
+        "src/math.js"
+      ],
+      "changedLines": 2
+    },
+    {
+      "id": "bug",
+      "route": "standard-baseline",
+      "model": "gpt-5.6-luna",
+      "verified": true,
+      "elapsedMs": 27100,
+      "inputTokens": 51017,
+      "outputTokens": 538,
+      "cost": null,
+      "currency": null,
+      "contextTokens": 24,
+      "status": "SUCCEEDED",
+      "files": [
+        "src/math.js"
+      ],
+      "changedLines": 2
+    },
+    {
+      "id": "lint",
+      "route": "spark-first",
+      "model": "gpt-5.3-codex-spark",
+      "verified": true,
+      "elapsedMs": 19448,
+      "inputTokens": 64862,
+      "outputTokens": 2410,
+      "cost": null,
+      "currency": null,
+      "contextTokens": 32,
+      "status": "SUCCEEDED",
+      "files": [
+        "src/lint.js"
+      ],
+      "changedLines": 2
+    },
+    {
+      "id": "lint",
+      "route": "standard-baseline",
+      "model": "gpt-5.6-luna",
+      "verified": true,
+      "elapsedMs": 40193,
+      "inputTokens": 64486,
+      "outputTokens": 906,
+      "cost": null,
+      "currency": null,
+      "contextTokens": 32,
+      "status": "SUCCEEDED",
+      "files": [
+        "src/lint.js"
+      ],
+      "changedLines": 2
+    },
+    {
+      "id": "test",
+      "route": "spark-first",
+      "model": "gpt-5.3-codex-spark",
+      "verified": true,
+      "elapsedMs": 14108,
+      "inputTokens": 49778,
+      "outputTokens": 956,
+      "cost": null,
+      "currency": null,
+      "contextTokens": 29,
+      "status": "SUCCEEDED",
+      "files": [
+        "test/math.test.js"
+      ],
+      "changedLines": 1
+    },
+    {
+      "id": "test",
+      "route": "standard-baseline",
+      "model": "gpt-5.6-luna",
+      "verified": true,
+      "elapsedMs": 27108,
+      "inputTokens": 51196,
+      "outputTokens": 520,
+      "cost": null,
+      "currency": null,
+      "contextTokens": 29,
+      "status": "SUCCEEDED",
+      "files": [
+        "test/math.test.js"
+      ],
+      "changedLines": 1
+    },
+    {
+      "id": "search",
+      "route": "spark-first",
+      "model": "gpt-5.3-codex-spark",
+      "verified": true,
+      "elapsedMs": 8060,
+      "inputTokens": 24504,
+      "outputTokens": 943,
+      "cost": null,
+      "currency": null,
+      "contextTokens": 35,
+      "status": "SUCCEEDED",
+      "files": [],
+      "changedLines": 0
+    },
+    {
+      "id": "search",
+      "route": "standard-baseline",
+      "model": "gpt-5.6-luna",
+      "verified": true,
+      "elapsedMs": 25332,
+      "inputTokens": 38175,
+      "outputTokens": 490,
+      "cost": null,
+      "currency": null,
+      "contextTokens": 35,
+      "status": "SUCCEEDED",
+      "files": [],
+      "changedLines": 0
+    }
+  ],
+  "summary": {
+    "spark": {
+      "attempts": 7,
+      "verified": 7,
+      "verifiedSuccessRate": 1,
+      "medianLatencyMs": 14464,
+      "inputTokens": 352121,
+      "outputTokens": 8655,
+      "cost": null,
+      "currency": null,
+      "costTimePerVerifiedOutcome": {
+        "latencyMs": 15396.42857142857,
+        "cost": null
+      }
+    },
+    "standard": {
+      "attempts": 7,
+      "verified": 6,
+      "verifiedSuccessRate": 0.8571428571428571,
+      "medianLatencyMs": 27100,
+      "inputTokens": 358347,
+      "outputTokens": 4438,
+      "cost": null,
+      "currency": null,
+      "costTimePerVerifiedOutcome": {
+        "latencyMs": 33111,
+        "cost": null
+      }
+    }
+  }
+}

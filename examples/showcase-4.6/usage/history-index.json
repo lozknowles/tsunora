@@ -1,0 +1,48 @@
+{
+  "schema": "agent-control.usage-history-qualification/v1",
+  "scope": "Selected canonical qualification histories; not whole-estate history",
+  "sources": [
+    {
+      "sourceId": "qualification-a1813589827d77104efae3490c6e6769a0a9908bbe43b0bb4864700fd8946be6",
+      "sourceSha256": "a1813589827d77104efae3490c6e6769a0a9908bbe43b0bb4864700fd8946be6",
+      "sourceVersion": "4.6.0-rc.1",
+      "indexed": 2,
+      "existing": 0,
+      "source": "qualification-a1813589827d77104efae3490c6e6769a0a9908bbe43b0bb4864700fd8946be6",
+      "migrationVersion": "canonical-index/v1",
+      "idempotent": true
+    },
+    {
+      "sourceId": "qualification-115bd4680939a7633ae22b41ced022141be1cb0605a85582918d775be13309df",
+      "sourceSha256": "115bd4680939a7633ae22b41ced022141be1cb0605a85582918d775be13309df",
+      "sourceVersion": "4.6.0-rc.1",
+      "indexed": 1,
+      "existing": 0,
+      "source": "qualification-115bd4680939a7633ae22b41ced022141be1cb0605a85582918d775be13309df",
+      "migrationVersion": "canonical-index/v1",
+      "idempotent": true
+    },
+    {
+      "sourceId": "qualification-1c76d7f5c2c7e246936c680618cb8f148fffdd2bea647d27dc53f02bf1b08667",
+      "sourceSha256": "1c76d7f5c2c7e246936c680618cb8f148fffdd2bea647d27dc53f02bf1b08667",
+      "sourceVersion": "4.6.0-rc.1",
+      "indexed": 1,
+      "existing": 0,
+      "source": "qualification-1c76d7f5c2c7e246936c680618cb8f148fffdd2bea647d27dc53f02bf1b08667",
+      "migrationVersion": "canonical-index/v1",
+      "idempotent": true
+    },
+    {
+      "sourceId": "qualification-4a25f984ef517f96b429245de9de76e261db97cd26274faff732b11e5a5488e3",
+      "sourceSha256": "4a25f984ef517f96b429245de9de76e261db97cd26274faff732b11e5a5488e3",
+      "sourceVersion": "4.6.0-rc.1",
+      "indexed": 1,
+      "existing": 0,
+      "source": "qualification-4a25f984ef517f96b429245de9de76e261db97cd26274faff732b11e5a5488e3",
+      "migrationVersion": "canonical-index/v1",
+      "idempotent": true
+    }
+  ],
+  "records": 5,
+  "originalSourcesUnchanged": true
+}

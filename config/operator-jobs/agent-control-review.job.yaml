@@ -1,0 +1,48 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata:
+  id: agent-control-whole-repository-ox-review
+  name: Agent Control whole-repository independent review
+  version: 1.0.0
+  description: Enter the independent review prompt below, then submit the complete clean repository snapshot through the operator-configured qualified review provider.
+spec:
+  enabled: true
+  priority: high
+  concurrency: no-overlap
+  parameters:
+    reviewPrompt:
+      type: string
+      required: true
+    contextFile:
+      type: string
+      required: true
+    maximumOutputTokens:
+      type: integer
+      default: 32768
+      minimum: 8192
+      maximum: 65536
+  retry:
+    attempts: 1
+    backoffSeconds: 30
+  steps:
+    - id: independent-review
+      name: Provider whole-repository defect and efficiency review
+      action: operator.large-context.review@1.0.0
+      requires: [model.execute, network.read, repository.review, large-context]
+      resources: [provider/operator-review, repository/agent-control-github-read-only]
+      timeoutSeconds: 5400
+      outputs:
+        - name: review-result
+          type: application/vnd.agent-control.large-context-review+json
+          schema: agent-control.large-context-review/v1
+          version: 1.0.0
+          retention: audit-evidence
+    - id: independent-verification
+      name: Independent retained-response verification
+      action: operator.large-context.verify@1.0.0
+      requires: [repository.review]
+      resources: [repository/agent-control-github-read-only]
+      dependsOn: [independent-review]
+      inputs:
+        review-result: independent-review.review-result
+      verification: [provider-completed, review-content-complete]

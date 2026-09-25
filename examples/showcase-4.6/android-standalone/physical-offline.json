@@ -1,0 +1,5 @@
+{
+  "url": "http://127.0.0.1:4310/",
+  "body": "The local controller is unavailable\n\nThis is the saved Agent Control UI shell. It cannot execute jobs or report live status.\n\nOn Android, open Termux, return to the installation directory and run:\n\nnode scripts/android-standalone.mjs start\n\nInterrupted work remains evidence, never a successful completion. Review its state before approving another attempt.\n\nReconnect to the controller",
+  "offlineWarning": true
+}

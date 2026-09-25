@@ -1,0 +1,2815 @@
+{
+  "schema": "agent-control.benchmark-escape-audit/v1",
+  "scope": "Tracked benchmark/qualification/lab/llama/process files and CLI; lexical occurrence inventory with execution-boundary classification. Not a whole-repository security proof.",
+  "nativeEntry": "job-bootstrap -> registerRuntimeBenchmark -> TargetLlamaRuntime -> OwnedExecution -> distributed helper",
+  "nativeQualificationClient": "CLI/API submit, wait and inspect only",
+  "legacyBoundary": "Legacy utilities are excluded from native composition. Historical measurements remain EXTERNAL_HARNESS_EVIDENCE. A caller label cannot satisfy product transcript receipt.",
+  "rows": [
+    {
+      "path": "assets/runtime/llama-invocation.py",
+      "sha256": "987315fad00c321d9b0876a9d37ac48181a0c1d09980f9e90c9e0d897a87701b",
+      "classification": "production Agent Control adapter",
+      "reason": "Product control/runtime code; native path uses governed ActionContext and existing owned process/evidence lifecycle.",
+      "occurrences": [
+        {
+          "line": 16,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 161,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 203,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 277,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 278,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 289,
+          "primitives": [
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/agent-control.mjs",
+      "sha256": "f36d2b65a40d196d8b099a1dad40adce437d317e2f9b97b8e3185ed92884e69e",
+      "classification": "unrelated",
+      "reason": "CLI command dispatcher and authenticated job client. Existing ACP subprocess is unrelated to benchmark execution.",
+      "occurrences": [
+        {
+          "line": 4,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 36,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 100,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/android-adb-qualification-contract.mjs",
+      "sha256": "1e9b87ddd2996a81a370fed1e75fc4e25a9ec45db1a21d65cc0e4adbd9f009c2",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 2,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 4,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 16,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 25,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 29,
+          "primitives": [
+            "adb"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/android-adb-qualification-contract.test.mjs",
+      "sha256": "e8f4b88085422d20360d6eb16d9d2c9eb8292e8a6d9f05d6372f3ba388a00586",
+      "classification": "legitimate test fixture",
+      "reason": "Automated test code; not registered as a production benchmark executor.",
+      "occurrences": [
+        {
+          "line": 6,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 8,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 10,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 11,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 12,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 17,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 19,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 24,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 27,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 28,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 29,
+          "primitives": [
+            "adb"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/benchmark-fast-execution.ts",
+      "sha256": "4f225e5200c434dedd88cc2c5c6cdb50a146f77be7dc890391c71b2db0ac15c7",
+      "classification": "legacy harness path",
+      "reason": "Standalone benchmark/qualification utility; historical reproduction only, not the registered native runtime path. It cannot substitute its output for a runtime transcript.",
+      "occurrences": [
+        {
+          "line": 1,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 18,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 40,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/benchmark-governed-retrieval.ts",
+      "sha256": "d3f884c8bce5ddb29df8457c974d47d78a29d32ffe0528899bdedbdaed0f807f",
+      "classification": "legacy harness path",
+      "reason": "Standalone benchmark/qualification utility; historical reproduction only, not the registered native runtime path. It cannot substitute its output for a runtime transcript.",
+      "occurrences": [
+        {
+          "line": 1,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 12,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/benchmark-harness-efficiency-live.ts",
+      "sha256": "83a1c8e90a17db488b5d0bf398a0759f732c565ae79161f16d371dc164abf9de",
+      "classification": "legacy harness path",
+      "reason": "Standalone benchmark/qualification utility; historical reproduction only, not the registered native runtime path. It cannot substitute its output for a runtime transcript.",
+      "occurrences": [
+        {
+          "line": 42,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 128,
+          "primitives": [
+            "model-http"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/benchmark-harness-mutation-live.ts",
+      "sha256": "973a56a7a14d182a71fec05f37024f1d679201a2e6e0ac78c0f4de1ae7b3dcdd",
+      "classification": "legacy harness path",
+      "reason": "Standalone benchmark/qualification utility; historical reproduction only, not the registered native runtime path. It cannot substitute its output for a runtime transcript.",
+      "occurrences": [
+        {
+          "line": 70,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 271,
+          "primitives": [
+            "model-http"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/non-openai-cache-qualification-report.mjs",
+      "sha256": "71a2cf919a655ddb96a3a40ad094837d2c864db7794860f0de175f66bf35aed0",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 13,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 22,
+          "primitives": [
+            "process",
+            "lifecycle"
+          ]
+        },
+        {
+          "line": 126,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 175,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/prepare-local-llm-benchmark.ts",
+      "sha256": "19e22fb5b9d6a90514ed3ae369720041667b5ca4ca7d020572ed4cf3ed02cf1c",
+      "classification": "legacy harness path",
+      "reason": "Standalone benchmark/qualification utility; historical reproduction only, not the registered native runtime path. It cannot substitute its output for a runtime transcript.",
+      "occurrences": [
+        {
+          "line": 13,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 22,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 25,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 44,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 46,
+          "primitives": [
+            "acquisition"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-all.mjs",
+      "sha256": "c6326ab5027826e4176a7d0c2ad41316487a93c5b74c899b78cda0a9c8edf49a",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 26,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 48,
+          "primitives": [
+            "ssh"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-android-adb-3.9.ts",
+      "sha256": "0a2d999c65ae3b8600f9264822ac55308f3c1c7390317ff7db52b07fd6c7b67c",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 10,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 22,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 77,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 86,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 87,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 98,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 111,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 124,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 146,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 148,
+          "primitives": [
+            "process",
+            "ssh"
+          ]
+        },
+        {
+          "line": 152,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 158,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 159,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 160,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 169,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 180,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 188,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 192,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 195,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 197,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 198,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 204,
+          "primitives": [
+            "ssh",
+            "adb"
+          ]
+        },
+        {
+          "line": 220,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 223,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 224,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 228,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 229,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 230,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 231,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 232,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 235,
+          "primitives": [
+            "ssh",
+            "adb"
+          ]
+        },
+        {
+          "line": 237,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 238,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 239,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 242,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 243,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 244,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 245,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 249,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 251,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 253,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 256,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 261,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 263,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 264,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 267,
+          "primitives": [
+            "adb"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-browser-capabilities.ts",
+      "sha256": "eda614a890fbc60eb168a87ca7b59463cac22b434d0a97671dbc4ff05343af00",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 26,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 28,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 39,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 41,
+          "primitives": [
+            "ssh",
+            "adb"
+          ]
+        },
+        {
+          "line": 56,
+          "primitives": [
+            "adb"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-crew-wopr-escalation.ts",
+      "sha256": "410af147abb066c16fbc45441228d629a5417f3ef3442cf4e989b9b9eca9006d",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 105,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 159,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 160,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 161,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 162,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 163,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 164,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 165,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 185,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 187,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 375,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-cross-model-memory-4.5.ts",
+      "sha256": "b6ed51cab6ed23b68b71471579009acc853d6d21b48e98b37caaa02032eab195",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 106,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 232,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-dashboard-characters.ts",
+      "sha256": "b93b105e216b5d058ccaa21ce581ccb6c36382da9ffb4ad2a2454bd449b785a8",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 73,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 75,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 84,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 92,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 234,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-deterministic-skill-promotion-4.5.ts",
+      "sha256": "47602390a8fbf77ce0400e7ea3d8784509f57a75eccce03c23e9b0bd8f82ee98",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 1,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 3,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 4,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 5,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 12,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-energy-efficiency-4.5.ts",
+      "sha256": "bddd04b9a0a6c361ad3bec08c5b9a2c605e7563f529c190f4e020ff3d82f71cc",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 1,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 2,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 5,
+          "primitives": [
+            "model-http"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-environment-discovery-4.5.ts",
+      "sha256": "b6898b48cdf7f4c84f18538dbf69eb9de3139c39195aaea39a2c37048a61c79d",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 164,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 228,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-first-run.ts",
+      "sha256": "5be51415aa161e31de9dc30defdb6f8fb66da7dbd98264e5c70dc34726ba768e",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 1,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 4,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-governed-retrieval-phase2.ts",
+      "sha256": "6c98d3c4d23da18b431205f593c2aff8f55be64d73d49a19551f7da4c626fb97",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 67,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 90,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 91,
+          "primitives": [
+            "acquisition"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-jobs.ts",
+      "sha256": "42edd67518671b871465d0ce77548140c67e77f03010a50dedaae873daf6fd9b",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 2,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 15,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 24,
+          "primitives": [
+            "acquisition"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-local-model-retrieval.ts",
+      "sha256": "0f81550527690bb2e27a86020cde66d83c720b53bab80b911c95fa2c6c3b1688",
+      "classification": "legacy harness path",
+      "reason": "Standalone benchmark/qualification utility; historical reproduction only, not the registered native runtime path. It cannot substitute its output for a runtime transcript.",
+      "occurrences": [
+        {
+          "line": 1,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 2,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 6,
+          "primitives": [
+            "model-http"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-marm-memory.ts",
+      "sha256": "b19bbfdb008ccf2c64e50216b609a628ac153e8dc7d5806c61eea51a340211a0",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 51,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 63,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 88,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 96,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-memory-conditions-consolidation-4.5.ts",
+      "sha256": "1a6e847f1d6f5c497a1b4e5c2d64df488b95160048f76d60433764a307e4a997",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 61,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-model-residency-4.5.ts",
+      "sha256": "e39125baebbaa1d2416092ed39e82299d56bc064fbacc047ec2d1a2cc7ba51f0",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 1,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 15,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 16,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 18,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-msi-memory-transition-4.5.ts",
+      "sha256": "91f2e34cf567ba47acdb6d075343a4b14a5957f888e72fb73f6e67d7592bb7fc",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 11,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 14,
+          "primitives": [
+            "ssh"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-poe-regression.mjs",
+      "sha256": "3eec82eda0123855bd12287245578576580d0023cd2c1681b57d273e1a6b86e2",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 2,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 4,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 5,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 10,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-power-aware-poe-4.5.ts",
+      "sha256": "49dd1b9b62ab954a3998530c1ab498335154f35f18d1792dba864540ed759f5a",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 1,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 19,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 21,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 31,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-protected-resource-governance.ts",
+      "sha256": "5b5a96ca9b6834dbe8ef9d390402955a58ad99f504a4eb140f80abe27bbbde39",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 32,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-provider-neutral-3.9.ts",
+      "sha256": "19be79076747769261f8819bef5a108b4b8c055f48e7f7002909b9f558009f69",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 87,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 89,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 300,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-real-harness-job.ts",
+      "sha256": "bb929f7467c8a4fee4bcdfaa5d527e269b8ea1b11841a4f42f5dfde46970d9b3",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 19,
+          "primitives": [
+            "model-http"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-recovery-3.9.ts",
+      "sha256": "1e02d560c18d8543128484c280e97cf693a70b39d5063dd87b4a00e0d8887022",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 45,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 50,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 57,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 59,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 60,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 67,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-runtime-map-4.5.ts",
+      "sha256": "c007ade5c53c7f96ca51cc70daec5815a98648623c12a7b912586b7e2a14a5c0",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 139,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 298,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 313,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 317,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 334,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 364,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 398,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 452,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 496,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 1317,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 1339,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 1359,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 1362,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 1425,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-session-vault-4.5.ts",
+      "sha256": "56bea2243846380bc36eb5e037496a5960f5e237d360a8346de818aaf168b0b5",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 2,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 37,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 41,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 70,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 80,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 223,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 231,
+          "primitives": [
+            "ssh"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-showcase-intelligence.ts",
+      "sha256": "60ca466b6c93f9e839c8fb4721603067407719189e8a2c853aeace4f635f8ab9",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 17,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 23,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 27,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 34,
+          "primitives": [
+            "acquisition"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-specialist-batch-energy-4.5.ts",
+      "sha256": "9d4c927dd91e1d861cbf7ce301fabbaef0792427b1c1cd9fe942470120353a79",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 1,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 16,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 27,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 29,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 36,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-specialist-energy-4.5.ts",
+      "sha256": "01c650d89142818b7537aa0a71630fe1819d0bb3e875cdbb4083772a9d2ae1f8",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 1,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 2,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 6,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 8,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-usage-closure.ts",
+      "sha256": "b872745013362dcdbab087f8cca7590cd17e013190665de81bbdc69ce97268a7",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 1,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 20,
+          "primitives": [
+            "process",
+            "lifecycle"
+          ]
+        },
+        {
+          "line": 21,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 25,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 29,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 33,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 46,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 69,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 71,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 76,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 78,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-usage-intelligence.ts",
+      "sha256": "1afd87d41c2d081ad6b7a7f4a678d70bedaffab774f9cf5a8d91624f3e779a45",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 1,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 17,
+          "primitives": [
+            "process",
+            "lifecycle"
+          ]
+        },
+        {
+          "line": 18,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 22,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 27,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 40,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 53,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 56,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 58,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-ux-session-replay.ts",
+      "sha256": "9e08970376f8297cce18ed800734cd29c210b6e14c030d7b8b3d07110f20373c",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 52,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 53,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 54,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 55,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 56,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 60,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 61,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 65,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/qualify-windows-cleanup.ts",
+      "sha256": "64ab7a175c358f20b82dc75d7f502a24b5fcbaec4e6dbcce4149f008f6055c7a",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 42,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 43,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 85,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 103,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 136,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 142,
+          "primitives": [
+            "ssh"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/record-android-adb-qualification.mjs",
+      "sha256": "71a68742d875e46fd53d391801b883bcca5265e19a6013144f02a95440a5042b",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 10,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 11,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 15,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 18,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 21,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 29,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 56,
+          "primitives": [
+            "process",
+            "ssh"
+          ]
+        },
+        {
+          "line": 61,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 62,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 64,
+          "primitives": [
+            "process",
+            "ssh",
+            "adb"
+          ]
+        },
+        {
+          "line": 78,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 81,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 82,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 83,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 84,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 86,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 89,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 92,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 93,
+          "primitives": [
+            "ssh",
+            "adb"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/record-live-memory-qualification-4.5.mjs",
+      "sha256": "b39b9f5581566b669502127602af955ec88847f4f5e338495f08c8e119953fa3",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 33,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 38,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 39,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 42,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 43,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/record-protected-resource-qualification.mjs",
+      "sha256": "b77b8fa4235ce9be6378932a6a97ba34aaa32e8201204c521c5fafd49304af3f",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 2,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 9,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 12,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 25,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 27,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/record-provider-neutral-qualification.mjs",
+      "sha256": "b4be6dcd29c7ce04f7daa8facd0a68821584516764eb495458ca5f801d832287",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 2,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 26,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 37,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 89,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/record-recovery-qualification.mjs",
+      "sha256": "aba182f4c16959a7bb85960d76a4b904838e458383a3b951d44bf18c8e7a1392",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 9,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 14,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 18,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 24,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "scripts/record-windows-cleanup-qualification.mjs",
+      "sha256": "afc30b3d2b5f31cde267fdb30821a8a9b8487303e4c17731c18a49a7723f6632",
+      "classification": "unrelated",
+      "reason": "Existing qualification/recording for another feature, not registered by the native model benchmark and not a source of native benchmark provenance.",
+      "occurrences": [
+        {
+          "line": 3,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 10,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 23,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 54,
+          "primitives": [
+            "process",
+            "ssh"
+          ]
+        },
+        {
+          "line": 55,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 60,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 61,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 62,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 88,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 90,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 97,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 101,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 105,
+          "primitives": [
+            "ssh"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/fast-execution-benchmark-evidence.ts",
+      "sha256": "9bfce1b0db36c2eac7e4d866f49df017e9e648abdf38abe13f5be85c843e7015",
+      "classification": "production Agent Control adapter",
+      "reason": "Product control/runtime code; native path uses governed ActionContext and existing owned process/evidence lifecycle.",
+      "occurrences": [
+        {
+          "line": 11,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/llama-cpp-benchmark-adapter.ts",
+      "sha256": "8307e27609e3d072920e4d5d62d169ca0d02dc62c2ac779379c1ad3e89812f3f",
+      "classification": "production Agent Control adapter",
+      "reason": "Product control/runtime code; native path uses governed ActionContext and existing owned process/evidence lifecycle.",
+      "occurrences": [
+        {
+          "line": 15,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 24,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 25,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 39,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 46,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 49,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 50,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 65,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 68,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 69,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 72,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 81,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 86,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 88,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 93,
+          "primitives": [
+            "model-http"
+          ]
+        },
+        {
+          "line": 96,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/local-llm-benchmark-controller.ts",
+      "sha256": "f2300f12e41968587d466764e31e0e4f7d651376c35e55826a68f5cac67bcdad",
+      "classification": "production Agent Control adapter",
+      "reason": "Product control/runtime code; native path uses governed ActionContext and existing owned process/evidence lifecycle.",
+      "occurrences": [
+        {
+          "line": 45,
+          "primitives": [
+            "acquisition"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/local-llm-benchmark-planner.ts",
+      "sha256": "015bd34147a67026b3a68b4baa2bd8fd2912345e0d2dc7c4b6022e6b27b20bc6",
+      "classification": "production Agent Control adapter",
+      "reason": "Product control/runtime code; native path uses governed ActionContext and existing owned process/evidence lifecycle.",
+      "occurrences": [
+        {
+          "line": 16,
+          "primitives": [
+            "acquisition"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/local-llm-benchmark.test.ts",
+      "sha256": "47d3db3290ff7074d16887fd6e2eba1f887c2d14d3fa8c6643dc6e519af1f1a9",
+      "classification": "legitimate test fixture",
+      "reason": "Automated test code; not registered as a production benchmark executor.",
+      "occurrences": [
+        {
+          "line": 17,
+          "primitives": [
+            "acquisition"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/local-llm-benchmark.ts",
+      "sha256": "642fb136574361622ecfc0f81524ca8c6642bbe3ecdcf3af01b85dfe0001f5f9",
+      "classification": "production Agent Control adapter",
+      "reason": "Product control/runtime code; native path uses governed ActionContext and existing owned process/evidence lifecycle.",
+      "occurrences": [
+        {
+          "line": 62,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 63,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 64,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 97,
+          "primitives": [
+            "acquisition"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/local-watch-benchmark-port.ts",
+      "sha256": "07327c56bb530b074e2c73ee5acb2a99b02d656b76f103167eace06045831c12",
+      "classification": "production Agent Control adapter",
+      "reason": "Product control/runtime code; native path uses governed ActionContext and existing owned process/evidence lifecycle.",
+      "occurrences": [
+        {
+          "line": 23,
+          "primitives": [
+            "acquisition"
+          ]
+        },
+        {
+          "line": 31,
+          "primitives": [
+            "acquisition"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/model-hardware-qualification.ts",
+      "sha256": "b53793187c4899fa41210bae865b03d592cdb91f35450eb3adb21c4cbf9ba76d",
+      "classification": "production Agent Control adapter",
+      "reason": "Product control/runtime code; native path uses governed ActionContext and existing owned process/evidence lifecycle.",
+      "occurrences": [
+        {
+          "line": 55,
+          "primitives": [
+            "acquisition"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/non-openai-cache-qualification.ts",
+      "sha256": "6a17d862bc12595270119717a0f2294e1a37360dbc9332c8800e04470cbbd316",
+      "classification": "production Agent Control adapter",
+      "reason": "Product control/runtime code; native path uses governed ActionContext and existing owned process/evidence lifecycle.",
+      "occurrences": [
+        {
+          "line": 94,
+          "primitives": [
+            "model-http"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/owned-process.test.ts",
+      "sha256": "5a182d66c5d014b1c6936c14214b66114659d2d225ac7bd444fab87063643fff",
+      "classification": "legitimate test fixture",
+      "reason": "Automated test code; not registered as a production benchmark executor.",
+      "occurrences": [
+        {
+          "line": 48,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 58,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 68,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 83,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 102,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 116,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 134,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 135,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/owned-process.ts",
+      "sha256": "b83989d5a1d087b369ee1f888cc0c499e5d920acca639bab98bf43f441944aee",
+      "classification": "production Agent Control adapter",
+      "reason": "Product control/runtime code; native path uses governed ActionContext and existing owned process/evidence lifecycle.",
+      "occurrences": [
+        {
+          "line": 1,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 64,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 174,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 187,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 201,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 251,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 257,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 271,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 371,
+          "primitives": [
+            "ssh"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/qualification-execution.test.ts",
+      "sha256": "3295299fb1233f7034412c9a6c0dbdac18a52a8bf8aefb8319b30d23022f5565",
+      "classification": "legitimate test fixture",
+      "reason": "Automated test code; not registered as a production benchmark executor.",
+      "occurrences": [
+        {
+          "line": 239,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 265,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/runtime-benchmark-projection.test.ts",
+      "sha256": "907d7e438c9fe1b9c4531f711ead093d46c6a8b4e4aa086846cefd485e0ecab7",
+      "classification": "legitimate test fixture",
+      "reason": "Automated test code; not registered as a production benchmark executor.",
+      "occurrences": [
+        {
+          "line": 4,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 7,
+          "primitives": [
+            "ssh"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/runtime-benchmark-provenance.test.ts",
+      "sha256": "bfd64b13aa7c44256b74e2541fbfa14e5ada8518228b9d63a65946fea6a65965",
+      "classification": "legitimate test fixture",
+      "reason": "Automated test code; not registered as a production benchmark executor.",
+      "occurrences": [
+        {
+          "line": 1,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 6,
+          "primitives": [
+            "lifecycle"
+          ]
+        },
+        {
+          "line": 13,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/runtime-benchmark-provenance.ts",
+      "sha256": "e3b361fe657027d30421363d76ac3c78f12a1f385735778ab59a45742aed9300",
+      "classification": "production Agent Control adapter",
+      "reason": "Product control/runtime code; native path uses governed ActionContext and existing owned process/evidence lifecycle.",
+      "occurrences": [
+        {
+          "line": 10,
+          "primitives": [
+            "lifecycle"
+          ]
+        },
+        {
+          "line": 12,
+          "primitives": [
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/runtime-benchmark-validator.test.ts",
+      "sha256": "d808c8d546053b776173924a52dc9e9755635c25572060272803cd40936cd446",
+      "classification": "legitimate test fixture",
+      "reason": "Automated test code; not registered as a production benchmark executor.",
+      "occurrences": [
+        {
+          "line": 6,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 9,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/runtime-benchmark-validator.ts",
+      "sha256": "82903ab96a5dd732e3788e346c3e9612710a755696ff71ca160dd4b57ff2af84",
+      "classification": "production Agent Control adapter",
+      "reason": "Product control/runtime code; native path uses governed ActionContext and existing owned process/evidence lifecycle.",
+      "occurrences": [
+        {
+          "line": 11,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/target-llama-runtime.test.ts",
+      "sha256": "0edaec0a0f37767089151d26dd888b412d910b23ff2adbb254a4799c8c35e89b",
+      "classification": "legitimate test fixture",
+      "reason": "Automated test code; not registered as a production benchmark executor.",
+      "occurrences": [
+        {
+          "line": 5,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 6,
+          "primitives": [
+            "process",
+            "adb"
+          ]
+        },
+        {
+          "line": 7,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 8,
+          "primitives": [
+            "process",
+            "adb"
+          ]
+        },
+        {
+          "line": 12,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "src/control/target-llama-runtime.ts",
+      "sha256": "6f3500fa0cda247929550a6c97162af23b0fc69cf2184624db82f55a9da98a95",
+      "classification": "production Agent Control adapter",
+      "reason": "Product control/runtime code; native path uses governed ActionContext and existing owned process/evidence lifecycle.",
+      "occurrences": [
+        {
+          "line": 7,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 13,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 18,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 19,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 23,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 35,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 37,
+          "primitives": [
+            "ssh"
+          ]
+        },
+        {
+          "line": 40,
+          "primitives": [
+            "process"
+          ]
+        },
+        {
+          "line": 56,
+          "primitives": [
+            "adb"
+          ]
+        },
+        {
+          "line": 60,
+          "primitives": [
+            "process"
+          ]
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "production Agent Control adapter": 13,
+    "unrelated": 40,
+    "legitimate test fixture": 8,
+    "legacy harness path": 6
+  }
+}

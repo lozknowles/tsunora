@@ -1,0 +1,53 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata:
+  id: governed-git-model-operation
+  name: Model-proposed governed Git maintenance
+  version: 1.0.0
+  description: Ask the Work Parcel's qualified model for a structured Git proposal, enforce semantic resource policy, then independently verify the protected remote ref.
+spec:
+  enabled: true
+  priority: normal
+  concurrency: queue
+  parameters:
+    repositoryPath:
+      type: string
+      required: true
+    task:
+      type: string
+      required: true
+    expectedProtectedSha:
+      type: string
+      required: true
+    expectedFeatureRef:
+      type: string
+      required: true
+  steps:
+    - id: propose
+      name: Produce bounded Git proposal
+      action: repository.git-propose@1.0.0
+      requires: [repository.git, model.execute]
+      resources: [repository/qualification]
+      timeoutSeconds: 240
+      outputs:
+        - name: git-proposal
+          type: application/vnd.agent-control.git-proposal+json
+          schema: agent-control.git-proposal/v1
+          version: 1.0.0
+          retention: audit-evidence
+    - id: execute
+      name: Resolve and execute governed effects
+      action: repository.git-governed@1.0.0
+      requires: [repository.git]
+      resources: [repository/qualification]
+      dependsOn: [propose]
+      inputs:
+        proposal: propose.git-proposal
+      verification: [governed-git-effects-enforced]
+    - id: verify
+      name: Independently verify protected ref
+      action: repository.git-protected-ref.verify@1.0.0
+      requires: [repository.git]
+      resources: [repository/qualification]
+      dependsOn: [execute]
+      verification: [protected-ref-unchanged]

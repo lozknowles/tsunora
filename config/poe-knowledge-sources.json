@@ -1,0 +1,122 @@
+[
+  {
+    "id": "architecture",
+    "path": "docs/concepts.md",
+    "terms": [
+      "agent control",
+      "architecture",
+      "purpose",
+      "system"
+    ]
+  },
+  {
+    "id": "crew",
+    "path": "docs/dashboard-characters.md",
+    "terms": [
+      "crew",
+      "member",
+      "character"
+    ]
+  },
+  {
+    "id": "poe",
+    "path": "docs/poe-dashboard-operator.md",
+    "terms": [
+      "your role",
+      "poe",
+      "morrow",
+      "unavailable",
+      "limitation",
+      "dashboard"
+    ]
+  },
+  {
+    "id": "jobs",
+    "path": "docs/jobs/README.md",
+    "terms": [
+      "job",
+      "run"
+    ]
+  },
+  {
+    "id": "schedules",
+    "path": "docs/jobs/SCHEDULING.md",
+    "terms": [
+      "scheduled",
+      "schedule"
+    ]
+  },
+  {
+    "id": "parcels",
+    "path": "docs/work-parcels.md",
+    "terms": [
+      "parcel",
+      "parent",
+      "child",
+      "verification",
+      "approval"
+    ]
+  },
+  {
+    "id": "routing",
+    "path": "docs/provider-model-lifecycle.md",
+    "terms": [
+      "model",
+      "provider",
+      "route",
+      "routing",
+      "quality"
+    ]
+  },
+  {
+    "id": "batons",
+    "path": "docs/token-aware-baton-routing.md",
+    "terms": [
+      "baton",
+      "continuation",
+      "handoff",
+      "not good enough"
+    ]
+  },
+  {
+    "id": "credentials",
+    "path": "docs/credential-residency.md",
+    "terms": [
+      "credential",
+      "residency",
+      "security"
+    ]
+  },
+  {
+    "id": "social",
+    "path": "docs/social-voice/README.md",
+    "terms": [
+      "whatsapp",
+      "social",
+      "omnivoice",
+      "voice"
+    ]
+  },
+  {
+    "id": "facebook",
+    "path": "docs/poe-facebook-workflow.md",
+    "terms": [
+      "pixel",
+      "facebook",
+      "collect",
+      "events",
+      "publish",
+      "staging",
+      "duplicate"
+    ]
+  },
+  {
+    "id": "runbook",
+    "path": "docs/web-dashboard.md",
+    "terms": [
+      "operate",
+      "runbook",
+      "dashboard"
+    ]
+  }
+]

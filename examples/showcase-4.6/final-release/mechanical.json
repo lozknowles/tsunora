@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "sourceCommit": "558e7a5202007ee162b61efdce45197e549f72fd",
+  "ancestorsVerified": [
+    "056c94758fdf5b9b1114ffcf9f6a2dad00282246",
+    "720577b8aa82c78a8f0ae6156b8d826e868e3502",
+    "2d30ceb2ab24126e7c2c95c30c89e13fdff942c3",
+    "5bbdf0b09410a608e7b185a0d58d05d9d8fd023e",
+    "a2cd9c9d8a12dbf8ff16fae61940d8e353bcf0c9"
+  ],
+  "priorEvidenceFilesUnchanged": 32,
+  "screenshotsChecked": 38,
+  "documentsChecked": 16,
+  "localLinksAndAnchorsChecked": 190,
+  "linkFailures": [],
+  "privacyPatternMatches": [],
+  "externalLinks": [
+    "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable",
+    "https://github.com/lozknowles/agent-control-jobs",
+    "https://github.com/lozknowles/agent-control/releases/tag/v4.6.0",
+    "https://github.com/termux/termux-app",
+    "https://github.com/termux/termux-packages/wiki/Termux-execution-environment",
+    "https://huggingface.co/bartowski/SmolLM2-135M-Instruct-GGUF/tree/09816acd5d99df7be770d85ea30822623dab342c"
+  ],
+  "scope": "Release-facing documents checked; historical evidence retains its original qualification scope."
+}

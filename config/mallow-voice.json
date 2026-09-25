@@ -1,0 +1,8 @@
+{
+  "id": "mallow-original-v1",
+  "kind": "designed",
+  "provider": "omnivoice",
+  "modelRevision": "operator-selected-revision",
+  "instruction": "Warm, clear and concise British English. Original voice; do not imitate any person or fictional character.",
+  "seed": 4102
+}

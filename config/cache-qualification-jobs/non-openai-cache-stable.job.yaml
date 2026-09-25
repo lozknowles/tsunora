@@ -1,0 +1,41 @@
+apiVersion: agent-control/v1
+kind: Job
+metadata:
+  id: non-openai-cache-stable
+  name: Non-OpenAI cache reuse stable-prefix qualification
+  version: 1.0.0
+  description: Runs one real bounded coding mutation with the frozen stable prompt prefix and independent verification.
+spec:
+  enabled: true
+  priority: normal
+  concurrency: no-overlap
+  parameters:
+    prefixVariant:
+      type: string
+      default: stable
+      enum: [stable]
+  steps:
+    - id: mutate
+      name: Governed local-model coding mutation
+      action: qualification.non-openai-cache.mutate@1.0.0
+      requires: [model.execute, repository.mutation.typed, repository.verify.public]
+      outputs:
+        - name: mutation-attempt
+          type: application/json
+          schema: agent-control.non-openai-cache-attempt/v1
+          version: 1.0.0
+      timeoutSeconds: 180
+    - id: verify
+      name: Independent mutation verification
+      action: qualification.non-openai-cache.verify@1.0.0
+      requires: [model.execute, repository.mutation.typed, repository.verify.public]
+      dependsOn: [mutate]
+      inputs:
+        attempt: mutate.mutation-attempt
+      outputs:
+        - name: verification-report
+          type: application/json
+          schema: agent-control.non-openai-cache-verification/v1
+          version: 1.0.0
+      verification: [non-openai-cache-mutation-verified]
+      timeoutSeconds: 90

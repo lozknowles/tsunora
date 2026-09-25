@@ -1,0 +1,8 @@
+{
+  "state": "PASS",
+  "reviewedStagedFiles": 25,
+  "actualTokenLeakMatches": 0,
+  "allShowcaseScreenshotHashesVerified": 38,
+  "issues": [],
+  "scope": "Known qualification tokens, selected private-material patterns, visual screenshot review and full secret-redaction regressions. Not a claim of exhaustive security certification."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "APPROVED",
+  "approvedRc": "056c94758fdf5b9b1114ffcf9f6a2dad00282246",
+  "version": "4.6.0",
+  "source": "Operator final release authorisation in this task on 2026-09-13",
+  "actions": [
+    "integrate to main",
+    "create new v4.6.0 tag",
+    "publish GitHub release"
+  ],
+  "acceptedNonBlockingLimitations": 15,
+  "benchmark": "Post-release; not required for publication",
+  "rcGateReviewBoundary": "The RC gate always signals operator review; this separate record captures the explicit review and release authority without weakening core checks."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "agent-control.direct-inference-evidence/v1",
+  "invocationId": "inv-raw-57fcf22c-aad6-4d91-90ca-96d75f0aa03c",
+  "jobId": "rebroad-direct-inference-requalification",
+  "runId": null,
+  "stepId": null,
+  "startedAt": "2026-09-19T08:04:24.540Z",
+  "completedAt": "2026-09-19T08:04:26.699Z",
+  "routeKind": "RAW_INFERENCE",
+  "request": {
+    "prompt": "Return exactly AC_RAW_LOCAL_OK and nothing else.",
+    "model": null,
+    "modelRole": "lab.raw.local",
+    "nodeId": "controller",
+    "requiredCapabilities": [],
+    "maximumOutputTokens": 16,
+    "timeoutMs": 60000
+  },
+  "resolved": {
+    "model": "ministral-local-raw",
+    "provider": "qualified-loopback-local",
+    "providerModel": "Ministral-3-8B-Instruct-2512-Q4_K_M.gguf",
+    "responseModel": "Ministral-3-8B-Instruct-2512-Q4_K_M.gguf",
+    "node": "controller",
+    "qualificationVersion": "rebroad-local-physical-20260919-accounting-v2",
+    "fallback": false
+  },
+  "response": {
+    "output": "AC_RAW_LOCAL_OK",
+    "finishReason": "stop",
+    "latencyMs": 2157,
+    "usage": {
+      "inputTokens": 546,
+      "outputTokens": 6,
+      "cachedInputTokens": 536,
+      "cacheWriteTokens": null,
+      "totalTokens": 552,
+      "providerReportedCost": null,
+      "calculatedCost": null,
+      "currency": null,
+      "cacheEvidence": {
+        "reusedTokens": 536,
+        "processedPromptTokens": 10,
+        "cacheWriteTokens": null,
+        "promptProcessingMs": 1176.244,
+        "generationMs": 944.58,
+        "authority": "authoritative",
+        "source": "llama.cpp.response.timings"
+      },
+      "reasoningTokens": null
+    }
+  },
+  "hashes": {
+    "request": "45d240a12fb7ac2ee0a35fe396850a7cdd147717b3f0ee97085bcdc7eb1e48a3",
+    "response": "b8b83ab9f3ea2af51862f2e0eeab68d3ca425526e032920f1d345f9c5368f1dd"
+  }
+}

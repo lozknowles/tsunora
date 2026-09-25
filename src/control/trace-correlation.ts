@@ -1,0 +1,5 @@
+import {randomBytes} from 'node:crypto';
+export interface TraceCorrelation{traceparent:string;traceId:string;spanId:string;attributes:Record<string,string>;}
+const safeKeys=new Set(['run.id','job.id','lane.id','worker.id','node.id','model.id','provider.id','event.type','status']);
+export function createTraceCorrelation(attributes:Record<string,string|undefined>,parentTraceId?:string):TraceCorrelation{const traceId=parentTraceId??randomBytes(16).toString('hex'),spanId=randomBytes(8).toString('hex'),safe=Object.fromEntries(Object.entries(attributes).filter(([key,value])=>safeKeys.has(key)&&value!==undefined)) as Record<string,string>;return{traceparent:`00-${traceId}-${spanId}-01`,traceId,spanId,attributes:safe};}
+export async function exportTraceSafely(value:TraceCorrelation,exporter?:{export:(value:TraceCorrelation)=>Promise<void>}){if(!exporter)return{exported:false,reason:'exporter_not_configured'};try{await exporter.export(value);return{exported:true,reason:null};}catch{return{exported:false,reason:'exporter_failed_execution_continued'};}}

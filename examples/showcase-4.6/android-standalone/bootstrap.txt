@@ -1,0 +1,17 @@
+Sanitized transcript: only private installation path replaced. Original SHA-256: 045bb9b6f59636a0231e5f78fae44d7e1d53f2c0ea9aafa0b9bae76b2a6057ed
+
+{"profile":"ANDROID_STANDALONE_WEB","platform":"android","architecture":"arm64","node":"26.4.0","availableBytes":11644358656,"failures":[],"commit":"f9f95eda37760ba4b83d0558ed9634cf5f4400cc","origin":"https://github.com/lozknowles/agent-control.git","trust":"Git commit and canonical origin; not a release signature"}
+
+up to date in 4s
+Runtime dependencies ready
+{
+  "schema": "agent-control.init/v1",
+  "result": "CREATED",
+  "created": true,
+  "file": "<PHONE_INSTALLATION>/.agent-control/config.json"
+}
+RESULT CREATED <PHONE_INSTALLATION>/.agent-control/config.json
+Installation complete. Run: node scripts/android-standalone.mjs start
+From https://github.com/lozknowles/agent-control
+ * branch            feature/4.6-android-standalone -> FETCH_HEAD
+HEAD is now at f9f95ed Add Android standalone bootstrap and conservative mobile resource gates

@@ -1,0 +1,119 @@
+{
+  "schema": "agent-control.physical-token-aware-baton-qualification/v1",
+  "release": "3.7.0",
+  "recordedAt": "2026-09-03T10:24:32.521Z",
+  "verdict": "PASS",
+  "productionCodePath": "parameterized repository review -> observe -> assess -> sealed baton -> governed handoff -> destination execution -> independent verification",
+  "thresholdPolicy": {
+    "scope": "qualification-only",
+    "productionGovernorCodeUnchanged": true,
+    "continuePercent": 0.1,
+    "prepareBatonPercent": 0.2,
+    "compactPercent": 0.3,
+    "handoffPercent": 0.4,
+    "reason": "Exercise the production transitions with a bounded real workload instead of purchasing an artificial 90-percent context fill."
+  },
+  "successfulLifecycle": {
+    "runId": "6d116287-a539-4606-a709-b43a11e7e134",
+    "workParcelId": "parcel-a52d77d9-43ea-4306-8345-034a2e548156",
+    "repositoryCommit": "a74643bf8b5fe98a80ff0c708235337b53185406",
+    "startedAt": "2026-09-03T10:24:28.684Z",
+    "completedAt": "2026-09-03T10:24:32.521Z",
+    "result": "PASS",
+    "source": {
+      "provider": "local-qwen-instruct",
+      "accountProfile": null,
+      "model": "qwen-instruct-local",
+      "providerModel": "qwen2.5-3b-instruct-q4_k_m.gguf",
+      "nodeId": "controller",
+      "inputTokens": 118,
+      "outputTokens": 68,
+      "totalTokens": 186,
+      "currentContextTokens": 186,
+      "contextWindowTokens": 32768,
+      "contextPercent": 0.567626953125,
+      "contextAuthority": "estimated",
+      "contextAuthorityDetail": "ephemeral_single_turn_usage_estimate",
+      "cost": null,
+      "costAuthority": "unavailable"
+    },
+    "baton": {
+      "id": "token-baton:8c72d511-59e4-405e-b7a6-79f80982e12c",
+      "sha256": "fc0de100074b3b25c421f4b39b198df47f29eadb8fdc644b4423cb3230d0cb7d",
+      "sealed": true
+    },
+    "destination": {
+      "provider": "local-qwen-coder",
+      "accountProfile": null,
+      "model": "qwen-coder-local",
+      "providerModel": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+      "nodeId": "controller",
+      "inputTokens": 415,
+      "outputTokens": 95,
+      "totalTokens": 510,
+      "currentContextTokens": 510,
+      "contextWindowTokens": 32768,
+      "contextPercent": 1.556396484375,
+      "contextAuthority": "estimated",
+      "contextAuthorityDetail": "ephemeral_single_turn_usage_estimate",
+      "costUsd": 0,
+      "costAuthority": "calculated",
+      "pricingBasis": "configured local-unmetered"
+    },
+    "aggregate": {
+      "inputTokens": 533,
+      "outputTokens": 163,
+      "totalTokens": 696,
+      "reconciliation": "186 + 510 = 696",
+      "costUsd": null,
+      "costAuthority": "unavailable because one leg has no configured price"
+    },
+    "governor": {
+      "observedContextPercent": 0.567626953125,
+      "states": ["CONTINUE", "HANDOFF"],
+      "routingDecision": "BATON_AND_HANDOFF",
+      "finalTransition": "handoff_completed_original_thread_recoverable",
+      "handoffResult": "SUCCEEDED"
+    },
+    "verification": {
+      "destinationContract": "PASS",
+      "parameterizedJob": "PASS",
+      "sourceThreadRecoverable": true
+    },
+    "dashboard": {
+      "api": "/api/token-routing",
+      "transport": "SSE",
+      "eventsObserved": ["token.telemetry", "token.governor_transition", "token.baton_created", "token.handoff_result"],
+      "captureSha256": "f86bb311ab149c538edbaeaa73e1bc5674d87fc00ea0e07bff8f8c34995e1aa9",
+      "reconciled": true
+    }
+  },
+  "failedHandoffRecovery": {
+    "runId": "d0e4f525-107b-43a4-a9e3-eee1b7abc18a",
+    "workParcelId": "parcel-b5559f6f-9f54-4f12-92c9-dcaaf3efb252",
+    "batonId": "token-baton:ebcf57cc-5a82-45b6-9f45-ebed9baf7471",
+    "batonSha256": "49a7985a6073cb14ddaa15ad83a3098301166ab280ef2e5909b3d0df0d44c2dc",
+    "injectedFailure": "qualification_injected_destination_failure",
+    "destinationInvoked": false,
+    "handoffResult": "FAILED",
+    "transition": "handoff_failed_resume_original_thread",
+    "sourceRecoveryTokens": 180,
+    "sourceTotalTokens": 366,
+    "sourceThreadRecovered": true,
+    "finalVerification": "PASS",
+    "ledgerTruthful": true
+  },
+  "security": {
+    "credentialMaterialPresent": false,
+    "oauthMaterialPresent": false,
+    "emailAddressPresent": false,
+    "windowsProfilePathPresent": false,
+    "codexHomeReferencePresent": false,
+    "rawRemoteProcessOutputPresent": false
+  },
+  "limitations": [
+    "The lifecycle proof used two distinct live local provider configurations and models, not a Codex or GLM workload leg.",
+    "Both providers expose exact per-response usage but not authoritative retained-context occupancy; current context is therefore estimated for these ephemeral single-turn invocations.",
+    "One source leg has no configured monetary price, so aggregate monetary cost remains unavailable rather than being treated as zero."
+  ]
+}

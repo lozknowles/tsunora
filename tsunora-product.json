@@ -1,0 +1,11 @@
+{
+  "name": "Tsunora",
+  "version": "0.1.0-dev",
+  "runtime": {
+    "name": "Agent Control",
+    "version": "4.15.0",
+    "sourceCommit": "46442b62099b930b9d694ba4fde1109262f3047f"
+  },
+  "experimentalLineage": "c972256b77b94ec55d2466e961e673b09f5b9e6c",
+  "entry": "/tsunora.html"
+}

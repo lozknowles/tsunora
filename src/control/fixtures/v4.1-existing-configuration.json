@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "resources": [
+    {
+      "id": "local-observer",
+      "name": "Isolated local controller",
+      "platform": "linux",
+      "transport": { "type": "local" },
+      "capabilities": []
+    },
+    {
+      "id": "controller",
+      "name": "Approved Codex reasoning controller",
+      "platform": "linux",
+      "transport": { "type": "local" },
+      "capabilities": [],
+      "controller": true
+    }
+  ],
+  "providers": [
+    {
+      "id": "codex-chatgpt",
+      "name": "OpenAI Codex",
+      "kind": "cli",
+      "enabled": true,
+      "costClass": "included",
+      "capabilities": ["structured-output"],
+      "accountProfiles": [
+        {
+          "id": "controller-profile",
+          "label": "Existing controller profile",
+          "providerExecutionNodeId": "controller",
+          "credentialResidency": {
+            "nodeId": "controller",
+            "store": {
+              "type": "codex-home-env",
+              "env": "CODEX_HOME_CONTROLLER_PROFILE"
+            }
+          },
+          "enabled": true,
+          "plan": "operator-configured",
+          "planAuthority": "operator-configured",
+          "capabilities": ["structured-output"],
+          "qualification": {
+            "state": "QUALIFIED",
+            "version": "pre-4.5-compatible-fixture"
+          }
+        }
+      ]
+    }
+  ],
+  "models": [
+    {
+      "id": "existing-controller-model",
+      "provider": "codex-chatgpt",
+      "providerModel": "qualified-controller-model",
+      "accountProfile": "controller-profile",
+      "displayName": "Existing controller model",
+      "enabled": true,
+      "capabilities": ["structured-output"],
+      "roles": ["poe.status"],
+      "limits": {"outputTokens": 1024},
+      "nodes": ["controller"],
+      "qualification": {
+        "state": "QUALIFIED",
+        "version": "pre-4.5-compatible-fixture",
+        "capabilities": ["structured-output"],
+        "nodes": ["controller"]
+      }
+    }
+  ],
+  "modelRouting": {
+    "defaultRole": "poe.status",
+    "roles": {
+      "poe.status": {
+        "primary": "existing-controller-model",
+        "requires": ["structured-output"]
+      }
+    }
+  },
+  "services": [],
+  "lanes": [
+    {
+      "id": 1,
+      "name": "Existing operator lane",
+      "cwd": ".",
+      "priority": 1,
+      "mode": "manual"
+    }
+  ]
+}

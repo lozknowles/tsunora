@@ -1,0 +1,421 @@
+{
+  "sourceCommit": "e8862223efaa4f3694145089fb1c142e8a75850f",
+  "runs": [
+    {
+      "scope": "Real read-only model metadata and native Work Parcel; not a model benchmark or overnight-duration proof",
+      "parcelId": "parcel-social-3b2406a890026bfbe52d02a0f75e511ff68452faaf0bd435531400b4dcd20b2e",
+      "status": "SUCCEEDED",
+      "nativeRuns": [
+        {
+          "id": "run-a8e5f9ca-9817-4d27-95d6-4f4c536ff794",
+          "job": "model-watch-brief",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-bad7fac5-b222-432d-9c10-d22328681a35",
+          "job": "model-watch-observe",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-f705b8cc-bb83-4cbc-a1e8-d14d6e81ac69",
+          "job": "model-watch-dispatch",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-b176b0f0-64c7-48e4-8bbf-80795c3fa562",
+          "job": "model-watch-proposal",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-8ef6f225-89ef-4cac-a4b2-1b8c55a8d7ea",
+          "job": "model-watch-shortlist",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-2edb5b87-6b0f-49ea-a7d9-cd49db5e7740",
+          "job": "model-watch-intelligence",
+          "status": "SUCCEEDED"
+        }
+      ],
+      "sourceSnapshots": [
+        {
+          "sourceId": "qwen-small-official",
+          "items": 9,
+          "changes": 9,
+          "complete": true
+        },
+        {
+          "sourceId": "qwen-medium-official",
+          "items": 8,
+          "changes": 8,
+          "complete": true
+        },
+        {
+          "sourceId": "runtime-official-releases",
+          "items": 0,
+          "changes": 0,
+          "complete": false
+        }
+      ],
+      "brief": {
+        "sha256": "91e66de7b82a5d56e4f0fc1ef6407b3c50f68c09a44aa43a21a70a76b2bfbf44",
+        "schema": "agent-control.morning-intelligence/v1",
+        "watchId": "read-only-physical-intelligence",
+        "watchDigest": "17c61f555a727872006d94fe92ae501670bf45e04c341de11309777eb00f3826",
+        "runKey": "3b2406a890026bfbe52d02a0f75e511ff68452faaf0bd435531400b4dcd20b2e",
+        "at": "2026-09-13T13:13:38.236Z",
+        "observationScope": "BASELINE_OR_MIXED",
+        "sourceCoverage": {
+          "complete": 2,
+          "total": 3,
+          "allComplete": false,
+          "sources": [
+            {
+              "sourceId": "qwen-small-official",
+              "state": "COMPLETE",
+              "baseline": true,
+              "changes": 9,
+              "snapshotSha256": "fd83a76955b011e65c107ee6d3d6f9ff1667cf11c127e373c90f79433992be0b"
+            },
+            {
+              "sourceId": "qwen-medium-official",
+              "state": "COMPLETE",
+              "baseline": true,
+              "changes": 8,
+              "snapshotSha256": "b1c75a74d848725928a97c3fb327ea4a5b6db544774589e22f7ec928e14d4d17"
+            },
+            {
+              "sourceId": "runtime-official-releases",
+              "state": "PARTIAL",
+              "baseline": true,
+              "changes": 0,
+              "snapshotSha256": "8cae92c1b1edbef5d78cbedbe3d3bbbcb57278f556635396d1789a2683b3f462"
+            }
+          ]
+        },
+        "changesDetected": 17,
+        "relevantCandidates": 2,
+        "changeSummary": "Initial observations include existing models; this is not proof that they were newly released.",
+        "rejections": [
+          {
+            "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          },
+          {
+            "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          },
+          {
+            "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          },
+          {
+            "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          },
+          {
+            "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          },
+          {
+            "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          },
+          {
+            "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          },
+          {
+            "model": "Qwen/Qwen2.5-Coder-0.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          },
+          {
+            "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          },
+          {
+            "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          },
+          {
+            "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          },
+          {
+            "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          },
+          {
+            "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          },
+          {
+            "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          },
+          {
+            "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+            "reasons": [
+              "CONTEXT_NOT_ESTABLISHED",
+              "NO_ADMITTED_TARGET"
+            ]
+          }
+        ],
+        "benchmarked": 0,
+        "benchmarkOutcomes": {
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "unverified": 0,
+          "missing": 0
+        },
+        "status": "APPROVAL_REQUIRED",
+        "comparisons": [],
+        "sourceFailures": [
+          "runtime-official-releases"
+        ],
+        "routingChanged": false,
+        "recommendation": "No evidence-backed new leader established",
+        "nextActions": [
+          "Review incomplete or unavailable sources; unchanged models cannot be concluded from missing observations.",
+          "Review and approve the exact benchmark proposal before acquisition or execution."
+        ],
+        "execution": {
+          "parcelId": null,
+          "completedResultHashes": []
+        },
+        "evidence": [
+          "d1d6fe7f04567ac57e7405ca88b618264437ef5e8f6b0d5d6009f089f8b04cb5",
+          "23d96131e9b3bf663413c995ec66e15712b8a76711a4331e02b7b0d08a2e0cd4",
+          "09344cee5a8f76e6ba6c65be9321114542d4e962f46d543f4d4e1066eb3a8331",
+          "060aba300f9d0c68bcf91fa4346cd6f0516495edf0b591f7f6073b2b158737a3"
+        ]
+      },
+      "downloadedModelBytes": 0,
+      "modelResults": 0,
+      "householdActions": 0,
+      "productionRoutingChanged": false
+    },
+    {
+      "scope": "Real read-only model metadata and native Work Parcel; not a model benchmark or overnight-duration proof",
+      "parcelId": "parcel-social-06955417de7afb91207d4c5dfdba1ecb5bcfae270564de90dc3669435b160556",
+      "status": "SUCCEEDED",
+      "nativeRuns": [
+        {
+          "id": "run-4c8d54d9-86a8-41c6-8611-4635a88b8ca1",
+          "job": "model-watch-brief",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-2584858a-99f6-4559-926a-773cc1fd4884",
+          "job": "model-watch-observe",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-068fc02a-373e-49da-9d8c-8e931493d966",
+          "job": "model-watch-dispatch",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-31355388-c095-4763-ab00-1d7f72cd8268",
+          "job": "model-watch-proposal",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-c362c953-6f2e-455c-a88f-8020959770fc",
+          "job": "model-watch-shortlist",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-05350c1c-d50d-47bc-899a-abbb90f3be6a",
+          "job": "model-watch-intelligence",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-a8e5f9ca-9817-4d27-95d6-4f4c536ff794",
+          "job": "model-watch-brief",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-bad7fac5-b222-432d-9c10-d22328681a35",
+          "job": "model-watch-observe",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-f705b8cc-bb83-4cbc-a1e8-d14d6e81ac69",
+          "job": "model-watch-dispatch",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-b176b0f0-64c7-48e4-8bbf-80795c3fa562",
+          "job": "model-watch-proposal",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-8ef6f225-89ef-4cac-a4b2-1b8c55a8d7ea",
+          "job": "model-watch-shortlist",
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "run-2edb5b87-6b0f-49ea-a7d9-cd49db5e7740",
+          "job": "model-watch-intelligence",
+          "status": "SUCCEEDED"
+        }
+      ],
+      "sourceSnapshots": [
+        {
+          "sourceId": "qwen-small-official",
+          "items": 9,
+          "changes": 9,
+          "complete": true
+        },
+        {
+          "sourceId": "qwen-medium-official",
+          "items": 8,
+          "changes": 8,
+          "complete": true
+        },
+        {
+          "sourceId": "runtime-official-releases",
+          "items": 0,
+          "changes": 0,
+          "complete": false
+        },
+        {
+          "sourceId": "qwen-small-official",
+          "items": 9,
+          "changes": 0,
+          "complete": true
+        },
+        {
+          "sourceId": "qwen-medium-official",
+          "items": 8,
+          "changes": 0,
+          "complete": true
+        },
+        {
+          "sourceId": "runtime-official-releases",
+          "items": 0,
+          "changes": 0,
+          "complete": false
+        }
+      ],
+      "brief": {
+        "sha256": "3ad506cf0675c95ff9a7ad62a9575bbec417338e63b94e4ba380229f24c097f8",
+        "schema": "agent-control.morning-intelligence/v1",
+        "watchId": "read-only-physical-intelligence",
+        "watchDigest": "0aa7a20a44f683a305f99b8d1bff86b0fbd702c8d21a3982ba5bc17e30a88d5f",
+        "runKey": "06955417de7afb91207d4c5dfdba1ecb5bcfae270564de90dc3669435b160556",
+        "at": "2026-09-13T13:14:28.116Z",
+        "observationScope": "FOLLOW_UP",
+        "sourceCoverage": {
+          "complete": 2,
+          "total": 3,
+          "allComplete": false,
+          "sources": [
+            {
+              "sourceId": "qwen-small-official",
+              "state": "COMPLETE",
+              "baseline": false,
+              "changes": 0,
+              "snapshotSha256": "002b78fc79d27ba6319eb2083c6e1a394051207ff5a0694119a17ceb33e70e14"
+            },
+            {
+              "sourceId": "qwen-medium-official",
+              "state": "COMPLETE",
+              "baseline": false,
+              "changes": 0,
+              "snapshotSha256": "df05e84869b89862a62f27f856e813cccf96646a0a5e399dd555ab2f9c930440"
+            },
+            {
+              "sourceId": "runtime-official-releases",
+              "state": "PARTIAL",
+              "baseline": false,
+              "changes": 0,
+              "snapshotSha256": "4a7431c98fff49283c705f071f7b63aff6e54f9b871b56a553d085a05f01652a"
+            }
+          ]
+        },
+        "changesDetected": 0,
+        "relevantCandidates": 0,
+        "changeSummary": "Source coverage is incomplete; only observed changes are reported.",
+        "rejections": [],
+        "benchmarked": 0,
+        "benchmarkOutcomes": {
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "unverified": 0,
+          "missing": 0
+        },
+        "status": "NO_CANDIDATES",
+        "comparisons": [],
+        "sourceFailures": [
+          "runtime-official-releases"
+        ],
+        "routingChanged": false,
+        "recommendation": "No evidence-backed new leader established",
+        "nextActions": [
+          "Review incomplete or unavailable sources; unchanged models cannot be concluded from missing observations."
+        ],
+        "execution": {
+          "parcelId": null,
+          "completedResultHashes": []
+        },
+        "evidence": [
+          "4ac6a797ed10769397f2ddd125806d6e088036d199394b68cb59d0baa378ab69",
+          "bd022831c73185e347c90f962f124f1d6a272c88d2d4360b5034bb1732e403d4",
+          "a0bd9f38dd9d18e447276b82c43736ae8c1f4d73e71387570348d6efacc73eee",
+          "276801716a2ae8fec9b8c28b3fa30f80beab888955c524808119d7393799a306"
+        ]
+      },
+      "downloadedModelBytes": 0,
+      "modelResults": 0,
+      "householdActions": 0,
+      "productionRoutingChanged": false
+    }
+  ],
+  "boundary": "Real manual source observations and native six-phase jobs. No target-model execution, new-leader result or overnight-duration claim."
+}

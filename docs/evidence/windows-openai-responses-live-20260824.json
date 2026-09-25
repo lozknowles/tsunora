@@ -1,0 +1,64 @@
+{
+  "schema": "agent-control.windows-openai-live-evidence.v1",
+  "started_at": "2026-08-24T20:42:02.461Z",
+  "completed_at": "2026-08-24T20:42:06.325Z",
+  "verdict": "WINDOWS_OPENAI_RETURN_DATA_QUALIFIED",
+  "provider": {
+    "id": "openai-responses",
+    "transport": "POST https://api.openai.com/v1/responses",
+    "authentication": "existing ignored API key supplied only at runtime",
+    "auth_mode": "api-key",
+    "selection_reason": "operator_forced_api_key",
+    "model_id": "gpt-4o-mini",
+    "new_key_created": false
+  },
+  "job": {
+    "id": "openai-windows-return-data",
+    "action": "qualification.openai-windows-return@1.0.0",
+    "kind": "agent",
+    "run_id": "run-c8de17dc-ba8b-4295-b122-74a72bba86d9",
+    "run_status": "SUCCEEDED",
+    "step_status": "SUCCEEDED"
+  },
+  "recipe": {
+    "id": "recipe-f5056c5b98b15de8",
+    "fingerprint": "f5056c5b98b15de8ab57ec6f6b0250c0ccf418aeec5fa492406cecda31a691fd",
+    "tools": [
+      "qualification.return-data"
+    ],
+    "authority": {
+      "lane_id": "windows-api-qualification",
+      "lease_generation": 23,
+      "ownership_generation": 31,
+      "owner": "agent"
+    }
+  },
+  "tool_policy": {
+    "audit_count": 1,
+    "tool_id": "qualification.return-data",
+    "allowed": true,
+    "lease_generation": 23,
+    "ownership_generation": 31
+  },
+  "artifact": {
+    "id": "artifact-345892b9-4303-44ed-bdb5-129cc781399a",
+    "type": "application/json",
+    "sha256": "b406d0b08cc52508d7a2aca7e259ed74cebb02358297ae94596ba37615afc587"
+  },
+  "verification": {
+    "required": [
+      "windows-openai-return-data"
+    ],
+    "passed": [
+      "windows-openai-return-data"
+    ],
+    "failed": []
+  },
+  "source_result_sha256": "b3bdc998f9b192bb593f753c8ddcbcaf6ea3bd647a14d38ed84612b980c2750a",
+  "security": {
+    "api_key_persisted": false,
+    "api_key_printed": false,
+    "control_plane_authority_changed": false,
+    "production_changed": false
+  }
+}
