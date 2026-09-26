@@ -2,7 +2,7 @@
 
 Scope: Ubuntu 24.04 x86_64, Node.js 24 with npm, CPU-only, local single-user research. Clean-install evidence uses disposable containers, not a fresh VM or physical machine. Do not infer Windows, macOS, Android, GPU, production HR, multi-user SSO or real-model qualification. Agent Control historical release documents describe their own revisions, not this Tsunora revision.
 
-No Tsunora release tag or release asset existed at the start of this qualification. `main` is the landing/documentation line; `research/workforce-ops` contains Workforce Lab. Record the exact revision you choose. A reviewed candidate branch can be substituted explicitly. Do not install Agent Control v4.12.1 by following its historical README.
+At the time of qualification there was no Tsunora release tag or release asset. The qualified Workforce Lab and clean-install work has since been merged to `main`. For normal public installation use `main`; for exact reproduction, pin the specific candidate or commit recorded in the release-status document. Do not install Agent Control v4.12.1 by following its historical README.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ Checksums downloaded over HTTPS detect corruption; this is not independent signa
 ## Route A: public Git clone
 
 ```sh
-git clone --branch research/workforce-ops https://github.com/lozknowles/tsunora.git
+git clone --branch main https://github.com/lozknowles/tsunora.git
 cd tsunora
 git rev-parse HEAD
 ./scripts/bootstrap-agent-control.sh --check --target "$PWD"
