@@ -19,7 +19,11 @@ export function inspectDoctor({root=path.resolve(path.dirname(fileURLToPath(impo
   add('node','CORE_REQUIRED',Number(nodeVersion.split('.')[0])>=24?'CORE_READY':'BLOCKED','node_24_or_newer_required');
   for(const command of ['git','npm',...(platform==='win32'?[]:['bash'])]) {
     const result=run(command,['--version'],{timeout:2000,maxBuffer:8192,windowsHide:true,encoding:'utf8',shell:false});
-    add(command,'CORE_REQUIRED',result.status===0?'CORE_READY':'BLOCKED',result.status===0?'executable_responded':result.error?.code==='ENOENT'?'command_unavailable':'command_failed');
+    // Archive installations have no Git metadata and do not use the Git bootstrap.
+    // A .git file also denotes a worktree; it retains the Git prerequisite.
+    const required=command!=='git'||fs.existsSync(path.join(root,'.git'));
+    const state=required?(result.status===0?'CORE_READY':'BLOCKED'):(result.status===0?'OPTIONAL_AVAILABLE':result.error?.code==='ENOENT'?'OPTIONAL_UNAVAILABLE':'OPTIONAL_DEGRADED');
+    add(command,required?'CORE_REQUIRED':'OPTIONAL',state,result.status===0?'executable_responded':result.error?.code==='ENOENT'?'command_unavailable':'command_failed');
   }
   const dependencies=['tsx','undici','ws'].every(name=>fs.existsSync(path.join(root,'node_modules',name,'package.json')));
   add('locked-dependencies','CORE_REQUIRED',dependencies?'CORE_READY':'BLOCKED',dependencies?'installed':'run_documented_bootstrap');

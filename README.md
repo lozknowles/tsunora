@@ -28,7 +28,7 @@ The product idea is simple: turn fragmented capability into governed, verifiable
 
 ## What is in the current development line?
 
-The current qualified development line, `research/workforce-ops`, combines the privacy-reviewed Tsunora baseline with the qualified Digital Labour Exchange, externally informed architectural decisions and the Workforce Operations research prototype.
+The current branch combines the privacy-reviewed Tsunora baseline with the qualified Digital Labour Exchange, externally informed architectural decisions and the Workforce Operations research prototype.
 
 ### Digital Labour Exchange
 
@@ -54,17 +54,23 @@ The full repository regression at the qualification anchor was **2,480/2,480 PAS
 
 ## Branch and provenance model
 
-- `main` is the public landing/documentation line descended from the privacy-reviewed publication anchor `2915a630db0ead1333cc9657ef44af9e953cc19b`.
-- `research/workforce-ops` is the current qualified code-development line and is where new Tsunora capability work should continue.
+- `main` preserves the clean public publication lineage rooted at `2915a630db0ead1333cc9657ef44af9e953cc19b`.
+- `research/workforce-ops` is the current qualified development line and is where new Tsunora work should continue.
 - The workforce qualification anchor `3e0e6cb…` is a direct child of the reviewed public base.
 - Documentation-only commits after the qualification anchor do not expand the qualification claim.
 - Private evidence and local-environment artefacts are intentionally excluded from public Git.
 
+<a id="install"></a>
+
 ## Run
 
-Use the inherited [installation guide](docs/provenance/AGENT-CONTROL-README.md) and locked dependencies (`npm ci`). Start the configured runtime with `npm run web` and open `/tsunora.html` on its configured origin.
+Start with the [Tsunora clean-install guide](docs/TSUNORA-CLEAN-INSTALL.md). It selects the development branch explicitly, covers Git and source archives, and separates the core dashboard from the Workforce Lab research launcher. Historical Agent Control guides are provenance, not current Tsunora installation instructions.
 
 Exchange use requires explicit `AGENT_CONTROL_LABOUR_EXCHANGE=1` configuration and trusted host registration of organisations, backends, workers and verifiers as documented in the [operations guide](docs/DIGITAL-LABOUR-EXCHANGE-v4.15-OPERATIONS.md). Without that configuration, the workspace fails closed.
+
+## Historical platform references
+
+The [inherited first-run walkthrough](docs/installation-first-run.md) and [Android prerequisites](android/README.md#fresh-termux-prerequisites) remain available for provenance. Their older repository/release commands are not the current Tsunora installation route. Android and other platforms have not received fresh Tsunora clean-install qualification. Use the current guide above.
 
 ## Read
 
