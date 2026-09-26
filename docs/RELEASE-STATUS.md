@@ -4,7 +4,7 @@ Updated: 26 September 2026.
 
 ## Published state
 
-Tsunora source is published on `main`.
+Tsunora v0.1.0 is an experimental research prerelease, derived from Agent Control runtime 4.15.0. Source is published on `main`.
 
 Published scope includes:
 

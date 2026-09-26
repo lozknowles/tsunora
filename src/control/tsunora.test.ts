@@ -17,7 +17,7 @@ test('Tsunora entry and assets are served without opening governed APIs',async t
  assert.match(await (await fetch(base+'/')).text(),/dashboard-poe.js/);
 });
 test('product identity separates runtime and research lineage; hero contains no operational feed',()=>{
- const p=JSON.parse(fs.readFileSync('tsunora-product.json','utf8'));assert.equal(p.version,'0.1.0-dev');assert.equal(p.runtime.version,'4.15.0');
+ const p=JSON.parse(fs.readFileSync('tsunora-product.json','utf8'));assert.equal(p.version,'0.1.0');assert.equal(p.runtime.version,'4.15.0');
  const html=fs.readFileSync('assets/dashboard/tsunora.html','utf8');const hero=html.split('<section id="hero">')[1]!.split('</section>')[0]!;
  assert.match(hero,/CONNECT WORK/);assert.doesNotMatch(hero,/id="view"|counter|ledger|activity|gauge/i);
  const js=fs.readFileSync('assets/dashboard/tsunora.js','utf8');assert.doesNotMatch(js,/localStorage|sessionStorage|innerHTML|eval\(/);

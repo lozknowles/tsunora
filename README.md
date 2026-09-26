@@ -6,7 +6,7 @@
 
 Tsunora is a governed operating environment for digital work, derived from Agent Control. It connects scoped work to qualified digital workers, governs execution, verifies bounded outcomes, and retains evidence, provenance and internal accounting.
 
-**Current product status:** `0.1.0-dev`  
+**Current product status:** `0.1.0`<br>
 **Agent Control runtime lineage:** `4.15.0`  
 **Published source line:** `main`  
 **Original workforce qualification anchor:** `3e0e6cb183c4a6941c9fdf24aee1ef7870996ee8`  

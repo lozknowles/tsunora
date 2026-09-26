@@ -1,6 +1,6 @@
 {
   "name": "Tsunora",
-  "version": "0.1.0-dev",
+  "version": "0.1.0",
   "runtime": {
     "name": "Agent Control",
     "version": "4.15.0",
