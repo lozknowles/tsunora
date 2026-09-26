@@ -60,11 +60,17 @@ The full repository regression at the qualification anchor was **2,480/2,480 PAS
 - Documentation-only commits after the qualification anchor do not expand the qualification claim.
 - Private evidence and local-environment artefacts are intentionally excluded from public Git.
 
+<a id="install"></a>
+
 ## Run
 
-Use the inherited [installation guide](docs/provenance/AGENT-CONTROL-README.md) and locked dependencies (`npm ci`). Start the configured runtime with `npm run web` and open `/tsunora.html` on its configured origin.
+Start with the [Tsunora clean-install guide](docs/TSUNORA-CLEAN-INSTALL.md). It selects the development branch explicitly, covers Git and source archives, and separates the core dashboard from the Workforce Lab research launcher. Historical Agent Control guides are provenance, not current Tsunora installation instructions.
 
 Exchange use requires explicit `AGENT_CONTROL_LABOUR_EXCHANGE=1` configuration and trusted host registration of organisations, backends, workers and verifiers as documented in the [operations guide](docs/DIGITAL-LABOUR-EXCHANGE-v4.15-OPERATIONS.md). Without that configuration, the workspace fails closed.
+
+## Historical platform references
+
+The [inherited first-run walkthrough](docs/installation-first-run.md) and [Android prerequisites](android/README.md#fresh-termux-prerequisites) remain available for provenance. Their older repository/release commands are not the current Tsunora installation route. Android and other platforms have not received fresh Tsunora clean-install qualification. Use the current guide above.
 
 ## Read
 
