@@ -8,9 +8,10 @@ Tsunora is a governed operating environment for digital work, derived from Agent
 
 **Current product status:** `0.1.0-dev`  
 **Agent Control runtime lineage:** `4.15.0`  
-**Current qualified development line:** `research/workforce-ops`  
-**Qualification anchor:** `3e0e6cb183c4a6941c9fdf24aee1ef7870996ee8`  
-**Status:** **EXPERIMENTAL — PASS WITH LIMITATIONS**
+**Published source line:** `main`  
+**Original workforce qualification anchor:** `3e0e6cb183c4a6941c9fdf24aee1ef7870996ee8`  
+**Clean-install qualification candidate:** `c810d643a9c9d16acc2e54f5c30051d02e9762cc`  
+**Status:** **EXPERIMENTAL — PASS WITH DOCUMENTED LIMITATIONS**
 
 The Digital Labour Exchange and Workforce Operations prototype are research software, not a production HR/payroll platform. Workers used in the current physical demonstration are deterministic; real enterprise integrations, production authentication and model-backed workforce execution remain separately unqualified.
 
@@ -26,9 +27,9 @@ The product idea is simple: turn fragmented capability into governed, verifiable
 
 > **Work moves. Responsibility remains.**
 
-## What is in the current development line?
+## What is published?
 
-The current branch combines the privacy-reviewed Tsunora baseline with the qualified Digital Labour Exchange, externally informed architectural decisions and the Workforce Operations research prototype.
+`main` now combines the privacy-reviewed Tsunora baseline, the Digital Labour Exchange, the Workforce Operations research prototype, and the qualified clean-install/restart repairs.
 
 ### Digital Labour Exchange
 
@@ -50,12 +51,12 @@ The current research prototype physically demonstrated three governed workforce 
 
 The frozen R&D workload executed 360 cases across three configurations. Boundary outcomes were 120/120, 100/120 and 120/120. The 20 retained failures were cases where recovery correctly found no eligible replacement worker.
 
-The full repository regression at the qualification anchor was **2,480/2,480 PASS**.
+The original workforce qualification anchor passed **2,480/2,480** tests. The later clean-install qualification passed **2,482 tests, zero failed, one skipped**; the skip is the Bubblewrap/systemd-user sandbox test whose environment was unavailable.
 
 ## Branch and provenance model
 
-- `main` preserves the clean public publication lineage rooted at `2915a630db0ead1333cc9657ef44af9e953cc19b`.
-- `research/workforce-ops` is the current qualified development line and is where new Tsunora work should continue.
+- `main` is the public source line and includes the merged Workforce Operations and clean-install qualification work.
+- `research/workforce-ops` remains the research lineage used to develop and qualify the workforce changes.
 - The workforce qualification anchor `3e0e6cb…` is a direct child of the reviewed public base.
 - Documentation-only commits after the qualification anchor do not expand the qualification claim.
 - Private evidence and local-environment artefacts are intentionally excluded from public Git.
@@ -64,7 +65,7 @@ The full repository regression at the qualification anchor was **2,480/2,480 PAS
 
 ## Run
 
-Start with the [Tsunora clean-install guide](docs/TSUNORA-CLEAN-INSTALL.md). It selects the development branch explicitly, covers Git and source archives, and separates the core dashboard from the Workforce Lab research launcher. Historical Agent Control guides are provenance, not current Tsunora installation instructions.
+Start with the [Tsunora clean-install guide](docs/TSUNORA-CLEAN-INSTALL.md). For normal public installation use `main`; the guide also records the exact qualification lineage, Git and source-archive routes, and the separation between the core dashboard and Workforce Lab research launcher. Historical Agent Control guides are provenance, not current Tsunora installation instructions.
 
 Exchange use requires explicit `AGENT_CONTROL_LABOUR_EXCHANGE=1` configuration and trusted host registration of organisations, backends, workers and verifiers as documented in the [operations guide](docs/DIGITAL-LABOUR-EXCHANGE-v4.15-OPERATIONS.md). Without that configuration, the workspace fails closed.
 
@@ -83,6 +84,7 @@ The [inherited first-run walkthrough](docs/installation-first-run.md) and [Andro
 - [Workforce prototype threat model](WORKFORCE-PROTOTYPE-THREAT-MODEL.md)
 - [Publication provenance](docs/provenance/PUBLICATION-LINEAGE.md)
 - [Agent Control lineage](docs/provenance/AGENT-CONTROL-LINEAGE.md)
+- [Current release status and limitations](docs/RELEASE-STATUS.md)
 
 ## Licence
 
